@@ -1,0 +1,1216 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"ke",
+				"keys"
+			],
+			[
+				"num",
+				"num_of_files"
+			],
+			[
+				"ar",
+				"argv  (variable)"
+			],
+			[
+				"BaseRegistr",
+				"BaseRegistrationView	(imported, instance)"
+			],
+			[
+				"url",
+				"urlpatterns"
+			],
+			[
+				"clea",
+				"cleaned_name"
+			],
+			[
+				"cle",
+				"cleaned_name"
+			],
+			[
+				"initial",
+				"initial_data"
+			],
+			[
+				"email",
+				"email_backend"
+			],
+			[
+				"Int",
+				"IntegrityError"
+			],
+			[
+				"up",
+				"update"
+			],
+			[
+				"assert",
+				"assertTrue"
+			],
+			[
+				"Use",
+				"UserFactory	(imported, class)"
+			],
+			[
+				"property",
+				"property	(builtin, function)"
+			],
+			[
+				"None",
+				"NotImplemented	(builtin, instance)"
+			],
+			[
+				"user",
+				"userStatus	(global, instance)"
+			],
+			[
+				"use",
+				"user1Id	(local, instance)"
+			],
+			[
+				"u",
+				"userId	(local, instance)"
+			],
+			[
+				"sp",
+				"sponsorId	(local, instance)"
+			],
+			[
+				"par",
+				"parentUserId	(local, instance)"
+			],
+			[
+				"bin",
+				"active_binary_position"
+			],
+			[
+				"ass",
+				"assertFalse"
+			],
+			[
+				"new",
+				"newUser1PositionId	(local, instance)"
+			],
+			[
+				"ol",
+				"oldUser1PositionId	(local, instance)"
+			],
+			[
+				"Ma",
+				"MasterUser	(imported, class)"
+			],
+			[
+				"b",
+				"binary_money"
+			],
+			[
+				"act",
+				"active_binary_position"
+			],
+			[
+				"ac",
+				"active_binary_position"
+			],
+			[
+				"Binar",
+				"BinaryTree	(imported, class)"
+			],
+			[
+				"ipn",
+				"ipn_obj	(local, instance)"
+			],
+			[
+				"pay",
+				"payment_was_successful"
+			],
+			[
+				"uni",
+				"unilevel_money"
+			],
+			[
+				"mon",
+				"binary_money"
+			],
+			[
+				"posit",
+				"position_1	(local, instance)"
+			],
+			[
+				"po",
+				"position_1	(local, instance)"
+			],
+			[
+				"mo",
+				"monthly_percent	(attribute, instance)"
+			],
+			[
+				"_",
+				"_depthOfComission	(attribute, instance)"
+			],
+			[
+				"get",
+				"get_level"
+			],
+			[
+				"Master",
+				"MasterUser	(imported, class)"
+			],
+			[
+				"tree",
+				"tree_view	(attribute, instance)"
+			],
+			[
+				"asse",
+				"assertEqual"
+			],
+			[
+				"add",
+				"testAddNewActiveUnilevelPosition"
+			],
+			[
+				"Bina",
+				"BinaryPosition	(global, class)"
+			],
+			[
+				"Bin",
+				"BinaryPosition	(global, class)"
+			],
+			[
+				"Posit",
+				"PositionFactory	(global, class)"
+			],
+			[
+				"Unileve",
+				"UnilevelPosition	(global, class)"
+			],
+			[
+				"getA",
+				"getActualUser()	(attribute, function)"
+			],
+			[
+				"B",
+				"BINARY_TREE	(attribute, instance)"
+			],
+			[
+				"Masr",
+				"MasterUser	(imported, class)"
+			],
+			[
+				"Cre",
+				"CreateInDatabase"
+			],
+			[
+				"class",
+				"classmethod"
+			],
+			[
+				"is",
+				"isMatrixFull	(local, instance)"
+			],
+			[
+				"root",
+				"rootPosition	(local, instance)"
+			],
+			[
+				"pla",
+				"placePosition"
+			],
+			[
+				"us",
+				"user_type	(attribute, instance)"
+			],
+			[
+				"left",
+				"left_guy	(attribute, instance)"
+			],
+			[
+				"Du",
+				"DummyUser	(global, class)"
+			],
+			[
+				"A",
+				"APPLICATION_NAME"
+			],
+			[
+				"H",
+				"HTML_ROOT"
+			],
+			[
+				"AP",
+				"APT_COMMAND"
+			],
+			[
+				"APP",
+				"APPLICATION_ROOT"
+			],
+			[
+				"p",
+				"price	(attribute, instance)"
+			],
+			[
+				"mas",
+				"master	(local, instance)"
+			],
+			[
+				"master",
+				"masterMoney	(local, instance)"
+			],
+			[
+				"a",
+				"assertEqual"
+			],
+			[
+				"co",
+				"conf_master_username	(attribute, instance)"
+			],
+			[
+				"pr",
+				"price	(attribute, instance)"
+			],
+			[
+				"righ",
+				"right_guy"
+			],
+			[
+				"rig",
+				"right_guy"
+			],
+			[
+				"posi",
+				"position_type"
+			],
+			[
+				"cre",
+				"createNewPosition"
+			],
+			[
+				"call",
+				"callNumber"
+			],
+			[
+				"No",
+				"NodeIsEmpty"
+			],
+			[
+				"ri",
+				"right_guy"
+			],
+			[
+				"actua",
+				"actualNode"
+			],
+			[
+				"N",
+				"NodeIsEmpty"
+			],
+			[
+				"pos",
+				"positionName"
+			],
+			[
+				"jo",
+				"joe_staff"
+			],
+			[
+				"c",
+				"country"
+			],
+			[
+				"zi",
+				"zip_code"
+			],
+			[
+				"form",
+				"form_data"
+			],
+			[
+				"o",
+				"objects"
+			],
+			[
+				"Poa",
+				"PostalAddress"
+			],
+			[
+				"Post",
+				"PostalAddress"
+			],
+			[
+				"f_",
+				"f_postal_address"
+			],
+			[
+				"Si",
+				"SignupForm"
+			],
+			[
+				"err",
+				"error_message"
+			],
+			[
+				"Mock",
+				"MockDependencies"
+			],
+			[
+				"da",
+				"dateFactory"
+			],
+			[
+				"min",
+				"minAgeFactory"
+			],
+			[
+				"va",
+				"validator_must_be_18"
+			],
+			[
+				"re",
+				"request"
+			],
+			[
+				"conte",
+				"context_processors"
+			],
+			[
+				"cont",
+				"contenttypes"
+			],
+			[
+				"Em",
+				"EmailWronglyFormatted"
+			],
+			[
+				"e",
+				"email"
+			],
+			[
+				"S",
+				"STATIC_URL"
+			],
+			[
+				"rem",
+				"remote_file_pattern"
+			],
+			[
+				"tmp",
+				"tmpfile_path"
+			],
+			[
+				"er",
+				"ertesito_conf"
+			],
+			[
+				"tm",
+				"tmpfile_path"
+			],
+			[
+				"pyu",
+				"pyuaeq	assert-equal"
+			],
+			[
+				"py",
+				"pyuaeq	assert-equal"
+			],
+			[
+				"h",
+				"host"
+			],
+			[
+				"ert",
+				"ertesito_path"
+			],
+			[
+				"ER",
+				"ERTESITO_SZAM"
+			],
+			[
+				"erte",
+				"ertesito_html"
+			],
+			[
+				"TH",
+				"THUMBNAIL_PATH"
+			],
+			[
+				"THU",
+				"THUMBNAIL_FILE"
+			],
+			[
+				"ERT",
+				"ERTESITO_SZAM"
+			],
+			[
+				"upl",
+				"upload_ertesito"
+			],
+			[
+				"ERTE",
+				"ERTESITO_PATH"
+			],
+			[
+				"GME",
+				"GME_PWD"
+			],
+			[
+				"GME_",
+				"GME_HOST"
+			],
+			[
+				"Librar",
+				"libraries"
+			],
+			[
+				"bu",
+				"build_link_index"
+			],
+			[
+				"link",
+				"link_by_id"
+			],
+			[
+				"lin",
+				"link_id"
+			],
+			[
+				"li",
+				"links"
+			],
+			[
+				"sub",
+				"submitted_time"
+			],
+			[
+				"username",
+				"username_msg"
+			],
+			[
+				"FI",
+				"FILE_NAME"
+			],
+			[
+				"M",
+				"MOVIE_ROOT"
+			],
+			[
+				"MO",
+				"MOVIE_ROOT"
+			],
+			[
+				"F",
+				"FILE_NAME"
+			],
+			[
+				"w",
+				"write_form"
+			],
+			[
+				"valid",
+				"valid_month"
+			],
+			[
+				"L",
+				"LINK_NAME"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "Packages/Titanium Build/Titanium.sublime-build",
+	"command_palette":
+	{
+		"height": 375.0,
+		"selected_items":
+		[
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Package Control: Remove Package"
+			],
+			[
+				"rope",
+				"Rope: Regenerate Global Module Cache"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"pa",
+				"Package Control: Remove Package"
+			],
+			[
+				"pac",
+				"Package Control: Remove Package"
+			],
+			[
+				"tiy",
+				"Tidy HTML"
+			],
+			[
+				"tidy",
+				"Tidy HTML"
+			],
+			[
+				"indent",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"Snippet: u",
+				"Snippet: import-unittest"
+			],
+			[
+				"py",
+				"Set Syntax: Python"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"djang",
+				"Django DocsSearch"
+			],
+			[
+				"task",
+				"Tasks: New document"
+			],
+			[
+				"docb",
+				"DocBlockr: Decorate line comment"
+			],
+			[
+				"gist",
+				"Gist: Open Gist"
+			],
+			[
+				"snippet",
+				"Snippet: html"
+			],
+			[
+				"Packa",
+				"Package Control: Install Package"
+			],
+			[
+				"snipp",
+				"Snippet: if __name__ == '__main__'"
+			],
+			[
+				"build",
+				"Build: Cancel"
+			],
+			[
+				"si",
+				"View: Toggle Side Bar"
+			],
+			[
+				"side",
+				"View: Toggle Side Bar"
+			],
+			[
+				"syn ja",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"pyth",
+				"Set Syntax: Python"
+			]
+		],
+		"width": 633.0
+	},
+	"console":
+	{
+		"height": 368.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/alloy_first/alloy_first/app/views/index.xml",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/alloy_first/alloy_first/app/controllers/index.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/alloy_first/alloy_first/app/styles/index.tss",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/locale/en/LC_MESSAGES/django.po",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/templates/registration/password_reset_done.html",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/locale/hu/LC_MESSAGES/django.po",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/templates/registration.html",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/templates/registration/registration_complete.html",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/templates/registration/registration_form.html",
+		"/var/folders/xf/f2hn1_gj277fx87n50c841xw0000gn/T/sublime-sftp-browse-1379338494/GME FTP Server/index.html",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/templates/registration/password_reset_confirm.html",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/templates/registration/password_change_done.html",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/templates/registration/login_error.html",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/templates/registration/registration_closed.html",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/DiamondMLM/settings.py",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/registration/backends/simple/views.py",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/registration/urls.py",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/registration/signals.py",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/registration/auth_urls.py",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/registration/forms.py",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/registration/models.py",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/registration/backends/default/views.py",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/DiamondMLM/urls.py",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/registration/views.py",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/templates/registration/logout.html",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/registration/tests/default_backend.py",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/registration/tests/simple_backend.py",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/templates/registration/activate.html",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/registration/backends/simple/urls.py",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/registration/backends/default/urls.py",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/registration/tests/urls.py",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/initial_data.json",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/django-registration/registration/backends/default/views.py",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/views.py",
+		"/Users/molnarzs/Dropbox/System/bin_mac/organize_images.py",
+		"/Users/molnarzs/Dropbox/System/bin_mac/organize_images.sh",
+		"/Users/molnarzs/Library/Application Support/Sublime Text 2/Packages/SublimeCodeIntel/Default (OSX).sublime-keymap",
+		"/Users/molnarzs/Library/Application Support/Sublime Text 2/Packages/SublimeCodeIntel/Default (OSX).sublime-mousemap",
+		"/Users/molnarzs/Library/Application Support/Sublime Text 2/Packages/SublimeRope/Default (OSX).sublime-keymap",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/registration/tests/models.py",
+		"/Library/Python/2.7/site-packages/django/template/defaulttags.py",
+		"/Library/Python/2.7/site-packages/django/template/base.py",
+		"/Library/Python/2.7/site-packages/django/template/response.py",
+		"/Library/Python/2.7/site-packages/django/core/handlers/base.py",
+		"/Library/Python/2.7/site-packages/django/test/client.py",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite.sublime-project",
+		"/Library/Python/2.7/site-packages/django/template/debug.py",
+		"/Library/Python/2.7/site-packages/django/test/utils.py",
+		"/Library/Python/2.7/site-packages/django/template/loader_tags.py",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/registration/tests/__init__.py",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/accounts/views.py",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/.git/COMMIT_EDITMSG",
+		"/Users/molnarzs/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/molnarzs/Library/Application Support/Sublime Text 2/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/dev/view_support.py",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/controller.py",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/test_package/test_models_user.py",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/bin/refresh_server.sh",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/.gitignore",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/bin/setup_server.sh",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/fixtures/devprod/initial_data.prod.json",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/fixtures/devprod/initial_data.dev.json",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/DiamondMLM/settings_prod.py",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/context_processors.py",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/features/password_handling.py",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/features/steps.py",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/templates/language_selector.html",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/templates/header.html",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/DiamondMLM/settings_dev.py",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/templates/index_loggedin.html",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/dev/views.py",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/dev/forms.py",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/templates/registration/login.html",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/features/password_handling.feature",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/templates/registration/password_reset_complete.html",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/templates/registration/password_reset.html",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/features/login.feature",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/models.py",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/fixtures/devprod/initial_data.json.dev",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/fixtures/devprod/initial_data.json.dev",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/static/css/mlmsite.css",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/static/css/typica-login.css",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/templates/registration/password_reset_email.html",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/test_package/test_models_unilevel_position.py",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/test_package/test_tools.py",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/test_package/test_models_masteruser.py",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/templates/base.html",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/test_package/test_controller.py",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/accounts/features/account_handling.py",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/templates/registration/password_reset_done2.html",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/templates/reg/login.html",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/templates/reg/password_reset.html",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/templates/reg/password_reset_done.html",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/templates/registration/password_reset_form2.html",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/templates/registration/password_reset_form.html",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/templates/registration/login.html.bak",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/features/paypal.py",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/accounts/features/terrain.py",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/locale/hu/LC_MESSAGES/django.mo",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/locale/en/LC_MESSAGES/django.mo",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/templates/registration/base.html",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/templates/index_notloggedin.html",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/dev/__init__.py",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/forms.py",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/tests.py",
+		"/Users/molnarzs/Library/Application Support/Sublime Text 2/Packages/SublimeLinter/README.md",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/accounts/models.py",
+		"/Users/molnarzs/Library/Application Support/Sublime Text 2/Packages/Default/Default (OSX).sublime-keymap",
+		"/Users/molnarzs/Library/Application Support/Sublime Text 2/Packages/SublimeLinter/SublimeLinter.sublime-settings",
+		"/Users/molnarzs/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/Users/molnarzs/Library/Application Support/Sublime Text 2/Packages/User/SublimeLinter.sublime-settings",
+		"/Users/molnarzs/Library/Application Support/Sublime Text 2/Packages/Pylinter/Pylinter.sublime-settings",
+		"/Users/molnarzs/Library/Application Support/Sublime Text 2/Packages/User/Pylinter.sublime-settings",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/templates/graph_eval.html",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/dev/graph_eval/__init__.py",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/dev/graph_eval/views.py",
+		"/Library/Python/2.7/site-packages/django/conf/__init__.py",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/admin.py",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/.gitmodules",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/templates/dev/select_user.html",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/templates/password_reset.html",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/django-userena/userena/templates/userena/password_reset_form.html",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/userena/forms.py",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/view_support.py",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/userena/views.py",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/templates/index.bak.html",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/django-userena/userena/urls.py",
+		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/django-userena/userena/locale/hu/LC_MESSAGES/django.po"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"<project>"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"Create",
+			"registration_activation_complete",
+			"activation_key",
+			"context",
+			"activation_key",
+			"get_context_data",
+			"user_activated",
+			"get_absolute_url",
+			"urls",
+			"RegistrationFormTermsOfService",
+			"index",
+			"SETTINGS_MODULE",
+			"url index",
+			"url",
+			"Enter a ",
+			"Ehhez az",
+			"LOCALE_P",
+			"LOCALE",
+			"LOCAL",
+			"That email address doesn",
+			"Note that both fields may be case-sensitive.",
+			"Please enter a correct",
+			"error",
+			"That email",
+			"instruc",
+			"emailed",
+			"VERSION",
+			"templ",
+			"fuzzy",
+			"password_reset",
+			"törlése",
+			"Reset my",
+			"Forgotten",
+			"login-wra",
+			"login-wraper",
+			"login-wrapper",
+			"login_wrapper",
+			"Forgot",
+			"trans",
+			"sign",
+			"Sign",
+			"sign",
+			"sign_",
+			"sign",
+			"login-form",
+			"navbar",
+			"navbar-fixed-top",
+			"navbar",
+			"error",
+			"login-wra",
+			"login",
+			"template",
+			"user",
+			"master",
+			"userena",
+			"graph_eval",
+			"dev/",
+			"signin",
+			"</dd>",
+			"<dd>",
+			"password_reset",
+			"password",
+			"Reset ",
+			"Remem",
+			"paypal",
+			"userena",
+			"bg1",
+			"try_paypal",
+			"graph_eval",
+			"conf_unilevel_copmmission_depth",
+			"_loginStatus",
+			"Get",
+			"TEST_RUN",
+			"5",
+			"SITE_N",
+			"SITE_",
+			"payCommi",
+			"money",
+			"Position",
+			"getMatrixparent",
+			"top",
+			"getMat",
+			"getMatrix",
+			"top",
+			"from",
+			"getAct",
+			"Controller.state_type",
+			"Controller.user_type",
+			"Controller.position_type",
+			"createNewPosition",
+			"_createPositions",
+			"active_position",
+			"sponsor",
+			"user",
+			"TreeLogic",
+			"_guy",
+			"TreeLogic",
+			"Position",
+			"GraphEval_",
+			"TreeLogic",
+			"_guy",
+			"GraphEval_",
+			"Logic",
+			"getActu",
+			"getTree",
+			"BinaryTreeLogic",
+			"active_position",
+			"st_binary",
+			"onClick",
+			"root",
+			"st.",
+			"init",
+			"nodes",
+			"self.getMaster()",
+			"c.getMaster()",
+			"sponsor",
+			"_guy",
+			"sponsor",
+			"_guy",
+			"Position.CreateInDatabase(None)",
+			"realOwner",
+			"Position.CreateInDatabase()",
+			"DummyNode",
+			"left",
+			"_guy",
+			"owner",
+			"isMaster",
+			"\")"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"basic-box",
+			"",
+			"</small></dd>",
+			"<dd><small>",
+			"getMatrixTop",
+			"parent",
+			"State",
+			"User",
+			"BinaryPosition",
+			"createNewBinaryPosition",
+			"_createBinaryPositions",
+			"active_binary_position",
+			"top",
+			"owner",
+			"Tree",
+			"",
+			"Tree",
+			"BinaryPosition",
+			"",
+			"Tree",
+			"",
+			"Tree",
+			"active_binary_position",
+			"st",
+			"st_unilevel.",
+			"st_binary.",
+			"MasterUser.Get()",
+			"top",
+			"",
+			"top",
+			"",
+			"self._createTestPosition()",
+			"",
+			"message",
+			" ",
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		},
+		{
+			"sheets":
+			[
+			]
+		},
+		{
+			"sheets":
+			[
+			]
+		},
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			],
+			[
+				0,
+				1,
+				1,
+				2
+			],
+			[
+				1,
+				1,
+				2,
+				2
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.5,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			0.5,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 170.0
+	},
+	"output.sftp":
+	{
+		"height": 100.0
+	},
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"urls.p",
+				"DiamondMLM/urls.py"
+			],
+			[
+				"model",
+				"registration/models.py"
+			],
+			[
+				"urls",
+				"DiamondMLM/urls.py"
+			],
+			[
+				"urls.py",
+				"DiamondMLM/urls.py"
+			],
+			[
+				"views",
+				"mlmsite/views.py"
+			],
+			[
+				"views.",
+				"accounts/views.py"
+			],
+			[
+				"url.py",
+				"DiamondMLM/urls.py"
+			],
+			[
+				"mlm",
+				"mlmsite.sublime-project"
+			],
+			[
+				"set",
+				"DiamondMLM/settings.py"
+			],
+			[
+				"ini",
+				"initial_data.json"
+			],
+			[
+				"sett",
+				"DiamondMLM/settings.py"
+			],
+			[
+				"pass",
+				"mlmsite/features/password_handling.feature"
+			],
+			[
+				"se",
+				"DiamondMLM/settings.py"
+			],
+			[
+				"initi",
+				"initial_data.json"
+			],
+			[
+				"setti",
+				"DiamondMLM/settings_prod.py"
+			],
+			[
+				"setting",
+				"DiamondMLM/settings_dev.py"
+			],
+			[
+				"init",
+				"initial_data.json"
+			],
+			[
+				"auth",
+				"registration/auth_urls.py"
+			],
+			[
+				"url",
+				"registration/backends/default/urls.py"
+			],
+			[
+				"settin",
+				"DiamondMLM/settings_dev.py"
+			],
+			[
+				"typi",
+				"mlmsite/static/css/typica-login.css"
+			],
+			[
+				"aut",
+				"registration/auth_urls.py"
+			],
+			[
+				"",
+				"registration/auth_urls.py"
+			],
+			[
+				"view.p",
+				"mlmsite/views.py"
+			],
+			[
+				"html",
+				"example.html"
+			],
+			[
+				"val",
+				"valid_month.py"
+			],
+			[
+				"test",
+				"test_escape_html.py"
+			],
+			[
+				"e",
+				"escape_html.py"
+			],
+			[
+				"main",
+				"main.py"
+			],
+			[
+				"esc",
+				"escape_html.py"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 142.0,
+	"status_bar_visible": true
+}
