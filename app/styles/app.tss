@@ -1,0 +1,43 @@
+
+
+"Label": {
+}
+
+"Button": {
+    backgroundColor: "#828282",
+    borderColor: "#e9bf3c",
+    color: "#e9bf3c",
+    borderWidth: 1,
+    style: Ti.UI.iPhone.DONE,
+    borderRadius: 5,
+    backgroundImage: 'none',
+    font: {fontWeight: "bold", fontSize: "16"}
+}
+
+"TextField": {
+    paddingLeft: 5,
+}
+
+"TableView": {
+    borderColor: "#e9bf3c",
+    separatorColor: "#e9bf3c"
+}
+
+".bar": {
+    backgroundColor: "#e9bf3c",
+    height: 40,
+    width: "100%",
+    textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+    font: {fontSize: "24"},
+    color: "#000"
+}
+
+".bottom": {
+   bottom: "0"
+}
+
+".container": {
+    backgroundColor: "#fff",
+    color: "#000"
+}
+

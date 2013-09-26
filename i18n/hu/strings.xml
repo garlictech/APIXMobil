@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <string name="login">Belépés</string>
+    <string name="username">felhasználó</string>
+    <string name="password">jelszó</string>
+    <string name="logging_in">belépés...</string>
+</resources>

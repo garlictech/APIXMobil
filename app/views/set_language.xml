@@ -1,0 +1,9 @@
+<Alloy>
+    <Window>
+        <Picker onChange="onChange">
+            <PickerRow title="English" val="en"/>
+            <PickerRow title="Espagnol" val="es" />
+            <PickerRow title="Magyar" val="hu" />
+        </Picker>
+    </Window>
+</Alloy>

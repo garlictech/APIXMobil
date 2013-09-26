@@ -1,0 +1,50 @@
+"#header_image": {
+    image: "images/start_screen_logo.png",
+    top: 0
+}
+
+"TextField": {
+    backgroundColor: "#828282",
+    borderColor: "#e9bf3c",
+    borderWidth: 1,
+    width: 200,
+    height: 40,
+    autocorrect: false,
+    paddingLeft: 5
+}
+
+"#username": {
+    hintText: L('username'),
+    top: '150'
+}
+
+"#password": {
+    hintText: L('password'),
+    top: '189',
+    passwordMask: true
+}
+
+"Button": {
+    width: 150,
+    height: 40
+}
+
+"#login_button": {
+    top: 260,
+    title: L('login')
+}
+
+"Window": {
+    tabBarHidden: "true",
+    navBarHidden: "true"
+}
+
+"#activity_logging_in": {
+    width: "auto",
+    height: 30,
+    top: 330,
+    message: L('logging_in'),
+    color: 'white',
+    style: 'Ti.UI.ActivityIndicatorStyle.PLAIN'
+}
+

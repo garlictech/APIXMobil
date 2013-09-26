@@ -1,0 +1,12 @@
+<Alloy>
+    <Tab id="login" title="Login" >
+        <Window>
+            <ImageView id="header_image" />
+            <TextField id="username" />
+            <TextField id="password" />
+            <Button id="login_button" onClick="doLogin"></Button>
+            <ActivityIndicator id="activity_logging_in" />
+            <Label id="bottom" class="bottom bar">APIXMobil</Label>
+        </Window>
+    </Tab>
+</Alloy>

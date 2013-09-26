@@ -1,0 +1,9 @@
+<Alloy>
+    <Window id="set_date" class="container">
+        <Picker selectionIndicator="true" useSpinner="true" type="Ti.UI.PICKER_TYPE_DATE_AND_TIME" top="150" height="200">
+            <PickerColumn width="200" />
+            <PickerColumn />
+        </Picker>
+        <Label class="bar">settings</Label>
+    </Window>
+</Alloy>

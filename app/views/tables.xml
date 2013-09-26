@@ -1,0 +1,10 @@
+<Alloy>
+    <TabGroup id="tables">
+        <Tab icon="Ti.UI.iPhone.SystemIcon.SEARCH" title="Tab 1">
+            <Window id="win1" title="Tab 1" tabBarHidden="true">
+               <TableView id="table" onClick="showItems"/>
+               <Label class="bottom bar" />
+            </Window>
+        </Tab>
+    </TabGroup>
+</Alloy>
