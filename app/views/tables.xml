@@ -1,10 +1,11 @@
 <Alloy>
-    <TabGroup id="tables">
-        <Tab icon="Ti.UI.iPhone.SystemIcon.SEARCH" title="Tab 1">
-            <Window id="win1" title="Tab 1" tabBarHidden="true">
-               <TableView id="table" onClick="showItems"/>
-               <Label class="bottom bar" />
-            </Window>
-        </Tab>
-    </TabGroup>
+    <Tab id="tables">
+        <Window >
+            <Label id="top_label" class="top bar"/>
+            <TableView id="table"  class="content_top" onClick="showItems"/>
+            <Label class="bottom bar" />
+            <Button id="home_button" class="small_button home_button" onClick="goHome"/>
+            <Button id="info_button" class="small_button info_button" onClick="goInfoScreen"/>
+        </Window>
+    </Tab>
 </Alloy>

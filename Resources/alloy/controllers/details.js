@@ -10,9 +10,10 @@ function Controller() {
         id: "details"
     });
     $.__views.win1 = Ti.UI.createWindow({
+        navBarHidden: "true",
+        tabBarHidden: "true",
         id: "win1",
-        title: "Tab 1",
-        tabBarHidden: "true"
+        title: "Tab 1"
     });
     $.__views.title = Ti.UI.createLabel({
         id: "title"

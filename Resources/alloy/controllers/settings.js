@@ -10,9 +10,10 @@ function Controller() {
         id: "settings"
     });
     $.__views.win1 = Ti.UI.createWindow({
+        navBarHidden: "true",
+        tabBarHidden: "true",
         id: "win1",
-        title: "Tab 1",
-        tabBarHidden: "true"
+        title: "Tab 1"
     });
     $.__views.label1 = Ti.UI.createLabel({
         text: "I am Window 1",
@@ -20,13 +21,13 @@ function Controller() {
         color: "#999"
     });
     $.__views.win1.add($.__views.label1);
-    $.__views.__alloyId14 = Ti.UI.createTab({
+    $.__views.__alloyId12 = Ti.UI.createTab({
         window: $.__views.win1,
         icon: Ti.UI.iPhone.SystemIcon.SEARCH,
         title: "Tab 1",
-        id: "__alloyId14"
+        id: "__alloyId12"
     });
-    $.__views.settings.addTab($.__views.__alloyId14);
+    $.__views.settings.addTab($.__views.__alloyId12);
     $.__views.settings && $.addTopLevelView($.__views.settings);
     exports.destroy = function() {};
     _.extend($, $.__views);

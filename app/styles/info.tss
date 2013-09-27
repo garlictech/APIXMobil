@@ -1,0 +1,13 @@
+"#content": {
+    text: L('detailed_help'),
+    color: '#dddddd'
+}
+
+"#scroll_view": {
+    contentHeight:'auto',
+    showVerticalScrollIndicator: "true"
+}
+
+"#top_label": {
+    text: L("help"),
+}

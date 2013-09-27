@@ -1,21 +1,26 @@
 var Config = require('config');
+var webServiceClient = require('webServiceClient');
 
-function callback(args) {
-    $.activity_logging_in.hide();
-    alert(args.result + "Message: " + args.msg);
-}
+Alloy.Globals.tabgroup = $.index;
+Ti.UI.iPhone.StatusBar = Ti.UI.LIGHT_CONTENT;
 
+// Handle clicking on the "Login" button.
 function doLogin(e) {
+    $.username.blur();
+    $.password.blur();
     $.activity_logging_in.show();
-    Config.login($.username.getValue(), $.password.getValue(), callback);
+    username = $.username.getValue();
+    password = $.password.getValue();
+    res = webServiceClient.login(username, password);
+    $.activity_logging_in.hide();
+
+    if (res) {
+        Config.setLoggedIn(username, password);
+        Alloy.Globals.tabgroup.setActiveTab(Alloy.Globals.TABLES_TAB);
+    } else {
+        alert(webServiceClient.errorMessage);
+    }
 }
 
+// When the login window appears, the activity monitor is hidden.
 $.activity_logging_in.hide();
-
-// function doSetLanguage() {
-//     console.debug("in set_language_button click event handler");
-//     // load the set_language controller and call the index method
-//     var setLanguageController = Alloy.createController('set_language');
-//     // pass in the tab to give navigation and back button
-//     setLanguageController.openMainWindow($.login);
-// }

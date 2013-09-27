@@ -1,11 +1,16 @@
 function Controller() {
-    function callback(args) {
-        $.activity_logging_in.hide();
-        alert(args.result + "Message: " + args.msg);
-    }
     function doLogin() {
+        $.username.blur();
+        $.password.blur();
         $.activity_logging_in.show();
-        Config.login($.username.getValue(), $.password.getValue(), callback);
+        username = $.username.getValue();
+        password = $.password.getValue();
+        res = webServiceClient.login(username, password);
+        $.activity_logging_in.hide();
+        if (res) {
+            Config.setLoggedIn(username, password);
+            Alloy.Globals.tabgroup.setActiveTab(Alloy.Globals.TABLES_TAB);
+        } else alert(webServiceClient.errorMessage);
     }
     require("alloy/controllers/BaseController").apply(this, Array.prototype.slice.call(arguments));
     this.__controllerPath = "login";
@@ -15,17 +20,17 @@ function Controller() {
     var $ = this;
     var exports = {};
     var __defers = {};
-    $.__views.__alloyId3 = Ti.UI.createWindow({
-        tabBarHidden: "true",
+    $.__views.__alloyId6 = Ti.UI.createWindow({
         navBarHidden: "true",
-        id: "__alloyId3"
+        tabBarHidden: "true",
+        id: "__alloyId6"
     });
     $.__views.header_image = Ti.UI.createImageView({
         image: "images/start_screen_logo.png",
-        top: 0,
+        top: "20",
         id: "header_image"
     });
-    $.__views.__alloyId3.add($.__views.header_image);
+    $.__views.__alloyId6.add($.__views.header_image);
     $.__views.username = Ti.UI.createTextField({
         paddingLeft: 5,
         backgroundColor: "#828282",
@@ -38,7 +43,7 @@ function Controller() {
         top: "150",
         id: "username"
     });
-    $.__views.__alloyId3.add($.__views.username);
+    $.__views.__alloyId6.add($.__views.username);
     $.__views.password = Ti.UI.createTextField({
         paddingLeft: 5,
         backgroundColor: "#828282",
@@ -52,7 +57,7 @@ function Controller() {
         passwordMask: true,
         id: "password"
     });
-    $.__views.__alloyId3.add($.__views.password);
+    $.__views.__alloyId6.add($.__views.password);
     $.__views.login_button = Ti.UI.createButton({
         backgroundColor: "#828282",
         borderColor: "#e9bf3c",
@@ -71,18 +76,18 @@ function Controller() {
         title: L("login"),
         id: "login_button"
     });
-    $.__views.__alloyId3.add($.__views.login_button);
+    $.__views.__alloyId6.add($.__views.login_button);
     doLogin ? $.__views.login_button.addEventListener("click", doLogin) : __defers["$.__views.login_button!click!doLogin"] = true;
     $.__views.activity_logging_in = Ti.UI.createActivityIndicator({
         width: "auto",
         height: 30,
         top: 330,
-        message: L("logging_in"),
+        message: L("in_progress"),
         color: "white",
         style: "Ti.UI.ActivityIndicatorStyle.PLAIN",
         id: "activity_logging_in"
     });
-    $.__views.__alloyId3.add($.__views.activity_logging_in);
+    $.__views.__alloyId6.add($.__views.activity_logging_in);
     $.__views.bottom = Ti.UI.createLabel({
         backgroundColor: "#e9bf3c",
         height: 40,
@@ -96,9 +101,9 @@ function Controller() {
         text: "APIXMobil",
         id: "bottom"
     });
-    $.__views.__alloyId3.add($.__views.bottom);
+    $.__views.__alloyId6.add($.__views.bottom);
     $.__views.login = Ti.UI.createTab({
-        window: $.__views.__alloyId3,
+        window: $.__views.__alloyId6,
         id: "login",
         title: "Login"
     });
@@ -106,6 +111,9 @@ function Controller() {
     exports.destroy = function() {};
     _.extend($, $.__views);
     var Config = require("config");
+    var webServiceClient = require("webServiceClient");
+    Alloy.Globals.tabgroup = $.index;
+    Ti.UI.iPhone.StatusBar = Ti.UI.LIGHT_CONTENT;
     $.activity_logging_in.hide();
     __defers["$.__views.login_button!click!doLogin"] && $.__views.login_button.addEventListener("click", doLogin);
     _.extend($, exports);

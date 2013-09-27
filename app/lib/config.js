@@ -1,38 +1,18 @@
 // The persistent configuration.
-function credentialFactory() {
-    function dummyCredentials() {
-        this.login = function(username, password) {
-            return username == "u" && password == "p";
-        };
-    }
-
-    dummyCredentials();
-    return this;
-}
+var webServiceClient = require('webServiceClient');
 
 exports.isLoggedIn = function () {
-    return Ti.App.Properties.getString('loggedIn');
+    return Ti.App.Properties.getString('loggedIn') == 1;
 };
 
-exports.login = function(username, password, callback) {
-    credentials = credentialFactory();
-
-    if (credentials.login(username, password)) {
-        Ti.App.Properties.setString('loggedIn', 1);
-        Ti.App.Properties.setString('username', username);
-        Ti.App.Properties.setString('password', password);
-
-        setTimeout(function() {
-            callback({ result: 'ok' });
-        }, 3000);
-    } else {
-        setTimeout(function() {
-            callback({ result: 'error', msg: 'Login error' });
-        }, 3000);
-    }
+exports.setLoggedIn = function(username, password) {
+    Ti.App.Properties.setString('loggedIn', 1);
+    Ti.App.Properties.setString('username', username);
+    Ti.App.Properties.setString('password', password);
 };
 
-exports.logout = function (callback) {
+exports.setLoggedOut = function () {
     Ti.App.Properties.removeProperty('loggedIn');
-    callback({ result: 'ok' });
+    Ti.App.Properties.removeProperty('username');
+    Ti.App.Properties.removeProperty('password');
 };

@@ -1,6 +1,6 @@
 "#header_image": {
     image: "images/start_screen_logo.png",
-    top: 0
+    top: '20'
 }
 
 "TextField": {
@@ -34,17 +34,11 @@
     title: L('login')
 }
 
-"Window": {
-    tabBarHidden: "true",
-    navBarHidden: "true"
-}
-
 "#activity_logging_in": {
     width: "auto",
     height: 30,
     top: 330,
-    message: L('logging_in'),
+    message: L('in_progress'),
     color: 'white',
     style: 'Ti.UI.ActivityIndicatorStyle.PLAIN'
 }
-

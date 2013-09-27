@@ -15,6 +15,14 @@ function showItems(e) {
     Alloy.Globals.tabGroup.activeTab.open(detail);
 }
 
+function goHome(e) {
+    alert ("GoHome");
+}
+
+function goInfoScreen(e) {
+    Alloy.Globals.tabgroup.setActiveTab(Alloy.Globals.INFO_TAB);
+}
+
 var rowData=[];
 
 for (var i = 0; i < data.length; ++i) {
@@ -29,4 +37,3 @@ for (var i = 0; i < data.length; ++i) {
 }
 
 $.table.data=rowData;
-$.tables.open();

@@ -1,0 +1,11 @@
+<Alloy>
+    <Tab id="info">
+        <Window>
+            <Label id="top_label" class="top bar"/>
+            <ScrollView id="scrollview"  class="content_top">
+                <Label id="content" />
+            </ScrollView>
+            <Button id="back_button" class="back_button" onClick="goBack" />
+        </Window>
+    </Tab>
+</Alloy>
