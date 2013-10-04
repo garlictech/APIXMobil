@@ -5,7 +5,7 @@
             <ScrollView id="scrollview"  class="content_top">
                 <Label id="content" />
             </ScrollView>
-            <Button id="back_button" class="back_button" onClick="goBack" />
+            <Button id="back_button" class="back_button" onClick="eventHandlers.goToTables" />
         </Window>
     </Tab>
 </Alloy>

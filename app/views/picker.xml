@@ -1,0 +1,7 @@
+<Alloy>
+    <Window id="picker_window">
+        <Picker id="picker" />
+        <Label id="cancel" class="left" onClick="cancelClicked"/>
+        <Label id="done" class="right" onClick="doneClicked" />
+    </Window>
+</Alloy>

@@ -1,6 +1,7 @@
 if (Ti.App.deployType == 'test') {
     require('specs/test_config');
     require('specs/test_webServiceClient');
+    require('specs/test_locale');
     require('behave').run('this');
 }
 
@@ -14,12 +15,8 @@ Alloy.Globals.tabgroup = $.index;
 Alloy.Globals.LOGIN_TAB = 0;
 Alloy.Globals.TABLES_TAB = 1;
 Alloy.Globals.INFO_TAB = 2;
+Alloy.Globals.SETTINGS_TAB = 3;
 
-$.index.setActiveTab(Alloy.Globals.LOGIN_TAB);
+var activeTab = Config.isLoggedIn() ? Alloy.Globals.TABLES_TAB : Alloy.Globals.LOGIN_TAB;
+$.index.setActiveTab(activeTab);
 $.index.open();
-//if (! Config.isLoggedIn()) {
-//     var loginController = Alloy.createController('login');
-//     //var loginController = Alloy.createController('tables');
-// } else {
-//     $.index.open();
-// }

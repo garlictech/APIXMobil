@@ -1,0 +1,4 @@
+"Button": {
+    backgroundImage: "images/icons/info.png",
+    right: 5
+}

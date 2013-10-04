@@ -1,0 +1,17 @@
+<Alloy>
+    <Window win="locations_window">
+        <Label id="top_label" class="top bar"/>
+        <Button id="back_button" class="back_button" onClick="goBack" />
+        <TableView id="table" class="content_top table" dataCollection="location">
+            <Require id="locations_row" src="icon_row"
+                childWindow="locations_window" dataId=""
+                model="{alloy_id}" icon_id="{icon_id}"
+                text="{name}"
+            />
+        </TableView>
+        <Label class="bottom bar" />
+        <Require src="info_button"/>
+        <Require src="settings_button"/>
+        <Require src="home_button"/>
+    </Window>
+</Alloy>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Translation structure: tag name is a text id, used by the myL function.
+Text is the translation itself. -->
+<translations>
+    <login>Login</login>
+    <server_name>Server name</server_name>
+    <locations>Usage locations</locations>
+    <locations_short>Locations</locations_short>
+    <groups>Groups</groups>
+    <reset_factory>Reset factory settings</reset_factory>
+    <logout>Logout</logout>
+    <username>username</username>
+    <password>password</password>
+    <in_progress>In progress...</in_progress>
+    <ok>OK</ok>
+    <server_error>Server error.</server_error>
+    <permission_denied>Login unsuccessful.</permission_denied>
+    <help>Help</help>
+    <back>Back</back>
+    <data>Data</data>
+    <settings>Settings</settings>
+    <query_interval_start>Start of query</query_interval_start>
+    <query_interval_end>End of query</query_interval_end>
+    <beginning>Beginning</beginning>
+    <end>End</end>
+    <done>Kész</done>
+    <detailed_help>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lobortis arcu magna, a scelerisque ante tristique ac. Fusce sed mollis mauris, id pellentesque libero. Proin non porttitor nunc. Nam tincidunt tincidunt tincidunt. Nullam aliquam erat vel adipiscing ornare. Etiam rhoncus in elit ac imperdiet. Nulla semper varius felis, ac condimentum arcu adipiscing ut. Nunc orci augue, aliquet ut diam ac, tristique consequat purus. Suspendisse potenti.
+
+Integer ultrices quam vel nisi tempus ornare. Quisque sagittis risus eget arcu fringilla, in sollicitudin purus pulvinar. Quisque et quam et augue volutpat rhoncus sit amet ac neque. Proin at pharetra ante, vel tempus erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam sed lacus enim. Phasellus in neque ante. Duis turpis dui, tempor eget euismod nec, mollis quis eros. Integer scelerisque mauris vel nisi laoreet ultrices. Duis a euismod lectus.
+
+Morbi porta euismod magna. Curabitur ultrices, dui quis malesuada facilisis, nunc ante bibendum ipsum, ut dignissim sem lacus vitae neque. Duis quis vestibulum ipsum. Fusce ut adipiscing nisl. Etiam quis sagittis sapien. Mauris aliquet velit in consectetur hendrerit. Donec cursus, purus ac lacinia fringilla, erat felis facilisis eros, a blandit est eros ut sapien. Proin leo libero, porta ac justo consequat, convallis facilisis nulla. Phasellus vulputate ante at libero vehicula, ac interdum urna consequat. Praesent ornare tincidunt diam. Nam congue, sem eu iaculis tempor, nisl est iaculis odio, non scelerisque libero erat sed sem. Aliquam tempus porta velit, in accumsan metus scelerisque nec. Aenean aliquet rhoncus eros blandit ornare.
+
+Vivamus est diam, tempus eu egestas a, rutrum id augue. Nam iaculis ullamcorper ante sed pharetra. Nulla nec mi semper, aliquam diam dapibus, elementum ipsum. Suspendisse potenti. Fusce auctor leo et arcu auctor, facilisis facilisis erat gravida. Maecenas feugiat lorem vitae tellus facilisis fringilla. In non mauris lobortis, sollicitudin turpis quis, ullamcorper dui.
+
+Nulla pulvinar rhoncus arcu ac mollis. Donec in lacinia sem, et eleifend ante. Proin nec nisl scelerisque, consequat tortor sed, malesuada est. Cras tincidunt leo non purus auctor, id aliquet enim rhoncus. Suspendisse rhoncus consequat massa, et euismod urna dignissim quis. Aenean ac condimentum nulla. Praesent faucibus metus vel arcu sodales luctus. Nunc pharetra magna vel lacinia egestas. Curabitur vitae viverra arcu, id egestas dolor. Fusce dui diam, volutpat ut venenatis vel, malesuada luctus ipsum.
+    </detailed_help>
+</translations>

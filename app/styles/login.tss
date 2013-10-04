@@ -4,13 +4,7 @@
 }
 
 "TextField": {
-    backgroundColor: "#828282",
-    borderColor: "#e9bf3c",
-    borderWidth: 1,
-    width: 200,
-    height: 40,
-    autocorrect: false,
-    paddingLeft: 5
+    width: 200
 }
 
 "#username": {

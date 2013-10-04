@@ -1,0 +1,31 @@
+"Window": {
+    // inverse of the height allows us to have the picker slide in from
+    // the bottom.
+    backgroundColor: "black"
+}
+
+"TextField": {
+    top:80,
+    left: 5,
+    right: 5
+}
+
+"Button": {
+    top: 23,
+    borderColor: "black"
+}
+
+"#cancel_button": {
+    left: 10,
+    backgroundImage: "images/icons/cancel.png"
+}
+
+"#done_button": {
+    right: 10,
+    backgroundImage: "images/icons/check.png"
+}
+
+"#top_label": {
+    text: L("server_name"),
+}
+

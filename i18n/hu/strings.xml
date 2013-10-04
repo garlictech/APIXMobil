@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resources>
     <string name="login">Belépés</string>
+    <string name="locations">Felhasználási helyszínek</string>
+    <string name="locations_short">Helyszínek</string>
+    <string name="groups">Csoportok</string>
+    <string name="server_name">Szerver név</string>
+    <string name="reset_factory">Gyári beállítások visszaállítása</string>
+    <string name="logout">Kijelentkezés</string>
     <string name="username">felhasználó</string>
     <string name="password">jelszó</string>
     <string name="in progress">Folyamatban...</string>
@@ -8,8 +14,14 @@
     <string name="server_error">Szerver hiba.</string>
     <string name="permission_denied">Sikertelen belépés.</string>
     <string name="help">Segítség</string>
-    <string name="back"> Vissza </string>
+    <string name="back">Vissza</string>
     <string name="data">Adatok</string>
+    <string name="settings">Beállítások</string>
+    <string name="query_interval_start">Lekérések kezdete</string>
+    <string name="query_interval_end">Lekérések vége</string>
+    <string name="beginning">Kezdő</string>
+    <string name="end">Végső</string>
+    <string name="done">Kész</string>
     <string name="detailed_help">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lobortis arcu magna, a scelerisque ante tristique ac. Fusce sed mollis mauris, id pellentesque libero. Proin non porttitor nunc. Nam tincidunt tincidunt tincidunt. Nullam aliquam erat vel adipiscing ornare. Etiam rhoncus in elit ac imperdiet. Nulla semper varius felis, ac condimentum arcu adipiscing ut. Nunc orci augue, aliquet ut diam ac, tristique consequat purus. Suspendisse potenti.
 

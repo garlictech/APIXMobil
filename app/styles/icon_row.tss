@@ -1,0 +1,16 @@
+"#icon": {
+    left: 5,
+    top: 2,
+    height: 40,
+    width: 40
+}
+
+"#row_name": {
+    left: 50,
+    color: "#e9bf3c"
+}
+
+"TableViewRow": {
+    hasChild: true,
+    height: 43
+}

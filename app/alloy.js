@@ -9,3 +9,48 @@
 // object. For example:
 //
 // Alloy.Globals.someGlobalFunction = function(){};
+
+var Config = require('config');
+
+// Initialize models and collections
+Alloy.Collections.location = Alloy.createCollection("location");
+
+// Language
+// Ti.App.Properties.setString("language", "EN");
+// Config.changeLanguage();
+// alert(Config.getLanguageText("login"));
+
+// --------- TEST
+var locations = Alloy.Collections.location;
+
+function initDummyData() {
+    function addModel(data) {
+        var location = Alloy.createModel("location", data);
+        locations.add(location);
+        // Save our model to the SQL database
+        location.save(location);
+    }
+
+    var data = [
+        {
+            "name": "Budapest",
+            "icon_id": 1
+        },
+        {
+            "name": "Bánkút",
+            "icon_id": 2
+        }
+    ];
+
+    locations.fetch();
+    while(locations.length) {
+        locations.at(0).destroy();
+    }
+    for (var i = 0; i < data.length; ++i) {
+        addModel(data[i]);
+    }
+    // Finally, fetch the collection items
+    locations.fetch();
+}
+
+initDummyData();

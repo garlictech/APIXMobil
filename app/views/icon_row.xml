@@ -1,0 +1,6 @@
+<Alloy>
+    <TableViewRow id="row" onClick="openChildWindow">
+        <ImageView id="icon"/>
+        <Label id="row_name"/>
+    </TableViewRow>
+</Alloy>

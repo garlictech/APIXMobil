@@ -1,0 +1,33 @@
+"Window": {
+    height: 220,
+    // inverse of the height allows us to have the picker slide in from
+    // the bottom.
+    bottom: -220,
+    backgroundColor: "white"
+}
+
+"Label": {
+    top: "0",
+    backgroundColor: "white",
+    color: "black"
+}
+
+"#cancel": {
+    text: L('Cancel'),
+}
+
+"#done": {
+    text: L('OK'),
+}
+
+"#picker": {
+    selectionIndicator: "true",
+    useSpinner: "true",
+    type: "Ti.UI.PICKER_TYPE_DATE",
+    top: "20",
+    height: "200"
+}
+
+"ToolBar": {
+    top: 0
+}

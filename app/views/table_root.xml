@@ -1,0 +1,13 @@
+<Alloy>
+    <Window win="table_root">
+        <Label id="top_label" class="top bar"/>
+        <TableView id="table" class="content_top table">
+            <Require id="locations_row" src="icon_row" childWindow="locations_window"/>
+            <Require id="groups_row" src="icon_row" />
+        </TableView>
+        <Label class="bottom bar" />
+        <Require src="info_button"/>
+        <Require src="settings_button"/>
+        <Require src="home_button"/>
+    </Window>
+</Alloy>

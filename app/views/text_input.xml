@@ -1,0 +1,8 @@
+<Alloy>
+    <Window id="text_input">
+        <Label id="top_label" class="top bar"/>
+        <TextField id="input" />
+        <Button id="cancel_button" onClick="cancelClicked"/>
+        <Button id="done_button" onClick="doneClicked" />
+    </Window>
+</Alloy>

@@ -1,0 +1,20 @@
+"#top_label": {
+    text: L("data"),
+}
+
+"#table": {
+    top: 100,
+    left: 3,
+    right: 3,
+    height: "90"
+}
+
+"#locations_row": {
+    text: L("locations"),
+    image: "images/locations.png"
+}
+
+"#groups_row": {
+    text: L("groups"),
+    image: "images/locations.png"
+}

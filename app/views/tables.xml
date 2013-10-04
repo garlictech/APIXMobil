@@ -1,11 +1,5 @@
 <Alloy>
     <Tab id="tables">
-        <Window >
-            <Label id="top_label" class="top bar"/>
-            <TableView id="table"  class="content_top" onClick="showItems"/>
-            <Label class="bottom bar" />
-            <Button id="home_button" class="small_button home_button" onClick="goHome"/>
-            <Button id="info_button" class="small_button info_button" onClick="goInfoScreen"/>
-        </Window>
+        <Require src="table_root" />
     </Tab>
 </Alloy>

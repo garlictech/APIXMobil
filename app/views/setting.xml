@@ -1,0 +1,8 @@
+<Alloy>
+    <View id="setting" onClick="onClick">
+        <Label id="title_background"/>
+        <Label id="title_label"/>
+        <Label id="setting_value"/>
+        <Button id="change_button"/>
+    </View>
+</Alloy>

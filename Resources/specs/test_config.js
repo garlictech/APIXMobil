@@ -2,6 +2,8 @@ require("behave").andSetup(this);
 
 var Config = require("config");
 
+var Locale = require("locale");
+
 describe("Test config properties", function() {
     it("*** Tests login/logout functionality", function() {
         username = "user";

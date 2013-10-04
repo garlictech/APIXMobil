@@ -1,7 +1,7 @@
 "Button": {
     backgroundColor: "#828282",
     borderColor: "#e9bf3c",
-    color: "#e9bf3c",
+    color: "black",
     borderWidth: 1,
     style: Ti.UI.iPhone.DONE,
     borderRadius: 5,
@@ -11,20 +11,21 @@
 
 "TextField": {
     paddingLeft: 5,
-}
-
-"TableView": {
+    backgroundColor: "#828282",
     borderColor: "#e9bf3c",
-    separatorColor: "#e9bf3c"
+    borderWidth: 1,
+    height: 40,
+    autocorrect: false
 }
 
 "Window" : {
     navBarHidden: "true",
-    tabBarHidden: "true",
+    tabBarHidden: "true"
 }
 
 ".bar": {
     backgroundColor: "#e9bf3c",
+    borderRadius: 5,
     height: 40,
     width: "100%",
     textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
@@ -38,6 +39,18 @@
 
 ".top": {
    top: "20"
+}
+
+".absolute_top": {
+   top: "0"
+}
+
+".left": {
+    left: 5
+}
+
+".right": {
+    right: 5
 }
 
 ".content_top": {
@@ -59,15 +72,17 @@
     left: 5
 }
 
-".info_button": {
-    backgroundImage: "images/icons/info.png",
-    right: 5
-}
-
 ".back_button": {
     top: 25,
     left: 5,
     height: 30,
     width: 60,
     title: L('back')
+}
+
+".table": {
+    backgroundColor: "black",
+    borderColor: "#e9bf3c",
+    borderRadius: 5,
+    separatorColor: "black"
 }

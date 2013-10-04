@@ -1,8 +1,4 @@
 function Controller() {
-    function goBack() {
-        Ti.API.trace("in goBack ");
-        Alloy.Globals.tabgroup.setActiveTab(Alloy.Globals.TABLES_TAB);
-    }
     require("alloy/controllers/BaseController").apply(this, Array.prototype.slice.call(arguments));
     this.__controllerPath = "info";
     arguments[0] ? arguments[0]["__parentSymbol"] : null;
@@ -11,13 +7,14 @@ function Controller() {
     var $ = this;
     var exports = {};
     var __defers = {};
-    $.__views.__alloyId5 = Ti.UI.createWindow({
+    $.__views.__alloyId4 = Ti.UI.createWindow({
         navBarHidden: "true",
         tabBarHidden: "true",
-        id: "__alloyId5"
+        id: "__alloyId4"
     });
     $.__views.top_label = Ti.UI.createLabel({
         backgroundColor: "#e9bf3c",
+        borderRadius: 5,
         height: 40,
         width: "100%",
         textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
@@ -29,12 +26,12 @@ function Controller() {
         text: L("help"),
         id: "top_label"
     });
-    $.__views.__alloyId5.add($.__views.top_label);
+    $.__views.__alloyId4.add($.__views.top_label);
     $.__views.scrollview = Ti.UI.createScrollView({
         top: "60",
         id: "scrollview"
     });
-    $.__views.__alloyId5.add($.__views.scrollview);
+    $.__views.__alloyId4.add($.__views.scrollview);
     $.__views.content = Ti.UI.createLabel({
         text: L("detailed_help"),
         color: "#dddddd",
@@ -44,7 +41,7 @@ function Controller() {
     $.__views.back_button = Ti.UI.createButton({
         backgroundColor: "#828282",
         borderColor: "#e9bf3c",
-        color: "#e9bf3c",
+        color: "black",
         borderWidth: 1,
         style: Ti.UI.iPhone.DONE,
         borderRadius: 5,
@@ -60,16 +57,21 @@ function Controller() {
         title: L("back"),
         id: "back_button"
     });
-    $.__views.__alloyId5.add($.__views.back_button);
-    goBack ? $.__views.back_button.addEventListener("click", goBack) : __defers["$.__views.back_button!click!goBack"] = true;
+    $.__views.__alloyId4.add($.__views.back_button);
+    try {
+        $.__views.back_button.addEventListener("click", eventHandlers.goToTables);
+    } catch (e) {
+        __defers["$.__views.back_button!click!eventHandlers.goToTables"] = true;
+    }
     $.__views.info = Ti.UI.createTab({
-        window: $.__views.__alloyId5,
+        window: $.__views.__alloyId4,
         id: "info"
     });
     $.__views.info && $.addTopLevelView($.__views.info);
     exports.destroy = function() {};
     _.extend($, $.__views);
-    __defers["$.__views.back_button!click!goBack"] && $.__views.back_button.addEventListener("click", goBack);
+    var eventHandlers = require("eventHandlers");
+    __defers["$.__views.back_button!click!eventHandlers.goToTables"] && $.__views.back_button.addEventListener("click", eventHandlers.goToTables);
     _.extend($, exports);
 }
 
