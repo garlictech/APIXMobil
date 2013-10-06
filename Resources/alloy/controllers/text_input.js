@@ -19,9 +19,11 @@ function Controller() {
     var exports = {};
     var __defers = {};
     $.__views.text_input = Ti.UI.createWindow({
+        width: "100%",
+        height: "100%",
+        backgroundColor: "black",
         navBarHidden: "true",
         tabBarHidden: "true",
-        backgroundColor: "black",
         id: "text_input"
     });
     $.__views.text_input && $.addTopLevelView($.__views.text_input);

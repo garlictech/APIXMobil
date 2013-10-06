@@ -7,7 +7,8 @@ exports.goToSettings = function() {
 };
 
 exports.goToInfo = function() {
-    Alloy.Globals.tabgroup.setActiveTab(Alloy.Globals.INFO_TAB);
+    var controller = Alloy.createController("info").getView();
+    controller.open();
 };
 
 exports.goToHome = function() {

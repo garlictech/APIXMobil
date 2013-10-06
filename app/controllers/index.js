@@ -15,8 +15,7 @@ var Config = require('config');
 Alloy.Globals.tabgroup = $.index;
 Alloy.Globals.LOGIN_TAB = 0;
 Alloy.Globals.TABLES_TAB = 1;
-Alloy.Globals.INFO_TAB = 2;
-Alloy.Globals.SETTINGS_TAB = 3;
+Alloy.Globals.SETTINGS_TAB = 2;
 
 var activeTab = Config.isLoggedIn() ? Alloy.Globals.TABLES_TAB : Alloy.Globals.LOGIN_TAB;
 $.index.setActiveTab(activeTab);

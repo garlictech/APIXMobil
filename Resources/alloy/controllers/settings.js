@@ -17,10 +17,13 @@ function Controller() {
     var $ = this;
     var exports = {};
     var __defers = {};
-    $.__views.__alloyId17 = Ti.UI.createWindow({
+    $.__views.__alloyId15 = Ti.UI.createWindow({
+        width: "100%",
+        height: "100%",
+        backgroundColor: "black",
         navBarHidden: "true",
         tabBarHidden: "true",
-        id: "__alloyId17"
+        id: "__alloyId15"
     });
     $.__views.top_label = Ti.UI.createLabel({
         backgroundColor: "#e9bf3c",
@@ -36,31 +39,31 @@ function Controller() {
         text_id: "settings",
         id: "top_label"
     });
-    $.__views.__alloyId17.add($.__views.top_label);
+    $.__views.__alloyId15.add($.__views.top_label);
     $.__views.query_start_date = Alloy.createController("setting", {
         title_id: "query_interval_start",
         top: 120,
         propertyName: "QueryStartDate",
         id: "query_start_date",
-        __parentSymbol: $.__views.__alloyId17
+        __parentSymbol: $.__views.__alloyId15
     });
-    $.__views.query_start_date.setParent($.__views.__alloyId17);
+    $.__views.query_start_date.setParent($.__views.__alloyId15);
     $.__views.query_end_date = Alloy.createController("setting", {
         top: 180,
         title_id: "query_interval_end",
         propertyName: "QueryEndDate",
         id: "query_end_date",
-        __parentSymbol: $.__views.__alloyId17
+        __parentSymbol: $.__views.__alloyId15
     });
-    $.__views.query_end_date.setParent($.__views.__alloyId17);
+    $.__views.query_end_date.setParent($.__views.__alloyId15);
     $.__views.language = Alloy.createController("setting", {
         top: 240,
         title_id: "language",
         propertyName: "Locale",
         id: "language",
-        __parentSymbol: $.__views.__alloyId17
+        __parentSymbol: $.__views.__alloyId15
     });
-    $.__views.language.setParent($.__views.__alloyId17);
+    $.__views.language.setParent($.__views.__alloyId15);
     $.__views.back_button = Ti.UI.createButton({
         backgroundColor: "#828282",
         borderColor: "#e9bf3c",
@@ -81,7 +84,7 @@ function Controller() {
         title: L("back"),
         id: "back_button"
     });
-    $.__views.__alloyId17.add($.__views.back_button);
+    $.__views.__alloyId15.add($.__views.back_button);
     try {
         $.__views.back_button.addEventListener("click", eventHandlers.goToTables);
     } catch (e) {
@@ -105,7 +108,7 @@ function Controller() {
         title_id: "advanced_settings",
         id: "advanced_settings_button"
     });
-    $.__views.__alloyId17.add($.__views.advanced_settings_button);
+    $.__views.__alloyId15.add($.__views.advanced_settings_button);
     doAdvancedSettings ? $.__views.advanced_settings_button.addEventListener("click", doAdvancedSettings) : __defers["$.__views.advanced_settings_button!click!doAdvancedSettings"] = true;
     $.__views.logout_button = Ti.UI.createButton({
         backgroundColor: "#828282",
@@ -125,14 +128,14 @@ function Controller() {
         title_id: "logout",
         id: "logout_button"
     });
-    $.__views.__alloyId17.add($.__views.logout_button);
+    $.__views.__alloyId15.add($.__views.logout_button);
     try {
         $.__views.logout_button.addEventListener("click", common.doLogout);
     } catch (e) {
         __defers["$.__views.logout_button!click!common.doLogout"] = true;
     }
     $.__views.settings = Ti.UI.createTab({
-        window: $.__views.__alloyId17,
+        window: $.__views.__alloyId15,
         id: "settings"
     });
     $.__views.settings && $.addTopLevelView($.__views.settings);

@@ -7,11 +7,11 @@ function Controller() {
     var $ = this;
     var exports = {};
     $.__views.cover_window = Ti.UI.createWindow({
-        navBarHidden: "true",
-        tabBarHidden: "true",
         width: "100%",
         height: "100%",
         backgroundColor: "transparent",
+        navBarHidden: "true",
+        tabBarHidden: "true",
         id: "cover_window"
     });
     $.__views.cover_window && $.addTopLevelView($.__views.cover_window);

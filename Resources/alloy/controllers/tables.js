@@ -6,11 +6,11 @@ function Controller() {
     arguments[0] ? arguments[0]["__itemTemplate"] : null;
     var $ = this;
     var exports = {};
-    $.__views.__alloyId23 = Alloy.createController("table_root", {
-        id: "__alloyId23"
+    $.__views.__alloyId21 = Alloy.createController("table_root", {
+        id: "__alloyId21"
     });
     $.__views.tables = Ti.UI.createTab({
-        window: $.__views.__alloyId23.getViewEx({
+        window: $.__views.__alloyId21.getViewEx({
             recurse: true
         }),
         id: "tables"

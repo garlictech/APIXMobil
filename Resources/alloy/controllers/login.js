@@ -21,6 +21,9 @@ function Controller() {
     var exports = {};
     var __defers = {};
     $.__views.login_window = Ti.UI.createWindow({
+        width: "100%",
+        height: "100%",
+        backgroundColor: "black",
         navBarHidden: "true",
         tabBarHidden: "true",
         id: "login_window"

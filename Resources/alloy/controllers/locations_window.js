@@ -1,21 +1,21 @@
 function Controller() {
-    function __alloyId8() {
-        __alloyId8.opts || {};
-        var models = __alloyId7.models;
+    function __alloyId6() {
+        __alloyId6.opts || {};
+        var models = __alloyId5.models;
         var len = models.length;
         var rows = [];
         for (var i = 0; len > i; i++) {
-            var __alloyId5 = models[i];
-            __alloyId5.__transform = {};
-            var __alloyId6 = Alloy.createController("icon_row", {
+            var __alloyId3 = models[i];
+            __alloyId3.__transform = {};
+            var __alloyId4 = Alloy.createController("icon_row", {
                 childWindow: "locations_window",
                 dataId: "",
-                model: "undefined" != typeof __alloyId5.__transform["alloy_id"] ? __alloyId5.__transform["alloy_id"] : __alloyId5.get("alloy_id"),
-                icon_id: "undefined" != typeof __alloyId5.__transform["icon_id"] ? __alloyId5.__transform["icon_id"] : __alloyId5.get("icon_id"),
-                text: "undefined" != typeof __alloyId5.__transform["name"] ? __alloyId5.__transform["name"] : __alloyId5.get("name"),
-                $model: __alloyId5
+                model: "undefined" != typeof __alloyId3.__transform["alloy_id"] ? __alloyId3.__transform["alloy_id"] : __alloyId3.get("alloy_id"),
+                icon_id: "undefined" != typeof __alloyId3.__transform["icon_id"] ? __alloyId3.__transform["icon_id"] : __alloyId3.get("icon_id"),
+                text: "undefined" != typeof __alloyId3.__transform["name"] ? __alloyId3.__transform["name"] : __alloyId3.get("name"),
+                $model: __alloyId3
             });
-            rows.push(__alloyId6.getViewEx({
+            rows.push(__alloyId4.getViewEx({
                 recurse: true
             }));
         }
@@ -33,6 +33,9 @@ function Controller() {
     var exports = {};
     var __defers = {};
     $.__views.locations_window = Ti.UI.createWindow({
+        width: "100%",
+        height: "100%",
+        backgroundColor: "black",
         navBarHidden: "true",
         tabBarHidden: "true",
         win: "locations_window",
@@ -84,9 +87,9 @@ function Controller() {
         id: "table"
     });
     $.__views.locations_window.add($.__views.table);
-    var __alloyId7 = Alloy.Collections["location"] || location;
-    __alloyId7.on("fetch destroy change add remove reset", __alloyId8);
-    $.__views.__alloyId9 = Ti.UI.createLabel({
+    var __alloyId5 = Alloy.Collections["location"] || location;
+    __alloyId5.on("fetch destroy change add remove reset", __alloyId6);
+    $.__views.__alloyId7 = Ti.UI.createLabel({
         backgroundColor: "#e9bf3c",
         borderRadius: 5,
         height: 40,
@@ -97,26 +100,26 @@ function Controller() {
         },
         color: "#000",
         bottom: "0",
-        id: "__alloyId9"
+        id: "__alloyId7"
     });
-    $.__views.locations_window.add($.__views.__alloyId9);
-    $.__views.__alloyId10 = Alloy.createController("info_button", {
+    $.__views.locations_window.add($.__views.__alloyId7);
+    $.__views.__alloyId8 = Alloy.createController("info_button", {
+        id: "__alloyId8",
+        __parentSymbol: $.__views.locations_window
+    });
+    $.__views.__alloyId8.setParent($.__views.locations_window);
+    $.__views.__alloyId9 = Alloy.createController("settings_button", {
+        id: "__alloyId9",
+        __parentSymbol: $.__views.locations_window
+    });
+    $.__views.__alloyId9.setParent($.__views.locations_window);
+    $.__views.__alloyId10 = Alloy.createController("home_button", {
         id: "__alloyId10",
         __parentSymbol: $.__views.locations_window
     });
     $.__views.__alloyId10.setParent($.__views.locations_window);
-    $.__views.__alloyId11 = Alloy.createController("settings_button", {
-        id: "__alloyId11",
-        __parentSymbol: $.__views.locations_window
-    });
-    $.__views.__alloyId11.setParent($.__views.locations_window);
-    $.__views.__alloyId12 = Alloy.createController("home_button", {
-        id: "__alloyId12",
-        __parentSymbol: $.__views.locations_window
-    });
-    $.__views.__alloyId12.setParent($.__views.locations_window);
     exports.destroy = function() {
-        __alloyId7.off("fetch destroy change add remove reset", __alloyId8);
+        __alloyId5.off("fetch destroy change add remove reset", __alloyId6);
     };
     _.extend($, $.__views);
     require("utils").registerTextUpdates($.top_label);

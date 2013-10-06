@@ -3,11 +3,16 @@ function Controller() {
         Ti.App.removeEventListener("SettingsChanged", listener);
         $.window.close();
     }
+    function doReset() {
+        Config.resetFactorySettings();
+        common.doLogout();
+        close();
+    }
     function goBack() {
         close();
     }
     require("alloy/controllers/BaseController").apply(this, Array.prototype.slice.call(arguments));
-    this.__controllerPath = "info";
+    this.__controllerPath = "advanced_settings";
     arguments[0] ? arguments[0]["__parentSymbol"] : null;
     arguments[0] ? arguments[0]["$model"] : null;
     arguments[0] ? arguments[0]["__itemTemplate"] : null;
@@ -34,21 +39,18 @@ function Controller() {
         },
         color: "#000",
         top: "20",
-        label_id: "help",
+        text_id: "settings",
         id: "top_label"
     });
     $.__views.window.add($.__views.top_label);
-    $.__views.scrollview = Ti.UI.createScrollView({
-        top: "60",
-        id: "scrollview"
+    $.__views.server_name = Alloy.createController("setting", {
+        top: 120,
+        title_id: "server_name",
+        propertyName: "ServerName",
+        id: "server_name",
+        __parentSymbol: $.__views.window
     });
-    $.__views.window.add($.__views.scrollview);
-    $.__views.content = Ti.UI.createLabel({
-        text_id: "detailed_help",
-        color: "#dddddd",
-        id: "content"
-    });
-    $.__views.scrollview.add($.__views.content);
+    $.__views.server_name.setParent($.__views.window);
     $.__views.back_button = Ti.UI.createButton({
         backgroundColor: "#828282",
         borderColor: "#e9bf3c",
@@ -61,8 +63,9 @@ function Controller() {
             fontWeight: "bold",
             fontSize: "16"
         },
-        top: 25,
         left: 5,
+        right: 5,
+        top: 25,
         height: 30,
         width: 60,
         title: L("back"),
@@ -70,11 +73,40 @@ function Controller() {
     });
     $.__views.window.add($.__views.back_button);
     goBack ? $.__views.back_button.addEventListener("click", goBack) : __defers["$.__views.back_button!click!goBack"] = true;
+    $.__views.reset_button = Ti.UI.createButton({
+        backgroundColor: "#828282",
+        borderColor: "#e9bf3c",
+        color: "black",
+        borderWidth: 1,
+        style: Ti.UI.iPhone.DONE,
+        borderRadius: 5,
+        backgroundImage: "none",
+        font: {
+            fontWeight: "bold",
+            fontSize: "16"
+        },
+        left: 5,
+        right: 5,
+        bottom: 100,
+        title_id: "reset_factory",
+        id: "reset_button"
+    });
+    $.__views.window.add($.__views.reset_button);
+    doReset ? $.__views.reset_button.addEventListener("click", doReset) : __defers["$.__views.reset_button!click!doReset"] = true;
     exports.destroy = function() {};
     _.extend($, $.__views);
-    require("eventHandlers");
-    var listener = require("utils").registerTextUpdates($.content, $.top_label);
+    var Config = require("config");
+    var utils = require("utils");
+    var common = require("settings_common");
+    var listener = utils.registerTextUpdates($.reset_button, $.server_name, $.top_label);
+    $.server_name.addEventListener("click", function() {
+        var initial = Ti.App.Properties.getString("ServerName");
+        common.addSettingChangeEvent("ServerName", "text_input", initial, function(n, v) {
+            Ti.App.Properties.setString(n, v);
+        });
+    });
     __defers["$.__views.back_button!click!goBack"] && $.__views.back_button.addEventListener("click", goBack);
+    __defers["$.__views.reset_button!click!doReset"] && $.__views.reset_button.addEventListener("click", doReset);
     _.extend($, exports);
 }
 

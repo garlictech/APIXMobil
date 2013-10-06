@@ -18,11 +18,12 @@ function Controller() {
     var exports = {};
     var __defers = {};
     $.__views.picker_window = Ti.UI.createWindow({
+        width: "100%",
+        height: 220,
+        backgroundColor: "white",
         navBarHidden: "true",
         tabBarHidden: "true",
-        height: 220,
         bottom: -220,
-        backgroundColor: "white",
         id: "picker_window"
     });
     $.__views.picker_window && $.addTopLevelView($.__views.picker_window);

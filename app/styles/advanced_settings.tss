@@ -1,0 +1,25 @@
+"#top_label": {
+    text_id: "settings"
+}
+
+"#server_name": {
+    top: 120,
+    title_id: "server_name",
+    propertyName: "ServerName"
+}
+
+"#language": {
+    top: 180,
+    title_id: "language",
+    propertyName: "Locale"
+}
+
+"Button": {
+    left: 5,
+    right: 5
+}
+
+"#reset_button": {
+    bottom: 100,
+    title_id: 'reset_factory'
+}

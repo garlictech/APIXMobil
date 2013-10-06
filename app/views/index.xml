@@ -4,8 +4,6 @@
         <Require src="login"/>
         <!-- Tables screen -->
         <Require id="tables" src="tables"/>
-        <!-- Info screen -->
-        <Require src="info"/>
         <!-- Settings screen -->
         <Require src="settings"/>
     </TabGroup>

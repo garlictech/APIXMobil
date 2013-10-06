@@ -14,15 +14,15 @@ function Controller() {
         height: "200",
         id: "set_time"
     });
-    $.__views.__alloyId15 = Ti.UI.createPickerColumn({
+    $.__views.__alloyId13 = Ti.UI.createPickerColumn({
         width: "200",
-        id: "__alloyId15"
+        id: "__alloyId13"
     });
-    $.__views.set_time.add($.__views.__alloyId15);
-    $.__views.__alloyId16 = Ti.UI.createPickerColumn({
-        id: "__alloyId16"
+    $.__views.set_time.add($.__views.__alloyId13);
+    $.__views.__alloyId14 = Ti.UI.createPickerColumn({
+        id: "__alloyId14"
     });
-    $.__views.set_time.add($.__views.__alloyId16);
+    $.__views.set_time.add($.__views.__alloyId14);
     $.__views.set_time && $.addTopLevelView($.__views.set_time);
     exports.destroy = function() {};
     _.extend($, $.__views);

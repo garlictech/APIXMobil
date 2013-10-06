@@ -1,9 +1,8 @@
 <Alloy>
     <Window id="window">
         <Label id="top_label" class="top bar"/>
-        <ScrollView id="scrollview"  class="content_top">
-            <Label id="content" />
-        </ScrollView>
+        <Require type="view" id="server_name" src="setting"/>
         <Button id="back_button" class="back_button" onClick="goBack" />
+        <Button id="reset_button" onClick="doReset" />
     </Window>
 </Alloy>
