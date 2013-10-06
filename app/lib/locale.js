@@ -35,7 +35,7 @@ exports.setTranslation = function() {
     // set locale only after successful XML processing
     Ti.API.info(String.format("locale.setTranslation: Locale has been changed from %s to %s", _actualLocale, locale));
     _actualLocale = locale;
-    Ti.fireEvent("SettingsChanged");
+    Ti.App.fireEvent("SettingsChanged");
 };
 
 // Returns the actual translation of the text id
@@ -44,10 +44,20 @@ exports.myL = function(key) {
 };
 
 // Return an array of supported locale descriptors.
-exports.supportedLocales = {
-    "en": "English",
-    "hu": "Magyar",
-    "es": "Espagnol"
+exports.supportedLocales = ['en', 'hu', 'es'];
+
+// Return human representation of locale ID
+exports.getHumanTextOfLocale = function(localeId) {
+    switch(localeId) {
+    case "en":
+        return "English";
+    case "hu":
+        return "Magyar";
+    case "es":
+        return "Espagnol";
+    default:
+        throw("Unsupported locale");
+    }
 };
 
 // (re)initialize the module. Ensure that translation file is processed

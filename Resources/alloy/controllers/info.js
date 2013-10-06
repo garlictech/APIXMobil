@@ -23,7 +23,7 @@ function Controller() {
         },
         color: "#000",
         top: "20",
-        text: L("help"),
+        label_id: "help",
         id: "top_label"
     });
     $.__views.__alloyId4.add($.__views.top_label);
@@ -33,7 +33,7 @@ function Controller() {
     });
     $.__views.__alloyId4.add($.__views.scrollview);
     $.__views.content = Ti.UI.createLabel({
-        text: L("detailed_help"),
+        text_id: "detailed_help",
         color: "#dddddd",
         id: "content"
     });
@@ -71,6 +71,7 @@ function Controller() {
     exports.destroy = function() {};
     _.extend($, $.__views);
     var eventHandlers = require("eventHandlers");
+    require("utils").registerTextUpdates($.content, $.top_label);
     __defers["$.__views.back_button!click!eventHandlers.goToTables"] && $.__views.back_button.addEventListener("click", eventHandlers.goToTables);
     _.extend($, exports);
 }

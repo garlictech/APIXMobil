@@ -8,12 +8,12 @@
 }
 
 "#username": {
-    hintText: L('username'),
+    hintText_id: 'username',
     top: '150'
 }
 
 "#password": {
-    hintText: L('password'),
+    hintText_id: 'password',
     top: '189',
     passwordMask: true
 }
@@ -25,14 +25,14 @@
 
 "#login_button": {
     top: 260,
-    title: L('login')
+    title_id: 'login'
 }
 
 "#activity_logging_in": {
     width: "auto",
     height: 30,
     top: 330,
-    message: L('in_progress'),
+    message_id: 'in_progress',
     color: 'white',
     style: 'Ti.UI.ActivityIndicatorStyle.PLAIN'
 }

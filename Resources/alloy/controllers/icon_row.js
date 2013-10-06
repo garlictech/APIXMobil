@@ -35,8 +35,11 @@ function Controller() {
     exports.destroy = function() {};
     _.extend($, $.__views);
     var args = arguments[0] || {};
+    if ("undefined" != typeof args.text) $.row_name.text = args.text; else {
+        $.row_name.text_id = args.text_id;
+        require("utils").registerTextUpdates($.row_name);
+    }
     $.icon.image = "undefined" != typeof args.icon_id ? String.format("images/db_icons/%d.png", args.icon_id) : args.image;
-    $.row_name.text = args.text;
     __defers["$.__views.row!click!openChildWindow"] && $.__views.row.addEventListener("click", openChildWindow);
     _.extend($, exports);
 }

@@ -1,5 +1,10 @@
 var Config = require("config");
+var utils = require("utils");
 var args = arguments[0] || {};
+
+// Handling text label update in case of locale change
+$.title_label.text_id = args.title_id;
+utils.registerTextUpdates($.title_label);
 
 // Read the actual value of the property that this setting is responsible for
 function updateValue() {
@@ -27,13 +32,10 @@ exports.addEventListener = function(listenerName, listenerFunction) {
 
 // Set up what the controller should display.
 $.setting.top = args.top || 0;
-$.title_label.text = args.text || "";
 updateValue();
 
 // Listen to the "SettingChanges" event. It simply updates the string
 // representation of the property that the view shows.
-Ti.App.addEventListener('SettingChanged', function(e) {
+Ti.App.addEventListener('SettingsChanged', function(e) {
     updateValue();
 });
-
-

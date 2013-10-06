@@ -24,26 +24,26 @@ function Controller() {
         },
         color: "#000",
         top: "20",
-        text: L("data"),
+        text_id: "data",
         id: "top_label"
     });
     $.__views.table_root.add($.__views.top_label);
     $.__views.locations_row = Alloy.createController("icon_row", {
-        text: L("locations"),
+        text_id: "locations",
         image: "images/locations.png",
         id: "locations_row",
         childWindow: "locations_window"
     });
-    var __alloyId19 = [];
-    __alloyId19.push($.__views.locations_row.getViewEx({
+    var __alloyId18 = [];
+    __alloyId18.push($.__views.locations_row.getViewEx({
         recurse: true
     }));
     $.__views.groups_row = Alloy.createController("icon_row", {
-        text: L("groups"),
+        text_id: "groups",
         image: "images/locations.png",
         id: "groups_row"
     });
-    __alloyId19.push($.__views.groups_row.getViewEx({
+    __alloyId18.push($.__views.groups_row.getViewEx({
         recurse: true
     }));
     $.__views.table = Ti.UI.createTableView({
@@ -55,11 +55,11 @@ function Controller() {
         left: 3,
         right: 3,
         height: "90",
-        data: __alloyId19,
+        data: __alloyId18,
         id: "table"
     });
     $.__views.table_root.add($.__views.table);
-    $.__views.__alloyId20 = Ti.UI.createLabel({
+    $.__views.__alloyId19 = Ti.UI.createLabel({
         backgroundColor: "#e9bf3c",
         borderRadius: 5,
         height: 40,
@@ -70,26 +70,27 @@ function Controller() {
         },
         color: "#000",
         bottom: "0",
-        id: "__alloyId20"
+        id: "__alloyId19"
     });
-    $.__views.table_root.add($.__views.__alloyId20);
-    $.__views.__alloyId21 = Alloy.createController("info_button", {
+    $.__views.table_root.add($.__views.__alloyId19);
+    $.__views.__alloyId20 = Alloy.createController("info_button", {
+        id: "__alloyId20",
+        __parentSymbol: $.__views.table_root
+    });
+    $.__views.__alloyId20.setParent($.__views.table_root);
+    $.__views.__alloyId21 = Alloy.createController("settings_button", {
         id: "__alloyId21",
         __parentSymbol: $.__views.table_root
     });
     $.__views.__alloyId21.setParent($.__views.table_root);
-    $.__views.__alloyId22 = Alloy.createController("settings_button", {
+    $.__views.__alloyId22 = Alloy.createController("home_button", {
         id: "__alloyId22",
         __parentSymbol: $.__views.table_root
     });
     $.__views.__alloyId22.setParent($.__views.table_root);
-    $.__views.__alloyId23 = Alloy.createController("home_button", {
-        id: "__alloyId23",
-        __parentSymbol: $.__views.table_root
-    });
-    $.__views.__alloyId23.setParent($.__views.table_root);
     exports.destroy = function() {};
     _.extend($, $.__views);
+    require("utils").registerTextUpdates($.top_label);
     _.extend($, exports);
 }
 

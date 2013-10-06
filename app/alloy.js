@@ -12,6 +12,8 @@
 
 var Config = require('config');
 
+Alloy.Globals.L = require('locale').myL;
+
 // Initialize models and collections
 Alloy.Collections.location = Alloy.createCollection("location");
 

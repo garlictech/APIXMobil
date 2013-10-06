@@ -1,6 +1,11 @@
 var Config = require('config');
 var webServiceClient = require('webServiceClient');
 
+// Handling text label update in case of locale change
+require('utils').registerTextUpdates(
+    $.username, $.password, $.login_button, $.activity_logging_in
+);
+
 Alloy.Globals.tabgroup = $.index;
 Ti.UI.iPhone.StatusBar = Ti.UI.LIGHT_CONTENT;
 

@@ -36,7 +36,7 @@ function Controller() {
         },
         color: "#000",
         top: "20",
-        text: L("server_name"),
+        text_id: "server_name",
         id: "top_label"
     });
     $.__views.text_input.add($.__views.top_label);
@@ -93,7 +93,8 @@ function Controller() {
     _.extend($, $.__views);
     require("config");
     var args = arguments[0] || {};
-    "undefined" !== args.initialData && ($.input.value = args.initialData);
+    require("utils").registerTextUpdates($.top_label);
+    "undefined" !== args.value && ($.input.value = args.value);
     __defers["$.__views.cancel_button!click!cancelClicked"] && $.__views.cancel_button.addEventListener("click", cancelClicked);
     __defers["$.__views.done_button!click!doneClicked"] && $.__views.done_button.addEventListener("click", doneClicked);
     _.extend($, exports);

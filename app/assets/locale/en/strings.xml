@@ -2,6 +2,9 @@
 <!-- Translation structure: tag name is a text id, used by the myL function.
 Text is the translation itself. -->
 <translations>
+    <language>Language</language>
+    <advanced_settings>Advanced settings</advanced_settings>
+    <undefined></undefined>
     <login>Login</login>
     <server_name>Server name</server_name>
     <locations>Usage locations</locations>
@@ -23,7 +26,8 @@ Text is the translation itself. -->
     <query_interval_end>End of query</query_interval_end>
     <beginning>Beginning</beginning>
     <end>End</end>
-    <done>Kész</done>
+    <done>Done</done>
+    <cancel>Cancel</cancel>
     <detailed_help>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lobortis arcu magna, a scelerisque ante tristique ac. Fusce sed mollis mauris, id pellentesque libero. Proin non porttitor nunc. Nam tincidunt tincidunt tincidunt. Nullam aliquam erat vel adipiscing ornare. Etiam rhoncus in elit ac imperdiet. Nulla semper varius felis, ac condimentum arcu adipiscing ut. Nunc orci augue, aliquet ut diam ac, tristique consequat purus. Suspendisse potenti.
 

@@ -1,15 +1,12 @@
 function Controller() {
     function close() {
+        Ti.App.removeEventListener("SettingsChanged", listener);
         $.picker_window.close(Titanium.UI.createAnimation({
             bottom: -220
         }));
         args.cover_window.close();
     }
     function cancelClicked() {
-        close();
-    }
-    function doneClicked() {
-        args.useValue($.picker.value);
         close();
     }
     require("alloy/controllers/BaseController").apply(this, Array.prototype.slice.call(arguments));
@@ -32,7 +29,6 @@ function Controller() {
     $.__views.picker = Ti.UI.createPicker({
         selectionIndicator: "true",
         useSpinner: "true",
-        type: "Ti.UI.PICKER_TYPE_DATE",
         top: "20",
         height: "200",
         id: "picker"
@@ -43,7 +39,7 @@ function Controller() {
         backgroundColor: "white",
         color: "black",
         left: 5,
-        text: L("Cancel"),
+        text_id: "cancel",
         id: "cancel"
     });
     $.__views.picker_window.add($.__views.cancel);
@@ -53,27 +49,31 @@ function Controller() {
         backgroundColor: "white",
         color: "black",
         right: 5,
-        text: L("OK"),
+        text_id: "ok",
         id: "done"
     });
     $.__views.picker_window.add($.__views.done);
-    doneClicked ? $.__views.done.addEventListener("click", doneClicked) : __defers["$.__views.done!click!doneClicked"] = true;
+    try {
+        $.__views.done.addEventListener("click", exports.doneClicked);
+    } catch (e) {
+        __defers["$.__views.done!click!exports.doneClicked"] = true;
+    }
     exports.destroy = function() {};
     _.extend($, $.__views);
     Ti.API.debug("picker constructor started");
     var args = arguments[0] || {};
-    $.picker.value = args.initialData;
-    $.picker.maxData = new Date();
-    $.picker.type = Ti.UI.PICKER_TYPE_DATE;
-    exports.getController = function() {
-        return $.picker;
-    };
+    var listener = require("utils").registerTextUpdates($.cancel, $.done);
+    $.picker.type = Ti.UI.PICKER_TYPE_PLAIN;
     exports.animate_in = Titanium.UI.createAnimation({
         bottom: 0
     });
+    exports.doneClicked = function() {
+        args.useValue(args.value);
+        close();
+    };
     Ti.API.debug("picker constructor finished");
     __defers["$.__views.cancel!click!cancelClicked"] && $.__views.cancel.addEventListener("click", cancelClicked);
-    __defers["$.__views.done!click!doneClicked"] && $.__views.done.addEventListener("click", doneClicked);
+    __defers["$.__views.done!click!exports.doneClicked"] && $.__views.done.addEventListener("click", exports.doneClicked);
     _.extend($, exports);
 }
 

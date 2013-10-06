@@ -2,6 +2,7 @@ if (Ti.App.deployType == 'test') {
     require('specs/test_config');
     require('specs/test_webServiceClient');
     require('specs/test_locale');
+    require('specs/test_utils');
     require('behave').run('this');
 }
 

@@ -1,5 +1,5 @@
 "#top_label": {
-    text: L("data"),
+    text_id: "data",
 }
 
 "#table": {
@@ -10,11 +10,11 @@
 }
 
 "#locations_row": {
-    text: L("locations"),
+    text_id: "locations",
     image: "images/locations.png"
 }
 
 "#groups_row": {
-    text: L("groups"),
+    text_id: "groups",
     image: "images/locations.png"
 }

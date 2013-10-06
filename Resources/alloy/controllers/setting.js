@@ -79,7 +79,10 @@ function Controller() {
     exports.destroy = function() {};
     _.extend($, $.__views);
     var Config = require("config");
+    var utils = require("utils");
     var args = arguments[0] || {};
+    $.title_label.text_id = args.title_id;
+    utils.registerTextUpdates($.title_label);
     var handlers = {};
     handlers.click = function() {};
     exports.addEventListener = function(listenerName, listenerFunction) {
@@ -89,9 +92,8 @@ function Controller() {
         }
     };
     $.setting.top = args.top || 0;
-    $.title_label.text = args.text || "";
     updateValue();
-    Ti.App.addEventListener("SettingChanged", function() {
+    Ti.App.addEventListener("SettingsChanged", function() {
         updateValue();
     });
     __defers["$.__views.setting!click!onClick"] && $.__views.setting.addEventListener("click", onClick);

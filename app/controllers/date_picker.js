@@ -1,28 +1,18 @@
-// Ti.API.debug('date_picker constructor started');
+Ti.API.debug('date_picker constructor started');
+// ----------------------------------------------------------------------------
 exports.baseController = "picker";
+var args = arguments[0] || {};
 
-// Ti.include('lib/picker_common.js');
+// Construction
+$.picker.value = args.value;
+$.picker.maxData = new Date();
+$.picker.type = Ti.UI.PICKER_TYPE_DATE;
 
-// setupPickerCommons(exports);
-// ----------------------------------------------------------------------------
-// Private
-// var args = arguments[0] || {};
-
-// ----------------------------------------------------------------------------
-// Set up the class
-// setUpCommon(exports);
-// var api = require('settings_button');
-
-// api.useValue = function() {
-//     return args.useValue;
-// };
-
-// // ----------------------------------------------------------------------------
-// // Do the construction
-// var controller = p.getController();
-// controller.value = args.initialData;
-// controller.maxData = new Date();
-// controller.type = Ti.UI.PICKER_TYPE_DATE;
+// On change, share the value of the picker with the base controller, by
+// using args.value.
+$.picker.addEventListener('change', function(e) {
+    args.value = e.value;
+});
 
 // ----------------------------------------------------------------------------
 Ti.API.debug('date_picker constructor finished');

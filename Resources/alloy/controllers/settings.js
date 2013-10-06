@@ -1,26 +1,11 @@
 function Controller() {
-    function doLogout() {
-        Config.setLoggedOut();
-        Alloy.Globals.tabgroup.setActiveTab(Alloy.Globals.LOGIN_TAB);
-    }
-    function doReset() {
-        Config.resetFactorySettings();
-        Ti.App.fireEvent("SettingChanged");
-        doLogout();
-    }
-    function addSettingChangeEvent(name, controllerName, initial, use) {
-        var arg = {
-            useValue: function(value) {
-                use(name, value);
-                Ti.App.fireEvent("SettingChanged");
-            },
-            initialData: initial
-        };
-        utils.openWindowWithBottomClicksDisabled(controllerName, arg);
+    function doAdvancedSettings() {
+        var controller = Alloy.createController("advanced_settings").getView();
+        controller.open();
     }
     function addQueryDateChangeEvent(name) {
         var initial = Config.getDataProperty(name);
-        addSettingChangeEvent(name, "date_picker", initial, function(n, v) {
+        common.addSettingChangeEvent(name, "date_picker", initial, function(n, v) {
             Config.setQueryDate(n, v);
         });
     }
@@ -32,10 +17,10 @@ function Controller() {
     var $ = this;
     var exports = {};
     var __defers = {};
-    $.__views.__alloyId18 = Ti.UI.createWindow({
+    $.__views.__alloyId17 = Ti.UI.createWindow({
         navBarHidden: "true",
         tabBarHidden: "true",
-        id: "__alloyId18"
+        id: "__alloyId17"
     });
     $.__views.top_label = Ti.UI.createLabel({
         backgroundColor: "#e9bf3c",
@@ -48,34 +33,34 @@ function Controller() {
         },
         color: "#000",
         top: "20",
-        text: L("settings"),
+        text_id: "settings",
         id: "top_label"
     });
-    $.__views.__alloyId18.add($.__views.top_label);
+    $.__views.__alloyId17.add($.__views.top_label);
     $.__views.query_start_date = Alloy.createController("setting", {
-        text: L("query_interval_start"),
+        title_id: "query_interval_start",
         top: 120,
         propertyName: "QueryStartDate",
         id: "query_start_date",
-        __parentSymbol: $.__views.__alloyId18
+        __parentSymbol: $.__views.__alloyId17
     });
-    $.__views.query_start_date.setParent($.__views.__alloyId18);
+    $.__views.query_start_date.setParent($.__views.__alloyId17);
     $.__views.query_end_date = Alloy.createController("setting", {
         top: 180,
-        text: L("query_interval_end"),
+        title_id: "query_interval_end",
         propertyName: "QueryEndDate",
         id: "query_end_date",
-        __parentSymbol: $.__views.__alloyId18
+        __parentSymbol: $.__views.__alloyId17
     });
-    $.__views.query_end_date.setParent($.__views.__alloyId18);
-    $.__views.server_name = Alloy.createController("setting", {
+    $.__views.query_end_date.setParent($.__views.__alloyId17);
+    $.__views.language = Alloy.createController("setting", {
         top: 240,
-        text: L("server_name"),
-        propertyName: "ServerName",
-        id: "server_name",
-        __parentSymbol: $.__views.__alloyId18
+        title_id: "language",
+        propertyName: "Locale",
+        id: "language",
+        __parentSymbol: $.__views.__alloyId17
     });
-    $.__views.server_name.setParent($.__views.__alloyId18);
+    $.__views.language.setParent($.__views.__alloyId17);
     $.__views.back_button = Ti.UI.createButton({
         backgroundColor: "#828282",
         borderColor: "#e9bf3c",
@@ -96,12 +81,32 @@ function Controller() {
         title: L("back"),
         id: "back_button"
     });
-    $.__views.__alloyId18.add($.__views.back_button);
+    $.__views.__alloyId17.add($.__views.back_button);
     try {
         $.__views.back_button.addEventListener("click", eventHandlers.goToTables);
     } catch (e) {
         __defers["$.__views.back_button!click!eventHandlers.goToTables"] = true;
     }
+    $.__views.advanced_settings_button = Ti.UI.createButton({
+        backgroundColor: "#828282",
+        borderColor: "#e9bf3c",
+        color: "black",
+        borderWidth: 1,
+        style: Ti.UI.iPhone.DONE,
+        borderRadius: 5,
+        backgroundImage: "none",
+        font: {
+            fontWeight: "bold",
+            fontSize: "16"
+        },
+        left: 5,
+        right: 5,
+        bottom: 150,
+        title_id: "advanced_settings",
+        id: "advanced_settings_button"
+    });
+    $.__views.__alloyId17.add($.__views.advanced_settings_button);
+    doAdvancedSettings ? $.__views.advanced_settings_button.addEventListener("click", doAdvancedSettings) : __defers["$.__views.advanced_settings_button!click!doAdvancedSettings"] = true;
     $.__views.logout_button = Ti.UI.createButton({
         backgroundColor: "#828282",
         borderColor: "#e9bf3c",
@@ -117,33 +122,17 @@ function Controller() {
         left: 5,
         right: 5,
         bottom: 100,
-        title: L("logout"),
+        title_id: "logout",
         id: "logout_button"
     });
-    $.__views.__alloyId18.add($.__views.logout_button);
-    doLogout ? $.__views.logout_button.addEventListener("click", doLogout) : __defers["$.__views.logout_button!click!doLogout"] = true;
-    $.__views.reset_button = Ti.UI.createButton({
-        backgroundColor: "#828282",
-        borderColor: "#e9bf3c",
-        color: "black",
-        borderWidth: 1,
-        style: Ti.UI.iPhone.DONE,
-        borderRadius: 5,
-        backgroundImage: "none",
-        font: {
-            fontWeight: "bold",
-            fontSize: "16"
-        },
-        left: 5,
-        right: 5,
-        bottom: 50,
-        title: L("reset_factory"),
-        id: "reset_button"
-    });
-    $.__views.__alloyId18.add($.__views.reset_button);
-    doReset ? $.__views.reset_button.addEventListener("click", doReset) : __defers["$.__views.reset_button!click!doReset"] = true;
+    $.__views.__alloyId17.add($.__views.logout_button);
+    try {
+        $.__views.logout_button.addEventListener("click", common.doLogout);
+    } catch (e) {
+        __defers["$.__views.logout_button!click!common.doLogout"] = true;
+    }
     $.__views.settings = Ti.UI.createTab({
-        window: $.__views.__alloyId18,
+        window: $.__views.__alloyId17,
         id: "settings"
     });
     $.__views.settings && $.addTopLevelView($.__views.settings);
@@ -151,22 +140,26 @@ function Controller() {
     _.extend($, $.__views);
     var utils = require("utils");
     var Config = require("config");
+    require("locale");
     var eventHandlers = require("eventHandlers");
+    var common = require("settings_common");
+    utils.registerTextUpdates($.query_start_date, $.query_end_date, $.language, $.logout_button, $.top_label, $.advanced_settings_button);
     $.query_start_date.addEventListener("click", function() {
         addQueryDateChangeEvent("QueryStartDate");
     });
     $.query_end_date.addEventListener("click", function() {
         addQueryDateChangeEvent("QueryEndDate");
     });
-    $.server_name.addEventListener("click", function() {
-        var initial = Ti.App.Properties.getString("ServerName");
-        addSettingChangeEvent("ServerName", "text_input", initial, function(n, v) {
+    $.language.addEventListener("click", function() {
+        function use(n, v) {
             Ti.App.Properties.setString(n, v);
-        });
+        }
+        var initial = Ti.App.Properties.getString("Locale");
+        common.addSettingChangeEvent("Locale", "language_picker", initial, use);
     });
     __defers["$.__views.back_button!click!eventHandlers.goToTables"] && $.__views.back_button.addEventListener("click", eventHandlers.goToTables);
-    __defers["$.__views.logout_button!click!doLogout"] && $.__views.logout_button.addEventListener("click", doLogout);
-    __defers["$.__views.reset_button!click!doReset"] && $.__views.reset_button.addEventListener("click", doReset);
+    __defers["$.__views.advanced_settings_button!click!doAdvancedSettings"] && $.__views.advanced_settings_button.addEventListener("click", doAdvancedSettings);
+    __defers["$.__views.logout_button!click!common.doLogout"] && $.__views.logout_button.addEventListener("click", common.doLogout);
     _.extend($, exports);
 }
 

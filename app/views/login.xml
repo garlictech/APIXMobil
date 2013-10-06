@@ -1,6 +1,6 @@
 <Alloy>
     <Tab id="login" title="Login" >
-        <Window>
+        <Window id="login_window">
             <ImageView id="header_image" />
             <TextField id="username" />
             <TextField id="password" />

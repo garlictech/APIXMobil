@@ -24,17 +24,29 @@ exports.setTranslation = function() {
     Ti.API.trace(String.format("* Language file parsed, resulted %s.", _languageXml));
     Ti.API.info(String.format("locale.setTranslation: Locale has been changed from %s to %s", _actualLocale, locale));
     _actualLocale = locale;
-    Ti.fireEvent("SettingsChanged");
+    Ti.App.fireEvent("SettingsChanged");
 };
 
 exports.myL = function(key) {
     return _languageXml.getElementsByTagName(key).item(0).text;
 };
 
-exports.supportedLocales = {
-    en: "English",
-    hu: "Magyar",
-    es: "Espagnol"
+exports.supportedLocales = [ "en", "hu", "es" ];
+
+exports.getHumanTextOfLocale = function(localeId) {
+    switch (localeId) {
+      case "en":
+        return "English";
+
+      case "hu":
+        return "Magyar";
+
+      case "es":
+        return "Espagnol";
+
+      default:
+        throw "Unsupported locale";
+    }
 };
 
 exports.init = function() {

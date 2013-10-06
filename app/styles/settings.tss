@@ -1,23 +1,23 @@
 "#top_label": {
-    text: L("settings")
+    text_id: "settings"
 }
 
 "#query_start_date": {
-    text: L("query_interval_start"),
+    title_id: "query_interval_start",
     top: 120,
     propertyName: "QueryStartDate"
 }
 
 "#query_end_date": {
     top: 180,
-    text: L("query_interval_end"),
+    title_id: "query_interval_end",
     propertyName: "QueryEndDate"
 }
 
-"#server_name": {
+"#language": {
     top: 240,
-    text: L("server_name"),
-    propertyName: "ServerName"
+    title_id: "language",
+    propertyName: "Locale"
 }
 
 "Button": {
@@ -25,12 +25,13 @@
     right: 5
 }
 
-"#logout_button": {
-    bottom: 100,
-    title: L('logout')
+"#advanced_settings_button": {
+    bottom: 150,
+    title_id: 'advanced_settings'
 }
 
-"#reset_button": {
-    bottom: 50,
-    title: L('reset_factory')
+
+"#logout_button": {
+    bottom: 100,
+    title_id: 'logout'
 }

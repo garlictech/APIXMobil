@@ -21,6 +21,8 @@ var Alloy = require("alloy"), _ = Alloy._, Backbone = Alloy.Backbone;
 
 var Config = require("config");
 
+Alloy.Globals.L = require("locale").myL;
+
 Alloy.Collections.location = Alloy.createCollection("location");
 
 var locations = Alloy.Collections.location;

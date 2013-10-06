@@ -21,6 +21,18 @@ describe("Test setTranslation functions", function() {
         locale.setTranslation();
         expect(myL("login")).toBe("Login");
     });
+    it("*** Test getHumanTextOfLocale", function() {
+        expect(locale.getHumanTextOfLocale("en")).toBe("English");
+        expect(locale.getHumanTextOfLocale("hu")).toBe("Magyar");
+        expect(locale.getHumanTextOfLocale("es")).toBe("Espagnol");
+        var cought = false;
+        try {
+            locale.getHumanTextOfLocale("foobar");
+        } catch (err) {
+            "Unsupported locale" === err && (cought = true);
+        }
+        expect(cought).toBe(true);
+    });
     it("Tear down", function() {
         saved_locale && Ti.App.Properties.setString("Locale", saved_locale);
     });

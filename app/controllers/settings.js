@@ -1,33 +1,21 @@
 var utils = require("utils");
 var Config = require('config');
+var locale = require('locale');
 var eventHandlers = require('eventHandlers');
+var common = require("settings_common");
 
-function doLogout(e) {
-    Config.setLoggedOut();
-    Alloy.Globals.tabgroup.setActiveTab(Alloy.Globals.LOGIN_TAB);
-}
+// Handling text label update in case of locale change
+utils.registerTextUpdates($.query_start_date, $.query_end_date,
+    $.language, $.logout_button, $.top_label, $.advanced_settings_button);
 
-function doReset(e) {
-    Config.resetFactorySettings();
-    Ti.App.fireEvent('SettingChanged');
-    doLogout();
-}
-
-function addSettingChangeEvent(name, controllerName, initial, use) {
-    var arg = {
-        useValue: function(value) {
-            use(name, value);
-            Ti.App.fireEvent('SettingChanged');
-        },
-        initialData: initial
-    };
-
-    utils.openWindowWithBottomClicksDisabled(controllerName, arg);
+function doAdvancedSettings(e) {
+    var controller = Alloy.createController("advanced_settings").getView();
+    controller.open();
 }
 
 function addQueryDateChangeEvent(name) {
     var initial = Config.getDataProperty(name);
-    addSettingChangeEvent(name, 'date_picker', initial, function(n, v) {
+    common.addSettingChangeEvent(name, 'date_picker', initial, function(n, v) {
         Config.setQueryDate(n, v);
     });
 }
@@ -40,9 +28,12 @@ $.query_end_date.addEventListener('click', function(e) {
     addQueryDateChangeEvent("QueryEndDate");
 });
 
-$.server_name.addEventListener('click', function(e) {
-    var initial = Ti.App.Properties.getString('ServerName');
-    addSettingChangeEvent('ServerName', 'text_input', initial, function(n, v) {
+$.language.addEventListener('click', function(e) {
+    var initial = Ti.App.Properties.getString("Locale");
+
+    function use(n, v) {
         Ti.App.Properties.setString(n, v);
-    });
+    }
+
+    common.addSettingChangeEvent('Locale', 'language_picker', initial, use);
 });

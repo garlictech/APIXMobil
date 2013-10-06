@@ -20,17 +20,17 @@ function Controller() {
     var $ = this;
     var exports = {};
     var __defers = {};
-    $.__views.__alloyId13 = Ti.UI.createWindow({
+    $.__views.login_window = Ti.UI.createWindow({
         navBarHidden: "true",
         tabBarHidden: "true",
-        id: "__alloyId13"
+        id: "login_window"
     });
     $.__views.header_image = Ti.UI.createImageView({
         image: "images/start_screen_logo.png",
         top: "20",
         id: "header_image"
     });
-    $.__views.__alloyId13.add($.__views.header_image);
+    $.__views.login_window.add($.__views.header_image);
     $.__views.username = Ti.UI.createTextField({
         paddingLeft: 5,
         backgroundColor: "#828282",
@@ -39,11 +39,11 @@ function Controller() {
         height: 40,
         autocorrect: false,
         width: 200,
-        hintText: L("username"),
+        hintText_id: "username",
         top: "150",
         id: "username"
     });
-    $.__views.__alloyId13.add($.__views.username);
+    $.__views.login_window.add($.__views.username);
     $.__views.password = Ti.UI.createTextField({
         paddingLeft: 5,
         backgroundColor: "#828282",
@@ -52,12 +52,12 @@ function Controller() {
         height: 40,
         autocorrect: false,
         width: 200,
-        hintText: L("password"),
+        hintText_id: "password",
         top: "189",
         passwordMask: true,
         id: "password"
     });
-    $.__views.__alloyId13.add($.__views.password);
+    $.__views.login_window.add($.__views.password);
     $.__views.login_button = Ti.UI.createButton({
         backgroundColor: "#828282",
         borderColor: "#e9bf3c",
@@ -73,21 +73,21 @@ function Controller() {
         width: 150,
         height: 40,
         top: 260,
-        title: L("login"),
+        title_id: "login",
         id: "login_button"
     });
-    $.__views.__alloyId13.add($.__views.login_button);
+    $.__views.login_window.add($.__views.login_button);
     doLogin ? $.__views.login_button.addEventListener("click", doLogin) : __defers["$.__views.login_button!click!doLogin"] = true;
     $.__views.activity_logging_in = Ti.UI.createActivityIndicator({
         width: "auto",
         height: 30,
         top: 330,
-        message: L("in_progress"),
+        message_id: "in_progress",
         color: "white",
         style: "Ti.UI.ActivityIndicatorStyle.PLAIN",
         id: "activity_logging_in"
     });
-    $.__views.__alloyId13.add($.__views.activity_logging_in);
+    $.__views.login_window.add($.__views.activity_logging_in);
     $.__views.bottom = Ti.UI.createLabel({
         backgroundColor: "#e9bf3c",
         borderRadius: 5,
@@ -102,9 +102,9 @@ function Controller() {
         text: "APIXMobil",
         id: "bottom"
     });
-    $.__views.__alloyId13.add($.__views.bottom);
+    $.__views.login_window.add($.__views.bottom);
     $.__views.login = Ti.UI.createTab({
-        window: $.__views.__alloyId13,
+        window: $.__views.login_window,
         id: "login",
         title: "Login"
     });
@@ -113,6 +113,7 @@ function Controller() {
     _.extend($, $.__views);
     var Config = require("config");
     var webServiceClient = require("webServiceClient");
+    require("utils").registerTextUpdates($.username, $.password, $.login_button, $.activity_logging_in);
     Alloy.Globals.tabgroup = $.index;
     Ti.UI.iPhone.StatusBar = Ti.UI.LIGHT_CONTENT;
     $.activity_logging_in.hide();

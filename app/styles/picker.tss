@@ -13,17 +13,16 @@
 }
 
 "#cancel": {
-    text: L('Cancel'),
+    text_id: 'cancel'
 }
 
 "#done": {
-    text: L('OK'),
+    text_id: 'ok',
 }
 
 "#picker": {
     selectionIndicator: "true",
     useSpinner: "true",
-    type: "Ti.UI.PICKER_TYPE_DATE",
     top: "20",
     height: "200"
 }

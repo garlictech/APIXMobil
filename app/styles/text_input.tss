@@ -26,6 +26,6 @@
 }
 
 "#top_label": {
-    text: L("server_name"),
+    text_id: "server_name",
 }
 

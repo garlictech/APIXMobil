@@ -24,6 +24,23 @@ describe('Test setTranslation functions', function() {
         expect(myL("login")).toBe("Login");
     });
 
+    it ('*** Test getHumanTextOfLocale', function() {
+        expect(locale.getHumanTextOfLocale('en')).toBe('English');
+        expect(locale.getHumanTextOfLocale('hu')).toBe('Magyar');
+        expect(locale.getHumanTextOfLocale('es')).toBe('Espagnol');
+        // Unsupported locale must throw exception
+        var cought = false;
+        try {
+            locale.getHumanTextOfLocale('foobar');
+        } catch(err) {
+            if (err === "Unsupported locale") {
+                cought = true;
+            }
+        }
+
+        expect(cought).toBe(true);
+    });
+
     it ('Tear down', function() {
         if (saved_locale) {
             Ti.App.Properties.setString("Locale", saved_locale);

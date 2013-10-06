@@ -1,5 +1,5 @@
 "#content": {
-    text: L('detailed_help'),
+    text_id: 'detailed_help',
     color: '#dddddd'
 }
 
@@ -9,5 +9,5 @@
 }
 
 "#top_label": {
-    text: L("help"),
+    label_id: 'help',
 }

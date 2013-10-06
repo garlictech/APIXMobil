@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resources>
+    <undefined></undefined>
+    <advanced_settings>Haladó beállítások</advanced_settings>
     <login>Belépés</login>
+    <language>Nyelv</language>
     <locations>Felhasználási helyszínek</locations>
     <locations_short>Helyszínek</locations_short>
     <groups>Csoportok</groups>
@@ -22,6 +25,7 @@
     <beginning>Kezdő</beginning>
     <end>Végső</end>
     <done>Kész</done>
+    <cancel>Mégsem</cancel>
     <detailed_help>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lobortis arcu magna, a scelerisque ante tristique ac. Fusce sed mollis mauris, id pellentesque libero. Proin non porttitor nunc. Nam tincidunt tincidunt tincidunt. Nullam aliquam erat vel adipiscing ornare. Etiam rhoncus in elit ac imperdiet. Nulla semper varius felis, ac condimentum arcu adipiscing ut. Nunc orci augue, aliquet ut diam ac, tristique consequat purus. Suspendisse potenti.
 

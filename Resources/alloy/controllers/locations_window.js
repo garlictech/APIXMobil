@@ -50,7 +50,7 @@ function Controller() {
         },
         color: "#000",
         top: "20",
-        text: L("locations_short"),
+        text_id: "locations_short",
         id: "top_label"
     });
     $.__views.locations_window.add($.__views.top_label);
@@ -119,6 +119,7 @@ function Controller() {
         __alloyId7.off("fetch destroy change add remove reset", __alloyId8);
     };
     _.extend($, $.__views);
+    require("utils").registerTextUpdates($.top_label);
     var locations = Alloy.Collections.location;
     locations.fetch();
     Ti.App.addEventListener("GoToHome", function() {

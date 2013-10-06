@@ -4,10 +4,10 @@
             <Label id="top_label" class="top bar"/>
             <Require type="view" id="query_start_date" src="setting"/>
             <Require type="view" id="query_end_date" src="setting"/>
-            <Require type="view" id="server_name" src="setting"/>
+            <Require type="view" id="language" src="setting"/>
             <Button id="back_button" class="back_button" onClick="eventHandlers.goToTables" />
-            <Button id="logout_button" onClick="doLogout" />
-            <Button id="reset_button" onClick="doReset" />
+            <Button id="advanced_settings_button" onClick="doAdvancedSettings" />
+            <Button id="logout_button" onClick="common.doLogout" />
         </Window>
     </Tab>
 </Alloy>
