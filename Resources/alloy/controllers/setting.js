@@ -1,9 +1,12 @@
 function Controller() {
-    function updateValue() {
-        $.setting_value.text = args.propertyName ? Config.getStringOfSetting(args.propertyName) : "";
+    function Setting() {
+        $.title_label.text_id = this.args.title_id;
+        $.setting.top = this.args.top || 0;
+        "undefined" != typeof this.args.width && ($.setting.width = this.args.width);
+        this.addSettingsChangedHandler(this.updateValue);
     }
-    function onClick(e) {
-        handlers.click(e);
+    function onClick() {
+        setting.clickHandler();
     }
     require("alloy/controllers/BaseController").apply(this, Array.prototype.slice.call(arguments));
     this.__controllerPath = "setting";
@@ -14,6 +17,8 @@ function Controller() {
     var exports = {};
     var __defers = {};
     $.__views.setting = Ti.UI.createView({
+        width: "100%",
+        height: 47,
         id: "setting"
     });
     $.__views.setting && $.addTopLevelView($.__views.setting);
@@ -80,22 +85,29 @@ function Controller() {
     _.extend($, $.__views);
     var Config = require("config");
     var utils = require("utils");
-    var args = arguments[0] || {};
-    $.title_label.text_id = args.title_id;
-    utils.registerTextUpdates($.title_label);
-    var handlers = {};
-    handlers.click = function() {};
-    exports.addEventListener = function(listenerName, listenerFunction) {
-        switch (listenerName) {
-          case "click":
-            handlers.click = listenerFunction;
-        }
+    Setting.prototype = new (require("controller"))(arguments, [ $.title_label ]);
+    Setting.prototype.updateValue = function() {
+        $.setting_value.text = Config.getStringOfSetting(this.args.propertyName);
     };
-    $.setting.top = args.top || 0;
-    updateValue();
-    Ti.App.addEventListener("SettingsChanged", function() {
-        updateValue();
-    });
+    Setting.prototype.addSettingChangeEvent = function(initial, use) {
+        var self = this;
+        var arg = {
+            useValue: function(value) {
+                use(self.args.propertyName, value);
+                Ti.App.fireEvent("SettingsChanged");
+            },
+            value: initial
+        };
+        utils.openWindowWithBottomClicksDisabled(this.args.controllerName, arg);
+    };
+    Setting.prototype.clickHandler = function() {
+        function use(n, v) {
+            Config.setProperty(n, v);
+        }
+        var initial = Config.getProperty(this.args.propertyName);
+        this.addSettingChangeEvent(initial, use);
+    };
+    var setting = new Setting();
     __defers["$.__views.setting!click!onClick"] && $.__views.setting.addEventListener("click", onClick);
     _.extend($, exports);
 }

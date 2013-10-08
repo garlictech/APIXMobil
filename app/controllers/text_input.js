@@ -1,30 +1,37 @@
-var Config = require('config');
-var args = arguments[0] || {};
+// ----------------------------------------------------------------------------
+// Module initialization
+var WindowController = require("window_controller");
 
-// Handling text label update in case of locale change
-require('utils').registerTextUpdates($.top_label);
-
-if (args.value !== 'undefined') {
-    $.input.value = args.value;
-}
-// Close the bottom window that prevents from clicking on the visible
-// buttons of the settings view. Then, slides down the window and closes it.
-function close() {
-    $.text_input.close();
-    args.cover_window.close();
+// ----------------------------------------------------------------------------
+// TextInput class.
+function TextInput(args, uiElements) {
+    WindowController.call(this, args, uiElements, $.window, $);
 }
 
-// On cancel, simply close the picker.
-function cancelClicked(e) {
-    close();
-}
+// ----------------------------------------------------------------------------
+// Inherits from Controller...
+TextInput.prototype = Object.create(WindowController.prototype);
 
-// When done, call the passed function that handles the picker value.
+// ----------------------------------------------------------------------------
+// When done, call the passed function that handles the input value.
 // Then closes the window properly.
-function doneClicked(e) {
-    if (typeof args.useValue !== 'undefined') {
-        args.useValue($.input.value);
-    }
+TextInput.prototype.doneClicked = function() {
+    this.args.useValue($.input.value);
+    this.close();
+};
 
-    close();
+// ----------------------------------------------------------------------------
+// Create the object representing this particular controller
+var textInput = new TextInput(arguments, [$.top_label]);
+
+// ----------------------------------------------------------------------------
+
+function cancelClicked(e) {
+    textInput.close();
+}
+
+// ----------------------------------------------------------------------------
+
+function doneClicked(e) {
+    textInput.doneClicked();
 }

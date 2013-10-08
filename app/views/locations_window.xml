@@ -1,5 +1,5 @@
 <Alloy>
-    <Window win="locations_window">
+<!--     <Window win="window">
         <Label id="top_label" class="top bar"/>
         <Button id="back_button" class="back_button" onClick="goBack" />
         <TableView id="table" class="content_top table" dataCollection="location">
@@ -13,5 +13,5 @@
         <Require src="info_button"/>
         <Require src="settings_button"/>
         <Require src="home_button"/>
-    </Window>
+    </Window> -->
 </Alloy>

@@ -15,7 +15,6 @@ var Config = require('config');
 Alloy.Globals.L = require('locale').myL;
 
 // Initialize models and collections
-Alloy.Collections.location = Alloy.createCollection("location");
 
 // Language
 // Ti.App.Properties.setString("language", "EN");
@@ -23,36 +22,90 @@ Alloy.Collections.location = Alloy.createCollection("location");
 // alert(Config.getLanguageText("login"));
 
 // --------- TEST
-var locations = Alloy.Collections.location;
+//
+// ----------------------------------------------------------------------------
 
-function initDummyData() {
+function initDummyData(data, collection) {
     function addModel(data) {
-        var location = Alloy.createModel("location", data);
-        locations.add(location);
+        var model = Alloy.createModel("table_data", data);
+        collection.add(model);
         // Save our model to the SQL database
-        location.save(location);
+        model.save(model);
     }
 
-    var data = [
-        {
-            "name": "Budapest",
-            "icon_id": 1
-        },
-        {
-            "name": "Bánkút",
-            "icon_id": 2
-        }
-    ];
-
-    locations.fetch();
-    while(locations.length) {
-        locations.at(0).destroy();
+    collection.fetch();
+    while(collection.length) {
+        collection.at(0).destroy();
     }
     for (var i = 0; i < data.length; ++i) {
         addModel(data[i]);
     }
     // Finally, fetch the collection items
-    locations.fetch();
+    collection.fetch();
 }
 
-initDummyData();
+// ----------------------------------------------------------------------------
+// Alloy.Collections.location = Alloy.createCollection("table_data");
+
+Alloy.Globals.locations = [
+    {
+        "text": "Budapest",
+        "image": "images/db_icons/1.png",
+        "child_collection": "sub_locations"
+    },
+    {
+        "text": "Bánkút",
+        "image": "images/db_icons/2.png",
+        "child_collection": "sub_locations"
+    }
+];
+
+// ----------------------------------------------------------------------------
+Alloy.Globals.root_table = [
+    {
+        "text_id": "locations",
+        "image": "images/locations.png",
+        "child_collection": "locations"
+    },
+    {
+        "text_id": "groups",
+        "image": "images/locations.png",
+        "child_collection": "groups"
+    }
+];
+
+// ----------------------------------------------------------------------------
+Alloy.Globals.sub_locations = [
+    {
+        text: "Bp, Budaörsi út",
+        image: "images/db_icons/1.png",
+        childCollection: "main_menu"
+    },
+    {
+        text: "Bp, Honvéd utca",
+        image: "images/db_icons/1.png",
+        childCollection: "main_menu"
+    }
+
+];
+
+// ----------------------------------------------------------------------------
+Alloy.Globals.groups = [
+    {
+        text: "Nagy Csoport",
+        "image": "images/locations.png"
+    },
+    {
+        text: "Kis Csoport",
+        "image": "images/locations.png"
+    }
+];
+
+// ----------------------------------------------------------------------------
+Alloy.Globals.ActualTableIndex = 0;
+
+// Indicator od the actual table open. collection is the model of the collection, index is the collection ID.
+Alloy.Globals.ActualTableDescriptor = {
+    collection: Alloy.Globals.root_table,
+    index: 0
+};

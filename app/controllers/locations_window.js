@@ -1,3 +1,7 @@
+// ----------------------------------------------------------------------------
+// Module initialization
+exports.baseController = "table_common";
+alert("A " + tableroot);
 // Handling text label update in case of locale change
 require('utils').registerTextUpdates($.top_label);
 

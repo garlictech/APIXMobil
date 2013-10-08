@@ -3,7 +3,7 @@ function _setPropertyAsStringIfUndefined(name, value) {
 }
 
 function _getQueryDateString(name) {
-    date = exports.getDataProperty(name);
+    date = exports.getDateProperty(name);
     return String.format("%s %d:%d", date.toLocaleDateString(), date.getHours(), date.getMinutes());
 }
 
@@ -37,16 +37,16 @@ exports.setInitialDates = function(now) {
     _setPropertyAsStringIfUndefined("QueryEndDate", past);
 };
 
-exports.getDataProperty = function(name) {
+exports.getDateProperty = function(name) {
     if (Ti.App.Properties.hasProperty(name)) return new Date(Ti.App.Properties.getString(name));
 };
 
 exports.getQueryStartDate = function() {
-    return exports.getDataProperty("QueryStartDate");
+    return exports.getDateProperty("QueryStartDate");
 };
 
 exports.getQueryEndDate = function() {
-    return exports.getDataProperty("QueryEndDate");
+    return exports.getDateProperty("QueryEndDate");
 };
 
 exports.getQueryStartDateString = function() {
@@ -72,9 +72,21 @@ exports.getStringOfSetting = function(name) {
     }
 };
 
+exports.getStringOfSetting = function(name) {
+    switch (name) {
+      case "QueryStartDate":
+      case "QueryEndDate":
+        return _getQueryDateString(name);
+
+      default:
+        return Ti.App.Properties.getString(name);
+    }
+};
+
 exports.init = function() {
     exports.setInitialDates();
-    _setPropertyAsStringIfUndefined("ServerName", defaults.SERVER_URL);
+    _setPropertyAsStringIfUndefined("ServerName", defaults.SERVER_NAME);
+    _setPropertyAsStringIfUndefined("Locale", defaults.LOCALE);
     Ti.App.Properties.addEventListener("change", function() {
         Ti.API.trace("config.change event handler...");
         Ti.API.debug(String.format("Actual locale: %s", Ti.App.Properties.getString("Locale")));
@@ -89,7 +101,31 @@ exports.resetFactorySettings = function() {
     Ti.App.Properties.setString("QueryStartDate", now.toString());
     Ti.App.Properties.setString("QueryEndDate", past.toString());
     exports.setLoggedOut();
-    Ti.App.Properties.setString("ServerName", defaults.SERVER_URL);
+    Ti.App.Properties.setString("ServerName", defaults.SERVER_NAME);
+    Ti.App.Properties.removeProperty("Bookmark");
+    Ti.App.Properties.setString("Locale", defaults.LOCALE);
+};
+
+exports.getProperty = function(name) {
+    switch (name) {
+      case "QueryStartDate":
+      case "QueryEndDate":
+        return exports.getDateProperty(name);
+
+      default:
+        return Ti.App.Properties.getString(name);
+    }
+};
+
+exports.setProperty = function(name, value) {
+    switch (name) {
+      case "QueryStartDate":
+      case "QueryEndDate":
+        return exports.setQueryDate(name, value);
+
+      default:
+        return Ti.App.Properties.setString(name, value);
+    }
 };
 
 exports.init();

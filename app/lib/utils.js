@@ -23,6 +23,12 @@ exports.openWindowWithBottomClicksDisabled = function(viewName, arg) {
     controller.getView().open(controller.animate_in);
 };
 
+// ----------------------------------------------------------------------------
+exports.doLogout = function(e) {
+    Config.setLoggedOut();
+    Alloy.Globals.tabgroup.setActiveTab(Alloy.Globals.LOGIN_TAB);
+};
+
 // When locale changes, text of views must be updated to show the translations.
 // Each views containing localizable text must call this function. Arguments
 // are the view elements having text attributes. Define text id as
@@ -34,8 +40,6 @@ exports.registerTextUpdates = function() {
     args = arguments;
 
     function set(txt, id) {
-        if (typeof id !== 'undefined')
-            Ti.API.trace(id + " " + Alloy.Globals.L(id));
         return (typeof id !== 'undefined') ? Alloy.Globals.L(id) : txt;
     }
 

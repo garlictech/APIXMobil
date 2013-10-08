@@ -1,14 +1,27 @@
+// ----------------------------------------------------------------------------
+// Module initialization
 var Config = require('config');
 var webServiceClient = require('webServiceClient');
+var WindowController = require("window_controller");
 
-// Handling text label update in case of locale change
-require('utils').registerTextUpdates(
-    $.username, $.password, $.login_button, $.activity_logging_in
+// ----------------------------------------------------------------------------
+// Login class, responsible for Info window Login.
+function Login(args, uiElements, window) {
+    WindowController.call(this, args, uiElements, $.window, $);
+    this.addElement('setting', 'language');
+}
+
+// Inherits from WindowController...
+Login.prototype = Object.create(WindowController.prototype);
+
+// ----------------------------------------------------------------------------
+// Create the actial Info object, and bind it to this particular controller
+module.exports = new Login(
+    arguments,
+    [$.username, $.password, $.login_button, $.activity_logging_in]
 );
 
-Alloy.Globals.tabgroup = $.index;
-Ti.UI.iPhone.StatusBar = Ti.UI.LIGHT_CONTENT;
-
+// ----------------------------------------------------------------------------
 // Handle clicking on the "Login" button.
 function doLogin(e) {
     $.username.blur();

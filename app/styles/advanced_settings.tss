@@ -1,17 +1,12 @@
 "#top_label": {
-    text_id: "settings"
+    text_id: "advanced_settings"
 }
 
-"#server_name": {
+".server_name": {
     top: 120,
     title_id: "server_name",
-    propertyName: "ServerName"
-}
-
-"#language": {
-    top: 180,
-    title_id: "language",
-    propertyName: "Locale"
+    propertyName: "ServerName",
+    controllerName: "text_input"
 }
 
 "Button": {

@@ -1,0 +1,7 @@
+"Button": {
+    top: 25,
+    left: 5,
+    height: 30,
+    width: 60,
+    title_id: 'back'
+}

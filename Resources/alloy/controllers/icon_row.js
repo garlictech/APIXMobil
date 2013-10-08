@@ -1,7 +1,12 @@
 function Controller() {
+    function IconRow() {
+        "undefined" != typeof this.args.text && ($.row_name.text = this.args.text);
+        "undefined" != typeof this.args.text_id && ($.row_name.text_id = this.args.text_id);
+        $.icon.image = "undefined" != typeof this.args.icon_id ? String.format("images/db_icons/%d.png", this.args.icon_id) : this.args.image;
+        this.hasChild() || ($.row.hasChild = false);
+    }
     function openChildWindow() {
-        var controller = Alloy.createController(args.childWindow).getView();
-        Alloy.Globals.tabgroup.activeTab.open(controller);
+        iconrow.openChildWindow();
     }
     require("alloy/controllers/BaseController").apply(this, Array.prototype.slice.call(arguments));
     this.__controllerPath = "icon_row";
@@ -34,12 +39,14 @@ function Controller() {
     $.__views.row.add($.__views.row_name);
     exports.destroy = function() {};
     _.extend($, $.__views);
-    var args = arguments[0] || {};
-    if ("undefined" != typeof args.text) $.row_name.text = args.text; else {
-        $.row_name.text_id = args.text_id;
-        require("utils").registerTextUpdates($.row_name);
-    }
-    $.icon.image = "undefined" != typeof args.icon_id ? String.format("images/db_icons/%d.png", args.icon_id) : args.image;
+    IconRow.prototype = new (require("controller"))(arguments, [ $.row_name ]);
+    IconRow.prototype.openChildWindow = function() {
+        this.hasChild() && require("table_manager").manager.openChildTable(this.args.childWindow, this.args.child_collection);
+    };
+    IconRow.prototype.hasChild = function() {
+        return "undefined" != typeof this.args.child_collection;
+    };
+    var iconrow = new IconRow();
     __defers["$.__views.row!click!openChildWindow"] && $.__views.row.addEventListener("click", openChildWindow);
     _.extend($, exports);
 }

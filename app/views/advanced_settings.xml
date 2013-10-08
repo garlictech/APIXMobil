@@ -1,8 +1,8 @@
 <Alloy>
     <Window id="window">
         <Label id="top_label" class="top bar"/>
-        <Require type="view" id="server_name" src="setting"/>
-        <Button id="back_button" class="back_button" onClick="goBack" />
         <Button id="reset_button" onClick="doReset" />
+        <!-- Back button added in controller -->
+        <!-- Setting elements added in controller -->
     </Window>
 </Alloy>

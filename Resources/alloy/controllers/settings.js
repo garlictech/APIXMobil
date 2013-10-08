@@ -1,13 +1,16 @@
 function Controller() {
-    function doAdvancedSettings() {
-        var controller = Alloy.createController("advanced_settings").getView();
-        controller.open();
+    function Settings(args, uiElements) {
+        WindowController.call(this, args, uiElements, $.window, $);
+        this.addElement("query_start_date");
+        this.addElement("query_end_date");
+        this.addElement("locale");
+        this.addBackToTablesButton();
     }
-    function addQueryDateChangeEvent(name) {
-        var initial = Config.getDataProperty(name);
-        common.addSettingChangeEvent(name, "date_picker", initial, function(n, v) {
-            Config.setQueryDate(n, v);
-        });
+    function doAdvancedSettings() {
+        Alloy.createController("advanced_settings").getView().open();
+    }
+    function doLogout() {
+        require("utils").doLogout();
     }
     require("alloy/controllers/BaseController").apply(this, Array.prototype.slice.call(arguments));
     this.__controllerPath = "settings";
@@ -17,13 +20,13 @@ function Controller() {
     var $ = this;
     var exports = {};
     var __defers = {};
-    $.__views.__alloyId15 = Ti.UI.createWindow({
+    $.__views.window = Ti.UI.createWindow({
         width: "100%",
         height: "100%",
         backgroundColor: "black",
         navBarHidden: "true",
         tabBarHidden: "true",
-        id: "__alloyId15"
+        id: "window"
     });
     $.__views.top_label = Ti.UI.createLabel({
         backgroundColor: "#e9bf3c",
@@ -32,64 +35,14 @@ function Controller() {
         width: "100%",
         textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
         font: {
-            fontSize: "24"
+            fontSize: "20"
         },
         color: "#000",
         top: "20",
         text_id: "settings",
         id: "top_label"
     });
-    $.__views.__alloyId15.add($.__views.top_label);
-    $.__views.query_start_date = Alloy.createController("setting", {
-        title_id: "query_interval_start",
-        top: 120,
-        propertyName: "QueryStartDate",
-        id: "query_start_date",
-        __parentSymbol: $.__views.__alloyId15
-    });
-    $.__views.query_start_date.setParent($.__views.__alloyId15);
-    $.__views.query_end_date = Alloy.createController("setting", {
-        top: 180,
-        title_id: "query_interval_end",
-        propertyName: "QueryEndDate",
-        id: "query_end_date",
-        __parentSymbol: $.__views.__alloyId15
-    });
-    $.__views.query_end_date.setParent($.__views.__alloyId15);
-    $.__views.language = Alloy.createController("setting", {
-        top: 240,
-        title_id: "language",
-        propertyName: "Locale",
-        id: "language",
-        __parentSymbol: $.__views.__alloyId15
-    });
-    $.__views.language.setParent($.__views.__alloyId15);
-    $.__views.back_button = Ti.UI.createButton({
-        backgroundColor: "#828282",
-        borderColor: "#e9bf3c",
-        color: "black",
-        borderWidth: 1,
-        style: Ti.UI.iPhone.DONE,
-        borderRadius: 5,
-        backgroundImage: "none",
-        font: {
-            fontWeight: "bold",
-            fontSize: "16"
-        },
-        left: 5,
-        right: 5,
-        top: 25,
-        height: 30,
-        width: 60,
-        title: L("back"),
-        id: "back_button"
-    });
-    $.__views.__alloyId15.add($.__views.back_button);
-    try {
-        $.__views.back_button.addEventListener("click", eventHandlers.goToTables);
-    } catch (e) {
-        __defers["$.__views.back_button!click!eventHandlers.goToTables"] = true;
-    }
+    $.__views.window.add($.__views.top_label);
     $.__views.advanced_settings_button = Ti.UI.createButton({
         backgroundColor: "#828282",
         borderColor: "#e9bf3c",
@@ -108,7 +61,7 @@ function Controller() {
         title_id: "advanced_settings",
         id: "advanced_settings_button"
     });
-    $.__views.__alloyId15.add($.__views.advanced_settings_button);
+    $.__views.window.add($.__views.advanced_settings_button);
     doAdvancedSettings ? $.__views.advanced_settings_button.addEventListener("click", doAdvancedSettings) : __defers["$.__views.advanced_settings_button!click!doAdvancedSettings"] = true;
     $.__views.logout_button = Ti.UI.createButton({
         backgroundColor: "#828282",
@@ -128,41 +81,25 @@ function Controller() {
         title_id: "logout",
         id: "logout_button"
     });
-    $.__views.__alloyId15.add($.__views.logout_button);
-    try {
-        $.__views.logout_button.addEventListener("click", common.doLogout);
-    } catch (e) {
-        __defers["$.__views.logout_button!click!common.doLogout"] = true;
-    }
+    $.__views.window.add($.__views.logout_button);
+    doLogout ? $.__views.logout_button.addEventListener("click", doLogout) : __defers["$.__views.logout_button!click!doLogout"] = true;
     $.__views.settings = Ti.UI.createTab({
-        window: $.__views.__alloyId15,
+        window: $.__views.window,
         id: "settings"
     });
     $.__views.settings && $.addTopLevelView($.__views.settings);
     exports.destroy = function() {};
     _.extend($, $.__views);
-    var utils = require("utils");
-    var Config = require("config");
-    require("locale");
-    var eventHandlers = require("eventHandlers");
-    var common = require("settings_common");
-    utils.registerTextUpdates($.query_start_date, $.query_end_date, $.language, $.logout_button, $.top_label, $.advanced_settings_button);
-    $.query_start_date.addEventListener("click", function() {
-        addQueryDateChangeEvent("QueryStartDate");
-    });
-    $.query_end_date.addEventListener("click", function() {
-        addQueryDateChangeEvent("QueryEndDate");
-    });
-    $.language.addEventListener("click", function() {
-        function use(n, v) {
-            Ti.App.Properties.setString(n, v);
-        }
-        var initial = Ti.App.Properties.getString("Locale");
-        common.addSettingChangeEvent("Locale", "language_picker", initial, use);
-    });
-    __defers["$.__views.back_button!click!eventHandlers.goToTables"] && $.__views.back_button.addEventListener("click", eventHandlers.goToTables);
+    require("config");
+    require("eventHandlers");
+    var WindowController = require("window_controller");
+    Settings.prototype = Object.create(WindowController.prototype);
+    Settings.prototype.addElement = function(TSSClass) {
+        WindowController.prototype.addElement.call(this, "setting", TSSClass);
+    };
+    new Settings(arguments, [ $.logout_button, $.top_label, $.advanced_settings_button ]);
     __defers["$.__views.advanced_settings_button!click!doAdvancedSettings"] && $.__views.advanced_settings_button.addEventListener("click", doAdvancedSettings);
-    __defers["$.__views.logout_button!click!common.doLogout"] && $.__views.logout_button.addEventListener("click", common.doLogout);
+    __defers["$.__views.logout_button!click!doLogout"] && $.__views.logout_button.addEventListener("click", doLogout);
     _.extend($, exports);
 }
 

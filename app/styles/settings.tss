@@ -2,22 +2,25 @@
     text_id: "settings"
 }
 
-"#query_start_date": {
+".query_start_date": {
     title_id: "query_interval_start",
     top: 120,
-    propertyName: "QueryStartDate"
+    propertyName: "QueryStartDate",
+    controllerName: "date_picker"
 }
 
-"#query_end_date": {
+".query_end_date": {
     top: 180,
     title_id: "query_interval_end",
-    propertyName: "QueryEndDate"
+    propertyName: "QueryEndDate",
+    controllerName: "date_picker"
 }
 
-"#language": {
+".locale": {
     top: 240,
     title_id: "language",
-    propertyName: "Locale"
+    propertyName: "Locale",
+    controllerName: "language_picker"
 }
 
 "Button": {
@@ -29,7 +32,6 @@
     bottom: 150,
     title_id: 'advanced_settings'
 }
-
 
 "#logout_button": {
     bottom: 100,

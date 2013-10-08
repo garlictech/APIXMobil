@@ -15,7 +15,7 @@ function Controller() {
     $.__views.index.addTab($.__views.__alloyId1.getViewEx({
         recurse: true
     }));
-    $.__views.tables = Alloy.createController("tables", {
+    $.__views.tables = Alloy.createController("tables_tab", {
         id: "tables"
     });
     $.__views.index.addTab($.__views.tables.getViewEx({
@@ -25,6 +25,12 @@ function Controller() {
         id: "__alloyId2"
     });
     $.__views.index.addTab($.__views.__alloyId2.getViewEx({
+        recurse: true
+    }));
+    $.__views.__alloyId3 = Alloy.createController("info", {
+        id: "__alloyId3"
+    });
+    $.__views.index.addTab($.__views.__alloyId3.getViewEx({
         recurse: true
     }));
     $.__views.index && $.addTopLevelView($.__views.index);
@@ -42,6 +48,7 @@ function Controller() {
     Alloy.Globals.LOGIN_TAB = 0;
     Alloy.Globals.TABLES_TAB = 1;
     Alloy.Globals.SETTINGS_TAB = 2;
+    Alloy.Globals.INFO_TAB = 3;
     var activeTab = Config.isLoggedIn() ? Alloy.Globals.TABLES_TAB : Alloy.Globals.LOGIN_TAB;
     $.index.setActiveTab(activeTab);
     $.index.open();

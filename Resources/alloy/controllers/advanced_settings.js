@@ -1,15 +1,16 @@
 function Controller() {
-    function close() {
-        Ti.App.removeEventListener("SettingsChanged", listener);
-        $.window.close();
+    function AdvancedSettings(args, uiElements) {
+        WindowController.call(this, args, uiElements, $.window, $);
+        this.addElement("server_name");
+        this.addBackButton({
+            click: goBack
+        });
     }
     function doReset() {
-        Config.resetFactorySettings();
-        common.doLogout();
-        close();
+        advancedSettings.doReset();
     }
     function goBack() {
-        close();
+        advancedSettings.close();
     }
     require("alloy/controllers/BaseController").apply(this, Array.prototype.slice.call(arguments));
     this.__controllerPath = "advanced_settings";
@@ -35,44 +36,14 @@ function Controller() {
         width: "100%",
         textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
         font: {
-            fontSize: "24"
+            fontSize: "20"
         },
         color: "#000",
         top: "20",
-        text_id: "settings",
+        text_id: "advanced_settings",
         id: "top_label"
     });
     $.__views.window.add($.__views.top_label);
-    $.__views.server_name = Alloy.createController("setting", {
-        top: 120,
-        title_id: "server_name",
-        propertyName: "ServerName",
-        id: "server_name",
-        __parentSymbol: $.__views.window
-    });
-    $.__views.server_name.setParent($.__views.window);
-    $.__views.back_button = Ti.UI.createButton({
-        backgroundColor: "#828282",
-        borderColor: "#e9bf3c",
-        color: "black",
-        borderWidth: 1,
-        style: Ti.UI.iPhone.DONE,
-        borderRadius: 5,
-        backgroundImage: "none",
-        font: {
-            fontWeight: "bold",
-            fontSize: "16"
-        },
-        left: 5,
-        right: 5,
-        top: 25,
-        height: 30,
-        width: 60,
-        title: L("back"),
-        id: "back_button"
-    });
-    $.__views.window.add($.__views.back_button);
-    goBack ? $.__views.back_button.addEventListener("click", goBack) : __defers["$.__views.back_button!click!goBack"] = true;
     $.__views.reset_button = Ti.UI.createButton({
         backgroundColor: "#828282",
         borderColor: "#e9bf3c",
@@ -96,16 +67,17 @@ function Controller() {
     exports.destroy = function() {};
     _.extend($, $.__views);
     var Config = require("config");
-    var utils = require("utils");
-    var common = require("settings_common");
-    var listener = utils.registerTextUpdates($.reset_button, $.server_name, $.top_label);
-    $.server_name.addEventListener("click", function() {
-        var initial = Ti.App.Properties.getString("ServerName");
-        common.addSettingChangeEvent("ServerName", "text_input", initial, function(n, v) {
-            Ti.App.Properties.setString(n, v);
-        });
-    });
-    __defers["$.__views.back_button!click!goBack"] && $.__views.back_button.addEventListener("click", goBack);
+    var WindowController = require("window_controller");
+    AdvancedSettings.prototype = Object.create(WindowController.prototype);
+    AdvancedSettings.prototype.addElement = function(TSSClass) {
+        WindowController.prototype.addElement.call(this, "setting", TSSClass);
+    };
+    AdvancedSettings.prototype.doReset = function() {
+        Config.resetFactorySettings();
+        require("utils").doLogout();
+        this.close();
+    };
+    var advancedSettings = new AdvancedSettings(arguments, [ $.reset_button, $.top_label ]);
     __defers["$.__views.reset_button!click!doReset"] && $.__views.reset_button.addEventListener("click", doReset);
     _.extend($, exports);
 }

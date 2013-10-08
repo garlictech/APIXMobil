@@ -6,9 +6,13 @@ exports.openWindowWithBottomClicksDisabled = function(viewName, arg) {
     controller.getView().open(controller.animate_in);
 };
 
+exports.doLogout = function() {
+    Config.setLoggedOut();
+    Alloy.Globals.tabgroup.setActiveTab(Alloy.Globals.LOGIN_TAB);
+};
+
 exports.registerTextUpdates = function() {
     function set(txt, id) {
-        "undefined" != typeof id && Ti.API.trace(id + " " + Alloy.Globals.L(id));
         return "undefined" != typeof id ? Alloy.Globals.L(id) : txt;
     }
     function update() {

@@ -1,30 +1,49 @@
+// ----------------------------------------------------------------------------
+// Module initialization
 var Config = require('config');
-var utils = require("utils");
-var common = require("settings_common");
+var WindowController = require("window_controller");
 
-// Handling text label update in case of locale change
-var listener = utils.registerTextUpdates($.reset_button, $.server_name,
-    $.top_label);
-
-function close() {
-    Ti.App.removeEventListener("SettingsChanged", listener);
-    $.window.close();
+// ----------------------------------------------------------------------------
+// AdvancedSettings class
+function AdvancedSettings(args, uiElements) {
+    WindowController.call(this, args, uiElements, $.window, $);
+    this.addElement('server_name');
+    this.addBackButton({click: goBack});
 }
+
+// ----------------------------------------------------------------------------
+
+// Inherits from WindowController...
+AdvancedSettings.prototype = Object.create(WindowController.prototype);
+
+// ----------------------------------------------------------------------------
+
+AdvancedSettings.prototype.addElement = function(TSSClass) {
+    WindowController.prototype.addElement.call(this, "setting", TSSClass);
+};
+
+// ----------------------------------------------------------------------------
+
+AdvancedSettings.prototype.doReset = function() {
+    Config.resetFactorySettings();
+    require("utils").doLogout();
+    this.close();
+};
+
+// ----------------------------------------------------------------------------
+// Create the actual AdvancedSettings object, and bind it to this particular controller
+var advancedSettings = new AdvancedSettings(
+    arguments, [$.reset_button, $.top_label]
+);
+
+// ----------------------------------------------------------------------------
 
 function doReset(e) {
-    Config.resetFactorySettings();
-    common.doLogout();
-    close();
+    advancedSettings.doReset();
 }
 
-$.server_name.addEventListener('click', function(e) {
-    var initial = Ti.App.Properties.getString('ServerName');
-    common.addSettingChangeEvent('ServerName', 'text_input', initial,
-    function(n, v) {
-        Ti.App.Properties.setString(n, v);
-    });
-});
+// ----------------------------------------------------------------------------
 
 function goBack() {
-    close();
+    advancedSettings.close();
 }

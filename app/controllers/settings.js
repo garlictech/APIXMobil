@@ -1,39 +1,38 @@
-var utils = require("utils");
+// ----------------------------------------------------------------------------
+// Module initialization
 var Config = require('config');
-var locale = require('locale');
 var eventHandlers = require('eventHandlers');
-var common = require("settings_common");
+var WindowController = require("window_controller");
 
-// Handling text label update in case of locale change
-utils.registerTextUpdates($.query_start_date, $.query_end_date,
-    $.language, $.logout_button, $.top_label, $.advanced_settings_button);
+// ----------------------------------------------------------------------------
+// Settings class, responsible for Settings window logic.
+function Settings(args, uiElements) {
+    WindowController.call(this, args, uiElements, $.window, $);
+    this.addElement('query_start_date');
+    this.addElement('query_end_date');
+    this.addElement('locale');
+    this.addBackToTablesButton();
+}
 
+// Inherits from WindowController...
+Settings.prototype = Object.create(WindowController.prototype);
+
+Settings.prototype.addElement = function(TSSClass) {
+    WindowController.prototype.addElement.call(this, "setting", TSSClass);
+};
+
+// ----------------------------------------------------------------------------
+// Create the actial Settings object, and bind it to this particular controller
+var settings = new Settings(
+    arguments,
+    [$.logout_button, $.top_label, $.advanced_settings_button]
+);
+
+// Click event handlers
 function doAdvancedSettings(e) {
-    var controller = Alloy.createController("advanced_settings").getView();
-    controller.open();
+    Alloy.createController("advanced_settings").getView().open();
 }
 
-function addQueryDateChangeEvent(name) {
-    var initial = Config.getDataProperty(name);
-    common.addSettingChangeEvent(name, 'date_picker', initial, function(n, v) {
-        Config.setQueryDate(n, v);
-    });
+function doLogout(e) {
+    require("utils").doLogout();
 }
-
-$.query_start_date.addEventListener('click', function(e) {
-    addQueryDateChangeEvent("QueryStartDate");
-});
-
-$.query_end_date.addEventListener('click', function(e) {
-    addQueryDateChangeEvent("QueryEndDate");
-});
-
-$.language.addEventListener('click', function(e) {
-    var initial = Ti.App.Properties.getString("Locale");
-
-    function use(n, v) {
-        Ti.App.Properties.setString(n, v);
-    }
-
-    common.addSettingChangeEvent('Locale', 'language_picker', initial, use);
-});

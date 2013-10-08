@@ -1,14 +1,12 @@
 function Controller() {
-    function close() {
-        $.text_input.close();
-        args.cover_window.close();
+    function TextInput(args, uiElements) {
+        WindowController.call(this, args, uiElements, $.window, $);
     }
     function cancelClicked() {
-        close();
+        textInput.close();
     }
     function doneClicked() {
-        "undefined" != typeof args.useValue && args.useValue($.input.value);
-        close();
+        textInput.doneClicked();
     }
     require("alloy/controllers/BaseController").apply(this, Array.prototype.slice.call(arguments));
     this.__controllerPath = "text_input";
@@ -18,15 +16,15 @@ function Controller() {
     var $ = this;
     var exports = {};
     var __defers = {};
-    $.__views.text_input = Ti.UI.createWindow({
+    $.__views.window = Ti.UI.createWindow({
         width: "100%",
         height: "100%",
         backgroundColor: "black",
         navBarHidden: "true",
         tabBarHidden: "true",
-        id: "text_input"
+        id: "window"
     });
-    $.__views.text_input && $.addTopLevelView($.__views.text_input);
+    $.__views.window && $.addTopLevelView($.__views.window);
     $.__views.top_label = Ti.UI.createLabel({
         backgroundColor: "#e9bf3c",
         borderRadius: 5,
@@ -34,14 +32,14 @@ function Controller() {
         width: "100%",
         textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
         font: {
-            fontSize: "24"
+            fontSize: "20"
         },
         color: "#000",
         top: "20",
         text_id: "server_name",
         id: "top_label"
     });
-    $.__views.text_input.add($.__views.top_label);
+    $.__views.window.add($.__views.top_label);
     $.__views.input = Ti.UI.createTextField({
         paddingLeft: 5,
         backgroundColor: "#828282",
@@ -54,7 +52,7 @@ function Controller() {
         right: 5,
         id: "input"
     });
-    $.__views.text_input.add($.__views.input);
+    $.__views.window.add($.__views.input);
     $.__views.cancel_button = Ti.UI.createButton({
         backgroundColor: "#828282",
         borderColor: "black",
@@ -71,7 +69,7 @@ function Controller() {
         left: 10,
         id: "cancel_button"
     });
-    $.__views.text_input.add($.__views.cancel_button);
+    $.__views.window.add($.__views.cancel_button);
     cancelClicked ? $.__views.cancel_button.addEventListener("click", cancelClicked) : __defers["$.__views.cancel_button!click!cancelClicked"] = true;
     $.__views.done_button = Ti.UI.createButton({
         backgroundColor: "#828282",
@@ -89,14 +87,17 @@ function Controller() {
         right: 10,
         id: "done_button"
     });
-    $.__views.text_input.add($.__views.done_button);
+    $.__views.window.add($.__views.done_button);
     doneClicked ? $.__views.done_button.addEventListener("click", doneClicked) : __defers["$.__views.done_button!click!doneClicked"] = true;
     exports.destroy = function() {};
     _.extend($, $.__views);
-    require("config");
-    var args = arguments[0] || {};
-    require("utils").registerTextUpdates($.top_label);
-    "undefined" !== args.value && ($.input.value = args.value);
+    var WindowController = require("window_controller");
+    TextInput.prototype = Object.create(WindowController.prototype);
+    TextInput.prototype.doneClicked = function() {
+        this.args.useValue($.input.value);
+        this.close();
+    };
+    var textInput = new TextInput(arguments, [ $.top_label ]);
     __defers["$.__views.cancel_button!click!cancelClicked"] && $.__views.cancel_button.addEventListener("click", cancelClicked);
     __defers["$.__views.done_button!click!doneClicked"] && $.__views.done_button.addEventListener("click", doneClicked);
     _.extend($, exports);

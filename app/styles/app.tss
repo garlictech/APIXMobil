@@ -32,7 +32,7 @@
     height: 40,
     width: "100%",
     textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
-    font: {fontSize: "24"},
+    font: {fontSize: "20"},
     color: "#000"
 }
 
@@ -73,14 +73,6 @@
 ".home_button": {
     backgroundImage: "images/icons/home.png",
     left: 5
-}
-
-".back_button": {
-    top: 25,
-    left: 5,
-    height: 30,
-    width: 60,
-    title: L('back')
 }
 
 ".table": {

@@ -1,10 +1,6 @@
 function Controller() {
-    function close() {
-        Ti.App.removeEventListener("SettingsChanged", listener);
-        $.window.close();
-    }
-    function goBack() {
-        close();
+    function Info(args, uiElements) {
+        WindowController.call(this, args, uiElements, $.window, $);
     }
     require("alloy/controllers/BaseController").apply(this, Array.prototype.slice.call(arguments));
     this.__controllerPath = "info";
@@ -13,7 +9,6 @@ function Controller() {
     arguments[0] ? arguments[0]["__itemTemplate"] : null;
     var $ = this;
     var exports = {};
-    var __defers = {};
     $.__views.window = Ti.UI.createWindow({
         width: "100%",
         height: "100%",
@@ -22,7 +17,6 @@ function Controller() {
         tabBarHidden: "true",
         id: "window"
     });
-    $.__views.window && $.addTopLevelView($.__views.window);
     $.__views.top_label = Ti.UI.createLabel({
         backgroundColor: "#e9bf3c",
         borderRadius: 5,
@@ -30,11 +24,11 @@ function Controller() {
         width: "100%",
         textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
         font: {
-            fontSize: "24"
+            fontSize: "20"
         },
         color: "#000",
         top: "20",
-        label_id: "help",
+        text_id: "help",
         id: "top_label"
     });
     $.__views.window.add($.__views.top_label);
@@ -49,32 +43,18 @@ function Controller() {
         id: "content"
     });
     $.__views.scrollview.add($.__views.content);
-    $.__views.back_button = Ti.UI.createButton({
-        backgroundColor: "#828282",
-        borderColor: "#e9bf3c",
-        color: "black",
-        borderWidth: 1,
-        style: Ti.UI.iPhone.DONE,
-        borderRadius: 5,
-        backgroundImage: "none",
-        font: {
-            fontWeight: "bold",
-            fontSize: "16"
-        },
-        top: 25,
-        left: 5,
-        height: 30,
-        width: 60,
-        title: L("back"),
-        id: "back_button"
+    $.__views.info = Ti.UI.createTab({
+        window: $.__views.window,
+        id: "info"
     });
-    $.__views.window.add($.__views.back_button);
-    goBack ? $.__views.back_button.addEventListener("click", goBack) : __defers["$.__views.back_button!click!goBack"] = true;
+    $.__views.info && $.addTopLevelView($.__views.info);
     exports.destroy = function() {};
     _.extend($, $.__views);
     require("eventHandlers");
-    var listener = require("utils").registerTextUpdates($.content, $.top_label);
-    __defers["$.__views.back_button!click!goBack"] && $.__views.back_button.addEventListener("click", goBack);
+    var WindowController = require("window_controller");
+    Info.prototype = Object.create(WindowController.prototype);
+    var info = new Info(arguments, [ $.content, $.top_label ]);
+    info.addBackToTablesButton();
     _.extend($, exports);
 }
 

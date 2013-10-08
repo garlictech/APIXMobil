@@ -28,6 +28,11 @@
     title_id: 'login'
 }
 
+"#language_button": {
+    top: 400,
+    title: "Language"
+}
+
 "#activity_logging_in": {
     width: "auto",
     height: 30,
@@ -35,4 +40,12 @@
     message_id: 'in_progress',
     color: 'white',
     style: 'Ti.UI.ActivityIndicatorStyle.PLAIN'
+}
+
+".language": {
+    top: 460,
+    width: "65%",
+    title_id: "language",
+    propertyName: "Locale",
+    controllerName: "language_picker"
 }

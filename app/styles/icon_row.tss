@@ -7,7 +7,7 @@
 
 "#row_name": {
     left: 50,
-    color: "#e9bf3c"
+    color: "#e9bf3c",
 }
 
 "TableViewRow": {

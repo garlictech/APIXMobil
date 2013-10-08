@@ -9,5 +9,5 @@
 }
 
 "#top_label": {
-    label_id: 'help',
+    text_id: 'help',
 }

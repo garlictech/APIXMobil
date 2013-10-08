@@ -4,6 +4,66 @@
 		"selected_items":
 		[
 			[
+				"on",
+				"onLongpress  (function)"
+			],
+			[
+				"collec",
+				"collectionName"
+			],
+			[
+				"par",
+				"parentController"
+			],
+			[
+				"hint",
+				"hintText_id"
+			],
+			[
+				"is",
+				"isfile  (function)"
+			],
+			[
+				"has",
+				"hasProperty"
+			],
+			[
+				"getV",
+				"getView"
+			],
+			[
+				"lan",
+				"languageFile"
+			],
+			[
+				"set",
+				"setString"
+			],
+			[
+				"P",
+				"Properties"
+			],
+			[
+				"trac",
+				"Ti.API.trace()"
+			],
+			[
+				"get",
+				"getQueryStartDateString  (function)"
+			],
+			[
+				"error",
+				"errorMessage"
+			],
+			[
+				"row",
+				"rowTitle"
+			],
+			[
+				"createTable",
+				"Ti.UI.createTableViewRow()"
+			],
+			[
 				"ke",
 				"keys"
 			],
@@ -80,10 +140,6 @@
 				"sponsorId	(local, instance)"
 			],
 			[
-				"par",
-				"parentUserId	(local, instance)"
-			],
-			[
 				"bin",
 				"active_binary_position"
 			],
@@ -152,10 +208,6 @@
 				"_depthOfComission	(attribute, instance)"
 			],
 			[
-				"get",
-				"get_level"
-			],
-			[
 				"Master",
 				"MasterUser	(imported, class)"
 			],
@@ -206,10 +258,6 @@
 			[
 				"class",
 				"classmethod"
-			],
-			[
-				"is",
-				"isMatrixFull	(local, instance)"
 			],
 			[
 				"root",
@@ -466,54 +514,6 @@
 			[
 				"bu",
 				"build_link_index"
-			],
-			[
-				"link",
-				"link_by_id"
-			],
-			[
-				"lin",
-				"link_id"
-			],
-			[
-				"li",
-				"links"
-			],
-			[
-				"sub",
-				"submitted_time"
-			],
-			[
-				"username",
-				"username_msg"
-			],
-			[
-				"FI",
-				"FILE_NAME"
-			],
-			[
-				"M",
-				"MOVIE_ROOT"
-			],
-			[
-				"MO",
-				"MOVIE_ROOT"
-			],
-			[
-				"F",
-				"FILE_NAME"
-			],
-			[
-				"w",
-				"write_form"
-			],
-			[
-				"valid",
-				"valid_month"
-			],
-			[
-				"L",
-				"LINK_NAME"
 			]
 		]
 	},
@@ -523,7 +523,7 @@
 	"build_system": "Packages/Titanium Build/Titanium.sublime-build",
 	"command_palette":
 	{
-		"height": 375.0,
+		"height": 306.0,
 		"selected_items":
 		[
 			[
@@ -643,7 +643,7 @@
 				"Set Syntax: Python"
 			]
 		],
-		"width": 633.0
+		"width": 515.0
 	},
 	"console":
 	{
@@ -660,134 +660,134 @@
 	},
 	"file_history":
 	[
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/alloy_first/alloy_first/app/views/index.xml",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/alloy_first/alloy_first/app/controllers/index.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/alloy_first/alloy_first/app/styles/index.tss",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/locale/en/LC_MESSAGES/django.po",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/templates/registration/password_reset_done.html",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/locale/hu/LC_MESSAGES/django.po",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/templates/registration.html",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/templates/registration/registration_complete.html",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/templates/registration/registration_form.html",
-		"/var/folders/xf/f2hn1_gj277fx87n50c841xw0000gn/T/sublime-sftp-browse-1379338494/GME FTP Server/index.html",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/templates/registration/password_reset_confirm.html",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/templates/registration/password_change_done.html",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/templates/registration/login_error.html",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/templates/registration/registration_closed.html",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/DiamondMLM/settings.py",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/registration/backends/simple/views.py",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/registration/urls.py",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/registration/signals.py",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/registration/auth_urls.py",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/registration/forms.py",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/registration/models.py",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/registration/backends/default/views.py",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/DiamondMLM/urls.py",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/registration/views.py",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/templates/registration/logout.html",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/registration/tests/default_backend.py",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/registration/tests/simple_backend.py",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/templates/registration/activate.html",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/registration/backends/simple/urls.py",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/registration/backends/default/urls.py",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/registration/tests/urls.py",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/initial_data.json",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/django-registration/registration/backends/default/views.py",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/views.py",
-		"/Users/molnarzs/Dropbox/System/bin_mac/organize_images.py",
-		"/Users/molnarzs/Dropbox/System/bin_mac/organize_images.sh",
-		"/Users/molnarzs/Library/Application Support/Sublime Text 2/Packages/SublimeCodeIntel/Default (OSX).sublime-keymap",
-		"/Users/molnarzs/Library/Application Support/Sublime Text 2/Packages/SublimeCodeIntel/Default (OSX).sublime-mousemap",
-		"/Users/molnarzs/Library/Application Support/Sublime Text 2/Packages/SublimeRope/Default (OSX).sublime-keymap",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/registration/tests/models.py",
-		"/Library/Python/2.7/site-packages/django/template/defaulttags.py",
-		"/Library/Python/2.7/site-packages/django/template/base.py",
-		"/Library/Python/2.7/site-packages/django/template/response.py",
-		"/Library/Python/2.7/site-packages/django/core/handlers/base.py",
-		"/Library/Python/2.7/site-packages/django/test/client.py",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite.sublime-project",
-		"/Library/Python/2.7/site-packages/django/template/debug.py",
-		"/Library/Python/2.7/site-packages/django/test/utils.py",
-		"/Library/Python/2.7/site-packages/django/template/loader_tags.py",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/registration/tests/__init__.py",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/accounts/views.py",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/.git/COMMIT_EDITMSG",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/icon_row.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/settings.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/controller.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/set_bookmark_button.xml",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/advanced_settings.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/assets/locale/hu/strings.xml",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/set_bookmark_button.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/advanced_settings.xml",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/advanced_settings.tss",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/app.tss",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/login.tss",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/tables.xml",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/set_bookmark_button.tss",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/tables.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/alloy.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/config.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/utils.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/window_controller.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/settings.xml",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/settings.tss",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/home_button.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/info.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/tables_tab.xml",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/index.xml",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/locale.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/locations_window.xml",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/table_manager.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/icon_row.xml",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/icon_row.tss",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/back_button.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/back_button.tss",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/eventHandlers.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/tables.tss",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/Resources/table_manager.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/models/location.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/models/table_data.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/models/root_table.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/locations_window.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/locations_window.tss",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/info_button.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/setting.js",
 		"/Users/molnarzs/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
-		"/Users/molnarzs/Library/Application Support/Sublime Text 2/Packages/User/Default (OSX).sublime-keymap",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/dev/view_support.py",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/controller.py",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/test_package/test_models_user.py",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/bin/refresh_server.sh",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/.gitignore",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/bin/setup_server.sh",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/fixtures/devprod/initial_data.prod.json",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/fixtures/devprod/initial_data.dev.json",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/DiamondMLM/settings_prod.py",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/context_processors.py",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/features/password_handling.py",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/features/steps.py",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/templates/language_selector.html",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/templates/header.html",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/DiamondMLM/settings_dev.py",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/templates/index_loggedin.html",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/dev/views.py",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/dev/forms.py",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/templates/registration/login.html",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/features/password_handling.feature",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/templates/registration/password_reset_complete.html",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/templates/registration/password_reset.html",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/features/login.feature",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/models.py",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/fixtures/devprod/initial_data.json.dev",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/fixtures/devprod/initial_data.json.dev",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/static/css/mlmsite.css",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/static/css/typica-login.css",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/templates/registration/password_reset_email.html",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/test_package/test_models_unilevel_position.py",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/test_package/test_tools.py",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/test_package/test_models_masteruser.py",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/templates/base.html",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/test_package/test_controller.py",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/accounts/features/account_handling.py",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/templates/registration/password_reset_done2.html",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/templates/reg/login.html",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/templates/reg/password_reset.html",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/templates/reg/password_reset_done.html",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/templates/registration/password_reset_form2.html",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/templates/registration/password_reset_form.html",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/templates/registration/login.html.bak",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/features/paypal.py",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/accounts/features/terrain.py",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/locale/hu/LC_MESSAGES/django.mo",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/locale/en/LC_MESSAGES/django.mo",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/templates/registration/base.html",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/templates/index_notloggedin.html",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/dev/__init__.py",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/forms.py",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/tests.py",
-		"/Users/molnarzs/Library/Application Support/Sublime Text 2/Packages/SublimeLinter/README.md",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/accounts/models.py",
-		"/Users/molnarzs/Library/Application Support/Sublime Text 2/Packages/Default/Default (OSX).sublime-keymap",
-		"/Users/molnarzs/Library/Application Support/Sublime Text 2/Packages/SublimeLinter/SublimeLinter.sublime-settings",
-		"/Users/molnarzs/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
-		"/Users/molnarzs/Library/Application Support/Sublime Text 2/Packages/User/SublimeLinter.sublime-settings",
-		"/Users/molnarzs/Library/Application Support/Sublime Text 2/Packages/Pylinter/Pylinter.sublime-settings",
-		"/Users/molnarzs/Library/Application Support/Sublime Text 2/Packages/User/Pylinter.sublime-settings",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/templates/graph_eval.html",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/dev/graph_eval/__init__.py",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/dev/graph_eval/views.py",
-		"/Library/Python/2.7/site-packages/django/conf/__init__.py",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/admin.py",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/.gitmodules",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/templates/dev/select_user.html",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/templates/password_reset.html",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/django-userena/userena/templates/userena/password_reset_form.html",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/userena/forms.py",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/view_support.py",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/userena/views.py",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/mlmsite/templates/index.bak.html",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/django-userena/userena/urls.py",
-		"/Users/molnarzs/Dropbox/Projects/MLM/site/mlmsite/django-userena/userena/locale/hu/LC_MESSAGES/django.po"
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/table_common.tss",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/table_root.xml",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/table_common.xml",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/picker.xml",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/picker.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/table_common.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/table_root.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/date_picker.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/table_root.xml.bak",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/login.xml",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/table_root.tss",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/login.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/setting.xml",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/settings_common.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/Resources/controller.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/info.xml",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/setting.tss",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/info.tss",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/back_button.xml",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/index.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/info_button.xml",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/info_controller.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/info_button.tss",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/settings_button.xml",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/assets/locale/en/strings.xml",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/cover_window.tss",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/index.tss",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/settings_button.tss",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/advanced_setting.tss",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/text_input.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/picker.tss",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/text_input.tss",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/assets/specs/test_utils.js",
+		"/Users/molnarzs/bin/organize_images.py",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/assets/specs/test_webServiceClient.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/assets/specs/test_config.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/defaults.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/text_input.xml",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/base.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/base.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/baseController.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/assets/lib/picker_common.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/date_picker_bak.xml",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/date_picker.xml",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/Resources/alloy/controllers/date_picker.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/picker_common.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/picker_common.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/picker_base.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/picker_base.xml",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/assets/locale/stringsEN.xml",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/assets/locale/stringsHU.xml",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/assets/locale/stringsHU.xml",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/Resources/config.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/i18n/en/strings.xml",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/i18n/hu/strings.xml",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/date_picker.tss",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/home_button.xml",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/home_button.tss",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/tiapp.xml",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/Resources/alloy/controllers/icon_row.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/Resources/alloy/controllers/locations_window.js",
+		"/Users/molnarzs/Library/Application Support/iPhone Simulator/7.0/Applications/0CC4C68A-0CB1-4358-A45E-746C8EC6440B/APIXMobil.app/alloy/controllers/locations_window.js",
+		"/Users/molnarzs/Library/Application Support/iPhone Simulator/7.0/Applications/0CC4C68A-0CB1-4358-A45E-746C8EC6440B/APIXMobil.app/alloy/controllers/icon_row.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/models/locations.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/models/settings.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/settings_button.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/table_root.xml",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/tables_root.tss",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/cover_window.xml",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/config.json",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/setting.xml",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/widgets",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/row.tss",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/row.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/row.xml",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/set_time.xml",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/set_time.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/.gitignore",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/details.xml",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/set_language.xml",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/set_language.tss",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/set_language.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/webServiceClient.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/buttons_home_info.xml",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/buttons_home_info.tss",
+		"/Users/molnarzs/Library/Application Support/iPhone Simulator/7.0/Applications/0CC4C68A-0CB1-4358-A45E-746C8EC6440B/APIXMobil.app/alloy/controllers/login.js"
 	],
 	"find":
 	{
@@ -795,7 +795,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 95.0,
 		"where_history":
 		[
 			"<project>"
@@ -806,6 +806,85 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"Settings",
+			"settings",
+			"Settings",
+			"open",
+			"iconrow",
+			"IconRow",
+			"Alloy",
+			"0",
+			"locations",
+			"fugitiveCollection",
+			"TableRoot",
+			"tableroot",
+			"TableRoot",
+			"common",
+			"BackButton",
+			"Info",
+			"info",
+			"Info",
+			"getDataProperty",
+			"()",
+			"BackButton",
+			"Info",
+			"class",
+			"window",
+			"args",
+			"called",
+			"\n",
+			"\"#",
+			"settings_common",
+			"eventHandlers",
+			"Locale",
+			"locale",
+			"Config",
+			"config",
+			"Config",
+			"config",
+			"Config",
+			"locale",
+			"label_id",
+			"myTextId",
+			"text",
+			"APP",
+			"+++\");",
+			"open",
+			"exports",
+			"/string",
+			"\">",
+			"<string name=\"",
+			">\"",
+			"<string name=\"",
+			");\n",
+			"webServiceClient",
+			"default",
+			"QUERY_INITIAL_END_DATE",
+			"INITIAL_SERVER_URL",
+			"changeLanguage",
+			"/string",
+			"\">",
+			"<string name=\"",
+			"game",
+			"SettingChanged",
+			"n",
+			"n.on",
+			"thing",
+			"things",
+			"2",
+			"splas",
+			"founction",
+			"change",
+			");\n",
+			"date2",
+			"date1",
+			"home_button",
+			">\n",
+			"webServerClient",
+			"WebServerClient",
+			"webServerClient",
+			"WebServerClient",
+			"\",",
 			"Create",
 			"registration_activation_complete",
 			"activation_key",
@@ -854,86 +933,7 @@
 			"navbar",
 			"navbar-fixed-top",
 			"navbar",
-			"error",
-			"login-wra",
-			"login",
-			"template",
-			"user",
-			"master",
-			"userena",
-			"graph_eval",
-			"dev/",
-			"signin",
-			"</dd>",
-			"<dd>",
-			"password_reset",
-			"password",
-			"Reset ",
-			"Remem",
-			"paypal",
-			"userena",
-			"bg1",
-			"try_paypal",
-			"graph_eval",
-			"conf_unilevel_copmmission_depth",
-			"_loginStatus",
-			"Get",
-			"TEST_RUN",
-			"5",
-			"SITE_N",
-			"SITE_",
-			"payCommi",
-			"money",
-			"Position",
-			"getMatrixparent",
-			"top",
-			"getMat",
-			"getMatrix",
-			"top",
-			"from",
-			"getAct",
-			"Controller.state_type",
-			"Controller.user_type",
-			"Controller.position_type",
-			"createNewPosition",
-			"_createPositions",
-			"active_position",
-			"sponsor",
-			"user",
-			"TreeLogic",
-			"_guy",
-			"TreeLogic",
-			"Position",
-			"GraphEval_",
-			"TreeLogic",
-			"_guy",
-			"GraphEval_",
-			"Logic",
-			"getActu",
-			"getTree",
-			"BinaryTreeLogic",
-			"active_position",
-			"st_binary",
-			"onClick",
-			"root",
-			"st.",
-			"init",
-			"nodes",
-			"self.getMaster()",
-			"c.getMaster()",
-			"sponsor",
-			"_guy",
-			"sponsor",
-			"_guy",
-			"Position.CreateInDatabase(None)",
-			"realOwner",
-			"Position.CreateInDatabase()",
-			"DummyNode",
-			"left",
-			"_guy",
-			"owner",
-			"isMaster",
-			"\")"
+			"error"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -941,6 +941,12 @@
 		"regex": false,
 		"replace_history":
 		[
+			"",
+			">",
+			"<",
+			"/",
+			">",
+			"<",
 			"basic-box",
 			"",
 			"</small></dd>",
@@ -1047,7 +1053,7 @@
 		"cols":
 		[
 			0.0,
-			0.5,
+			0.504660844793,
 			1.0
 		],
 		"rows":
@@ -1060,7 +1066,7 @@
 	"menu_visible": true,
 	"output.exec":
 	{
-		"height": 170.0
+		"height": 85.0
 	},
 	"output.sftp":
 	{
@@ -1076,6 +1082,142 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"allo",
+				"app/alloy.js"
+			],
+			[
+				"tab",
+				"Resources/table_manager.js"
+			],
+			[
+				"table_man",
+				"Resources/table_manager.js"
+			],
+			[
+				"icon",
+				"app/styles/icon_row.tss"
+			],
+			[
+				"icon_",
+				"app/views/icon_row.xml"
+			],
+			[
+				"table",
+				"app/views/table_root.xml"
+			],
+			[
+				"sett",
+				"app/views/settings.xml"
+			],
+			[
+				"contro",
+				"Resources/controller.js"
+			],
+			[
+				"controll",
+				"Resources/controller.js"
+			],
+			[
+				"settings.",
+				"app/styles/settings.tss"
+			],
+			[
+				"login",
+				"app/styles/login.tss"
+			],
+			[
+				"login.j",
+				"app/controllers/login.js"
+			],
+			[
+				"settings.t",
+				"app/styles/settings.tss"
+			],
+			[
+				"info.x",
+				"app/views/info.xml"
+			],
+			[
+				"date",
+				"app/views/date_picker.xml"
+			],
+			[
+				"conf",
+				"Resources/config.js"
+			],
+			[
+				"alloy",
+				"app/alloy.js"
+			],
+			[
+				"app",
+				"app/styles/app.tss"
+			],
+			[
+				"locations_",
+				"Resources/alloy/controllers/locations_window.js"
+			],
+			[
+				"location",
+				"app/controllers/locations_window.js"
+			],
+			[
+				"config",
+				"Resources/config.js"
+			],
+			[
+				"confi",
+				"Resources/config.js"
+			],
+			[
+				"row.xm",
+				"app/views/row.xml"
+			],
+			[
+				"tiapp.",
+				"tiapp.xml"
+			],
+			[
+				"tipp.",
+				"tiapp.xml"
+			],
+			[
+				"tiapp.x",
+				"tiapp.xml"
+			],
+			[
+				"inde",
+				"app/controllers/index.js"
+			],
+			[
+				"log",
+				"app/controllers/login.js"
+			],
+			[
+				"logi",
+				"app/styles/login.tss"
+			],
+			[
+				"info",
+				"app/views/info.xml"
+			],
+			[
+				"ind",
+				"app/controllers/index.js"
+			],
+			[
+				"index",
+				"app/views/index.xml"
+			],
+			[
+				"login.",
+				"app/controllers/login.js"
+			],
+			[
+				"tabl",
+				"app/controllers/tables.js"
+			],
 			[
 				"urls.p",
 				"DiamondMLM/urls.py"
@@ -1115,10 +1257,6 @@
 			[
 				"ini",
 				"initial_data.json"
-			],
-			[
-				"sett",
-				"DiamondMLM/settings.py"
 			],
 			[
 				"pass",
@@ -1207,10 +1345,10 @@
 		],
 		"width": 0.0
 	},
-	"show_minimap": true,
+	"show_minimap": false,
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 142.0,
+	"side_bar_width": 157.0,
 	"status_bar_visible": true
 }

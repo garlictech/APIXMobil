@@ -1,5 +1,14 @@
 <Alloy>
-    <Tab id="tables">
-        <Require src="table_root" />
-    </Tab>
+    <Window id="window">
+        <!-- Back button added programmatically -->
+        <Label id="top_label" class="top bar"/>
+        <TableView id="table" class="content_top table">
+            <!-- Rows added programmatically -->
+        </TableView>
+        <Label class="bottom bar" />
+        <Require src="info_button"/>
+        <Require src="settings_button"/>
+        <Require src="home_button"/>
+        <Require src="set_bookmark_button"/>
+    </Window>
 </Alloy>

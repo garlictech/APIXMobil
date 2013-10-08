@@ -1,0 +1,15 @@
+"#top_label": {
+    text_id: "data"
+}
+
+"#table": {
+    top: 100,
+    left: 3,
+    right: 3,
+    height: "90"
+}
+
+".icon_row": {
+    childWindow: "tables"
+}
+
