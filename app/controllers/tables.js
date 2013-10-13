@@ -1,4 +1,5 @@
 // ----------------------------------------------------------------------------
+// Module responsibile for displaying table
 // Module initialization
 var WindowController = require("window_controller");
 var TableManager = require("table_manager").manager;
@@ -113,7 +114,8 @@ Tables.prototype.addOnTimeButton = function() {
 
 // ----------------------------------------------------------------------------
 Tables.prototype.updateTable = function() {
-    var collection = this.getCollection();
+    //var collection = this.getCollection();
+    collection = require("root_table_collection");
     var self = this;
     $.table.setData([]);
     var height = 0;

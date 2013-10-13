@@ -144,7 +144,7 @@ function Controller() {
         this.args.window.add(ontimeButton);
     };
     Tables.prototype.updateTable = function() {
-        var collection = this.getCollection();
+        collection = require("root_table_collection");
         var self = this;
         $.table.setData([]);
         var height = 0;

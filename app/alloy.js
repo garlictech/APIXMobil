@@ -11,15 +11,17 @@
 // Alloy.Globals.someGlobalFunction = function(){};
 
 // Execute unit test suite
-// if (Ti.App.deployType == 'test') {
-//     require('specs/test_property');
-//     require('specs/test_date_property');
-//     require('specs/test_config');
-//     require('specs/test_webServiceClient');
-//     require('specs/test_locale');
-//     require('specs/test_utils');
-//     require('behave').run('this');
-// }
+if (Ti.App.deployType == 'test') {
+    require('specs/test_property');
+    require('specs/test_date_property');
+    require('specs/test_config');
+    require('specs/test_webServiceClient');
+    require('specs/test_locale');
+    require('specs/test_utils');
+    require('specs/test_table_collection');
+    require('specs/test_root_table_collection');
+    require('behave').run('this');
+}
 
 var locale = require('locale');
 Alloy.Globals.L = locale.myL;
@@ -70,25 +72,6 @@ Alloy.Globals.places = {
     },
 
     tableNameId: "places",
-};
-
-// ----------------------------------------------------------------------------
-Alloy.Globals.root_table = {
-    data: [
-        {
-            "text_id": "places",
-            "image": "images/locations.png",
-            "child_collection": "places"
-        },
-        {
-            "text_id": "groups",
-            "image": "images/locations.png",
-            "child_collection": "groups"
-        }
-    ],
-
-    refresh: function() {},
-    tableNameId: "data"
 };
 
 // ----------------------------------------------------------------------------
@@ -202,6 +185,10 @@ Alloy.Globals.refuelling_details = {
     refresh: function() {},
     tableNameId: "refuelling_details"
 };
+
+// ----------------------------------------------------------------------------
+// Initialize collections
+Alloy.Globals.root_table = require("root_table_collection");
 
 // ----------------------------------------------------------------------------
 // ... and the root table contains the "root_table" collection.

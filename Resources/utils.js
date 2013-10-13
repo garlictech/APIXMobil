@@ -1,5 +1,9 @@
 var Config = require("config").config;
 
+exports.undefined = function(obj) {
+    return "undefined" == typeof obj;
+};
+
 exports.openWindowWithBottomClicksDisabled = function(viewName, arg) {
     var cover_window = Alloy.createController("cover_window").getView();
     cover_window.open();
