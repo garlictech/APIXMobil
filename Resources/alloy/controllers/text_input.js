@@ -1,6 +1,7 @@
 function Controller() {
     function TextInput(args, uiElements) {
         WindowController.call(this, args, uiElements, $.window, $);
+        $.input.value = this.args.value;
     }
     function cancelClicked() {
         textInput.close();

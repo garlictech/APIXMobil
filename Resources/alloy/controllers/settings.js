@@ -4,6 +4,8 @@ function Controller() {
         this.addElement("query_start_date");
         this.addElement("query_end_date");
         this.addElement("locale");
+        this.addElement("default_query_interval");
+        this.addElement("metric_system");
         this.addBackToTablesButton();
     }
     function doAdvancedSettings() {
@@ -57,7 +59,7 @@ function Controller() {
         },
         left: 5,
         right: 5,
-        bottom: 150,
+        bottom: 130,
         title_id: "advanced_settings",
         id: "advanced_settings_button"
     });
@@ -77,7 +79,7 @@ function Controller() {
         },
         left: 5,
         right: 5,
-        bottom: 100,
+        bottom: 80,
         title_id: "logout",
         id: "logout_button"
     });
@@ -90,8 +92,6 @@ function Controller() {
     $.__views.settings && $.addTopLevelView($.__views.settings);
     exports.destroy = function() {};
     _.extend($, $.__views);
-    require("config");
-    require("eventHandlers");
     var WindowController = require("window_controller");
     Settings.prototype = Object.create(WindowController.prototype);
     Settings.prototype.addElement = function(TSSClass) {

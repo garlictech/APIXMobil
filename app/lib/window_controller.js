@@ -7,6 +7,12 @@ function WindowController(args, uiElements, window, controller) {
     args[0] = args[0] || {};
     args[0].window = window;
     args[0].controller = controller;
+    var self = this;
+
+    window.addEventListener("close", function() {
+        self.close();
+    });
+
     Controller.call(this, args, uiElements);
 }
 
@@ -32,11 +38,15 @@ WindowController.prototype.addBackButton = function(args) {
 // class given as parameter. Also, parameter is the controller name whose
 // child the new element will be. An optional parameter is the parent
 // controller. If it is undefined, the controller set in object level is used.
-WindowController.prototype.addElement = function(controllerName, TSSClass) {
+WindowController.prototype.addElement = function(
+    controllerName, TSSClass, extraArgs)
+{
     var style = this.args.controller.createStyle({
         classes: TSSClass,
         window: this.args.window
     });
+
+    for (var key in extraArgs) { style[key] = extraArgs[key]; }
 
     this.args.window.add(
         Alloy.createController(controllerName, style).getView()

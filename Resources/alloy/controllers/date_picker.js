@@ -12,8 +12,8 @@ function Controller() {
     exports.baseController = "picker";
     var args = arguments[0] || {};
     $.picker.value = args.value;
-    $.picker.maxData = new Date();
-    $.picker.type = Ti.UI.PICKER_TYPE_DATE;
+    $.picker.maxDate = new Date();
+    $.picker.type = Ti.UI.PICKER_TYPE_DATE_AND_TIME;
     $.picker.addEventListener("change", function(e) {
         args.value = e.value;
     });

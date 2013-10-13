@@ -1,1 +1,4 @@
-var eventHandlers = require('eventHandlers');
+// ----------------------------------------------------------------------------
+function goHome(e) {
+    Ti.App.fireEvent("GoHome");
+}

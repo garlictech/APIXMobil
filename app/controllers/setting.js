@@ -1,12 +1,14 @@
 // ----------------------------------------------------------------------------
 // Module initialization
-var Config = require("config");
+var Config = require("config").config;
 var utils = require("utils");
+var validators = require("validators");
 
 // ----------------------------------------------------------------------------
 // Setting class.
 function Setting() {
     $.title_label.text_id = this.args.title_id;
+    // This will trigger UI update. Ugly solution I know.
     $.setting.top = this.args.top || 0;
 
     if (typeof this.args.width !== 'undefined') {
@@ -15,6 +17,7 @@ function Setting() {
     // Listen to the "SettingChanges" event. It simply updates the string
     // representation of the property that the view shows.
     this.addSettingsChangedHandler(this.updateValue);
+    Ti.App.fireEvent("SettingsChanged");
 }
 
 // Inherits from Controller...
@@ -22,32 +25,39 @@ Setting.prototype = new (require("controller"))(arguments, [$.title_label]);
 
 // Read the actual value of the property that this setting is responsible for
 Setting.prototype.updateValue = function() {
-    $.setting_value.text = Config.getStringOfSetting(this.args.propertyName);
+    $.setting_value.text =
+        Config.getProperty(this.args.propertyName).stringValue();
 };
 
-Setting.prototype.addSettingChangeEvent = function (initial, use) {
+Setting.prototype.handleClick = function (initial, use, validator) {
     var self = this;
     var arg = {
         useValue: function(value) {
-            use(self.args.propertyName, value);
-            Ti.App.fireEvent('SettingsChanged');
+            if (eval("validators." + validator + "(value)")) {
+                use(self.args.propertyName, value);
+                Ti.App.fireEvent('SettingsChanged');
+            } else {
+                alert(Alloy.Globals.L("illegal_value"));
+            }
         },
-        value: initial
+        value: initial,
+        validator: validator
     };
-
-    //Alloy.createController(this.args.controllerName, arg).getView().open();
 
     utils.openWindowWithBottomClicksDisabled(this.args.controllerName, arg);
 };
 
 Setting.prototype.clickHandler = function() {
-    var initial = Config.getProperty(this.args.propertyName);
+    var initial = Config.getProperty(this.args.propertyName).get();
+
+    var validator = typeof this.args.validator !== 'undefined' ?
+        this.args.validator : "ok";
 
     function use(n, v) {
-        Config.setProperty(n, v);
+        Config.getProperty(n).set(v);
     }
 
-    this.addSettingChangeEvent(initial, use);
+    this.handleClick(initial, use, validator);
 };
 
 // ----------------------------------------------------------------------------

@@ -2,36 +2,32 @@ function _hasLocaleChanged(locale) {
     return locale !== _actualLocale;
 }
 
-var defaults = require("defaults");
+var Config = require("config").config;
 
-var _languageXml = "to set";
+var _translations = "undefined";
 
-var _actualLocale = "to set";
+var _actualLocale = "undefined";
 
 exports.setTranslation = function() {
-    Ti.API.trace("In locale.setTranslation");
-    var locale = Ti.App.Properties.getString("Locale", defaults.LANGUAGE);
-    if (!_hasLocaleChanged(locale)) {
+    var loc = Config.getProperty("Locale").get();
+    if (!_hasLocaleChanged(loc)) {
         Ti.API.trace("* Locale has not been changed.");
         return;
     }
     Ti.API.debug("Setting new translation...");
-    var languageFile = String.format("locale/%s/strings.xml", locale);
-    var file = Titanium.Filesystem.getFile(languageFile);
-    var xmltext = file.read().toString();
-    Ti.API.trace(String.format("* Language file %s loaded.", languageFile));
-    _languageXml = Ti.XML.parseString(xmltext);
-    Ti.API.trace(String.format("* Language file parsed, resulted %s.", _languageXml));
-    Ti.API.info(String.format("locale.setTranslation: Locale has been changed from %s to %s", _actualLocale, locale));
-    _actualLocale = locale;
+    _translations = require(String.format("translations/%s/strings", loc)).translations;
+    Ti.API.info(String.format("locale.setTranslation: Locale has been changed from %s to %s", _actualLocale, loc));
+    _actualLocale = loc;
     Ti.App.fireEvent("SettingsChanged");
 };
 
 exports.myL = function(key) {
-    return _languageXml.getElementsByTagName(key).item(0).text;
+    return eval("_translations." + key);
 };
 
-exports.supportedLocales = [ "en", "hu", "es" ];
+exports.getSupportedLocales = function() {
+    return [ "en", "hu", "es" ];
+};
 
 exports.getHumanTextOfLocale = function(localeId) {
     switch (localeId) {
@@ -53,6 +49,10 @@ exports.init = function() {
     exports.setTranslation();
 };
 
-Ti.API.debug("Initializing locale module...");
+Ti.App.Properties.addEventListener("change", function() {
+    Ti.API.trace("config.change event handler...");
+    Ti.API.debug(String.format("Actual locale: %s", Config.getProperty("Locale").get()));
+    exports.setTranslation();
+});
 
 exports.init();

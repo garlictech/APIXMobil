@@ -9,8 +9,3 @@ exports.goToSettings = function(e) {
 exports.goToInfo = function(e) {
     Alloy.Globals.tabgroup.setActiveTab(Alloy.Globals.INFO_TAB);
 };
-
-exports.goToHome = function(e) {
-    Ti.App.fireEvent('GoToHome');
-    Alloy.Globals.tabgroup.setActiveTab(Alloy.Globals.TABLES_TAB);
-};

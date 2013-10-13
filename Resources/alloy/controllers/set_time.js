@@ -9,7 +9,6 @@ function Controller() {
     $.__views.set_time = Ti.UI.createPicker({
         selectionIndicator: "true",
         useSpinner: "true",
-        type: Ti.UI.PICKER_TYPE_DATE_AND_TIME,
         top: "150",
         height: "200",
         id: "set_time"

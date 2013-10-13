@@ -1,4 +1,4 @@
 "Button": {
     backgroundImage: "images/icons/settings.png",
-    left: 45
+    right: 45
 }

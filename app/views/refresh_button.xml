@@ -1,0 +1,3 @@
+<Alloy>
+    <Button id="button" class="small_button" onClick="onClick"/>
+</Alloy>

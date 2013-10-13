@@ -4,15 +4,16 @@ function Controller() {
         $.setting.top = this.args.top || 0;
         "undefined" != typeof this.args.width && ($.setting.width = this.args.width);
         this.addSettingsChangedHandler(this.updateValue);
+        Ti.App.fireEvent("SettingsChanged");
     }
     function onClick() {
         setting.clickHandler();
     }
     require("alloy/controllers/BaseController").apply(this, Array.prototype.slice.call(arguments));
     this.__controllerPath = "setting";
-    arguments[0] ? arguments[0]["__parentSymbol"] : null;
-    arguments[0] ? arguments[0]["$model"] : null;
-    arguments[0] ? arguments[0]["__itemTemplate"] : null;
+    var __parentSymbol = arguments[0] ? arguments[0]["__parentSymbol"] : null;
+    var $model = arguments[0] ? arguments[0]["$model"] : null;
+    var __itemTemplate = arguments[0] ? arguments[0]["__itemTemplate"] : null;
     var $ = this;
     var exports = {};
     var __defers = {};
@@ -83,29 +84,34 @@ function Controller() {
     $.__views.setting.add($.__views.change_button);
     exports.destroy = function() {};
     _.extend($, $.__views);
-    var Config = require("config");
+    var Config = require("config").config;
     var utils = require("utils");
+    var validators = require("validators");
     Setting.prototype = new (require("controller"))(arguments, [ $.title_label ]);
     Setting.prototype.updateValue = function() {
-        $.setting_value.text = Config.getStringOfSetting(this.args.propertyName);
+        $.setting_value.text = Config.getProperty(this.args.propertyName).stringValue();
     };
-    Setting.prototype.addSettingChangeEvent = function(initial, use) {
+    Setting.prototype.handleClick = function(initial, use, validator) {
         var self = this;
         var arg = {
             useValue: function(value) {
-                use(self.args.propertyName, value);
-                Ti.App.fireEvent("SettingsChanged");
+                if (eval("validators." + validator + "(value)")) {
+                    use(self.args.propertyName, value);
+                    Ti.App.fireEvent("SettingsChanged");
+                } else alert(Alloy.Globals.L("illegal_value"));
             },
-            value: initial
+            value: initial,
+            validator: validator
         };
         utils.openWindowWithBottomClicksDisabled(this.args.controllerName, arg);
     };
     Setting.prototype.clickHandler = function() {
         function use(n, v) {
-            Config.setProperty(n, v);
+            Config.getProperty(n).set(v);
         }
-        var initial = Config.getProperty(this.args.propertyName);
-        this.addSettingChangeEvent(initial, use);
+        var initial = Config.getProperty(this.args.propertyName).get();
+        var validator = "undefined" != typeof this.args.validator ? this.args.validator : "ok";
+        this.handleClick(initial, use, validator);
     };
     var setting = new Setting();
     __defers["$.__views.setting!click!onClick"] && $.__views.setting.addEventListener("click", onClick);

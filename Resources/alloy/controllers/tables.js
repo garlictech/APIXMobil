@@ -1,11 +1,17 @@
 function Controller() {
     function Tables(args, uiElements) {
         WindowController.call(this, args, uiElements, $.window, $);
-        TableManager.isRootTable() || this.addBackToTablesButton();
+        "undefined" == typeof this.args.tableLocator && (this.args.tableLocator = new (require("table_locator").TableLocator)("tables", "root_table", "", Alloy.Globals.root_table.tableNameId));
+        $.top_label.text_id = this.getCollection().tableNameId;
+        this.addTablePath();
+        if (!this.isRootTable()) {
+            this.addBackToTablesButton();
+            this.addRefreshButton();
+            this.addGoHomeListener();
+        }
+        this.addOnTimeButton();
         this.updateTable();
-    }
-    function goHome() {
-        alert("GoHome");
+        this.updateUi();
     }
     function goBack() {
         TableManager.closeTable($.window);
@@ -43,14 +49,13 @@ function Controller() {
     });
     $.__views.window.add($.__views.top_label);
     $.__views.table = Ti.UI.createTableView({
-        top: 100,
         backgroundColor: "black",
         borderColor: "#e9bf3c",
         borderRadius: 5,
         separatorColor: "black",
+        top: 130,
         left: 3,
         right: 3,
-        height: "90",
         id: "table"
     });
     $.__views.window.add($.__views.table);
@@ -83,35 +88,77 @@ function Controller() {
         __parentSymbol: $.__views.window
     });
     $.__views.__alloyId11.setParent($.__views.window);
-    $.__views.__alloyId12 = Alloy.createController("set_bookmark_button", {
-        id: "__alloyId12",
-        __parentSymbol: $.__views.window
-    });
-    $.__views.__alloyId12.setParent($.__views.window);
     exports.destroy = function() {};
     _.extend($, $.__views);
     var WindowController = require("window_controller");
     var TableManager = require("table_manager").manager;
+    var args = arguments;
     Tables.prototype = Object.create(WindowController.prototype);
-    Tables.prototype.addRow = function(TSSClass, model) {
+    Tables.prototype.addRow = function(model) {
+        var controllerName = "undefined" != typeof model.image ? "icon_row" : "text_row";
         var style = this.args.controller.createStyle({
-            classes: TSSClass,
+            classes: "row",
             window: this.args.window
         });
         for (var key in model) style[key] = model[key];
-        var row = Alloy.createController("icon_row", style).getView();
+        var row = Alloy.createController(controllerName, style).getView();
         $.table.appendRow(row);
+        return row.height;
+    };
+    Tables.prototype.addGoHomeListener = function() {
+        this.goHomeListener = function() {
+            Ti.API.trace("Handling GoHome...");
+            $.window.close();
+        };
+        Ti.App.addEventListener("GoHome", this.goHomeListener);
+    };
+    Tables.prototype.isRootTable = function() {
+        return 1 == Alloy.Globals.TablePath.length;
+    };
+    Tables.prototype.addTablePath = function() {
+        "undefined" == typeof Alloy.Globals.TablePath && (Alloy.Globals.TablePath = []);
+        Alloy.Globals.TablePath.push(this.args.tableLocator);
+        this.addElement("table_path", "table_path", {
+            path: Alloy.Globals.TablePath
+        });
     };
     Tables.prototype.addBackButton = function() {
         WindowController.prototype.addBackButton.call(this, {
             click: goBack
         });
     };
+    Tables.prototype.addRefreshButton = function() {
+        var self = this;
+        this.addElement("refresh_button", "button", {
+            refresher: function() {
+                self.getCollection().refresh();
+                self.updateTable();
+            }
+        });
+    };
+    Tables.prototype.addOnTimeButton = function() {
+        var ontimeButton = Alloy.createController("ontime_button", {
+            actualTableLocator: this.args.tableLocator,
+            window: this.args.window
+        }).getView();
+        this.args.window.add(ontimeButton);
+    };
     Tables.prototype.updateTable = function() {
-        var collection = eval("Alloy.Globals." + this.args.collectionName);
+        var collection = this.getCollection();
         var self = this;
         $.table.setData([]);
-        for (var i = 0; collection.length > i; i++) self.addRow("icon_row", collection[i]);
+        var height = 0;
+        for (var i = 0; collection.data.length > i; i++) height += self.addRow(collection.data[i]);
+        $.table.height = height;
+        this.updateUi();
+    };
+    Tables.prototype.close = function() {
+        Alloy.Globals.TablePath.pop();
+        Ti.App.removeEventListener("GoHome", this.goHomeListener);
+        WindowController.prototype.close.call(this);
+    };
+    Tables.prototype.getCollection = function() {
+        return eval("Alloy.Globals." + this.args.tableLocator.collectionName);
     };
     var tables = new Tables(arguments, [ $.top_label ]);
     _.extend($, exports);

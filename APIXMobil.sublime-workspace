@@ -4,6 +4,34 @@
 		"selected_items":
 		[
 			[
+				"removePro",
+				"Ti.App.Properties.removeProperty()"
+			],
+			[
+				"register",
+				"registerNewProperty"
+			],
+			[
+				"__def",
+				"__defaultName"
+			],
+			[
+				"default",
+				"defaultValue"
+			],
+			[
+				"get",
+				"getProperty"
+			],
+			[
+				"def",
+				"defaultValue"
+			],
+			[
+				"de",
+				"defaultValue"
+			],
+			[
 				"on",
 				"onLongpress  (function)"
 			],
@@ -46,10 +74,6 @@
 			[
 				"trac",
 				"Ti.API.trace()"
-			],
-			[
-				"get",
-				"getQueryStartDateString  (function)"
 			],
 			[
 				"error",
@@ -490,30 +514,6 @@
 			[
 				"ERT",
 				"ERTESITO_SZAM"
-			],
-			[
-				"upl",
-				"upload_ertesito"
-			],
-			[
-				"ERTE",
-				"ERTESITO_PATH"
-			],
-			[
-				"GME",
-				"GME_PWD"
-			],
-			[
-				"GME_",
-				"GME_HOST"
-			],
-			[
-				"Librar",
-				"libraries"
-			],
-			[
-				"bu",
-				"build_link_index"
 			]
 		]
 	},
@@ -660,33 +660,90 @@
 	},
 	"file_history":
 	[
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/defaults.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/webServiceClient.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/setting.tss",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/property.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/settings.tss",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/config.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/window_controller.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/setting.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/assets/specs/test_config.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/language_picker.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/assets/specs/test_locale.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/Resources/utils.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/alloy.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/text_input.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/assets/specs/test_utils.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/login.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/utils.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/tables.js",
 		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/icon_row.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/advanced_settings.tss",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/picker.js",
 		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/settings.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/controller.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/set_bookmark_button.xml",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/date_picker.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/index.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/locale.js",
 		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/advanced_settings.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/Resources/alloy/controllers/setting.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/Resources/alloy.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/controller.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/translations/en/strings.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/translations/es/strings.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/translations/hu/strings.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/Resources/alloy/controllers/language_picker.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/Resources/alloy/controllers/settings.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/assets/specs/test_date_property.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/assets/specs/test_property.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/Resources/specs/test_config.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/Resources/config.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/date_property.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/setup.sh",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/settings.xml",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/Resources/specs/test_property.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/Resources/property.js",
+		"/Users/molnarzs/Library/Application Support/iPhone Simulator/7.0/Applications/0CC4C68A-0CB1-4358-A45E-746C8EC6440B/APIXMobil.app/alloy/controllers/setting.js",
+		"/Users/molnarzs/Library/Application Support/iPhone Simulator/7.0/Applications/0CC4C68A-0CB1-4358-A45E-746C8EC6440B/APIXMobil.app/alloy/styles/settings.js",
+		"/Users/molnarzs/Library/Application%20Support/iPhone%20Simulator/7.0/Applications/0CC4C68A-0CB1-4358-A45E-746C8EC6440B/APIXMobil.app/alloy/controllers/setting.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/file",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/picker.tss",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/date_picker.tss",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/set_time.xml",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/locale/hu/strings.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/locale/en/strings.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/locale/hu/strings.xml",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/locale/en/strings.xml",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/text_input.xml",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/table_manager.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/setting.xml",
+		"/Users/molnarzs/Dropbox/Projects/GME/Web site/upload_ertesito/data.py",
+		"/Users/molnarzs/Dropbox/Projects/GME/Web site/upload_ertesito/data.csv",
+		"/Users/molnarzs/Dropbox/Projects/GME/Web site/upload_ertesito/gme_upload_ertesito.py",
+		"/Users/molnarzs/Dropbox/Projects/GME/Web site/upload_ertesito/thumbnail.py",
+		"/Users/molnarzs/bin/gme_upload_ertesito.py",
+		"/var/folders/xf/f2hn1_gj277fx87n50c841xw0000gn/T/sublime-sftp-browse-1381254128/GME FTP Server/index.html",
+		"/var/folders/xf/f2hn1_gj277fx87n50c841xw0000gn/T/sublime-sftp-browse-1381266447/GME FTP Server/css/structure.css",
+		"/Users/molnarzs/Dropbox/Projects/GME/Web site/upload_ertesito/config.py",
+		"/Users/molnarzs/Dropbox/Projects/GME/Web site/upload_ertesito/ertesito_html.py",
+		"/Users/molnarzs/Dropbox/Projects/GME/Web site/upload_ertesito.2/ertesito_html.py",
+		"/var/folders/xf/f2hn1_gj277fx87n50c841xw0000gn/T/sublime-sftp-browse-1381266361/GME FTP Server/css/typography.css",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/text_input.tss",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/info.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/tiapp.xml",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/assets/locale/en/strings.xml",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/set_bookmark_button.xml",
 		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/assets/locale/hu/strings.xml",
 		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/set_bookmark_button.js",
 		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/advanced_settings.xml",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/advanced_settings.tss",
 		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/app.tss",
 		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/login.tss",
 		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/tables.xml",
 		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/set_bookmark_button.tss",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/tables.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/alloy.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/config.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/utils.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/window_controller.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/settings.xml",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/settings.tss",
 		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/home_button.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/info.js",
 		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/tables_tab.xml",
 		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/index.xml",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/locale.js",
 		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/locations_window.xml",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/table_manager.js",
 		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/icon_row.xml",
 		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/icon_row.tss",
 		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/back_button.js",
@@ -700,94 +757,37 @@
 		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/locations_window.js",
 		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/locations_window.tss",
 		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/info_button.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/setting.js",
 		"/Users/molnarzs/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
 		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/table_common.tss",
 		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/table_root.xml",
 		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/table_common.xml",
 		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/picker.xml",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/picker.js",
 		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/table_common.js",
 		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/table_root.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/date_picker.js",
 		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/table_root.xml.bak",
 		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/login.xml",
 		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/table_root.tss",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/login.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/setting.xml",
 		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/settings_common.js",
 		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/Resources/controller.js",
 		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/info.xml",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/setting.tss",
 		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/info.tss",
 		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/back_button.xml",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/index.js",
 		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/info_button.xml",
 		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/info_controller.js",
 		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/info_button.tss",
 		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/settings_button.xml",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/assets/locale/en/strings.xml",
 		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/cover_window.tss",
 		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/index.tss",
 		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/settings_button.tss",
 		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/advanced_setting.tss",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/text_input.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/picker.tss",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/text_input.tss",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/assets/specs/test_utils.js",
 		"/Users/molnarzs/bin/organize_images.py",
 		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/assets/specs/test_webServiceClient.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/assets/specs/test_config.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/defaults.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/text_input.xml",
 		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/base.js",
 		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/base.js",
 		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/baseController.js",
 		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/assets/lib/picker_common.js",
 		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/date_picker_bak.xml",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/date_picker.xml",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/Resources/alloy/controllers/date_picker.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/picker_common.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/picker_common.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/picker_base.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/picker_base.xml",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/assets/locale/stringsEN.xml",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/assets/locale/stringsHU.xml",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/assets/locale/stringsHU.xml",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/Resources/config.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/i18n/en/strings.xml",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/i18n/hu/strings.xml",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/date_picker.tss",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/home_button.xml",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/home_button.tss",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/tiapp.xml",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/Resources/alloy/controllers/icon_row.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/Resources/alloy/controllers/locations_window.js",
-		"/Users/molnarzs/Library/Application Support/iPhone Simulator/7.0/Applications/0CC4C68A-0CB1-4358-A45E-746C8EC6440B/APIXMobil.app/alloy/controllers/locations_window.js",
-		"/Users/molnarzs/Library/Application Support/iPhone Simulator/7.0/Applications/0CC4C68A-0CB1-4358-A45E-746C8EC6440B/APIXMobil.app/alloy/controllers/icon_row.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/models/locations.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/models/settings.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/settings_button.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/table_root.xml",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/tables_root.tss",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/cover_window.xml",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/config.json",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/setting.xml",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/widgets",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/row.tss",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/row.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/row.xml",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/set_time.xml",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/set_time.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/.gitignore",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/details.xml",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/set_language.xml",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/set_language.tss",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/set_language.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/webServiceClient.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/buttons_home_info.xml",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/buttons_home_info.tss",
-		"/Users/molnarzs/Library/Application Support/iPhone Simulator/7.0/Applications/0CC4C68A-0CB1-4358-A45E-746C8EC6440B/APIXMobil.app/alloy/controllers/login.js"
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/date_picker.xml"
 	],
 	"find":
 	{
@@ -806,6 +806,55 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"locale",
+			"require(\"locale\")",
+			"updateValue",
+			"();\n",
+			"locale",
+			"config",
+			"Config",
+			"module",
+			"Config",
+			"config",
+			"Config",
+			"config",
+			"Config",
+			"webServiceClient",
+			"locale",
+			"_actualLocale",
+			"_translations",
+			"getProperty",
+			"gey",
+			"getProperty",
+			"Property",
+			"property",
+			"Property",
+			"defaultValue",
+			"Config",
+			"properties.getProperty",
+			"Config",
+			"config",
+			"Config",
+			"config",
+			"Config",
+			"var defaults = require(\"defaults\");",
+			"webServiceClient",
+			"QUERY_END_DATE",
+			"\\},",
+			"    \\{",
+			"<([/a-z_]*)>",
+			"<([a-z_]*)>",
+			"<advanced_settings>",
+			"<([a-z_]*)>",
+			"<advanced_settings>",
+			"<([a-z_]*)>",
+			"<([_a-z])*>",
+			"<*>",
+			"<{a-z_}>",
+			"<[a-z_]>",
+			"1160",
+			"LANG",
+			"SERVER",
 			"Settings",
 			"settings",
 			"Settings",
@@ -884,56 +933,7 @@
 			"WebServerClient",
 			"webServerClient",
 			"WebServerClient",
-			"\",",
-			"Create",
-			"registration_activation_complete",
-			"activation_key",
-			"context",
-			"activation_key",
-			"get_context_data",
-			"user_activated",
-			"get_absolute_url",
-			"urls",
-			"RegistrationFormTermsOfService",
-			"index",
-			"SETTINGS_MODULE",
-			"url index",
-			"url",
-			"Enter a ",
-			"Ehhez az",
-			"LOCALE_P",
-			"LOCALE",
-			"LOCAL",
-			"That email address doesn",
-			"Note that both fields may be case-sensitive.",
-			"Please enter a correct",
-			"error",
-			"That email",
-			"instruc",
-			"emailed",
-			"VERSION",
-			"templ",
-			"fuzzy",
-			"password_reset",
-			"törlése",
-			"Reset my",
-			"Forgotten",
-			"login-wra",
-			"login-wraper",
-			"login-wrapper",
-			"login_wrapper",
-			"Forgot",
-			"trans",
-			"sign",
-			"Sign",
-			"sign",
-			"sign_",
-			"sign",
-			"login-form",
-			"navbar",
-			"navbar-fixed-top",
-			"navbar",
-			"error"
+			"\","
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -941,6 +941,17 @@
 		"regex": false,
 		"replace_history":
 		[
+			"getProperty",
+			"config",
+			",",
+			"    ",
+			"\\\"\\},",
+			"\\{$1: \\\"",
+			"\\{$1: \\\" ",
+			"\\{$1:  ",
+			"\\{$1\\: ",
+			"\\{$1\\}",
+			"\\{\\1\\}",
 			"",
 			">",
 			"<",
@@ -1083,6 +1094,34 @@
 		"selected_items":
 		[
 			[
+				"date",
+				"app/controllers/date_picker.js"
+			],
+			[
+				"text",
+				"app/controllers/text_input.js"
+			],
+			[
+				"lan",
+				"app/controllers/language_picker.js"
+			],
+			[
+				"alloy",
+				"app/alloy.js"
+			],
+			[
+				"setting.",
+				"app/controllers/setting.js"
+			],
+			[
+				"config",
+				"app/lib/config.js"
+			],
+			[
+				"tiapp.x",
+				"tiapp.xml"
+			],
+			[
 				"allo",
 				"app/alloy.js"
 			],
@@ -1139,16 +1178,8 @@
 				"app/views/info.xml"
 			],
 			[
-				"date",
-				"app/views/date_picker.xml"
-			],
-			[
 				"conf",
 				"Resources/config.js"
-			],
-			[
-				"alloy",
-				"app/alloy.js"
 			],
 			[
 				"app",
@@ -1161,10 +1192,6 @@
 			[
 				"location",
 				"app/controllers/locations_window.js"
-			],
-			[
-				"config",
-				"Resources/config.js"
 			],
 			[
 				"confi",
@@ -1180,10 +1207,6 @@
 			],
 			[
 				"tipp.",
-				"tiapp.xml"
-			],
-			[
-				"tiapp.x",
 				"tiapp.xml"
 			],
 			[

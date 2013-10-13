@@ -2,13 +2,14 @@
     <Window id="window">
         <!-- Back button added programmatically -->
         <Label id="top_label" class="top bar"/>
-        <TableView id="table" class="content_top table">
+        <!-- path view added programmatically -->
+        <TableView id="table" class="table">
             <!-- Rows added programmatically -->
         </TableView>
         <Label class="bottom bar" />
         <Require src="info_button"/>
         <Require src="settings_button"/>
         <Require src="home_button"/>
-        <Require src="set_bookmark_button"/>
+        <!-- Ontime (set bookmark) button added programmatically -->
     </Window>
 </Alloy>

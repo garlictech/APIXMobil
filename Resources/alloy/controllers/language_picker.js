@@ -8,25 +8,23 @@ function Controller() {
     var exports = {};
     exports.destroy = function() {};
     _.extend($, $.__views);
-    Ti.API.debug("language_picker constructor started");
-    exports.baseController = "picker";
     var locale = require("locale");
+    exports.baseController = "picker";
     var args = arguments[0] || {};
     var data = [];
     var actualRow = 0;
-    for (var i = 0; locale.supportedLocales.length > i; ++i) {
-        loc = locale.supportedLocales[i];
+    for (var i = 0; locale.getSupportedLocales().length > i; ++i) {
+        var loc = locale.getSupportedLocales()[i];
         data[i] = Ti.UI.createPickerRow({
             title: locale.getHumanTextOfLocale(loc)
         });
-        loc === Ti.App.Properties.getString("Locale") && (actualRow = i);
+        loc === require("config").config.getProperty("Locale").get() && (actualRow = i);
     }
     $.picker.add(data);
     $.picker.setSelectedRow(0, actualRow);
     $.picker.addEventListener("change", function(e) {
-        args.value = locale.supportedLocales[e.rowIndex];
+        args.value = locale.getSupportedLocales()[e.rowIndex];
     });
-    Ti.API.debug("language_picker constructor finished");
     _.extend($, exports);
 }
 

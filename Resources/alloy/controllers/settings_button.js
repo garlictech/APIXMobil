@@ -19,7 +19,7 @@ function Controller() {
             fontWeight: "bold",
             fontSize: "16"
         },
-        left: 45,
+        right: 45,
         bottom: 5,
         id: "settings_button"
     });

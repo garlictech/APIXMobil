@@ -1,0 +1,14 @@
+"#name": {
+    left: 5,
+    color: "#e9bf3c",
+}
+
+"#value": {
+    left: 150,
+    color: "#e9bf3c",
+}
+
+"TableViewRow": {
+    hasChild: false,
+    height: 23
+}

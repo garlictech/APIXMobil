@@ -9,6 +9,7 @@ function Controller(args, uiElements) {
     }
 }
 
+// ----------------------------------------------------------------------------
 // Controller API
 // When settings changed, UI elements must update labels, etc. Here, we
 // add a an event listener for this event. The listener must be removed
@@ -26,16 +27,18 @@ Controller.prototype.addSettingsChangedHandler = function (handler){
     this.unregisterTextUpdatesAtClose(h);
 };
 
+// ----------------------------------------------------------------------------
 Controller.prototype.unregisterTextUpdatesAtClose = function(listener) {
     // When the associated windod closes, remove SettingChanged event
     // listening, not to generate memoy leak.
     if (this.args.window !== 'undefined') {
-        this.args.window.addEventListener('close', function() {
+        Ti.App.addEventListener('close', function() {
             Ti.API.removeEventListener("SettingsChanged", listener);
         });
     }
 };
 
+// ----------------------------------------------------------------------------
 Controller.prototype.registerTextUpdates = function(uiElements) {
     function set(txt, id) {
         return (typeof id !== 'undefined') ? Alloy.Globals.L(id) : txt;
@@ -57,4 +60,10 @@ Controller.prototype.registerTextUpdates = function(uiElements) {
     };
 };
 
+// ----------------------------------------------------------------------------
+Controller.prototype.updateUi = function() {
+    Ti.App.fireEvent("SettingsChanged");
+};
+
+// ----------------------------------------------------------------------------
 module.exports = Controller;

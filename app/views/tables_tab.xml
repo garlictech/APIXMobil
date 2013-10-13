@@ -1,5 +1,5 @@
 <Alloy>
     <Tab id="tables">
-        <Require src="tables" collectionName="root_table"/>
+        <Require src="tables"/>
     </Tab>
 </Alloy>

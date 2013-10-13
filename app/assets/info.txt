@@ -1,0 +1,21 @@
+Version: 0.3.0
+
+New features:
+- Ontime button implemented.
+- Windows display data path.
+- In settings, you can select metric system as well.
+- "queries" table implemented.
+
+Known problems:
+
+- When a table row has a child, and we refresh, the first table row shifts to right.
+- When there is no "ontime" set, and we set it, the already open windows do not show it in red, when we go back. When we reopen the windows (click on table rows), it is OK.
+- In case of logout or factory reset, the open tables should close.
+- Spanish language does not work.
+
+Older versions:
+
+0.2.0
+
+- Login window shows language selection.
+- In-app language change, without restart.

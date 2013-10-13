@@ -1,6 +1,11 @@
 function Controller() {
     function Info(args, uiElements) {
         WindowController.call(this, args, uiElements, $.window, $);
+        file = Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, "info.txt");
+        var blob = file.read();
+        $.content.text = blob.text;
+        file = null;
+        blob = null;
     }
     require("alloy/controllers/BaseController").apply(this, Array.prototype.slice.call(arguments));
     this.__controllerPath = "info";
@@ -38,8 +43,11 @@ function Controller() {
     });
     $.__views.window.add($.__views.scrollview);
     $.__views.content = Ti.UI.createLabel({
-        text_id: "detailed_help",
         color: "#dddddd",
+        textAlign: Ti.UI.TEXT_ALIGNMENT_JUSTIFY,
+        font: {
+            fontSize: "14"
+        },
         id: "content"
     });
     $.__views.scrollview.add($.__views.content);
@@ -53,7 +61,7 @@ function Controller() {
     require("eventHandlers");
     var WindowController = require("window_controller");
     Info.prototype = Object.create(WindowController.prototype);
-    var info = new Info(arguments, [ $.content, $.top_label ]);
+    var info = new Info(arguments, [ $.top_label ]);
     info.addBackToTablesButton();
     _.extend($, exports);
 }

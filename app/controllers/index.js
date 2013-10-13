@@ -1,12 +1,4 @@
-if (Ti.App.deployType == 'test') {
-    require('specs/test_config');
-    require('specs/test_webServiceClient');
-    require('specs/test_locale');
-    require('specs/test_utils');
-    require('behave').run('this');
-}
-
-var Config = require('config');
+var Config = require('config').config;
 
 // Save the index tabGroup as a global object. Reason: we do not use
 // built-in tab navigation, we use other buttons and event listerners.

@@ -1,7 +1,5 @@
 // ----------------------------------------------------------------------------
 // Module initialization
-var Config = require('config');
-var eventHandlers = require('eventHandlers');
 var WindowController = require("window_controller");
 
 // ----------------------------------------------------------------------------
@@ -11,6 +9,8 @@ function Settings(args, uiElements) {
     this.addElement('query_start_date');
     this.addElement('query_end_date');
     this.addElement('locale');
+    this.addElement('default_query_interval');
+    this.addElement('metric_system');
     this.addBackToTablesButton();
 }
 

@@ -5,8 +5,8 @@ var args = arguments[0] || {};
 
 // Construction
 $.picker.value = args.value;
-$.picker.maxData = new Date();
-$.picker.type = Ti.UI.PICKER_TYPE_DATE;
+$.picker.maxDate = new Date();
+$.picker.type = Ti.UI.PICKER_TYPE_DATE_AND_TIME;
 
 // On change, share the value of the picker with the base controller, by
 // using args.value.

@@ -5,12 +5,12 @@
     width: 40
 }
 
-"#row_name": {
+"#name": {
     left: 50,
     color: "#e9bf3c",
 }
 
 "TableViewRow": {
-    hasChild: true,
+    hasChild: false,
     height: 43
 }

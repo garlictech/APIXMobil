@@ -36,14 +36,7 @@ function Controller() {
     $.__views.index && $.addTopLevelView($.__views.index);
     exports.destroy = function() {};
     _.extend($, $.__views);
-    if ("test" == Ti.App.deployType) {
-        require("specs/test_config");
-        require("specs/test_webServiceClient");
-        require("specs/test_locale");
-        require("specs/test_utils");
-        require("behave").run("this");
-    }
-    var Config = require("config");
+    var Config = require("config").config;
     Alloy.Globals.tabgroup = $.index;
     Alloy.Globals.LOGIN_TAB = 0;
     Alloy.Globals.TABLES_TAB = 1;

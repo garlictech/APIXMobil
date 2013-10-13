@@ -1,137 +1,102 @@
-// The persistent configuration.
-var webServiceClient = require('webServiceClient');
-var locale = require('locale');
-var defaults = require("defaults");
+// ----------------------------------------------------------------------------
+// Module initialization
+var Defaults = require("defaults");
 
-exports.isLoggedIn = function () {
-    return Ti.App.Properties.getString('loggedIn') == 1;
-};
-
-exports.setLoggedIn = function(username, password) {
-    Ti.App.Properties.setString('loggedIn', 1);
-    Ti.App.Properties.setString('username', username);
-    Ti.App.Properties.setString('password', password);
-};
-
-exports.setLoggedOut = function () {
-    Ti.App.Properties.removeProperty('loggedIn');
-    Ti.App.Properties.removeProperty('username');
-    Ti.App.Properties.removeProperty('password');
-};
-
-function _setPropertyAsStringIfUndefined(name, value) {
-    if (! Ti.App.Properties.hasProperty(name)) {
-        Ti.App.Properties.setString(name, value.toString());
-    }
+// ----------------------------------------------------------------------------
+// Config. Responsibile for handling the app configuration. This is the model
+// of the settings/setting views.
+// The constructor registers all the properties, and sets their default values.
+// Default value: if there is no such property yet, the constructor registers
+// it and sets the default value.
+function Config() {
+    this.init();
 }
 
-// Set up beginning and end date of the queries. At first start, start
-// date/time is "now", end date/time is now - 30 days.
-exports.setInitialDates = function(now) {
+// ----------------------------------------------------------------------------
+// now: only for testing!!! Inject a well defined date instead of now.
+Config.prototype.init = function(now) {
+    // For testing only: dependence injection. We give explicitely what "now"
+    // is.
+    this.properties = [];
+    this.registerNewProperty("QueryInterval", Defaults.QUERY_INTERVAL);
     now = (typeof now !== 'undefined' ? now : new Date());
+    now.setMinutes(59);
+    now.setSeconds(59);
+    now.setHours(23);
+    this.registerNewDateProperty("QueryEndDate", now);
     past = new Date(now);
-    past.setDate(now.getDate() - defaults.QUERY_END_DATE);
-    _setPropertyAsStringIfUndefined("QueryStartDate", now);
-    _setPropertyAsStringIfUndefined("QueryEndDate", past);
+    past.setMinutes(0);
+    past.setSeconds(0);
+    past.setHours(0);
+    past.setDate(now.getDate() - this.getProperty("QueryInterval").get());
+    this.registerNewDateProperty("QueryStartDate", past);
+    this.registerNewProperty("ServerName", Defaults.SERVER_NAME);
+    this.registerNewProperty("Bookmark", {});
+    this.registerNewProperty("Locale", Defaults.LOCALE);
+    this.registerNewProperty('LoggedIn', false);
+    this.registerNewProperty('Username', "");
+    this.registerNewProperty('Password', "");
+    this.registerNewProperty('MetricSystem', Defaults.METRIC_SYSTEM);
+    Ti.App.fireEvent("SettingsChanged");
 };
 
-exports.getDateProperty = function(name) {
-    if (Ti.App.Properties.hasProperty(name)) {
-        return new Date(Ti.App.Properties.getString(name));
+// ----------------------------------------------------------------------------
+Config.prototype.registerNewProperty = function(name, defaultValue) {
+    if (! (name in this.properties)) {
+        this.properties[name] =
+            new (require("property").Property)(name, defaultValue);
     }
 };
 
-exports.getQueryStartDate = function() {
-    return exports.getDateProperty("QueryStartDate");
-};
-
-exports.getQueryEndDate = function() {
-    return exports.getDateProperty("QueryEndDate");
-};
-
-function _getQueryDateString(name) {
-    date = exports.getDateProperty(name);
-    return String.format("%s %d:%d", date.toLocaleDateString(),
-        date.getHours(), date.getMinutes());
-}
-
-exports.getQueryStartDateString = function() {
-    return _getQueryDateString("QueryStartDate");
-};
-
-exports.getQueryEndDateString = function() {
-    return _getQueryDateString("QueryEndDate");
-};
-
-exports.setQueryDate = function(name, date) {
-    Ti.App.Properties.setString(name, date.toString());
-};
-
-exports.getStringOfSetting = function(name) {
-    switch(name) {
-    case "QueryStartDate":
-    case "QueryEndDate":
-        return _getQueryDateString(name);
-    default:
-        return Ti.App.Properties.getString(name);
+// ----------------------------------------------------------------------------
+Config.prototype.registerNewDateProperty = function(name, defaultValue) {
+    if (! (name in this.properties)) {
+        this.properties[name] =
+            new (require("date_property").DateProperty)(name, defaultValue);
     }
 };
 
-exports.getStringOfSetting = function(name) {
-    switch(name) {
-    case "QueryStartDate":
-    case "QueryEndDate":
-        return _getQueryDateString(name);
-    default:
-        return Ti.App.Properties.getString(name);
+// ----------------------------------------------------------------------------
+Config.prototype.getProperty = function(name) {
+    if (name in this.properties) {
+        return this.properties[name];
     }
+
+    return;
 };
 
-exports.init = function() {
-    exports.setInitialDates();
-    _setPropertyAsStringIfUndefined("ServerName", defaults.SERVER_NAME);
-    _setPropertyAsStringIfUndefined("Locale", defaults.LOCALE);
-    // Handles property changes in one central place. It listens to property
-    // change event, and calls various handlers handling the particular
-    // event changes. They should notify then teh controllers to make
-    // necessary updates.
-    Ti.App.Properties.addEventListener('change', function(e) {
-        Ti.API.trace("config.change event handler...");
-        Ti.API.debug(String.format("Actual locale: %s", Ti.App.Properties.getString("Locale")));
-        locale.setTranslation();
-    });
-};
-
-exports.resetFactorySettings = function() {
-    now = new Date();
-    past = new Date(now);
-    past.setDate(now.getDate() - defaults.QUERY_END_DATE);
-    Ti.App.Properties.setString("QueryStartDate", now.toString());
-    Ti.App.Properties.setString("QueryEndDate", past.toString());
-    exports.setLoggedOut();
-    Ti.App.Properties.setString("ServerName", defaults.SERVER_NAME);
-    Ti.App.Properties.removeProperty("Bookmark");
-    Ti.App.Properties.setString("Locale", defaults.LOCALE);
-};
-
-exports.getProperty = function(name) {
-    switch(name) {
-    case "QueryStartDate":
-    case "QueryEndDate":
-        return exports.getDateProperty(name);
-    default:
-        return Ti.App.Properties.getString(name);
+// ----------------------------------------------------------------------------
+// now: only for testing!!! Inject a well defined date instead of now.
+Config.prototype.resetFactorySettings = function(now) {
+    for (var p in this.properties) {
+        this.properties[p].remove();
     }
+
+    this.init(now);
 };
 
-exports.setProperty = function(name, value) {
-    switch(name) {
-    case "QueryStartDate":
-    case "QueryEndDate":
-        return exports.setQueryDate(name, value);
-    default:
-        return Ti.App.Properties.setString(name, value);
-    }
+// ----------------------------------------------------------------------------
+Config.prototype.isLoggedIn = function () {
+    return this.getProperty('LoggedIn').get();
 };
 
-exports.init();
+// ----------------------------------------------------------------------------
+Config.prototype.setLoggedIn = function(username, password) {
+    this.getProperty('LoggedIn').set(true);
+    this.getProperty('Username').set(username);
+    this.getProperty('Password').set(password);
+};
+
+// ----------------------------------------------------------------------------
+Config.prototype.setLoggedOut = function () {
+    this.properties['LoggedIn'].set(false);
+    this.properties['Password'].set("");
+};
+
+// ----------------------------------------------------------------------------
+Config.prototype.hasProperty = function (name) {
+    return (name in this.properties);
+};
+
+// ----------------------------------------------------------------------------
+exports.config = new Config();

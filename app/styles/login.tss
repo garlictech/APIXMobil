@@ -4,7 +4,9 @@
 }
 
 "TextField": {
-    width: 200
+    width: 200,
+    autocorrect: false,
+    autocapitalization: "Titanium.Ui.TEXT_AUTOCAPITALIZATION_NONE"
 }
 
 "#username": {
@@ -15,7 +17,7 @@
 "#password": {
     hintText_id: 'password',
     top: '189',
-    passwordMask: true
+    passwordMask: true,
 }
 
 "Button": {

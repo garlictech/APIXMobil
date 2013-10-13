@@ -1,6 +1,6 @@
 // ----------------------------------------------------------------------------
 // Module initialization
-var Config = require('config');
+var Config = require('config').config;
 var WindowController = require("window_controller");
 
 // ----------------------------------------------------------------------------

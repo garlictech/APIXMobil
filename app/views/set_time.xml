@@ -1,5 +1,5 @@
 <Alloy>
-    <Picker selectionIndicator="true" useSpinner="true" type="Ti.UI.PICKER_TYPE_DATE_AND_TIME" top="150" height="200">
+    <Picker selectionIndicator="true" useSpinner="true" top="150" height="200">
             <PickerColumn width="200" />
             <PickerColumn />
     </Picker>

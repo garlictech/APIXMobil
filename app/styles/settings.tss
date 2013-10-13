@@ -2,25 +2,40 @@
     text_id: "settings"
 }
 
+".query_end_date": {
+    top: 100,
+    title_id: "query_interval_end",
+    propertyName: "QueryEndDate",
+    controllerName: "date_picker",
+}
+
 ".query_start_date": {
     title_id: "query_interval_start",
-    top: 120,
+    top: 160,
     propertyName: "QueryStartDate",
     controllerName: "date_picker"
 }
 
-".query_end_date": {
-    top: 180,
-    title_id: "query_interval_end",
-    propertyName: "QueryEndDate",
-    controllerName: "date_picker"
-}
-
 ".locale": {
-    top: 240,
+    top: 220,
     title_id: "language",
     propertyName: "Locale",
     controllerName: "language_picker"
+}
+
+".metric_system": {
+    top: 280,
+    title_id: "metric_system",
+    propertyName: "MetricSystem",
+    controllerName: "metric_system_picker"
+}
+
+".default_query_interval": {
+    title_id: "default_query_interval",
+    top: 340,
+    propertyName: "QueryInterval",
+    controllerName: "text_input",
+    validator: "mustBePositiveNumber"
 }
 
 "Button": {
@@ -29,11 +44,11 @@
 }
 
 "#advanced_settings_button": {
-    bottom: 150,
+    bottom: 130,
     title_id: 'advanced_settings'
 }
 
 "#logout_button": {
-    bottom: 100,
+    bottom: 80,
     title_id: 'logout'
 }

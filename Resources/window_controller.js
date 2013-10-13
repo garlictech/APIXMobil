@@ -2,6 +2,10 @@ function WindowController(args, uiElements, window, controller) {
     args[0] = args[0] || {};
     args[0].window = window;
     args[0].controller = controller;
+    var self = this;
+    window.addEventListener("close", function() {
+        self.close();
+    });
     Controller.call(this, args, uiElements);
 }
 
@@ -15,11 +19,12 @@ WindowController.prototype.addBackButton = function(args) {
     this.args.window.add(Alloy.createController("back_button", args).getView());
 };
 
-WindowController.prototype.addElement = function(controllerName, TSSClass) {
+WindowController.prototype.addElement = function(controllerName, TSSClass, extraArgs) {
     var style = this.args.controller.createStyle({
         classes: TSSClass,
         window: this.args.window
     });
+    for (var key in extraArgs) style[key] = extraArgs[key];
     this.args.window.add(Alloy.createController(controllerName, style).getView());
 };
 

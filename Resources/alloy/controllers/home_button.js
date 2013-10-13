@@ -1,4 +1,7 @@
 function Controller() {
+    function goHome() {
+        Ti.App.fireEvent("GoHome");
+    }
     require("alloy/controllers/BaseController").apply(this, Array.prototype.slice.call(arguments));
     this.__controllerPath = "home_button";
     arguments[0] ? arguments[0]["__parentSymbol"] : null;
@@ -24,15 +27,10 @@ function Controller() {
         id: "home_button"
     });
     $.__views.home_button && $.addTopLevelView($.__views.home_button);
-    try {
-        $.__views.home_button.addEventListener("click", eventHandlers.goToHome);
-    } catch (e) {
-        __defers["$.__views.home_button!click!eventHandlers.goToHome"] = true;
-    }
+    goHome ? $.__views.home_button.addEventListener("click", goHome) : __defers["$.__views.home_button!click!goHome"] = true;
     exports.destroy = function() {};
     _.extend($, $.__views);
-    var eventHandlers = require("eventHandlers");
-    __defers["$.__views.home_button!click!eventHandlers.goToHome"] && $.__views.home_button.addEventListener("click", eventHandlers.goToHome);
+    __defers["$.__views.home_button!click!goHome"] && $.__views.home_button.addEventListener("click", goHome);
     _.extend($, exports);
 }
 

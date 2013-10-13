@@ -1,3 +1,0 @@
-<Alloy>
-    <Button id="button" class="small_button" onClick="onClick" onLongpress="onLongpress"/>
-</Alloy>

@@ -2,38 +2,38 @@
 // TableManager class. Keeps track of the set of data tables, and provides some
 // global functions for them.
 
-function TableManager() {
-    if (Alloy.Globals.ActualTableIndex === 'undefined') {
-        // Track if we are at the root table or not
-        Alloy.Globals.ActualTableIndex = 0;
-    }
-}
+function TableManager() {}
 
 // ----------------------------------------------------------------------------
-
-TableManager.prototype.openChildTable = function
-    (childWindow, childCollection)
+TableManager.prototype.openChildTable = function(tableLocator)
 {
-    Alloy.Globals.ActualTableIndex++;
     var controller = Alloy.createController(
-        childWindow, {collectionName: childCollection}).getView();
+            tableLocator.controllerName,
+            {tableLocator: tableLocator}).getView();
     // This is defined in tables.js...
     // The controller must be open in the tab, otherwise, the new window
     // will overlay the whole tab group - so tab group navigation will
     // be invisible.
     Alloy.Globals.tabgroup.activeTab.open(controller);
+    Alloy.Globals.ActualTableLocator = tableLocator;
 };
 
 // ----------------------------------------------------------------------------
-
-TableManager.prototype.isRootTable = function() {
-    return Alloy.Globals.ActualTableIndex === 0;
+TableManager.prototype.openBookmarkedTable = function(tableLocator)
+{
+    if ( ! tableLocator.equal(this.actualTableLocator())) {
+        this.openChildTable(tableLocator);
+    }
 };
 
 // ----------------------------------------------------------------------------
 TableManager.prototype.closeTable = function(window) {
-    Alloy.Globals.ActualTableIndex--;
     window.close();
+};
+
+// ----------------------------------------------------------------------------
+TableManager.prototype.actualTableLocator = function() {
+    return Alloy.Globals.TablePath[Alloy.Globals.TablePath.length - 1];
 };
 
 // ----------------------------------------------------------------------------

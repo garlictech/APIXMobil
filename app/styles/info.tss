@@ -1,11 +1,14 @@
 "#content": {
-    text_id: 'detailed_help',
-    color: '#dddddd'
+    color: '#dddddd',
+    textAlign: Ti.UI.TEXT_ALIGNMENT_JUSTIFY,
+    font: {fontSize: "14"},
 }
 
 "#scroll_view": {
     contentHeight:'auto',
-    showVerticalScrollIndicator: "true"
+    showVerticalScrollIndicator: "true",
+    left: 5,
+    right: 5
 }
 
 "#top_label": {

@@ -6,6 +6,7 @@ var WindowController = require("window_controller");
 // TextInput class.
 function TextInput(args, uiElements) {
     WindowController.call(this, args, uiElements, $.window, $);
+    $.input.value = this.args.value;
 }
 
 // ----------------------------------------------------------------------------

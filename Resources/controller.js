@@ -14,7 +14,7 @@ Controller.prototype.addSettingsChangedHandler = function(handler) {
 };
 
 Controller.prototype.unregisterTextUpdatesAtClose = function(listener) {
-    "undefined" !== this.args.window && this.args.window.addEventListener("close", function() {
+    "undefined" !== this.args.window && Ti.App.addEventListener("close", function() {
         Ti.API.removeEventListener("SettingsChanged", listener);
     });
 };
@@ -32,6 +32,10 @@ Controller.prototype.registerTextUpdates = function(uiElements) {
             uiElements[i].message = set(uiElements[i].message, uiElements[i].message_id);
         }
     };
+};
+
+Controller.prototype.updateUi = function() {
+    Ti.App.fireEvent("SettingsChanged");
 };
 
 module.exports = Controller;

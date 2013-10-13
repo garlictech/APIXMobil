@@ -46,6 +46,7 @@ function Controller() {
         height: 40,
         autocorrect: false,
         width: 200,
+        autocapitalization: "Titanium.Ui.TEXT_AUTOCAPITALIZATION_NONE",
         hintText_id: "username",
         top: "150",
         id: "username"
@@ -59,6 +60,7 @@ function Controller() {
         height: 40,
         autocorrect: false,
         width: 200,
+        autocapitalization: "Titanium.Ui.TEXT_AUTOCAPITALIZATION_NONE",
         hintText_id: "password",
         top: "189",
         passwordMask: true,
@@ -118,7 +120,7 @@ function Controller() {
     $.__views.login && $.addTopLevelView($.__views.login);
     exports.destroy = function() {};
     _.extend($, $.__views);
-    var Config = require("config");
+    var Config = require("config").config;
     var webServiceClient = require("webServiceClient");
     var WindowController = require("window_controller");
     Login.prototype = Object.create(WindowController.prototype);

@@ -66,7 +66,7 @@ function Controller() {
     doReset ? $.__views.reset_button.addEventListener("click", doReset) : __defers["$.__views.reset_button!click!doReset"] = true;
     exports.destroy = function() {};
     _.extend($, $.__views);
-    var Config = require("config");
+    var Config = require("config").config;
     var WindowController = require("window_controller");
     AdvancedSettings.prototype = Object.create(WindowController.prototype);
     AdvancedSettings.prototype.addElement = function(TSSClass) {

@@ -10,16 +10,20 @@
 //
 // Alloy.Globals.someGlobalFunction = function(){};
 
-var Config = require('config');
+// Execute unit test suite
+// if (Ti.App.deployType == 'test') {
+//     require('specs/test_property');
+//     require('specs/test_date_property');
+//     require('specs/test_config');
+//     require('specs/test_webServiceClient');
+//     require('specs/test_locale');
+//     require('specs/test_utils');
+//     require('behave').run('this');
+// }
 
-Alloy.Globals.L = require('locale').myL;
+var locale = require('locale');
+Alloy.Globals.L = locale.myL;
 
-// Initialize models and collections
-
-// Language
-// Ti.App.Properties.setString("language", "EN");
-// Config.changeLanguage();
-// alert(Config.getLanguageText("login"));
 
 // --------- TEST
 //
@@ -47,62 +51,162 @@ function initDummyData(data, collection) {
 // ----------------------------------------------------------------------------
 // Alloy.Collections.location = Alloy.createCollection("table_data");
 
-Alloy.Globals.locations = [
-    {
-        "text": "Budapest",
-        "image": "images/db_icons/1.png",
-        "child_collection": "sub_locations"
+Alloy.Globals.places = {
+    data: [
+        {
+            "text": "Budapest",
+            "image": "images/db_icons/1.png",
+            "child_collection": "sites",
+        },
+        {
+            "text": "Bánkút",
+            "image": "images/db_icons/2.png",
+            "child_collection": "sites",
+        }
+    ],
+
+    refresh: function() {
+        Alloy.Globals.places.data[1].text = "Bánkút " + (new Date()).getSeconds();
     },
-    {
-        "text": "Bánkút",
-        "image": "images/db_icons/2.png",
-        "child_collection": "sub_locations"
-    }
-];
+
+    tableNameId: "places",
+};
 
 // ----------------------------------------------------------------------------
-Alloy.Globals.root_table = [
-    {
-        "text_id": "locations",
-        "image": "images/locations.png",
-        "child_collection": "locations"
-    },
-    {
-        "text_id": "groups",
-        "image": "images/locations.png",
-        "child_collection": "groups"
-    }
-];
+Alloy.Globals.root_table = {
+    data: [
+        {
+            "text_id": "places",
+            "image": "images/locations.png",
+            "child_collection": "places"
+        },
+        {
+            "text_id": "groups",
+            "image": "images/locations.png",
+            "child_collection": "groups"
+        }
+    ],
+
+    refresh: function() {},
+    tableNameId: "data"
+};
 
 // ----------------------------------------------------------------------------
-Alloy.Globals.sub_locations = [
-    {
-        text: "Bp, Budaörsi út",
-        image: "images/db_icons/1.png",
-        childCollection: "main_menu"
-    },
-    {
-        text: "Bp, Honvéd utca",
-        image: "images/db_icons/1.png",
-        childCollection: "main_menu"
-    }
+Alloy.Globals.sites = {
+    data: [
+        {
+            text: "Bp, Budaörsi út",
+            image: "images/db_icons/1.png",
+            child_collection: "queries"
+        },
+        {
+            text: "Bp, Honvéd utca",
+            image: "images/db_icons/1.png",
+            child_collection: "queries"
+        }
+    ],
 
-];
+    refresh: function() {
+        Alloy.Globals.sites.data[0].text = "Bp, Budaörsi út " + (new Date()).getSeconds();
+    },
+
+    tableNameId: "sites"
+};
 
 // ----------------------------------------------------------------------------
-Alloy.Globals.groups = [
-    {
-        text: "Nagy Csoport",
-        "image": "images/locations.png"
-    },
-    {
-        text: "Kis Csoport",
-        "image": "images/locations.png"
-    }
-];
+Alloy.Globals.groups = {
+    data: [
+        {
+            text: "Nagy Csoport",
+            "image": "images/locations.png"
+        },
+        {
+            text: "Kis Csoport",
+            "image": "images/locations.png"
+        }
+    ],
+
+    refresh: function() {},
+
+    tableNameId: "groups"
+};
 
 // ----------------------------------------------------------------------------
-Alloy.Globals.ActualTableIndex = 0;
+Alloy.Globals.queries = {
+    data: [
+        {
+            text_id: "refuelling_details",
+            //child_collection: "refuelling_details"
+        },
+
+        {
+            text_id: "refuelling_summary",
+            //child_collection: "refuelling_summary"
+        },
+
+        {
+            text_id: "card_details",
+            //child_collection: "card_details"
+        },
+
+        {
+            text_id: "card_summary",
+            //child_collection: "card_summary"
+        },
+
+        {
+            text_id: "tank_details",
+            //child_collection: "tank_details"
+        },
+
+        {
+            text_id: "tank_diagram",
+            //child_collection: "tank_diagram"
+        },
+
+        {
+            text_id: "tank_summary",
+            //child_collection: "tank_summary"
+        },
+
+        {
+            text_id: "controller_details",
+            //child_collection: "controller_details"
+        },
+
+        {
+            text_id: "controller_summary",
+            //child_collection: "controller_summary"
+        },
+
+        {
+            text_id: "vapour_data",
+            //child_collection: "vapour_data"
+        }
+    ],
+
+    refresh: function() {},
+
+    tableNameId: "queries"
+};
+
+// ----------------------------------------------------------------------------
+Alloy.Globals.refuelling_details = {
+    data: [
+        {
+            text_id: "vapour_data",
+            child_collection: "vapour_data"
+        }
+    ],
+
+    refresh: function() {},
+    tableNameId: "refuelling_details"
+};
+
+// ----------------------------------------------------------------------------
+// ... and the root table contains the "root_table" collection.
+Alloy.Globals.ActualTableLocator =
+    new (require("table_locator").TableLocator)("tables", "root_table");
 
 // Indicator od the actual table open. collection is the model of the collection, index is the collection ID.
 Alloy.Globals.ActualTableDescriptor = {

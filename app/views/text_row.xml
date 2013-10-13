@@ -1,0 +1,6 @@
+<Alloy>
+    <TableViewRow id="row" onClick="openChildWindow">
+        <Label id="name"/>
+        <Label id="value"/>
+    </TableViewRow>
+</Alloy>

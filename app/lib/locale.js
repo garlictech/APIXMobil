@@ -1,52 +1,49 @@
-var defaults = require("defaults");
+// ----------------------------------------------------------------------------
+// Module initialization
+var Config = require("config").config;
+var _translations = "undefined"; // Variable storing the actual translation object
+var _actualLocale = "undefined";
 
-// Handling language and locale related operations: re-read locale file
-// if language changes, notifies views to update labels.texts, etc.
-
-// Variable storing the processed XML of translations
-var _languageXml = "to set";
-var _actualLocale = "to set";
-
+// ----------------------------------------------------------------------------
 // Detects if locale has changed. In case of it hasn't, it should not reread
 // the locale file, etc.
 function _hasLocaleChanged(locale) {
     return locale !== _actualLocale;
 }
 
+// ----------------------------------------------------------------------------
 // According to the value of "Locale" property, it reads and processes
 // the appropriate language file, and resets translation. When finished,
 // it fires the locale"SettingsChanged" event.
 exports.setTranslation = function() {
-    Ti.API.trace("In locale.setTranslation");
-    var locale = Ti.App.Properties.getString("Locale", defaults.LANGUAGE);
+    var loc = Config.getProperty("Locale").get();
 
-    if (! _hasLocaleChanged(locale) ) {
+    if (! _hasLocaleChanged(loc) ) {
         Ti.API.trace("* Locale has not been changed.");
         return;
     }
 
     Ti.API.debug("Setting new translation...");
-    var languageFile = String.format("locale/%s/strings.xml", locale);
-    var file = Titanium.Filesystem.getFile(languageFile);
-    var xmltext = file.read().toString();
-    Ti.API.trace(String.format("* Language file %s loaded.", languageFile));
-    _languageXml = Ti.XML.parseString(xmltext);
-    Ti.API.trace(String.format("* Language file parsed, resulted %s.", _languageXml));
+    _translations = require(String.format("translations/%s/strings", loc)).translations;
     // set locale only after successful XML processing
-    Ti.API.info(String.format("locale.setTranslation: Locale has been changed from %s to %s", _actualLocale, locale));
-    _actualLocale = locale;
+    Ti.API.info(String.format("locale.setTranslation: Locale has been changed from %s to %s", _actualLocale, loc));
+    _actualLocale = loc;
     Ti.App.fireEvent("SettingsChanged");
 };
 
+// ----------------------------------------------------------------------------
 // Returns the actual translation of the text id
 exports.myL = function(key) {
-    return _languageXml.getElementsByTagName(key).item(0).text;
+    return eval("_translations." + key);
 };
 
+// ----------------------------------------------------------------------------
 // Return an array of supported locale descriptors.
-exports.supportedLocales = ['en', 'hu', 'es'];
+exports.getSupportedLocales = function() {
+    return ['en', 'hu', 'es'];
+};
 
-// Return human representation of locale ID
+// ----------------------------------------------------------------------------// Return human representation of locale ID
 exports.getHumanTextOfLocale = function(localeId) {
     switch(localeId) {
     case "en":
@@ -60,11 +57,19 @@ exports.getHumanTextOfLocale = function(localeId) {
     }
 };
 
+// ----------------------------------------------------------------------------
 // (re)initialize the module. Ensure that translation file is processed
 // at least once.
 exports.init = function() {
     exports.setTranslation();
 };
 
-Ti.API.debug("Initializing locale module...");
+// ----------------------------------------------------------------------------
+Ti.App.Properties.addEventListener('change', function(e) {
+    Ti.API.trace("config.change event handler...");
+    Ti.API.debug(String.format("Actual locale: %s", Config.getProperty("Locale").get()));
+    exports.setTranslation();
+});
+
+// ----------------------------------------------------------------------------
 exports.init();

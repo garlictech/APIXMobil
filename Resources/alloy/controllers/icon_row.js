@@ -1,9 +1,6 @@
 function Controller() {
     function IconRow() {
-        "undefined" != typeof this.args.text && ($.row_name.text = this.args.text);
-        "undefined" != typeof this.args.text_id && ($.row_name.text_id = this.args.text_id);
-        $.icon.image = "undefined" != typeof this.args.icon_id ? String.format("images/db_icons/%d.png", this.args.icon_id) : this.args.image;
-        this.hasChild() || ($.row.hasChild = false);
+        $.icon.image = this.args.image;
     }
     function openChildWindow() {
         iconrow.openChildWindow();
@@ -17,7 +14,7 @@ function Controller() {
     var exports = {};
     var __defers = {};
     $.__views.row = Ti.UI.createTableViewRow({
-        hasChild: true,
+        hasChild: false,
         height: 43,
         id: "row"
     });
@@ -31,21 +28,15 @@ function Controller() {
         id: "icon"
     });
     $.__views.row.add($.__views.icon);
-    $.__views.row_name = Ti.UI.createLabel({
+    $.__views.name = Ti.UI.createLabel({
         left: 50,
         color: "#e9bf3c",
-        id: "row_name"
+        id: "name"
     });
-    $.__views.row.add($.__views.row_name);
+    $.__views.row.add($.__views.name);
     exports.destroy = function() {};
     _.extend($, $.__views);
-    IconRow.prototype = new (require("controller"))(arguments, [ $.row_name ]);
-    IconRow.prototype.openChildWindow = function() {
-        this.hasChild() && require("table_manager").manager.openChildTable(this.args.childWindow, this.args.child_collection);
-    };
-    IconRow.prototype.hasChild = function() {
-        return "undefined" != typeof this.args.child_collection;
-    };
+    IconRow.prototype = new (require("table_row"))(arguments, $.row, $.name);
     var iconrow = new IconRow();
     __defers["$.__views.row!click!openChildWindow"] && $.__views.row.addEventListener("click", openChildWindow);
     _.extend($, exports);
