@@ -87,7 +87,7 @@
     backgroundColor: "black",
     borderColor: "#e9bf3c",
     borderRadius: 5,
-    separatorColor: "black",
+    separatorColor: "e9bf3c",
     top: 130,
     left: 3,
     right: 3

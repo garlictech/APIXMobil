@@ -13,5 +13,6 @@ module.exports = CollectionPrototypeGenerator({
     collectionTitleId: "groups",
     viewControllerName: "simple_table_view",
     text_id: false,
-    data: data
+    data: data,
+    id: "groups_table"
 });

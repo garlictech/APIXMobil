@@ -12,21 +12,24 @@
 //
 // Required, SetBookmarkButton specific controller arguments ("arguments[0]"):
 //
-// - actualTableLocator: table locator object of teh actual table. This is the
-// target of (new) longpress event: the next potential bookmark in case of
-// user setting it.
+// - arguments[0].window: The window that contains the button.
+// - arguments[0].actualCollection: The collection that the above window.
+//   displays. New window is not opened if actual collection and bookmarked
+//   collections are the same.
 //
+// Collections should be identified uniquely by a string, they will be
+// compared when deciding if bookmarked collection is the actual one.
 var Config = require("config").config;
-var TableLocator = require("table_locator").TableLocator;
-var debug = require("debug");
+var Utils = require("utils");
 
 // Property holding the bookmark in Ti.App.Properties (config)
 var propertyName = "Bookmark";
 
 // ----------------------------------------------------------------------------
 // OnTime class.
-function OnTime() {
+function OnTime(args) {
     var self = this;
+    this.actualCollection = args.actualCollection;
 
     this.addSettingsChangedHandler(function() {
         self.setColor();
@@ -35,29 +38,34 @@ function OnTime() {
 
 // ----------------------------------------------------------------------------
 // Inherits from Controller...
-OnTime.prototype =
-    new (require("controller"))(arguments[0], arguments[0].window);
+OnTime.prototype = new (require("controller"))(arguments[0]);
 
 // ----------------------------------------------------------------------------
 OnTime.prototype.onClick = function() {
     if (this.isBookmarkSet()) {
-        var tableLocator = new (require("table_locator")).TableLocator();
-        tableLocator.copyFrom(Config.getProperty(propertyName).get());
-        require("table_manager").manager.openBookmarkedTable(tableLocator);
+        var id = Config.getProperty(propertyName).get().collectionId;
+
+        if (id != this.actualCollection.id())
+        {
+            var coll = Alloy.Globals.collections[id];
+            require("table_manager").openChildTable(coll);
+        }
     }
 };
 
 // ----------------------------------------------------------------------------
 OnTime.prototype.onLongpress = function() {
     // Set bookmark
-    this.args.actualTableLocator.copyToProperty(propertyName);
+    Config.getProperty(propertyName).set({
+        collectionId: this.actualCollection.id()
+    });
     this.setColor();
     alert(Alloy.Globals.L("ontime_set"));
 };
 
 // ----------------------------------------------------------------------------
 OnTime.prototype.isBookmarkSet = function() {
-    return typeof Config.getProperty(propertyName).get().collectionName !== "undefined";
+    return !Utils.undefined(Config.getProperty(propertyName).get().collectionId);
 };
 
 // ----------------------------------------------------------------------------
@@ -67,7 +75,7 @@ OnTime.prototype.setColor = function() {
 
 // ----------------------------------------------------------------------------
 // Create the object representing this particular controller
-var onTime = new OnTime();
+var onTime = new OnTime(arguments[0]);
 
 // ----------------------------------------------------------------------------
 function onLongpress() {

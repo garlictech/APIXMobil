@@ -18,37 +18,9 @@ TableManager.prototype.openChildTable = function(collection)
 };
 
 // ----------------------------------------------------------------------------
-TableManager.prototype.openBookmarkedTable = function(tableLocator)
-{
-    if ( ! tableLocator.equal(this.actualTableLocator())) {
-        this.openChildTable(tableLocator);
-    }
-};
-
-// ----------------------------------------------------------------------------
 TableManager.prototype.closeTable = function(window) {
     window.close();
 };
 
 // ----------------------------------------------------------------------------
-TableManager.prototype.actualTableLocator = function() {
-    return Alloy.Globals.TablePath[Alloy.Globals.TablePath.length - 1];
-};
-
-// ----------------------------------------------------------------------------
-// Create a view by passing the window parameter to it.
-TableManager.prototype.addTableView = function(
-    controllerName, window, collection
-) {
-    var view = Alloy.createController(controllerName, {
-        window: window,
-        collection: collection,
-        controllerName: controllerName
-    }).getView();
-
-    window.add(view);
-};
-
-// ----------------------------------------------------------------------------
-var tableManager = new TableManager();
-module.exports = tableManager;
+module.exports = new TableManager();

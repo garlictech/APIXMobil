@@ -14,5 +14,7 @@ module.exports = CollectionPrototypeGenerator({
     collectionTitleId: "places",
     viewControllerName: "simple_table_view",
     text_id: false,
-    data: data
+    data: data,
+    id: "places_table",
+    refreshable: true
 });

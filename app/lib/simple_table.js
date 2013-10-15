@@ -12,6 +12,12 @@ var TableBase = require("table_base");
 function SimpleTable(args) {
     TableBase.call(this, args);
     this.addBackButton();
+
+    if (this.collection.refreshable()) {
+        this.addRefreshButton();
+    }
+
+    this.addGoHomeButton();
 }
 
 // ----------------------------------------------------------------------------
@@ -29,6 +35,28 @@ SimpleTable.prototype.close = function() {
 // We should not close it when we are at the root table.
 SimpleTable.prototype.addBackButton = function() {
     TableBase.prototype.addBackButton.call(this, this.controller.window);
+};
+
+// ----------------------------------------------------------------------------
+SimpleTable.prototype.addRefreshButton = function() {
+    var self = this;
+
+    this.addElement("refresh_button", {refresher: function() {
+        self.collection.dummyRefresh();
+        self.updateTable();
+    }});
+};
+
+// ----------------------------------------------------------------------------
+SimpleTable.prototype.addGoHomeButton = function() {
+    this.addElement("home_button", {});
+    var self = this;
+
+    this.goHomeListener = function() {
+        Ti.API.trace("Handling GoHome...");
+        self.close();
+    };
+    Ti.App.addEventListener("GoHome", this.goHomeListener);
 };
 
 // ----------------------------------------------------------------------------

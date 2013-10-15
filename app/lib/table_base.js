@@ -25,10 +25,10 @@ function TableBase(args) {
     // Configure the UI
     this.controller.top_label.text_id = this.collection.title_id;
     this.addTablePath();
-    //this.addOnTimeButton();
+    this.addOnTimeButton();
     this.updateTable();
     // Window title must reflect the table type it
-    // Table is ready and configured, update teh texts, etc...
+    // Table is ready and configured, update the texts, etc...
     this.updateUi();
 }
 
@@ -62,7 +62,7 @@ TableBase.prototype.addTablePath = function() {
 // Add ontime button: handles "bookmarks"
 TableBase.prototype.addOnTimeButton = function() {
     this.addElement("ontime_button", {
-        collection: this.collection
+        actualCollection: this.collection
     });
 };
 

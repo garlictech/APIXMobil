@@ -13,5 +13,7 @@ module.exports = CollectionPrototypeGenerator({
     collectionTitleId: "sites",
     viewControllerName: "simple_table_view",
     text_id: false,
-    data: data
+    data: data,
+    id: "sites_table",
+    refreshable: true
 });

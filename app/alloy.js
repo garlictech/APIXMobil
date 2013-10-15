@@ -27,71 +27,7 @@ if (Ti.App.deployType == 'test') {
     require('behave').run('this');
 }
 
-
-
-// ----------------------------------------------------------------------------
-// Alloy.Collections.location = Alloy.createCollection("table_data");
-
-Alloy.Globals.places = {
-    data: [
-        {
-            "text": "Budapest",
-            "image": "images/db_icons/1.png",
-            "child_collection": "sites",
-        },
-        {
-            "text": "Bánkút",
-            "image": "images/db_icons/2.png",
-            "child_collection": "sites",
-        }
-    ],
-
-    refresh: function() {
-        Alloy.Globals.places.data[1].text = "Bánkút " + (new Date()).getSeconds();
-    },
-
-    tableNameId: "places",
-};
-
-// ----------------------------------------------------------------------------
-Alloy.Globals.sites = {
-    data: [
-        {
-            text: "Bp, Budaörsi út",
-            image: "images/db_icons/1.png",
-            child_collection: "queries"
-        },
-        {
-            text: "Bp, Honvéd utca",
-            image: "images/db_icons/1.png",
-            child_collection: "queries"
-        }
-    ],
-
-    refresh: function() {
-        Alloy.Globals.sites.data[0].text = "Bp, Budaörsi út " + (new Date()).getSeconds();
-    },
-
-    tableNameId: "sites"
-};
-
-// ----------------------------------------------------------------------------
-Alloy.Globals.groups = {
-    data: [
-        {
-            text: "Nagy Csoport",
-            "image": "images/locations.png"
-        },
-        {
-            text: "Kis Csoport",
-            "image": "images/locations.png"
-        }
-    ],
-
-    refresh: function() {},
-
-    tableNameId: "groups"
-};
+Alloy.Globals.collections = {};
 
 // ----------------------------------------------------------------------------
 Alloy.Globals.queries = {

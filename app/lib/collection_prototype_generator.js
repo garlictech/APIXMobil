@@ -13,7 +13,23 @@ function CollectionPrototypeGenerator() {
         if (! Utils.undefined(parentNode)) {
             this.parentNode = parentNode;
         }
+
+        Alloy.Globals.collections[args.id] = this;
     }
+
+    Prototype.prototype.id = function() {
+        return args.id;
+    };
+
+    Prototype.prototype.dummyRefresh = function() {
+        if (! Utils.undefined(this.data[0].text)) {
+            this.data[0].text += " x";
+        }
+    };
+
+    Prototype.prototype.refreshable = function() {
+        return (! Utils.undefined(args.refreshable)) && args.refreshable;
+    };
 
     Prototype.prototype.refresh = function() {
         var self = this;
