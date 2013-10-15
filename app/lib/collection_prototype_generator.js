@@ -45,7 +45,7 @@ function CollectionPrototypeGenerator() {
         // row will be displayed as icon_row.
         function Node(pars) {
             function construct(
-                textParameter, image, value, childCollectionType, parentNode
+                textParameter, image, value, childCollectionType
             ) {
                 if (args.text_id) {
                     this.text_id = textParameter;
@@ -55,7 +55,7 @@ function CollectionPrototypeGenerator() {
 
                 this.image = image;
                 this.parentNode = self.parentNode;
-                this.value = self.value;
+                this.value = value;
 
                 if ( ! Utils.undefined(childCollectionType)) {
                     // This is where the parent node inserts itself to the

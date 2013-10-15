@@ -6,7 +6,7 @@
 "#value": {
     left: 150,
     color: "#e9bf3c",
-    textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT,
+    textAlign: Ti.UI.TEXT_ALIGNMENT_RIGHT,
     font: {fontSize: "14"},
     color: "white"
 }
