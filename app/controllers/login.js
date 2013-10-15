@@ -6,9 +6,12 @@ var WindowController = require("window_controller");
 
 // ----------------------------------------------------------------------------
 // Login class, responsible for Info window Login.
-function Login(args, uiElements, window) {
-    WindowController.call(this, args, uiElements, $.window, $);
-    this.addElement('setting', 'language');
+function Login(args) {
+    var uiElements =
+        [$.username, $.password, $.login_button, $.activity_logging_in];
+
+    WindowController.call(this, args, $, uiElements);
+    this.addElement('setting', {}, 'language');
 }
 
 // Inherits from WindowController...
@@ -16,10 +19,7 @@ Login.prototype = Object.create(WindowController.prototype);
 
 // ----------------------------------------------------------------------------
 // Create the actial Info object, and bind it to this particular controller
-module.exports = new Login(
-    arguments,
-    [$.username, $.password, $.login_button, $.activity_logging_in]
-);
+module.exports = new Login(arguments[0]);
 
 // ----------------------------------------------------------------------------
 // Handle clicking on the "Login" button.

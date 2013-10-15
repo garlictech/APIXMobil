@@ -9,7 +9,8 @@ function RefreshButton() { }
 
 // ----------------------------------------------------------------------------
 // Inherits from Controller...
-RefreshButton.prototype = new (require("controller"))(arguments);
+RefreshButton.prototype =
+    new (require("controller"))(arguments[0], arguments[0].window);
 
 // ----------------------------------------------------------------------------
 RefreshButton.prototype.onClick = function() {

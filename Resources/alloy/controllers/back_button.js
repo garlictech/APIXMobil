@@ -34,9 +34,9 @@ function Controller() {
     onClick ? $.__views.back_button.addEventListener("click", onClick) : __defers["$.__views.back_button!click!onClick"] = true;
     exports.destroy = function() {};
     _.extend($, $.__views);
-    BackButton.prototype = new (require("controller"))(arguments, [ $.back_button ]);
+    BackButton.prototype = new (require("controller"))(arguments[0], [ $.back_button ]);
     BackButton.prototype.onClick = function() {
-        this.args.click.call(void 0);
+        this.window.close();
     };
     var button = new BackButton();
     __defers["$.__views.back_button!click!onClick"] && $.__views.back_button.addEventListener("click", onClick);

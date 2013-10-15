@@ -1,6 +1,6 @@
 function Controller() {
     function IconRow() {
-        $.icon.image = this.args.image;
+        $.icon.image = this.model.image;
     }
     function openChildWindow() {
         iconrow.openChildWindow();
@@ -36,7 +36,7 @@ function Controller() {
     $.__views.row.add($.__views.name);
     exports.destroy = function() {};
     _.extend($, $.__views);
-    IconRow.prototype = new (require("table_row"))(arguments, $.row, $.name);
+    IconRow.prototype = new (require("table_row"))(arguments[0], $.row, $.name);
     var iconrow = new IconRow();
     __defers["$.__views.row!click!openChildWindow"] && $.__views.row.addEventListener("click", openChildWindow);
     _.extend($, exports);

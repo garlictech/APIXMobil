@@ -1,31 +1,19 @@
 // ----------------------------------------------------------------------------
 // Module initialization
-var TableCollection = require("table_collection");
+var CollectionPrototypeGenerator = require("collection_prototype_generator");
+var PlacesCollection = require("places_collection");
+var GroupsCollection = require("groups_collection");
 
 // ----------------------------------------------------------------------------
-function RootTableCollection() {
-    TableCollection.call(this);
-}
+var data = [
+    ["places", "images/locations.png", PlacesCollection],
+    ["groups", "images/locations.png", GroupsCollection]
+];
 
 // ----------------------------------------------------------------------------
-RootTableCollection.prototype = Object.create(TableCollection.prototype);
-
-// ----------------------------------------------------------------------------
-RootTableCollection.prototype.fetch = function(id) {
-    this.data = [
-        {
-            "text_id": "places",
-            "image": "images/locations.png",
-            "child_collection": "places"
-        },
-        {
-            "text_id": "groups",
-            "image": "images/locations.png",
-            "child_collection": "groups"
-        }
-    ];
-};
-
-// ----------------------------------------------------------------------------
-var rootTableCollection = new RootTableCollection();
-module.exports = rootTableCollection;
+module.exports = CollectionPrototypeGenerator({
+    collectionTitleId: "data",
+    viewControllerName: "simple_table_view",
+    text_id: true,
+    data: data
+});

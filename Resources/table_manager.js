@@ -1,11 +1,10 @@
 function TableManager() {}
 
-TableManager.prototype.openChildTable = function(tableLocator) {
-    var controller = Alloy.createController(tableLocator.controllerName, {
-        tableLocator: tableLocator
+TableManager.prototype.openChildTable = function(collection) {
+    var controller = Alloy.createController(collection.viewControllerName, {
+        collection: collection
     }).getView();
     Alloy.Globals.tabgroup.activeTab.open(controller);
-    Alloy.Globals.ActualTableLocator = tableLocator;
 };
 
 TableManager.prototype.openBookmarkedTable = function(tableLocator) {
@@ -20,4 +19,15 @@ TableManager.prototype.actualTableLocator = function() {
     return Alloy.Globals.TablePath[Alloy.Globals.TablePath.length - 1];
 };
 
-exports.manager = new TableManager();
+TableManager.prototype.addTableView = function(controllerName, window, collection) {
+    var view = Alloy.createController(controllerName, {
+        window: window,
+        collection: collection,
+        controllerName: controllerName
+    }).getView();
+    window.add(view);
+};
+
+var tableManager = new TableManager();
+
+module.exports = tableManager;

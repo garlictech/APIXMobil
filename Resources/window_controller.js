@@ -1,42 +1,47 @@
-function WindowController(args, uiElements, window, controller) {
-    args[0] = args[0] || {};
-    args[0].window = window;
-    args[0].controller = controller;
+function WindowController(args, controller, uiElements) {
+    args = Utils.undefined(args) ? {} : args;
+    args.window = controller.window;
+    Controller.call(this, args, uiElements);
     var self = this;
-    window.addEventListener("close", function() {
+    this.controller = controller;
+    this.window.addEventListener("close", function() {
         self.close();
     });
-    Controller.call(this, args, uiElements);
 }
 
 var Controller = require("controller");
 
+var Utils = require("utils");
+
 WindowController.prototype = Object.create(Controller.prototype);
 
-WindowController.prototype.addBackButton = function(args) {
-    "undefined" == typeof args.id && (args.id = "back_button");
-    args.window = this.args.window;
-    this.args.window.add(Alloy.createController("back_button", args).getView());
+WindowController.prototype.addBackButton = function() {
+    this.addElement("back_button");
 };
 
-WindowController.prototype.addElement = function(controllerName, TSSClass, extraArgs) {
-    var style = this.args.controller.createStyle({
-        classes: TSSClass,
-        window: this.args.window
-    });
-    for (var key in extraArgs) style[key] = extraArgs[key];
-    this.args.window.add(Alloy.createController(controllerName, style).getView());
+WindowController.prototype.addElement = function(controllerName, args, TSSClass) {
+    args = Utils.undefined(args) ? {} : args;
+    args.window = this.controller.window;
+    if (!Utils.undefined(TSSClass)) {
+        var style = this.controller.createStyle({
+            classes: TSSClass
+        });
+        Utils.merge(args, style);
+    }
+    this.window.add(Alloy.createController(controllerName, args).getView());
 };
 
 WindowController.prototype.addBackToTablesButton = function() {
-    this.addBackButton({
-        click: require("eventHandlers").goToTables
-    });
+    this.addElement("back_to_tables_button");
 };
 
 WindowController.prototype.close = function() {
-    this.args.window.close();
+    this.window.close();
     "undefined" != typeof this.args.cover_window && this.args.cover_window.close();
+};
+
+WindowController.prototype.getControllerPath = function() {
+    return this.controller.__controllerPath;
 };
 
 module.exports = WindowController;

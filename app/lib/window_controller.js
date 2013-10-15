@@ -1,36 +1,29 @@
 // ----------------------------------------------------------------------------
 // Module initialization
 var Controller = require("controller");
+var Utils = require("utils");
 
 // ----------------------------------------------------------------------------
-function WindowController(args, uiElements, window, controller) {
-    args[0] = args[0] || {};
-    args[0].window = window;
-    args[0].controller = controller;
+function WindowController(args, controller, uiElements) {
+    args = Utils.undefined(args) ? {} : args;
+    args.window = controller.window;
+    Controller.call(this, args, uiElements);
     var self = this;
+    this.controller = controller;
 
-    window.addEventListener("close", function() {
+    this.window.addEventListener("close", function() {
         self.close();
     });
-
-    Controller.call(this, args, uiElements);
 }
 
+// ----------------------------------------------------------------------------
 // Inherits from Controller...
 WindowController.prototype = Object.create(Controller.prototype);
 
 // ----------------------------------------------------------------------------
 // Add a back button to the top left corner of the window.
 WindowController.prototype.addBackButton = function(args) {
-    if (typeof args.id === 'undefined') {
-        args.id = 'back_button';
-    }
-
-    args.window = this.args.window;
-
-    this.args.window.add(
-        Alloy.createController("back_button", args).getView()
-    );
+    this.addElement("back_button");
 };
 
 // ----------------------------------------------------------------------------
@@ -39,34 +32,44 @@ WindowController.prototype.addBackButton = function(args) {
 // child the new element will be. An optional parameter is the parent
 // controller. If it is undefined, the controller set in object level is used.
 WindowController.prototype.addElement = function(
-    controllerName, TSSClass, extraArgs)
+    controllerName, args, TSSClass)
 {
-    var style = this.args.controller.createStyle({
-        classes: TSSClass,
-        window: this.args.window
-    });
+    args = Utils.undefined(args) ? {} : args;
+    args.window = this.controller.window;
 
-    for (var key in extraArgs) { style[key] = extraArgs[key]; }
+    if ( ! Utils.undefined(TSSClass)) {
+        var style = this.controller.createStyle({
+            classes: TSSClass
+        });
 
-    this.args.window.add(
-        Alloy.createController(controllerName, style).getView()
+        Utils.merge(args, style);
+    }
+
+    this.window.add(
+        Alloy.createController(controllerName, args).getView()
     );
 };
 
 // ----------------------------------------------------------------------------
 // Add back button to the tables window... to review!
 WindowController.prototype.addBackToTablesButton = function() {
-    this.addBackButton({click: require('eventHandlers').goToTables});
+    this.addElement("back_to_tables_button");
 };
 
 // ----------------------------------------------------------------------------
 // Add back button to the tables window... to review!
 WindowController.prototype.close = function() {
-    this.args.window.close();
+    this.window.close();
 
     if (typeof this.args.cover_window !== 'undefined') {
         this.args.cover_window.close();
     }
+};
+
+// ----------------------------------------------------------------------------
+// Name (path) of the controller JS, just in case we nee cloning it
+WindowController.prototype.getControllerPath = function() {
+    return this.controller.__controllerPath;
 };
 
 // ----------------------------------------------------------------------------

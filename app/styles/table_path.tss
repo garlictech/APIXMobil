@@ -1,5 +1,4 @@
 "#label": {
-    text: "/",
     color: "white",
     font: {fontWeight: "medium", fontSize: "12"},
     textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT

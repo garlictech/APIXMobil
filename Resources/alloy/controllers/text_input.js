@@ -1,6 +1,6 @@
 function Controller() {
-    function TextInput(args, uiElements) {
-        WindowController.call(this, args, uiElements, $.window, $);
+    function TextInput(args) {
+        WindowController.call(this, args, $, [ $.top_label ]);
         $.input.value = this.args.value;
     }
     function cancelClicked() {
@@ -98,7 +98,7 @@ function Controller() {
         this.args.useValue($.input.value);
         this.close();
     };
-    var textInput = new TextInput(arguments, [ $.top_label ]);
+    var textInput = new TextInput(arguments[0]);
     __defers["$.__views.cancel_button!click!cancelClicked"] && $.__views.cancel_button.addEventListener("click", cancelClicked);
     __defers["$.__views.done_button!click!doneClicked"] && $.__views.done_button.addEventListener("click", doneClicked);
     _.extend($, exports);

@@ -31,7 +31,7 @@ function Controller() {
     onClick ? $.__views.button.addEventListener("click", onClick) : __defers["$.__views.button!click!onClick"] = true;
     exports.destroy = function() {};
     _.extend($, $.__views);
-    RefreshButton.prototype = new (require("controller"))(arguments);
+    RefreshButton.prototype = new (require("controller"))(arguments[0], arguments[0].window);
     RefreshButton.prototype.onClick = function() {
         this.args.refresher();
     };

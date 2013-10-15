@@ -1,3 +1,5 @@
 <Alloy>
-    <Button class="small_button" onClick="eventHandlers.goToInfo"/>
+    <View>
+        <Button class="small_button" onClick="eventHandlers.goToInfo"/>
+    </View>
 </Alloy>

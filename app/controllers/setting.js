@@ -21,7 +21,9 @@ function Setting() {
 }
 
 // Inherits from Controller...
-Setting.prototype = new (require("controller"))(arguments, [$.title_label]);
+Setting.prototype = new (require("controller"))(
+    arguments[0], [$.title_label]
+);
 
 // Read the actual value of the property that this setting is responsible for
 Setting.prototype.updateValue = function() {

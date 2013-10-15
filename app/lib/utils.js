@@ -8,6 +8,15 @@ exports.undefined = function(obj) {
 };
 
 // ----------------------------------------------------------------------------
+exports.merge = function(to, from) {
+    if (!exports.undefined(from)) {
+        for (var key in from) {
+            to[key] = from[key];
+        }
+    }
+};
+
+// ----------------------------------------------------------------------------
 exports.openWindowWithBottomClicksDisabled = function(viewName, arg) {
     var cover_window=Alloy.createController('cover_window').getView();
     cover_window.open();

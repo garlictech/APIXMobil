@@ -26,7 +26,7 @@ function Controller() {
     exports.destroy = function() {};
     _.extend($, $.__views);
     exports.baseController = "picker";
-    MetricSystemPicker.prototype = new (require("controller"))(arguments);
+    MetricSystemPicker.prototype = new (require("controller"))(arguments[0], arguments[0].window);
     new MetricSystemPicker();
     _.extend($, exports);
 }

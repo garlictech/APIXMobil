@@ -1,16 +1,8 @@
-function initDummyData(data, collection) {
-    function addModel(data) {
-        var model = Alloy.createModel("table_data", data);
-        collection.add(model);
-        model.save(model);
-    }
-    collection.fetch();
-    while (collection.length) collection.at(0).destroy();
-    for (var i = 0; data.length > i; ++i) addModel(data[i]);
-    collection.fetch();
-}
-
 var Alloy = require("alloy"), _ = Alloy._, Backbone = Alloy.Backbone;
+
+var locale = require("locale");
+
+Alloy.Globals.L = locale.myL;
 
 if ("test" == Ti.App.deployType) {
     require("specs/test_property");
@@ -20,13 +12,8 @@ if ("test" == Ti.App.deployType) {
     require("specs/test_locale");
     require("specs/test_utils");
     require("specs/test_table_collection");
-    require("specs/test_root_table_collection");
     require("behave").run("this");
 }
-
-var locale = require("locale");
-
-Alloy.Globals.L = locale.myL;
 
 Alloy.Globals.places = {
     data: [ {

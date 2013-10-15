@@ -1,11 +1,12 @@
 function Controller() {
-    function Info(args, uiElements) {
-        WindowController.call(this, args, uiElements, $.window, $);
+    function Info(args) {
+        WindowController.call(this, args, $, [ $.top_label ]);
         file = Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, "info.txt");
         var blob = file.read();
         $.content.text = blob.text;
         file = null;
         blob = null;
+        this.addBackToTablesButton();
     }
     require("alloy/controllers/BaseController").apply(this, Array.prototype.slice.call(arguments));
     this.__controllerPath = "info";
@@ -61,8 +62,7 @@ function Controller() {
     require("eventHandlers");
     var WindowController = require("window_controller");
     Info.prototype = Object.create(WindowController.prototype);
-    var info = new Info(arguments, [ $.top_label ]);
-    info.addBackToTablesButton();
+    new Info(arguments[0]);
     _.extend($, exports);
 }
 

@@ -45,7 +45,7 @@ function Controller() {
     require("table_locator").TableLocator;
     require("debug");
     var propertyName = "Bookmark";
-    OnTime.prototype = new (require("controller"))(arguments);
+    OnTime.prototype = new (require("controller"))(arguments[0], arguments[0].window);
     OnTime.prototype.onClick = function() {
         if (this.isBookmarkSet()) {
             var tableLocator = new (require("table_locator").TableLocator)();

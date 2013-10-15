@@ -17,13 +17,13 @@ function _dummyClientFactory() {
         simulateLag();
         switch (username) {
         case 'user':
-            exports.errorMessage = L("OK");
+            exports.errorMessage = Alloy.Globals.L("ok");
             return true;
         case 'error':
-            exports.errorMessage = L("server_error");
+            exports.errorMessage = Alloy.Globals.L("server_error");
             return false;
         default:
-            exports.errorMessage = L("permission_denied");
+            exports.errorMessage = Alloy.Globals.L("permission_denied");
             return false;
         }
     };

@@ -9,6 +9,14 @@
     font: {fontWeight: "bold", fontSize: "16"}
 }
 
+".BackButton": {
+    top: 25,
+    left: 5,
+    height: 30,
+    width: 60,
+    title_id: 'back'
+}
+
 "TextField": {
     paddingLeft: 5,
     backgroundColor: "#828282",
@@ -79,5 +87,8 @@
     backgroundColor: "black",
     borderColor: "#e9bf3c",
     borderRadius: 5,
-    separatorColor: "black"
+    separatorColor: "black",
+    top: 130,
+    left: 3,
+    right: 3
 }

@@ -35,7 +35,8 @@ function OnTime() {
 
 // ----------------------------------------------------------------------------
 // Inherits from Controller...
-OnTime.prototype = new (require("controller"))(arguments);
+OnTime.prototype =
+    new (require("controller"))(arguments[0], arguments[0].window);
 
 // ----------------------------------------------------------------------------
 OnTime.prototype.onClick = function() {

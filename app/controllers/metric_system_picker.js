@@ -1,4 +1,6 @@
 // ----------------------------------------------------------------------------
+// argument[0].window: the window that the pocker is displayed on
+
 // Module initialization
 exports.baseController = "picker";
 
@@ -36,7 +38,8 @@ function MetricSystemPicker() {
 
 // ----------------------------------------------------------------------------
 // Inherits from Controller...
-MetricSystemPicker.prototype = new (require("controller"))(arguments);
+MetricSystemPicker.prototype =
+    new (require("controller"))(arguments[0], arguments[0].window);
 
 // ----------------------------------------------------------------------------
 // Create the object representing this particular setting

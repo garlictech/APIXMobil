@@ -10,6 +10,9 @@
 //
 // Alloy.Globals.someGlobalFunction = function(){};
 
+var locale = require('locale');
+Alloy.Globals.L = locale.myL;
+
 // Execute unit test suite
 if (Ti.App.deployType == 'test') {
     require('specs/test_property');
@@ -19,36 +22,12 @@ if (Ti.App.deployType == 'test') {
     require('specs/test_locale');
     require('specs/test_utils');
     require('specs/test_table_collection');
-    require('specs/test_root_table_collection');
+    // require('specs/test_root_table_collection');
+    // require('specs/test_places_collection');
     require('behave').run('this');
 }
 
-var locale = require('locale');
-Alloy.Globals.L = locale.myL;
 
-
-// --------- TEST
-//
-// ----------------------------------------------------------------------------
-
-function initDummyData(data, collection) {
-    function addModel(data) {
-        var model = Alloy.createModel("table_data", data);
-        collection.add(model);
-        // Save our model to the SQL database
-        model.save(model);
-    }
-
-    collection.fetch();
-    while(collection.length) {
-        collection.at(0).destroy();
-    }
-    for (var i = 0; i < data.length; ++i) {
-        addModel(data[i]);
-    }
-    // Finally, fetch the collection items
-    collection.fetch();
-}
 
 // ----------------------------------------------------------------------------
 // Alloy.Collections.location = Alloy.createCollection("table_data");

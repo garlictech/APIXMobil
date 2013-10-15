@@ -32,7 +32,7 @@ function Controller() {
     $.__views.row.add($.__views.value);
     exports.destroy = function() {};
     _.extend($, $.__views);
-    TextRow.prototype = new (require("table_row"))(arguments, $.row, $.name);
+    TextRow.prototype = new (require("table_row"))(arguments[0], $.row, $.name);
     var textRow = new TextRow();
     __defers["$.__views.row!click!openChildWindow"] && $.__views.row.addEventListener("click", openChildWindow);
     _.extend($, exports);

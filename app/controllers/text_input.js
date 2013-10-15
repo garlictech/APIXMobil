@@ -4,8 +4,8 @@ var WindowController = require("window_controller");
 
 // ----------------------------------------------------------------------------
 // TextInput class.
-function TextInput(args, uiElements) {
-    WindowController.call(this, args, uiElements, $.window, $);
+function TextInput(args) {
+    WindowController.call(this, args, $, [$.top_label]);
     $.input.value = this.args.value;
 }
 
@@ -23,7 +23,7 @@ TextInput.prototype.doneClicked = function() {
 
 // ----------------------------------------------------------------------------
 // Create the object representing this particular controller
-var textInput = new TextInput(arguments, [$.top_label]);
+var textInput = new TextInput(arguments[0]);
 
 // ----------------------------------------------------------------------------
 

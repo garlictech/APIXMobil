@@ -1,31 +1,34 @@
 // ----------------------------------------------------------------------------
 // TablePath module
+// Expected module parameters:
+//
+// arguments[0].collection: the collection that the actual table displays.
+// arguments[0].window: the window itself
+// displayed on
+// ----------------------------------------------------------------------------
+var Utils = require("utils");
 
 // ----------------------------------------------------------------------------
 // TablePath object.
-function TablePath() {
-    // Ensure that in case of language change, the path is not extended beyond
-    // the window. It uses the global path object, that may include more items.
-    this.endOfPath = this.args.path.length;
-    var self = this;
-
-    this.addSettingsChangedHandler(function() {
-        self.updateText();
-    });
+function TablePath(collection) {
+    this.collection = collection;
+    this.addSettingsChangedHandler(this.updateText);
 }
 
 // ----------------------------------------------------------------------------
 // Inherits from Controller...
-TablePath.prototype = new (require("controller"))(arguments);
+TablePath.prototype = new (require("controller"))(arguments[0]);
 
 // ----------------------------------------------------------------------------
 TablePath.prototype.updateText = function() {
     var text = "/";
+    var parentNode = this.collection.parentNode;
 
-    for (var i = 1; i < Math.min(this.endOfPath, this.args.path.length); ++i) {var locator = this.args.path[i];
+    while ( ! Utils.undefined(parentNode)) {
+        text = "/" + (Utils.undefined(parentNode.text_id) ?
+            parentNode.text : Alloy.Globals.L(parentNode.text_id)) + text;
 
-        text += (typeof locator.text_id === 'undefined' ?
-            locator.text : Alloy.Globals.L(locator.text_id)) + "/";
+        parentNode = parentNode.parentNode;
     }
 
     $.label.text = text;
@@ -33,4 +36,4 @@ TablePath.prototype.updateText = function() {
 
 // ----------------------------------------------------------------------------
 // Create the object representing this particular controller
-var tablePath = new TablePath();
+var tablePath = new TablePath(arguments[0].collection);

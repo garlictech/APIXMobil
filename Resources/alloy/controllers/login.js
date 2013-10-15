@@ -1,7 +1,8 @@
 function Controller() {
-    function Login(args, uiElements) {
-        WindowController.call(this, args, uiElements, $.window, $);
-        this.addElement("setting", "language");
+    function Login(args) {
+        var uiElements = [ $.username, $.password, $.login_button, $.activity_logging_in ];
+        WindowController.call(this, args, $, uiElements);
+        this.addElement("setting", {}, "language");
     }
     function doLogin() {
         $.username.blur();
@@ -124,7 +125,7 @@ function Controller() {
     var webServiceClient = require("webServiceClient");
     var WindowController = require("window_controller");
     Login.prototype = Object.create(WindowController.prototype);
-    module.exports = new Login(arguments, [ $.username, $.password, $.login_button, $.activity_logging_in ]);
+    module.exports = new Login(arguments[0]);
     $.activity_logging_in.hide();
     __defers["$.__views.login_button!click!doLogin"] && $.__views.login_button.addEventListener("click", doLogin);
     _.extend($, exports);

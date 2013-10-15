@@ -4,6 +4,102 @@
 		"selected_items":
 		[
 			[
+				"up",
+				"updateText"
+			],
+			[
+				"view",
+				"view_type"
+			],
+			[
+				"create",
+				"createController  (function)"
+			],
+			[
+				"Table",
+				"TableCollection"
+			],
+			[
+				"Tab",
+				"TableModel"
+			],
+			[
+				"Roo",
+				"RootTableModel"
+			],
+			[
+				"table",
+				"tableNameId"
+			],
+			[
+				"get",
+				"getCollection"
+			],
+			[
+				"proto",
+				"prototype"
+			],
+			[
+				"add",
+				"addEventListener"
+			],
+			[
+				"remove",
+				"removeEventListener"
+			],
+			[
+				"tabl",
+				"tableLocator"
+			],
+			[
+				"rem",
+				"removeEventListener"
+			],
+			[
+				"TablePa",
+				"TablePathChanged"
+			],
+			[
+				"addE",
+				"addEventListener"
+			],
+			[
+				"contr",
+				"controllerName"
+			],
+			[
+				"act",
+				"actualTableLocator"
+			],
+			[
+				"deb",
+				"debug_isClean"
+			],
+			[
+				"cont",
+				"controllerName"
+			],
+			[
+				"coll",
+				"collectionName"
+			],
+			[
+				"tab",
+				"tableLocator"
+			],
+			[
+				"on",
+				"ontimeButton"
+			],
+			[
+				"colle",
+				"collection"
+			],
+			[
+				"prop",
+				"propertyName"
+			],
+			[
 				"removePro",
 				"Ti.App.Properties.removeProperty()"
 			],
@@ -20,20 +116,12 @@
 				"defaultValue"
 			],
 			[
-				"get",
-				"getProperty"
-			],
-			[
 				"def",
 				"defaultValue"
 			],
 			[
 				"de",
 				"defaultValue"
-			],
-			[
-				"on",
-				"onLongpress  (function)"
 			],
 			[
 				"collec",
@@ -128,10 +216,6 @@
 				"IntegrityError"
 			],
 			[
-				"up",
-				"update"
-			],
-			[
 				"assert",
 				"assertTrue"
 			],
@@ -188,10 +272,6 @@
 				"binary_money"
 			],
 			[
-				"act",
-				"active_binary_position"
-			],
-			[
 				"ac",
 				"active_binary_position"
 			],
@@ -242,10 +322,6 @@
 			[
 				"asse",
 				"assertEqual"
-			],
-			[
-				"add",
-				"testAddNewActiveUnilevelPosition"
 			],
 			[
 				"Bina",
@@ -438,87 +514,83 @@
 			[
 				"va",
 				"validator_must_be_18"
-			],
-			[
-				"re",
-				"request"
-			],
-			[
-				"conte",
-				"context_processors"
-			],
-			[
-				"cont",
-				"contenttypes"
-			],
-			[
-				"Em",
-				"EmailWronglyFormatted"
-			],
-			[
-				"e",
-				"email"
-			],
-			[
-				"S",
-				"STATIC_URL"
-			],
-			[
-				"rem",
-				"remote_file_pattern"
-			],
-			[
-				"tmp",
-				"tmpfile_path"
-			],
-			[
-				"er",
-				"ertesito_conf"
-			],
-			[
-				"tm",
-				"tmpfile_path"
-			],
-			[
-				"pyu",
-				"pyuaeq	assert-equal"
-			],
-			[
-				"py",
-				"pyuaeq	assert-equal"
-			],
-			[
-				"h",
-				"host"
-			],
-			[
-				"ert",
-				"ertesito_path"
-			],
-			[
-				"ER",
-				"ERTESITO_SZAM"
-			],
-			[
-				"erte",
-				"ertesito_html"
-			],
-			[
-				"TH",
-				"THUMBNAIL_PATH"
-			],
-			[
-				"THU",
-				"THUMBNAIL_FILE"
-			],
-			[
-				"ERT",
-				"ERTESITO_SZAM"
 			]
 		]
 	},
 	"buffers":
 	[
+		{
+			"file": "app/lib/sites_collection.js",
+			"settings":
+			{
+				"buffer_size": 1523,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/controllers/table_path.js",
+			"settings":
+			{
+				"buffer_size": 1397,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/lib/table_collection.js",
+			"settings":
+			{
+				"buffer_size": 1017,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/lib/root_table_collection.js",
+			"settings":
+			{
+				"buffer_size": 1416,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/lib/table_manager.js",
+			"settings":
+			{
+				"buffer_size": 1947,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/lib/groups_collection.js",
+			"settings":
+			{
+				"buffer_size": 1358,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/lib/places_collection.js",
+			"settings":
+			{
+				"buffer_size": 1438,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/alloy.js",
+			"settings":
+			{
+				"buffer_size": 4843,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/assets/specs/test_root_table_collection.js",
+			"settings":
+			{
+				"buffer_size": 1282,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "Packages/Titanium Build/Titanium.sublime-build",
 	"command_palette":
@@ -660,134 +732,134 @@
 	},
 	"file_history":
 	[
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/defaults.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/webServiceClient.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/setting.tss",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/property.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/settings.tss",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/config.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/window_controller.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/setting.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/assets/specs/test_config.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/language_picker.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/assets/specs/test_locale.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/Resources/utils.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/table_base.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/table_collection.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/assets/specs/test_places_collection.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/table_path.js",
 		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/alloy.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/text_input.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/assets/specs/test_utils.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/login.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/utils.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/tables.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/icon_row.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/advanced_settings.tss",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/picker.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/settings.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/date_picker.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/index.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/locale.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/advanced_settings.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/Resources/alloy/controllers/setting.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/Resources/alloy.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/controller.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/translations/en/strings.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/translations/es/strings.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/translations/hu/strings.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/Resources/alloy/controllers/language_picker.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/Resources/alloy/controllers/settings.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/assets/specs/test_date_property.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/assets/specs/test_property.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/Resources/specs/test_config.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/Resources/config.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/date_property.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/setup.sh",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/settings.xml",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/Resources/specs/test_property.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/Resources/property.js",
-		"/Users/molnarzs/Library/Application Support/iPhone Simulator/7.0/Applications/0CC4C68A-0CB1-4358-A45E-746C8EC6440B/APIXMobil.app/alloy/controllers/setting.js",
-		"/Users/molnarzs/Library/Application Support/iPhone Simulator/7.0/Applications/0CC4C68A-0CB1-4358-A45E-746C8EC6440B/APIXMobil.app/alloy/styles/settings.js",
-		"/Users/molnarzs/Library/Application%20Support/iPhone%20Simulator/7.0/Applications/0CC4C68A-0CB1-4358-A45E-746C8EC6440B/APIXMobil.app/alloy/controllers/setting.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/file",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/picker.tss",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/date_picker.tss",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/set_time.xml",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/locale/hu/strings.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/locale/en/strings.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/locale/hu/strings.xml",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/locale/en/strings.xml",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/text_input.xml",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/table_manager.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/setting.xml",
-		"/Users/molnarzs/Dropbox/Projects/GME/Web site/upload_ertesito/data.py",
-		"/Users/molnarzs/Dropbox/Projects/GME/Web site/upload_ertesito/data.csv",
-		"/Users/molnarzs/Dropbox/Projects/GME/Web site/upload_ertesito/gme_upload_ertesito.py",
-		"/Users/molnarzs/Dropbox/Projects/GME/Web site/upload_ertesito/thumbnail.py",
-		"/Users/molnarzs/bin/gme_upload_ertesito.py",
-		"/var/folders/xf/f2hn1_gj277fx87n50c841xw0000gn/T/sublime-sftp-browse-1381254128/GME FTP Server/index.html",
-		"/var/folders/xf/f2hn1_gj277fx87n50c841xw0000gn/T/sublime-sftp-browse-1381266447/GME FTP Server/css/structure.css",
-		"/Users/molnarzs/Dropbox/Projects/GME/Web site/upload_ertesito/config.py",
-		"/Users/molnarzs/Dropbox/Projects/GME/Web site/upload_ertesito/ertesito_html.py",
-		"/Users/molnarzs/Dropbox/Projects/GME/Web site/upload_ertesito.2/ertesito_html.py",
-		"/var/folders/xf/f2hn1_gj277fx87n50c841xw0000gn/T/sublime-sftp-browse-1381266361/GME FTP Server/css/typography.css",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/text_input.tss",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/info.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/tiapp.xml",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/assets/locale/en/strings.xml",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/set_bookmark_button.xml",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/assets/locale/hu/strings.xml",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/set_bookmark_button.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/advanced_settings.xml",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/app.tss",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/login.tss",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/tables.xml",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/set_bookmark_button.tss",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/home_button.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/tables_tab.xml",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/index.xml",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/locations_window.xml",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/icon_row.xml",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/icon_row.tss",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/back_button.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/back_button.tss",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/eventHandlers.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/tables.tss",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/Resources/table_manager.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/models/location.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/models/table_data.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/models/root_table.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/locations_window.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/locations_window.tss",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/info_button.js",
-		"/Users/molnarzs/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/table_common.tss",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/table_root.xml",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/table_common.xml",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/picker.xml",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/table_common.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/table_root.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/table_root.xml.bak",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/login.xml",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/table_root.tss",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/settings_common.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/Resources/controller.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/info.xml",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/info.tss",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/back_button.xml",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/info_button.xml",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/info_controller.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/info_button.tss",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/settings_button.xml",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/cover_window.tss",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/index.tss",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/settings_button.tss",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/advanced_setting.tss",
-		"/Users/molnarzs/bin/organize_images.py",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/groups_collection.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/root_table_view.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/root_table_collection.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/places_collection.js",
 		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/assets/specs/test_webServiceClient.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/base.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/base.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/baseController.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/assets/lib/picker_common.js",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/date_picker_bak.xml",
-		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/date_picker.xml"
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/assets/specs/test_root_table_collection.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/assets/specs/test_table_collection.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/table_row.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/icon_row.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/assets/specs/test_locale.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/Resources/specs/test_root_table_collection.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/setting.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/window_controller.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/table_manager.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/simple_table.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/root_table_view.xml",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/controller.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/simple_table_view.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/Resources/alloy/controllers/table_path.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/Resources/alloy/controllers/icon_row.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/.project",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/Resources/table_base.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/Resources/table_collection.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/settings.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/settings.xml",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/back_button.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/back_to_tables_button.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/back_to_tables_button.xml",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/back_button.xml",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/advanced_settings.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/Resources/window_controller.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/Resources/controller.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/Resources/alloy.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/Resources/alloy/controllers/back_button.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/app.tss",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/Resources/alloy/backbone.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/translations/en/strings.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/translations/hu/strings.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/Resources/alloy/controllers/settings.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/login.xml",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/info.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/eventHandlers.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/info.xml",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/login.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/webServiceClient.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/settings_button.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/cover_window.xml",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/table_path.tss",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/text_row.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/ontime_button.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/refresh_button.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/index.xml",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/metric_system_picker.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/text_input.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/details.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/home_button.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/info_button.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/language_picker.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/locations_window.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/picker.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/index.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/data_table_window_content.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/Resources/simple_table.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/Resources/places_collection.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/tables_tab.xml",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/Resources/alloy/controllers/setting.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/simple_table_view.xml",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/settings.tss",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/utils.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/assets/specs/test_utils.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/Resources/root_table_collection.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/Resources/table_manager.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/simple_table_view.tss",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/root_table.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/table_base.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/general_table_window_content.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/simple_table_window_content.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/simple_table.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/general_table_view.xml",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/simple_table_window_content.xml",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/general_table_window_content.xml",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/icon_row.xml",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/root_table.xml",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/simple_table.xml",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/Resources/table_row.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/general_table_window_content.tss",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/text_row.xml",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/setting.xml",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/info_button.xml",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/Resources/alloy/controllers/general_table_window_content.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/icon_row.tss",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/Resources/alloy/styles/general_table_window_content.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/data_table_window_content.xml",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/general_table_window_content.js.bak",
+		"/Users/molnarzs/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/root_table.tss",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/root_table_window_content.xml",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/data_table_content.xml",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/root_window_content.xml",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/controllers/tables.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/config.json",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/Resources/config.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/assets/specs/test_config.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/Resources/specs/test_config.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/models/table_model.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/models/root_table_model.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/tables.tss",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/index.tss",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/info.tss",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/views/tables.xml",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/assets/info.txt",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/config.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/table_locator.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/.gitignore",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/styles/text_row.tss",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/Resources/alloy/controllers/ontime_button.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/Resources/alloy/controllers/tables.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/property.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/validators.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/locale.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/app/lib/defaults.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/Resources/defaults.js",
+		"/Users/molnarzs/Dropbox/Projects/Titanium Projects/APIXMobil/Resources/translations/hu/strings.js"
 	],
 	"find":
 	{
@@ -806,6 +878,121 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"RootTable",
+			"Places",
+			"TestCollection",
+			"addElement",
+			"addSettingsChangedHandler",
+			"BackButton",
+			"updateText",
+			"window",
+			".\n",
+			"controller",
+			"Controller",
+			"controller",
+			"args",
+			"Controller",
+			"controller",
+			"Controller",
+			"controller",
+			"this.controller.window",
+			"Controller",
+			"controller",
+			"Controller",
+			"controller",
+			"Controller",
+			"controller",
+			"this",
+			"controller",
+			"Controller",
+			"controller",
+			"this.this",
+			"args.window",
+			"simpleTable",
+			"WindowCont",
+			"$",
+			"table",
+			"Table",
+			"table",
+			"Table",
+			"table",
+			"Table",
+			"table",
+			"Table",
+			"table",
+			"Table",
+			"RootTableCollection",
+			"rootTableCollection",
+			"RootTableCollection",
+			"function",
+			"Tables",
+			"tables",
+			"Tables",
+			"tables",
+			"Tables",
+			"tables",
+			"Tables",
+			"tables",
+			"Tables",
+			"controll",
+			"Model",
+			"RootTableModel",
+			"rootTableModel",
+			"RootTableModel",
+			" \n",
+			"require('Config')",
+			"require('config')",
+			"Config",
+			"config",
+			"child_collection",
+			"TablePath",
+			"\");",
+			"tableLocator",
+			"TableLocator",
+			"tableLocator",
+			"collectionName",
+			";\n",
+			"collectionName",
+			"collection",
+			"collectionName",
+			"Collectionname",
+			"height",
+			"sites",
+			"detail",
+			"iconRowHeight",
+			"name_ui",
+			"row_ui",
+			"row_controller",
+			"\"\",\n",
+			"TextRow",
+			"textRow",
+			"TextRow",
+			"iconrow",
+			"IconRow",
+			"iconrow",
+			"IconRow",
+			"controllerName",
+			"Metrikus",
+			"();\n",
+			"wind",
+			"top_label",
+			"eventHandlers",
+			"ActualTableIndex",
+			"BackButton",
+			"onTime",
+			"OnTime",
+			"onTime",
+			"OnTime",
+			"ontime",
+			"OnTime",
+			"controllerName",
+			"addRow",
+			")(",
+			"collectionName",
+			"setBookmarkButton",
+			"SetBookmarkButton",
+			"setBookmarkButton",
+			"SetBookmarkButton",
 			"locale",
 			"require(\"locale\")",
 			"updateValue",
@@ -818,122 +1005,7 @@
 			"config",
 			"Config",
 			"config",
-			"Config",
-			"webServiceClient",
-			"locale",
-			"_actualLocale",
-			"_translations",
-			"getProperty",
-			"gey",
-			"getProperty",
-			"Property",
-			"property",
-			"Property",
-			"defaultValue",
-			"Config",
-			"properties.getProperty",
-			"Config",
-			"config",
-			"Config",
-			"config",
-			"Config",
-			"var defaults = require(\"defaults\");",
-			"webServiceClient",
-			"QUERY_END_DATE",
-			"\\},",
-			"    \\{",
-			"<([/a-z_]*)>",
-			"<([a-z_]*)>",
-			"<advanced_settings>",
-			"<([a-z_]*)>",
-			"<advanced_settings>",
-			"<([a-z_]*)>",
-			"<([_a-z])*>",
-			"<*>",
-			"<{a-z_}>",
-			"<[a-z_]>",
-			"1160",
-			"LANG",
-			"SERVER",
-			"Settings",
-			"settings",
-			"Settings",
-			"open",
-			"iconrow",
-			"IconRow",
-			"Alloy",
-			"0",
-			"locations",
-			"fugitiveCollection",
-			"TableRoot",
-			"tableroot",
-			"TableRoot",
-			"common",
-			"BackButton",
-			"Info",
-			"info",
-			"Info",
-			"getDataProperty",
-			"()",
-			"BackButton",
-			"Info",
-			"class",
-			"window",
-			"args",
-			"called",
-			"\n",
-			"\"#",
-			"settings_common",
-			"eventHandlers",
-			"Locale",
-			"locale",
-			"Config",
-			"config",
-			"Config",
-			"config",
-			"Config",
-			"locale",
-			"label_id",
-			"myTextId",
-			"text",
-			"APP",
-			"+++\");",
-			"open",
-			"exports",
-			"/string",
-			"\">",
-			"<string name=\"",
-			">\"",
-			"<string name=\"",
-			");\n",
-			"webServiceClient",
-			"default",
-			"QUERY_INITIAL_END_DATE",
-			"INITIAL_SERVER_URL",
-			"changeLanguage",
-			"/string",
-			"\">",
-			"<string name=\"",
-			"game",
-			"SettingChanged",
-			"n",
-			"n.on",
-			"thing",
-			"things",
-			"2",
-			"splas",
-			"founction",
-			"change",
-			");\n",
-			"date2",
-			"date1",
-			"home_button",
-			">\n",
-			"webServerClient",
-			"WebServerClient",
-			"webServerClient",
-			"WebServerClient",
-			"\","
+			"Config"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -941,6 +1013,12 @@
 		"regex": false,
 		"replace_history":
 		[
+			"Sites",
+			"Groups",
+			"this.window",
+			"this",
+			"this.controller.window",
+			"Collection",
 			"getProperty",
 			"config",
 			",",
@@ -1004,23 +1082,1835 @@
 	"groups":
 	[
 		{
+			"selected": 2,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "app/lib/sites_collection.js",
+					"settings":
+					{
+						"buffer_size": 1523,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								501,
+								501
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2.0,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5.0,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10.0,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"incomplete_sync": null,
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"remote_loading": false,
+							"sublime_auto_complete": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "outline",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 79.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/controllers/table_path.js",
+					"settings":
+					{
+						"buffer_size": 1397,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								600,
+								600
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"incomplete_sync": null,
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"remote_loading": false,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "outline",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/lib/table_collection.js",
+					"settings":
+					{
+						"buffer_size": 1017,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								581,
+								581
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2.0,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5.0,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10.0,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"incomplete_sync": null,
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"remote_loading": false,
+							"sublime_auto_complete": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "outline",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		},
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 3,
+					"file": "app/lib/root_table_collection.js",
+					"settings":
+					{
+						"buffer_size": 1416,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1395,
+								1395
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2.0,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5.0,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10.0,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"incomplete_sync": true,
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"remote_loading": false,
+							"sublime_auto_complete": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "outline",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 202.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		},
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 4,
+					"file": "app/lib/table_manager.js",
+					"settings":
+					{
+						"buffer_size": 1947,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								218,
+								218
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2.0,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5.0,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10.0,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"incomplete_sync": null,
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"remote_loading": false,
+							"sublime_auto_complete": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "outline",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 438.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/lib/groups_collection.js",
+					"settings":
+					{
+						"buffer_size": 1358,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								938,
+								938
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2.0,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5.0,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10.0,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"incomplete_sync": null,
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"remote_loading": false,
+							"sublime_auto_complete": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "outline",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 215.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		},
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 6,
+					"file": "app/lib/places_collection.js",
+					"settings":
+					{
+						"buffer_size": 1438,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								781,
+								781
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2.0,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5.0,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10.0,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"incomplete_sync": null,
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"remote_loading": false,
+							"sublime_auto_complete": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "outline",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 243.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "app/alloy.js",
+					"settings":
+					{
+						"buffer_size": 4843,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2722,
+								2722
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"incomplete_sync": null,
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"remote_loading": false,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "outline",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1353.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "app/assets/specs/test_root_table_collection.js",
+					"settings":
+					{
+						"buffer_size": 1282,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1190,
+								1190
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2.0,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5.0,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10.0,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"incomplete_sync": null,
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"remote_loading": false,
+							"sublime_auto_complete": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "outline",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 18.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -1094,76 +2984,492 @@
 		"selected_items":
 		[
 			[
-				"date",
-				"app/controllers/date_picker.js"
+				"group",
+				"app/lib/groups_collection.js"
 			],
 			[
-				"text",
-				"app/controllers/text_input.js"
+				"table_col",
+				"app/lib/table_collection.js"
 			],
 			[
-				"lan",
-				"app/controllers/language_picker.js"
+				"test_root",
+				"app/assets/specs/test_root_table_collection.js"
 			],
 			[
-				"alloy",
-				"app/alloy.js"
+				"table_p",
+				"app/controllers/table_path.js"
 			],
 			[
-				"setting.",
-				"app/controllers/setting.js"
+				"root",
+				"app/lib/root_table_collection.js"
 			],
 			[
-				"config",
-				"app/lib/config.js"
-			],
-			[
-				"tiapp.x",
-				"tiapp.xml"
+				"place",
+				"app/lib/places_collection.js"
 			],
 			[
 				"allo",
 				"app/alloy.js"
 			],
 			[
-				"tab",
-				"Resources/table_manager.js"
+				"all",
+				"app/alloy.js"
 			],
 			[
-				"table_man",
-				"Resources/table_manager.js"
+				"table_",
+				"app/controllers/table_path.js"
+			],
+			[
+				"table_ba",
+				"app/lib/table_base.js"
+			],
+			[
+				"table_base",
+				"app/lib/table_base.js"
+			],
+			[
+				"table_manag",
+				"app/lib/table_manager.js"
+			],
+			[
+				"laces",
+				"app/lib/places_collection.js"
+			],
+			[
+				"test_web",
+				"app/assets/specs/test_webServiceClient.js"
+			],
+			[
+				"test_lo",
+				"app/assets/specs/test_locale.js"
+			],
+			[
+				"test_roo",
+				"Resources/specs/test_root_table_collection.js"
+			],
+			[
+				"table_coll",
+				"app/lib/table_collection.js"
+			],
+			[
+				"test_table",
+				"app/assets/specs/test_table_collection.js"
+			],
+			[
+				"table_row",
+				"app/lib/table_row.js"
 			],
 			[
 				"icon",
+				"app/controllers/icon_row.js"
+			],
+			[
+				"alloy",
+				"app/alloy.js"
+			],
+			[
+				"pla",
+				"app/lib/places_collection.js"
+			],
+			[
+				"table",
+				"app/lib/table_collection.js"
+			],
+			[
+				"wind",
+				"app/lib/window_controller.js"
+			],
+			[
+				"table_pa",
+				"Resources/alloy/controllers/table_path.js"
+			],
+			[
+				"simple",
+				"app/lib/simple_table.js"
+			],
+			[
+				"simpl",
+				"app/lib/simple_table.js"
+			],
+			[
+				"simpe",
+				"app/lib/simple_table.js"
+			],
+			[
+				"simple_",
+				"app/controllers/simple_table_view.js"
+			],
+			[
+				"table_mana",
+				"app/lib/table_manager.js"
+			],
+			[
+				"table_ro",
+				"app/lib/table_row.js"
+			],
+			[
+				"table_r",
+				"app/lib/table_row.js"
+			],
+			[
+				"places",
+				"app/lib/places_collection.js"
+			],
+			[
+				"table_pat",
+				"app/controllers/table_path.js"
+			],
+			[
+				"setting.js",
+				"app/controllers/setting.js"
+			],
+			[
+				"table_b",
+				"app/lib/table_base.js"
+			],
+			[
+				"",
+				".project"
+			],
+			[
+				"control",
+				"app/lib/controller.js"
+			],
+			[
+				"controll",
+				"app/lib/controller.js"
+			],
+			[
+				"win",
+				"app/lib/window_controller.js"
+			],
+			[
+				"root_tab",
+				"app/lib/root_table_collection.js"
+			],
+			[
+				"tabe",
+				"app/lib/table_base.js"
+			],
+			[
+				"advanc",
+				"app/controllers/advanced_settings.js"
+			],
+			[
+				"settings.x",
+				"app/views/settings.xml"
+			],
+			[
+				"setting",
+				"app/controllers/setting.js"
+			],
+			[
+				"settings",
+				"app/controllers/settings.js"
+			],
+			[
+				"sett",
+				"app/controllers/setting.js"
+			],
+			[
+				"app.ts",
+				"app/styles/app.tss"
+			],
+			[
+				"back",
+				"app/views/back_button.xml"
+			],
+			[
+				"back_to",
+				"app/views/back_to_tables_button.xml"
+			],
+			[
+				"back_button",
+				"Resources/alloy/controllers/back_button.js"
+			],
+			[
+				"contro",
+				"app/lib/controller.js"
+			],
+			[
+				"window",
+				"app/lib/window_controller.js"
+			],
+			[
+				"settings.js",
+				"Resources/alloy/controllers/settings.js"
+			],
+			[
+				"info",
+				"app/controllers/info.js"
+			],
+			[
+				"table_bas",
+				"app/lib/table_base.js"
+			],
+			[
+				"even",
+				"app/lib/eventHandlers.js"
+			],
+			[
+				"string",
+				"app/lib/translations/hu/strings.js"
+			],
+			[
+				"table_co",
+				"app/lib/table_collection.js"
+			],
+			[
+				"windo",
+				"app/lib/window_controller.js"
+			],
+			[
+				"cont",
+				"app/lib/controller.js"
+			],
+			[
+				"index.",
+				"app/views/index.xml"
+			],
+			[
+				"table_path",
+				"app/controllers/table_path.js"
+			],
+			[
+				"controller",
+				"app/lib/controller.js"
+			],
+			[
+				"controlle",
+				"Resources/controller.js"
+			],
+			[
+				"login",
+				"app/controllers/login.js"
+			],
+			[
+				"settin",
+				"app/styles/settings.tss"
+			],
+			[
+				"test_ut",
+				"app/assets/specs/test_utils.js"
+			],
+			[
+				"settings.",
+				"app/controllers/settings.js"
+			],
+			[
+				"utils",
+				"app/lib/utils.js"
+			],
+			[
+				"sim",
+				"Resources/simple_table.js"
+			],
+			[
+				"root_",
+				"Resources/root_table_collection.js"
+			],
+			[
+				"contr",
+				"app/lib/controller.js"
+			],
+			[
+				"table_ma",
+				"Resources/table_manager.js"
+			],
+			[
+				"icon_row",
+				"app/views/icon_row.xml"
+			],
+			[
+				"table_man",
+				"app/lib/table_manager.js"
+			],
+			[
+				"general_table",
+				"Resources/alloy/controllers/general_table_window_content.js"
+			],
+			[
+				"general",
+				"Resources/alloy/styles/general_table_window_content.js"
+			],
+			[
+				"app",
+				"app/styles/app.tss"
+			],
+			[
+				"setting.j",
+				"app/controllers/setting.js"
+			],
+			[
+				"window_",
+				"app/lib/window_controller.js"
+			],
+			[
+				"root_table",
+				"app/views/root_table.xml"
+			],
+			[
+				"config.js",
+				"Resources/config.js"
+			],
+			[
+				"config",
+				"app/config.json"
+			],
+			[
+				"test_u",
+				"app/assets/specs/test_utils.js"
+			],
+			[
+				"test",
+				"app/assets/specs/test_config.js"
+			],
+			[
+				"test_co",
+				"Resources/specs/test_config.js"
+			],
+			[
+				"tables",
+				"app/controllers/tables.js"
+			],
+			[
+				"tables.j",
+				"app/controllers/tables.js"
+			],
+			[
+				"inf",
+				"app/views/info.xml"
+			],
+			[
+				"app.t",
+				"app/styles/app.tss"
+			],
+			[
+				"table.t",
+				"app/styles/tables.tss"
+			],
+			[
+				"onti",
+				"Resources/alloy/controllers/ontime_button.js"
+			],
+			[
+				"tables.",
+				"Resources/alloy/controllers/tables.js"
+			],
+			[
+				"table_lo",
+				"app/lib/table_locator.js"
+			],
+			[
+				"text",
+				"app/views/text_row.xml"
+			],
+			[
+				"tables.t",
+				"app/styles/tables.tss"
+			],
+			[
+				"propert",
+				"app/lib/property.js"
+			],
+			[
+				"default",
+				"app/lib/defaults.js"
+			],
+			[
+				"defau",
+				"Resources/defaults.js"
+			],
+			[
+				"langu",
+				"app/controllers/language_picker.js"
+			],
+			[
+				"locale",
+				"app/lib/locale.js"
+			],
+			[
+				"ico",
 				"app/styles/icon_row.tss"
+			],
+			[
+				"valid",
+				"app/lib/validators.js"
+			],
+			[
+				"test_conf",
+				"app/assets/specs/test_config.js"
+			],
+			[
+				"stri",
+				"Resources/translations/hu/strings.js"
+			],
+			[
+				"seting",
+				"app/controllers/settings.js"
+			],
+			[
+				"text_",
+				"app/styles/text_input.tss"
+			],
+			[
+				"deb",
+				"app/lib/debug.js"
+			],
+			[
+				"tble",
+				"app/lib/table_manager.js"
+			],
+			[
+				"tab",
+				"app/styles/tables.tss"
+			],
+			[
+				"app.",
+				"app/styles/app.tss"
+			],
+			[
+				"set_",
+				"app/views/set_bookmark_button.xml"
+			],
+			[
+				"set_b",
+				"app/styles/set_bookmark_button.tss"
+			],
+			[
+				"tabl",
+				"app/views/tables.xml"
+			],
+			[
+				"conf",
+				"app/lib/config.js"
+			],
+			[
+				"con",
+				"Resources/config.js"
+			],
+			[
+				"date",
+				"app/controllers/date_picker.js"
+			],
+			[
+				"lan",
+				"app/controllers/language_picker.js"
+			],
+			[
+				"setting.",
+				"app/controllers/setting.js"
+			],
+			[
+				"tiapp.x",
+				"tiapp.xml"
 			],
 			[
 				"icon_",
 				"app/views/icon_row.xml"
-			],
-			[
-				"table",
-				"app/views/table_root.xml"
-			],
-			[
-				"sett",
-				"app/views/settings.xml"
-			],
-			[
-				"contro",
-				"Resources/controller.js"
-			],
-			[
-				"controll",
-				"Resources/controller.js"
-			],
-			[
-				"settings.",
-				"app/styles/settings.tss"
-			],
-			[
-				"login",
-				"app/styles/login.tss"
 			],
 			[
 				"login.j",
@@ -1178,14 +3484,6 @@
 				"app/views/info.xml"
 			],
 			[
-				"conf",
-				"Resources/config.js"
-			],
-			[
-				"app",
-				"app/styles/app.tss"
-			],
-			[
 				"locations_",
 				"Resources/alloy/controllers/locations_window.js"
 			],
@@ -1196,166 +3494,6 @@
 			[
 				"confi",
 				"Resources/config.js"
-			],
-			[
-				"row.xm",
-				"app/views/row.xml"
-			],
-			[
-				"tiapp.",
-				"tiapp.xml"
-			],
-			[
-				"tipp.",
-				"tiapp.xml"
-			],
-			[
-				"inde",
-				"app/controllers/index.js"
-			],
-			[
-				"log",
-				"app/controllers/login.js"
-			],
-			[
-				"logi",
-				"app/styles/login.tss"
-			],
-			[
-				"info",
-				"app/views/info.xml"
-			],
-			[
-				"ind",
-				"app/controllers/index.js"
-			],
-			[
-				"index",
-				"app/views/index.xml"
-			],
-			[
-				"login.",
-				"app/controllers/login.js"
-			],
-			[
-				"tabl",
-				"app/controllers/tables.js"
-			],
-			[
-				"urls.p",
-				"DiamondMLM/urls.py"
-			],
-			[
-				"model",
-				"registration/models.py"
-			],
-			[
-				"urls",
-				"DiamondMLM/urls.py"
-			],
-			[
-				"urls.py",
-				"DiamondMLM/urls.py"
-			],
-			[
-				"views",
-				"mlmsite/views.py"
-			],
-			[
-				"views.",
-				"accounts/views.py"
-			],
-			[
-				"url.py",
-				"DiamondMLM/urls.py"
-			],
-			[
-				"mlm",
-				"mlmsite.sublime-project"
-			],
-			[
-				"set",
-				"DiamondMLM/settings.py"
-			],
-			[
-				"ini",
-				"initial_data.json"
-			],
-			[
-				"pass",
-				"mlmsite/features/password_handling.feature"
-			],
-			[
-				"se",
-				"DiamondMLM/settings.py"
-			],
-			[
-				"initi",
-				"initial_data.json"
-			],
-			[
-				"setti",
-				"DiamondMLM/settings_prod.py"
-			],
-			[
-				"setting",
-				"DiamondMLM/settings_dev.py"
-			],
-			[
-				"init",
-				"initial_data.json"
-			],
-			[
-				"auth",
-				"registration/auth_urls.py"
-			],
-			[
-				"url",
-				"registration/backends/default/urls.py"
-			],
-			[
-				"settin",
-				"DiamondMLM/settings_dev.py"
-			],
-			[
-				"typi",
-				"mlmsite/static/css/typica-login.css"
-			],
-			[
-				"aut",
-				"registration/auth_urls.py"
-			],
-			[
-				"",
-				"registration/auth_urls.py"
-			],
-			[
-				"view.p",
-				"mlmsite/views.py"
-			],
-			[
-				"html",
-				"example.html"
-			],
-			[
-				"val",
-				"valid_month.py"
-			],
-			[
-				"test",
-				"test_escape_html.py"
-			],
-			[
-				"e",
-				"escape_html.py"
-			],
-			[
-				"main",
-				"main.py"
-			],
-			[
-				"esc",
-				"escape_html.py"
 			]
 		],
 		"width": 0.0
@@ -1372,6 +3510,6 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 157.0,
+	"side_bar_width": 171.0,
 	"status_bar_visible": true
 }

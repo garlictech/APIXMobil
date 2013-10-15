@@ -4,29 +4,28 @@ var WindowController = require("window_controller");
 
 // ----------------------------------------------------------------------------
 // Settings class, responsible for Settings window logic.
-function Settings(args, uiElements) {
-    WindowController.call(this, args, uiElements, $.window, $);
-    this.addElement('query_start_date');
-    this.addElement('query_end_date');
-    this.addElement('locale');
-    this.addElement('default_query_interval');
-    this.addElement('metric_system');
+function Settings(args) {
+    var uiElements =
+        [$.logout_button, $.top_label, $.advanced_settings_button];
+    WindowController.call(this, args, $, uiElements);
+    this.addSetting('query_start_date');
+    this.addSetting('query_end_date');
+    this.addSetting('locale');
+    this.addSetting('default_query_interval');
+    this.addSetting('metric_system');
     this.addBackToTablesButton();
 }
 
 // Inherits from WindowController...
 Settings.prototype = Object.create(WindowController.prototype);
 
-Settings.prototype.addElement = function(TSSClass) {
-    WindowController.prototype.addElement.call(this, "setting", TSSClass);
+Settings.prototype.addSetting = function(TSSClass) {
+    this.addElement.call(this, "setting", {}, TSSClass);
 };
 
 // ----------------------------------------------------------------------------
 // Create the actial Settings object, and bind it to this particular controller
-var settings = new Settings(
-    arguments,
-    [$.logout_button, $.top_label, $.advanced_settings_button]
-);
+var settings = new Settings(arguments[0]);
 
 // Click event handlers
 function doAdvancedSettings(e) {

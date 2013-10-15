@@ -7,7 +7,11 @@ function Controller() {
     var $ = this;
     var exports = {};
     var __defers = {};
-    $.__views.info_button = Ti.UI.createButton({
+    $.__views.info_button = Ti.UI.createView({
+        id: "info_button"
+    });
+    $.__views.info_button && $.addTopLevelView($.__views.info_button);
+    $.__views.__alloyId4 = Ti.UI.createButton({
         backgroundColor: "#e9bf3c",
         borderColor: "#e9bf3c",
         color: "black",
@@ -21,18 +25,18 @@ function Controller() {
         },
         right: 5,
         bottom: 5,
-        id: "info_button"
+        id: "__alloyId4"
     });
-    $.__views.info_button && $.addTopLevelView($.__views.info_button);
+    $.__views.info_button.add($.__views.__alloyId4);
     try {
-        $.__views.info_button.addEventListener("click", eventHandlers.goToInfo);
+        $.__views.__alloyId4.addEventListener("click", eventHandlers.goToInfo);
     } catch (e) {
-        __defers["$.__views.info_button!click!eventHandlers.goToInfo"] = true;
+        __defers["$.__views.__alloyId4!click!eventHandlers.goToInfo"] = true;
     }
     exports.destroy = function() {};
     _.extend($, $.__views);
     var eventHandlers = require("eventHandlers");
-    __defers["$.__views.info_button!click!eventHandlers.goToInfo"] && $.__views.info_button.addEventListener("click", eventHandlers.goToInfo);
+    __defers["$.__views.__alloyId4!click!eventHandlers.goToInfo"] && $.__views.__alloyId4.addEventListener("click", eventHandlers.goToInfo);
     _.extend($, exports);
 }
 

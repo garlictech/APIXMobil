@@ -1,10 +1,13 @@
 // ----------------------------------------------------------------------------
+var Utils = require("utils");
+
+// ----------------------------------------------------------------------------
 // Controller class. Common base of all controllers in the system.
 function Controller(args, uiElements) {
-    this.args = args[0] || {};
+    this.args = args;
+    this.window = args.window;
     // Register ui elements for locale updates
-
-    if (typeof uiElements !== 'undefined') {
+    if ( ! Utils.undefined(uiElements) && uiElements.length > 0) {
         this.addSettingsChangedHandler(this.registerTextUpdates(uiElements));
     }
 }
@@ -29,13 +32,9 @@ Controller.prototype.addSettingsChangedHandler = function (handler){
 
 // ----------------------------------------------------------------------------
 Controller.prototype.unregisterTextUpdatesAtClose = function(listener) {
-    // When the associated windod closes, remove SettingChanged event
-    // listening, not to generate memoy leak.
-    if (this.args.window !== 'undefined') {
-        Ti.App.addEventListener('close', function() {
-            Ti.API.removeEventListener("SettingsChanged", listener);
-        });
-    }
+    this.window.addEventListener('close', function() {
+        Ti.API.removeEventListener("SettingsChanged", listener);
+    });
 };
 
 // ----------------------------------------------------------------------------

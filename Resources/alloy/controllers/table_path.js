@@ -1,10 +1,7 @@
 function Controller() {
-    function TablePath() {
-        this.endOfPath = this.args.path.length;
-        var self = this;
-        this.addSettingsChangedHandler(function() {
-            self.updateText();
-        });
+    function TablePath(collection) {
+        this.collection = collection;
+        this.addSettingsChangedHandler(this.updateText);
     }
     require("alloy/controllers/BaseController").apply(this, Array.prototype.slice.call(arguments));
     this.__controllerPath = "table_path";
@@ -21,7 +18,6 @@ function Controller() {
     });
     $.__views.view && $.addTopLevelView($.__views.view);
     $.__views.label = Ti.UI.createLabel({
-        text: "/",
         color: "white",
         font: {
             fontWeight: "medium",
@@ -33,16 +29,19 @@ function Controller() {
     $.__views.view.add($.__views.label);
     exports.destroy = function() {};
     _.extend($, $.__views);
-    TablePath.prototype = new (require("controller"))(arguments);
+    var Utils = require("utils");
+    TablePath.prototype = new (require("controller"))(arguments[0]);
     TablePath.prototype.updateText = function() {
         var text = "/";
-        for (var i = 1; Math.min(this.endOfPath, this.args.path.length) > i; ++i) {
-            var locator = this.args.path[i];
-            text += ("undefined" == typeof locator.text_id ? locator.text : Alloy.Globals.L(locator.text_id)) + "/";
+        var parentNode = this.collection.parentNode;
+        while (!Utils.undefined(parentNode)) {
+            text = "/" + (Utils.undefined(parentNode.text_id) ? parentNode.text : Alloy.Globals.L(parentNode.text_id)) + text;
+            Ti.API.trace("Text: " + text);
+            parentNode = parentNode.parentNode;
         }
         $.label.text = text;
     };
-    new TablePath();
+    new TablePath(arguments[0].collection);
     _.extend($, exports);
 }
 

@@ -1,11 +1,12 @@
 function Controller() {
-    function Settings(args, uiElements) {
-        WindowController.call(this, args, uiElements, $.window, $);
-        this.addElement("query_start_date");
-        this.addElement("query_end_date");
-        this.addElement("locale");
-        this.addElement("default_query_interval");
-        this.addElement("metric_system");
+    function Settings(args) {
+        var uiElements = [ $.logout_button, $.top_label, $.advanced_settings_button ];
+        WindowController.call(this, args, $, uiElements);
+        this.addSetting("query_start_date");
+        this.addSetting("query_end_date");
+        this.addSetting("locale");
+        this.addSetting("default_query_interval");
+        this.addSetting("metric_system");
         this.addBackToTablesButton();
     }
     function doAdvancedSettings() {
@@ -94,10 +95,10 @@ function Controller() {
     _.extend($, $.__views);
     var WindowController = require("window_controller");
     Settings.prototype = Object.create(WindowController.prototype);
-    Settings.prototype.addElement = function(TSSClass) {
-        WindowController.prototype.addElement.call(this, "setting", TSSClass);
+    Settings.prototype.addSetting = function(TSSClass) {
+        this.addElement.call(this, "setting", {}, TSSClass);
     };
-    new Settings(arguments, [ $.logout_button, $.top_label, $.advanced_settings_button ]);
+    new Settings(arguments[0]);
     __defers["$.__views.advanced_settings_button!click!doAdvancedSettings"] && $.__views.advanced_settings_button.addEventListener("click", doAdvancedSettings);
     __defers["$.__views.logout_button!click!doLogout"] && $.__views.logout_button.addEventListener("click", doLogout);
     _.extend($, exports);

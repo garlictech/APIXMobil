@@ -1,6 +1,11 @@
 function TableRow(args, row_ui, name_ui) {
-    Controller.call(this, args, [ name_ui ]);
-    "undefined" != typeof this.args.text ? name_ui.text = this.args.text : "undefined" != typeof this.args.text_id && (name_ui.text_id = this.args.text_id);
+    this.model = args.model;
+    var uis = [];
+    if ("undefined" != typeof this.model.text) name_ui.text = this.model.text; else if ("undefined" != typeof this.model.text_id) {
+        name_ui.text_id = this.model.text_id;
+        uis = [ name_ui ];
+    }
+    Controller.call(this, args, uis);
     this.hasChild() && (row_ui.hasChild = true);
 }
 
@@ -9,14 +14,11 @@ var Controller = require("controller");
 TableRow.prototype = Object.create(Controller.prototype);
 
 TableRow.prototype.openChildWindow = function() {
-    if (this.hasChild()) {
-        var nextTable = new (require("table_locator").TableLocator)(this.args.childWindow, this.args.child_collection, this.args.text, this.args.text_id);
-        require("table_manager").manager.openChildTable(nextTable);
-    }
+    this.hasChild() && require("table_manager").openChildTable(this.model.childCollection);
 };
 
 TableRow.prototype.hasChild = function() {
-    return "undefined" != typeof this.args.child_collection;
+    return "undefined" != typeof this.model.childCollection;
 };
 
 module.exports = TableRow;

@@ -1,7 +1,10 @@
 function Controller(args, uiElements) {
-    this.args = args[0] || {};
-    "undefined" != typeof uiElements && this.addSettingsChangedHandler(this.registerTextUpdates(uiElements));
+    this.args = args;
+    this.window = args.window;
+    !Utils.undefined(uiElements) && uiElements.length > 0 && this.addSettingsChangedHandler(this.registerTextUpdates(uiElements));
 }
+
+var Utils = require("utils");
 
 Controller.prototype.addSettingsChangedHandler = function(handler) {
     function h() {
@@ -14,7 +17,7 @@ Controller.prototype.addSettingsChangedHandler = function(handler) {
 };
 
 Controller.prototype.unregisterTextUpdatesAtClose = function(listener) {
-    "undefined" !== this.args.window && Ti.App.addEventListener("close", function() {
+    this.window.addEventListener("close", function() {
         Ti.API.removeEventListener("SettingsChanged", listener);
     });
 };

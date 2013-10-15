@@ -87,7 +87,7 @@ function Controller() {
     var Config = require("config").config;
     var utils = require("utils");
     var validators = require("validators");
-    Setting.prototype = new (require("controller"))(arguments, [ $.title_label ]);
+    Setting.prototype = new (require("controller"))(arguments[0], [ $.title_label ]);
     Setting.prototype.updateValue = function() {
         $.setting_value.text = Config.getProperty(this.args.propertyName).stringValue();
     };

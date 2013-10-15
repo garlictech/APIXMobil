@@ -3,22 +3,28 @@
 var Utils = require("utils");
 
 // ----------------------------------------------------------------------------
-function TableCollection() {
-    this.data = {};
+function TableCollectionNode(childCollectionType, parentNode) {
+    if ( ! Utils.undefined(childCollectionType)) {
+        this.child = new childCollectionType(parentNode);
+    }
 }
 
 // ----------------------------------------------------------------------------
-// Return a table row, identified by its id. If it does not exists, fetch
-// the data either form the server, or from locally. The method delegates
-// fetching data to the children of this object. After fetch, the formatted
-// data will be stored in this.data.
-TableCollection.prototype.get = function(id) {
-    if (Utils.undefined(this.data[id])) {
-        this.fetch(id);
+function TableCollection(parentNode) {
+    if (! Utils.undefined(parentNode)) {
+        this.parentNode = parentNode;
+    }
+}
+
+// ----------------------------------------------------------------------------
+TableCollection.prototype.getData = function() {
+    if (Utils.undefined(this.data)) {
+        this.refresh();
     }
 
-    return this.data[id];
+    return this.data;
 };
 
 // ----------------------------------------------------------------------------
-module.exports = TableCollection;
+module.exports.TableCollection = TableCollection;
+module.exports.TableCollectionNode = TableCollectionNode;
