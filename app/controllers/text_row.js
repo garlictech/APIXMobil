@@ -7,7 +7,9 @@ function TextRow() {}
 
 // ----------------------------------------------------------------------------
 // Inherits from Controller...
-TextRow.prototype = new (require("table_row"))(arguments[0], $.row, $.name);
+TextRow.prototype = new (require("table_row"))(
+    arguments[0], $.row, $.name, $.value
+);
 
 // ----------------------------------------------------------------------------
 // Create the object representing this particular controller

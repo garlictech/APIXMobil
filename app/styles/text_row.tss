@@ -6,9 +6,12 @@
 "#value": {
     left: 150,
     color: "#e9bf3c",
+    textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT,
+    font: {fontSize: "14"},
+    color: "white"
 }
 
 "TableViewRow": {
     hasChild: false,
-    height: 23
+    height: 26
 }

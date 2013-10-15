@@ -5,10 +5,12 @@ var PlacesCollection = require("places_collection");
 var GroupsCollection = require("groups_collection");
 
 // ----------------------------------------------------------------------------
-var data = [
-    ["places", "images/locations.png", PlacesCollection],
-    ["groups", "images/locations.png", GroupsCollection]
+var set_1 = [
+    ["places", "images/locations.png", undefined, PlacesCollection],
+    ["groups", "images/locations.png", undefined, GroupsCollection]
 ];
+
+var data = [set_1];
 
 // ----------------------------------------------------------------------------
 module.exports = CollectionPrototypeGenerator({

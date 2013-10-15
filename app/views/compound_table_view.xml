@@ -1,0 +1,11 @@
+<Alloy>
+    <Window id="window">
+        <Label id="top_label" class="top bar"/>
+        <!-- Ontime button added programmatically -->
+        <!-- table_path added programmatically -->
+        <TableView id="table" class="table" zIndex="10"/>
+        <Label class="bottom bar" />
+        <Require src="info_button"/>
+        <Require src="settings_button"/>
+    </Window>
+</Alloy>

@@ -1,22 +1,31 @@
 // /---------------------------------------------------------------------------
 // Module initialization
 var CollectionPrototypeGenerator = require("collection_prototype_generator");
-var QueriesCollection = require("queries_collection");
 
+//require("refuelling_details_collection")
 // ----------------------------------------------------------------------------
 var set_1 = [
-    ["Bp, Budaörsi út", "images/db_icons/1.png", undefined, QueriesCollection],
-    ["Bp, Kerepesi út", "images/db_icons/1.png"]
+    ["refuelling_details", undefined, undefined,
+        require("refuelling_details_collection")],
+    ["refuelling_summary"],
+    ["card_details"],
+    ["card_summary"],
+    ["tank_details"],
+    ["tank_diagram"],
+    ["tank_summary"],
+    ["controller_details"],
+    ["controller_summary"],
+    ["vapour_data"]
 ];
 
 var data = [set_1];
 
 // ----------------------------------------------------------------------------
 module.exports = CollectionPrototypeGenerator({
-    collectionTitleId: "sites",
+    collectionTitleId: "queries",
     viewControllerName: "simple_table_view",
-    text_id: false,
+    text_id: true,
     data: data,
-    id: "sites_table",
-    refreshable: true
+    id: "queries_table",
+    refreshable: false
 });

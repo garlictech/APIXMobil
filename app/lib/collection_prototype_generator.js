@@ -9,6 +9,7 @@ function CollectionPrototypeGenerator() {
     function Prototype(parentNode) {
         this.title_id = args.collectionTitleId;
         this.viewControllerName = args.viewControllerName;
+        this.setIndex = 0;
 
         if (! Utils.undefined(parentNode)) {
             this.parentNode = parentNode;
@@ -44,7 +45,7 @@ function CollectionPrototypeGenerator() {
         // row will be displayed as icon_row.
         function Node(pars) {
             function construct(
-                textParameter, image, childCollectionType, parentNode
+                textParameter, image, value, childCollectionType, parentNode
             ) {
                 if (args.text_id) {
                     this.text_id = textParameter;
@@ -54,6 +55,7 @@ function CollectionPrototypeGenerator() {
 
                 this.image = image;
                 this.parentNode = self.parentNode;
+                this.value = self.value;
 
                 if ( ! Utils.undefined(childCollectionType)) {
                     // This is where the parent node inserts itself to the
@@ -67,8 +69,8 @@ function CollectionPrototypeGenerator() {
 
         this.data = [];
 
-        for (var i = 0; i < args.data.length; ++i) {
-            this.data[i] = new Node(args.data[i]);
+        for (var i = 0; i < args.data[this.setIndex].length; ++i) {
+            this.data[i] = new Node(args.data[this.setIndex][i]);
         }
     };
 

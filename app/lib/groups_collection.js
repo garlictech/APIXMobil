@@ -3,10 +3,12 @@
 var CollectionPrototypeGenerator = require("collection_prototype_generator");
 
 // ----------------------------------------------------------------------------
-var data = [
+var set_1 = [
     ["Nagy Csoport", "images/db_icons/1.png"],
     ["Kis Csoport", "images/db_icons/2.png"]
 ];
+
+var data = [set_1];
 
 // ----------------------------------------------------------------------------
 module.exports = CollectionPrototypeGenerator({

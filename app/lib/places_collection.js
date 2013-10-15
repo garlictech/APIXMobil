@@ -4,10 +4,12 @@ var CollectionPrototypeGenerator = require("collection_prototype_generator");
 var SitesCollection = require("sites_collection");
 
 // ----------------------------------------------------------------------------
-var data = [
-    ["Budapest", "images/db_icons/1.png", SitesCollection],
+var set_1 = [
+    ["Budapest", "images/db_icons/1.png", undefined, SitesCollection],
     ["Bánkút", "images/db_icons/2.png"]
 ];
+
+var data = [set_1];
 
 // ----------------------------------------------------------------------------
 module.exports = CollectionPrototypeGenerator({
