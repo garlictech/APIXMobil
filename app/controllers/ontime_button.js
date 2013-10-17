@@ -34,6 +34,8 @@ function OnTime(args) {
     this.addSettingsChangedHandler(function() {
         self.setColor();
     });
+
+    this.addSettingsChangedHandler(this.setColor);
 }
 
 // ----------------------------------------------------------------------------

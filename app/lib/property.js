@@ -13,13 +13,16 @@ function Property(name, defaultValue) {
 Property.prototype.set = function(value) {
     switch(this.getType()) {
     case "number":
-        return Ti.App.Properties.setInt(this.name, value);
+        Ti.App.Properties.setInt(this.name, value);
+        break;
     case "boolean":
-        return Ti.App.Properties.setBool(this.name, value);
+        Ti.App.Properties.setBool(this.name, value);
+        break;
     case "object":
-        return Ti.App.Properties.setObject(this.name, value);
+        Ti.App.Properties.setObject(this.name, value);
+        break;
     default:
-        return Ti.App.Properties.setString(this.name, value);
+        Ti.App.Properties.setString(this.name, value);
     }
 
     Ti.App.fireEvent("SettingsChanged");
