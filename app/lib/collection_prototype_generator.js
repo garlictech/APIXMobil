@@ -24,9 +24,9 @@ function CollectionPrototypeGenerator() {
 
     Prototype.prototype.dummyRefresh = function() {
         if (! Utils.undefined(this.data[0].value)) {
-            this.data[1].value += " x";
+            this.data[0].value += " x";
         } else if (! Utils.undefined(this.data[0].text)) {
-            this.data[1].text += " x";
+            this.data[0].text += " x";
         }
     };
 
