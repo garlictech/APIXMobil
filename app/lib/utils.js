@@ -27,6 +27,8 @@ exports.openWindowWithBottomClicksDisabled = function(viewName, arg) {
 
 // ----------------------------------------------------------------------------
 exports.doLogout = function(e) {
+    // Forces closing all open windows, and resets views
+    Ti.App.fireEvent("GoHome");
     Config.setLoggedOut();
     Alloy.Globals.tabgroup.setActiveTab(Alloy.Globals.LOGIN_TAB);
 };

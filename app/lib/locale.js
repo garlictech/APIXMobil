@@ -19,7 +19,6 @@ exports.setTranslation = function() {
     var loc = Config.getProperty("Locale").get();
 
     if (! _hasLocaleChanged(loc) ) {
-        Ti.API.trace("* Locale has not been changed.");
         return;
     }
 
@@ -66,8 +65,6 @@ exports.init = function() {
 
 // ----------------------------------------------------------------------------
 Ti.App.Properties.addEventListener('change', function(e) {
-    Ti.API.trace("config.change event handler...");
-    Ti.API.debug(String.format("Actual locale: %s", Config.getProperty("Locale").get()));
     exports.setTranslation();
 });
 
