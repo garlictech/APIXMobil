@@ -1,19 +1,29 @@
-Version: 0.4.0
+Version: 0.4.1
 
-New features:
-- Detailed tables with steps inplemented.
-- Several minor improvments.
-
-Known problems:
+Fixed problems:
 
 - When a table row has a child, and we refresh, the first table row shifts to right.
 - When there is no "ontime" set, and we set it, the already open windows do not show it in red, when we go back. When we reopen the windows (click on table rows), it is OK.
 - In case of logout or factory reset, the open tables should close.
-- Spanish language does not work.
+- Spanish language does not work: temporarily, Spanish language displays teh English translations, until they are ready.
+
 
 Older versions:
 
-0.2.0
+
+**** 0.4.0
+
+New features:
+- Detailed tables with steps inplemented.
+- Image views implemented.
+- Several minor improvments.
+- Table rows are separated with lines, text rows have bigger size.
+
+**** 0.3.0
+
+- More data collections implemented.
+
+**** 0.2.0
 
 - Ontime button implemented.
 - Windows display data path.
