@@ -3,9 +3,13 @@
         <Label id="top_label" class="top bar"/>
         <!-- Ontime button added programmatically -->
         <!-- table_path added programmatically -->
-        <TableView id="table" class="table" zIndex="10"/>
+        <ScrollView class="table_scroll_view">
+            <TableView id="table" class="table"/>
+        </ScrollView>
         <Label class="bottom bar" />
         <Require src="info_button"/>
         <Require src="settings_button"/>
+        <Button id="left_arrow" class="small_button" onClick="goLeft"/>
+        <Button id="right_arrow" class="small_button" onClick="goRight"/>
     </Window>
 </Alloy>

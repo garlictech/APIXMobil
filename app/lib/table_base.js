@@ -69,6 +69,8 @@ TableBase.prototype.addOnTimeButton = function() {
 // ----------------------------------------------------------------------------
 TableBase.prototype.updateTable = function() {
     var self = this;
+    // TODO: when deleting rows, they should not receive SettingsChanged any
+    // more. Check the situation.
     this.controller.table.setData([]);
     var height = 0;
     // loop through collection and add them to table
@@ -78,7 +80,6 @@ TableBase.prototype.updateTable = function() {
     }
 
     this.controller.table.height = height;
-
 };
 
 // ----------------------------------------------------------------------------

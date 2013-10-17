@@ -1,7 +1,10 @@
 // Hungarian translations
 exports.translations = {
     undefined: "",
-    details: "Részletek",
+    diagram: "Diagram",
+    total_data: "Összes adat",
+    actual_data: "Aktuális adat",
+    detail: "Részlet",
     refuelling_details: "Tankolás részletek",
     refuelling_summary: "Tankolás összesítő",
     card_details: "Kártya részletek",

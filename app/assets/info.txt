@@ -1,10 +1,8 @@
-Version: 0.3.0
+Version: 0.4.0
 
 New features:
-- Ontime button implemented.
-- Windows display data path.
-- In settings, you can select metric system as well.
-- "queries" table implemented.
+- Detailed tables with steps inplemented.
+- Several minor improvments.
 
 Known problems:
 
@@ -17,5 +15,9 @@ Older versions:
 
 0.2.0
 
+- Ontime button implemented.
+- Windows display data path.
+- In settings, you can select metric system as well.
+- "queries" table implemented.
 - Login window shows language selection.
 - In-app language change, without restart.

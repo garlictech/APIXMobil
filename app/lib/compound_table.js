@@ -15,7 +15,20 @@ function CompoundTable(args) {
 
 // ----------------------------------------------------------------------------
 // Inherits from CompoundTable...
-CompoundTable.prototype = Object.create(TableBase.prototype);
+CompoundTable.prototype = Object.create(SimpleTable.prototype);
+
+// ----------------------------------------------------------------------------
+CompoundTable.prototype.stepRight = function() {
+    this.collection.increaseSetIndex();
+    this.updateTable();
+};
+
+// ----------------------------------------------------------------------------
+CompoundTable.prototype.stepLeft = function() {
+    this.collection.decreaseSetIndex();
+    this.updateTable();
+};
+
 
 // ----------------------------------------------------------------------------
 module.exports = CompoundTable;

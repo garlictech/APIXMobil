@@ -23,8 +23,10 @@ function CollectionPrototypeGenerator() {
     };
 
     Prototype.prototype.dummyRefresh = function() {
-        if (! Utils.undefined(this.data[0].text)) {
-            this.data[0].text += " x";
+        if (! Utils.undefined(this.data[0].value)) {
+            this.data[1].value += " x";
+        } else if (! Utils.undefined(this.data[0].text)) {
+            this.data[1].text += " x";
         }
     };
 
@@ -69,8 +71,17 @@ function CollectionPrototypeGenerator() {
 
         this.data = [];
 
+        // In compound case, we create two extra rows: total number of
+        // sets, and the actually displayed set. We step sets with the
+        // arrows of the compound windows.
+        if (args.data.length > 1) {
+            this.data.push(new Node(["total_data", undefined, args.data.length ]));
+
+            this.data.push(new Node(["actual_data", undefined, this.setIndex + 1]));
+        }
+
         for (var i = 0; i < args.data[this.setIndex].length; ++i) {
-            this.data[i] = new Node(args.data[this.setIndex][i]);
+            this.data.push(new Node(args.data[this.setIndex][i]));
         }
     };
 
@@ -80,6 +91,24 @@ function CollectionPrototypeGenerator() {
         }
 
         return this.data;
+    };
+
+    Prototype.prototype.increaseSetIndex = function() {
+        this.setIndex++;
+        if (this.setIndex >= args.data.length) {
+            this.setIndex = 0;
+        }
+
+        this.refresh();
+    };
+
+    Prototype.prototype.decreaseSetIndex = function() {
+        this.setIndex--;
+        if (this.setIndex < 0) {
+            this.setIndex = args.data.length - 1;
+        }
+
+        this.refresh();
     };
 
     return Prototype;

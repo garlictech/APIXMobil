@@ -1,6 +1,9 @@
 // English translations
 exports.translations = {
-    details: "Details",
+    diagram: "Diagram",
+    detail: "Detail",
+    total_data: "Total data",
+    actual_data: "Actual data",
     refuelling_details: "Refuelling details",
     refuelling_summary: "Refuelling summary",
     card_details: "Card details",

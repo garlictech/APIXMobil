@@ -88,7 +88,14 @@
     borderColor: "#e9bf3c",
     borderRadius: 5,
     separatorColor: "e9bf3c",
-    top: 130,
+    top: 0,
     left: 3,
     right: 3
+}
+
+".table_scroll_view": {
+    bottom: "50",
+    top: "130",
+    showHorizontalScrollIndicator: "true",
+    zIndex: "20"
 }

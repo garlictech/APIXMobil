@@ -8,3 +8,15 @@ var compoundTable = new (require("compound_table"))({
     collection: arguments[0].collection,
     controller: $
 });
+
+// ----------------------------------------------------------------------------
+
+// ----------------------------------------------------------------------------
+function goLeft() {
+    compoundTable.stepLeft();
+}
+
+// ----------------------------------------------------------------------------
+function goRight() {
+    compoundTable.stepRight();
+}

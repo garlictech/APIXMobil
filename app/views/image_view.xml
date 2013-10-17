@@ -1,0 +1,6 @@
+<Alloy>
+    <Window id="window">
+        <Label id="top_label" class="top bar"/>
+        <View id="image" />
+    </Window>
+</Alloy>

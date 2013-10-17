@@ -1,0 +1,9 @@
+"#top_label": {
+    text: "Diagram"
+}
+
+"#image": {
+    backgroundImage: "images/example.png",
+    height: 373,
+    width: 169
+}
