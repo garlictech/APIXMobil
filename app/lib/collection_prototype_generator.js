@@ -11,6 +11,14 @@ function CollectionPrototypeGenerator() {
         this.viewControllerName = args.viewControllerName;
         this.setIndex = 0;
 
+        if (!Utils.undefined(args.testData)) {
+            this.testData = args.testData;
+        }
+
+        if (!Utils.undefined(args.localData)) {
+            this.localData = args.localData;
+        }
+
         if (! Utils.undefined(parentNode)) {
             this.parentNode = parentNode;
         }
@@ -35,8 +43,21 @@ function CollectionPrototypeGenerator() {
     };
 
     Prototype.prototype.refresh = function() {
-        var self = this;
+        // localData has preference over remote data. If a collection defines
+        // local data, it means that no need to fetch it from the remote
+        // server. Good for menu-like tables, like root table, refuelling
+        // details.
+        // We pass test data as well, in test mode, it will be returned instead
+        // of fetching from server.
+        var data = Utils.undefined(this.localData) ?
+            require("data_retriever").retrieveData(this.id(), this.testData) :
+            this.localData;
 
+        this.buildLocalDataStructure(data);
+    };
+
+    Prototype.prototype.buildLocalDataStructure = function(data) {
+        var self = this;
         // Creates a node. The node will be the model if the table row.
         // Attributes:
         //
@@ -70,18 +91,17 @@ function CollectionPrototypeGenerator() {
         }
 
         this.data = [];
-
         // In compound case, we create two extra rows: total number of
         // sets, and the actually displayed set. We step sets with the
         // arrows of the compound windows.
-        if (args.data.length > 1) {
-            this.data.push(new Node(["total_data", undefined, args.data.length ]));
+        if (data.length > 1) {
+            this.data.push(new Node(["total_data", undefined, data.length ]));
 
             this.data.push(new Node(["actual_data", undefined, this.setIndex + 1]));
         }
 
-        for (var i = 0; i < args.data[this.setIndex].length; ++i) {
-            this.data.push(new Node(args.data[this.setIndex][i]));
+        for (var i = 0; i < data[this.setIndex].length; ++i) {
+            this.data.push(new Node(data[this.setIndex][i]));
         }
     };
 

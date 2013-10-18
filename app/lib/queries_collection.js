@@ -18,14 +18,14 @@ var set_1 = [
     ["vapour_data"]
 ];
 
-var data = [set_1];
+var localData = [set_1];
 
 // ----------------------------------------------------------------------------
 module.exports = CollectionPrototypeGenerator({
     collectionTitleId: "queries",
     viewControllerName: "simple_table_view",
     text_id: true,
-    data: data,
+    localData: localData,
     id: "queries_table",
     refreshable: false
 });

@@ -9,14 +9,14 @@ var set_1 = [
     ["Bánkút", "images/db_icons/2.png"]
 ];
 
-var data = [set_1];
+var testData = [set_1];
 
 // ----------------------------------------------------------------------------
 module.exports = CollectionPrototypeGenerator({
     collectionTitleId: "places",
     viewControllerName: "simple_table_view",
     text_id: false,
-    data: data,
+    testData: testData,
     id: "places_table",
     refreshable: true
 });

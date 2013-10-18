@@ -10,13 +10,13 @@ var set_1 = [
     ["groups", "images/locations.png", undefined, GroupsCollection]
 ];
 
-var data = [set_1];
+var localData = [set_1];
 
 // ----------------------------------------------------------------------------
 module.exports = CollectionPrototypeGenerator({
-    collectionTitleId: "data",
+    collectionTitleId: "testData",
     viewControllerName: "simple_table_view",
     text_id: true,
-    data: data,
+    localData: localData,
     id: "root_table"
 });

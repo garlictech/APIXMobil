@@ -9,14 +9,14 @@ var set_1 = [
     ["Bp, Kerepesi út", "images/db_icons/1.png"]
 ];
 
-var data = [set_1];
+var testData = [set_1];
 
 // ----------------------------------------------------------------------------
 module.exports = CollectionPrototypeGenerator({
     collectionTitleId: "sites",
     viewControllerName: "simple_table_view",
     text_id: false,
-    data: data,
+    testData: testData,
     id: "sites_table",
     refreshable: true
 });

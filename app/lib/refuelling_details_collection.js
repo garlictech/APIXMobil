@@ -74,14 +74,14 @@ var set_3 = [
     ["detail", undefined, "value3"],
 ];
 
-var data = [set_1, set_2, set_3];
+var testData = [set_1, set_2, set_3];
 
 // ----------------------------------------------------------------------------
 module.exports = CollectionPrototypeGenerator({
     collectionTitleId: "refuelling_details",
     viewControllerName: "compound_table_view",
     text_id: true,
-    data: data,
+    testData: testData,
     id: "refuelling_details_table",
     refreshable: true
 });
