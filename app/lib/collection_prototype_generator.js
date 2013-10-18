@@ -11,11 +11,11 @@ function CollectionPrototypeGenerator() {
         this.viewControllerName = args.viewControllerName;
         this.setIndex = 0;
 
-        if (!Utils.undefined(args.testData)) {
+        if (! Utils.undefined(args.testData)) {
             this.testData = args.testData;
         }
 
-        if (!Utils.undefined(args.localData)) {
+        if (! Utils.undefined(args.localData)) {
             this.localData = args.localData;
         }
 
@@ -31,11 +31,15 @@ function CollectionPrototypeGenerator() {
     };
 
     Prototype.prototype.dummyRefresh = function() {
-        if (! Utils.undefined(this.data[0].value)) {
-            this.data[0].value += " x";
-        } else if (! Utils.undefined(this.data[0].text)) {
-            this.data[0].text += " x";
+        var dataToRefresh = this.testData[this.setIndex][0];
+
+        if (! Utils.undefined(dataToRefresh[0])) {
+            dataToRefresh[0] += " x";
+        } else if (! Utils.undefined(dataToRefresh[2])) {
+            dataToRefresh[2] += " x";
         }
+
+        this.refresh();
     };
 
     Prototype.prototype.refreshable = function() {
