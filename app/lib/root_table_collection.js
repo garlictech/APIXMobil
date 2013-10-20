@@ -1,20 +1,18 @@
 // ----------------------------------------------------------------------------
 // Module initialization
 var CollectionPrototypeGenerator = require("collection_prototype_generator");
-var PlacesCollection = require("places_collection");
-var GroupsCollection = require("groups_collection");
 
 // ----------------------------------------------------------------------------
 var set_1 = [
-    ["places", "images/locations.png", undefined, PlacesCollection],
-    ["groups", "images/locations.png", undefined, GroupsCollection]
+    ["places", "images/locations.png", "", "places_collection"],
+    ["groups", "images/locations.png", "", "groups_collection"]
 ];
 
 var localData = [set_1];
 
 // ----------------------------------------------------------------------------
 module.exports = CollectionPrototypeGenerator({
-    collectionTitleId: "testData",
+    collectionTitleId: "data",
     viewControllerName: "simple_table_view",
     text_id: true,
     localData: localData,

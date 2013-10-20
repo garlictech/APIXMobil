@@ -29,31 +29,3 @@ Alloy.Globals.L = locale.myL;
 
 Alloy.Globals.collections = {};
 
-
-// ----------------------------------------------------------------------------
-Alloy.Globals.refuelling_details = {
-    data: [
-        {
-            text_id: "vapour_data",
-            child_collection: "vapour_data"
-        }
-    ],
-
-    refresh: function() {},
-    tableNameId: "refuelling_details"
-};
-
-// ----------------------------------------------------------------------------
-// Initialize collections
-Alloy.Globals.root_table = require("root_table_collection");
-
-// ----------------------------------------------------------------------------
-// ... and the root table contains the "root_table" collection.
-Alloy.Globals.ActualTableLocator =
-    new (require("table_locator").TableLocator)("tables", "root_table");
-
-// Indicator od the actual table open. collection is the model of the collection, index is the collection ID.
-Alloy.Globals.ActualTableDescriptor = {
-    collection: Alloy.Globals.root_table,
-    index: 0
-};

@@ -35,15 +35,6 @@
     title: "Language"
 }
 
-"#activity_logging_in": {
-    width: "auto",
-    height: 30,
-    top: 330,
-    message_id: 'in_progress',
-    color: 'white',
-    style: 'Ti.UI.ActivityIndicatorStyle.PLAIN'
-}
-
 ".language": {
     top: 460,
     width: "65%",

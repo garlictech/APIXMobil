@@ -5,8 +5,7 @@ var CollectionPrototypeGenerator = require("collection_prototype_generator");
 //require("refuelling_details_collection")
 // ----------------------------------------------------------------------------
 var set_1 = [
-    ["refuelling_details", undefined, undefined,
-        require("refuelling_details_collection")],
+    ["refuelling_details", "", "", "refuelling_details_collection"],
     ["refuelling_summary"],
     ["card_details"],
     ["card_summary"],

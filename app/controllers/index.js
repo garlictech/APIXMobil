@@ -11,5 +11,6 @@ Alloy.Globals.SETTINGS_TAB = 2;
 Alloy.Globals.INFO_TAB = 3;
 
 var activeTab = Config.isLoggedIn() ? Alloy.Globals.TABLES_TAB : Alloy.Globals.LOGIN_TAB;
+
 $.index.setActiveTab(activeTab);
 $.index.open();

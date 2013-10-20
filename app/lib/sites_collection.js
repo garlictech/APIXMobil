@@ -5,7 +5,7 @@ var QueriesCollection = require("queries_collection");
 
 // ----------------------------------------------------------------------------
 var set_1 = [
-    ["Bp, Budaörsi út", "images/db_icons/1.png", undefined, QueriesCollection],
+    ["Bp, Budaörsi út", "images/db_icons/1.png", "", "queries_collection"],
     ["Bp, Kerepesi út", "images/db_icons/1.png"]
 ];
 

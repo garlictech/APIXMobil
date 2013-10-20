@@ -5,7 +5,7 @@
             <TextField id="username" />
             <TextField id="password" />
             <Button id="login_button" onClick="doLogin"></Button>
-            <ActivityIndicator id="activity_logging_in" />
+            <ActivityIndicator id="activity" class="actvity_indicator" />
             <Label id="bottom" class="bottom bar">APIXMobil</Label>
         </Window>
     </Tab>

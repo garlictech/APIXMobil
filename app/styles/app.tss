@@ -99,3 +99,12 @@
     showHorizontalScrollIndicator: "true",
     zIndex: "20"
 }
+
+".activity_indicator": {
+    width: "auto",
+    height: 30,
+    top: 330,
+    message_id: 'in_progress',
+    color: 'white',
+    style: 'Ti.UI.ActivityIndicatorStyle.PLAIN'
+}

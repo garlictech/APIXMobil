@@ -8,7 +8,7 @@ var WindowController = require("window_controller");
 // Login class, responsible for Info window Login.
 function Login(args) {
     var uiElements =
-        [$.username, $.password, $.login_button, $.activity_logging_in];
+        [$.username, $.password, $.login_button, $.activity];
 
     WindowController.call(this, args, $, uiElements);
     this.addElement('setting', {}, 'language');
@@ -26,11 +26,11 @@ module.exports = new Login(arguments[0]);
 function doLogin(e) {
     $.username.blur();
     $.password.blur();
-    $.activity_logging_in.show();
+    $.activity.show();
     username = $.username.getValue();
     password = $.password.getValue();
     res = webServiceClient.login(username, password);
-    $.activity_logging_in.hide();
+    $.activity.hide();
 
     if (res) {
         Config.setLoggedIn(username, password);
@@ -41,4 +41,4 @@ function doLogin(e) {
 }
 
 // When the login window appears, the activity monitor is hidden.
-$.activity_logging_in.hide();
+$.activity.hide();

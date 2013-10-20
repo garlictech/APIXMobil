@@ -11,5 +11,6 @@
         <Require src="settings_button"/>
         <Button id="left_arrow" class="small_button" onClick="goLeft"/>
         <Button id="right_arrow" class="small_button" onClick="goRight"/>
+        <ActivityIndicator id="activity" class="actvity_indicator" />
     </Window>
 </Alloy>

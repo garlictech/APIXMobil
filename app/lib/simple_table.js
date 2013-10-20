@@ -42,8 +42,8 @@ SimpleTable.prototype.addRefreshButton = function() {
     var self = this;
 
     this.addElement("refresh_button", {refresher: function() {
-        self.collection.dummyRefresh();
         // Reopen the window without animation
+        self.collection.reset();
         require("table_manager").reopenTable(
             self.controller.window, self.collection
         );

@@ -14,7 +14,7 @@ var Utils=require("utils");
 // - args.uiElements: The UI elements to be registered as reveivers of
 // SettingsChanged event.
 function TableBase(args) {
-    var uiElements = [args.controller.top_label];
+    var uiElements = [args.controller.top_label, args.controller.activity];
 
     if ( ! Utils.undefined(args.uiElements)) {
         uiElements = uiElements.concat(args.uiElements);
@@ -69,17 +69,32 @@ TableBase.prototype.addOnTimeButton = function() {
 // ----------------------------------------------------------------------------
 TableBase.prototype.updateTable = function() {
     var self = this;
-    // TODO: when deleting rows, they should not receive SettingsChanged any
-    // more. Check the situation.
-    this.controller.table.setData([]);
-    var height = 0;
-    // loop through collection and add them to table
-    var data = this.collection.getData();
-    for (var i = 0; i < data.length; i++) {
-        height += self.addRow(data[i]);
-    }
+    self.controller.table.height = 0;
+    this.controller.activity.show();
 
-    this.controller.table.height = height;
+    var retriever = this.collection.getData({
+        on_timeout: function() {
+            alert("timeout");
+            self.close();
+        },
+
+        on_error: function(e) {
+            alert("Error: " + e.error);
+            self.close();
+        },
+
+        on_success: function(data) {
+            self.controller.table.setData([]);
+            var height = 0;
+            // loop through collection and add them to table
+            for (var i = 0; i < data.length; i++) {
+                height += self.addRow(data[i]);
+            }
+
+            self.controller.table.height = height;
+            self.controller.activity.hide();
+        }
+    });
 };
 
 // ----------------------------------------------------------------------------
