@@ -1,6 +1,7 @@
 // ----------------------------------------------------------------------------
 // Module initialization
 var Config = require("config").config;
+var Utils = require("utils");
 var _translations = "undefined"; // Variable storing the actual translation object
 var _actualLocale = "undefined";
 
@@ -33,7 +34,9 @@ exports.setTranslation = function() {
 // ----------------------------------------------------------------------------
 // Returns the actual translation of the text id
 exports.myL = function(key) {
-    return eval("_translations." + key);
+    var k = key.trim();
+    var str = eval(String.format("_translations['%s']", k));
+    return Utils.undefined(str) ? k : str;
 };
 
 // ----------------------------------------------------------------------------

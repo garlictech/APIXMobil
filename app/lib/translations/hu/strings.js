@@ -1,5 +1,12 @@
 // Hungarian translations
 exports.translations = {
+    controller_name: "Vezérlő neve",
+    serial_no: "Sorszám",
+    nozzle_number: "Pisztoly száma",
+    fuelgas_suction: "Benzingőz visszaszívás %",
+    errorneous_suction: "Hibás visszívás szám",
+    counter_before_stop: "Kút leállás előtti idő számlálója",
+    date: "Dátum",
     undefined: "",
     diagram: "Diagram",
     total_data: "Összes adat",
@@ -14,7 +21,7 @@ exports.translations = {
     tank_summary: "Tartály összesítő",
     controller_details: "Vezérlő részletek",
     controller_summary: "Vezérlő összesítő",
-    vapour_data: "Benzingőz adatok",
+    fuelgas_data: "Benzingőz adatok",
     illegal_value: "Hibás érték!",
     metric_system: "Mértékegység rendszer",
     metric: "Metrikus",

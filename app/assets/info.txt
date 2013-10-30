@@ -1,4 +1,26 @@
-Version: 0.4.1
+Version: 0.5.0
+
+Usage:
+
+- For login, use the credentials of the test database (db). In the test db, there is only one user ("Avis"), with no password defined. So, the password field is ignored for the moment, only Avis will be authenticated when using
+database
+- Use "test" username, with no password, to bypass db authentication and go through the login screen, to be able to access settings (database, etc.).
+- In Advanced Settings, you can set the server address. The current default is apixserver.selfip.com. When this is set, the app will contact the server in cases where the server side query is implemented. In unimeplemented cases, the app returns mock data, build in teh app (no server contact).
+- Use "test" as server name, to bypass the server. In this case, all the data displayed is the buil-in test data, there is no communication with the server. Certainly, in this case, use "test" as username as well.
+
+
+New features:
+
+- App communicates with server. You must set proper server name/ip and give
+authentication login. In the current database, there is only one user with no
+password set, so this version does not check password, temporarily. With the test database, the only working username is "Avis".
+- Server returns test data, except for querying Cards table. It is a real query.
+- Server ignores date settings, and ignores other permissions, only demonstrates a successfull database - server - app path.
+
+
+Older versions:
+
+**** 0.4.1
 
 Fixed problems:
 
@@ -6,10 +28,6 @@ Fixed problems:
 - When there is no "ontime" set, and we set it, the already open windows do not show it in red, when we go back. When we reopen the windows (click on table rows), it is OK.
 - In case of logout or factory reset, the open tables should close.
 - Spanish language does not work: temporarily, Spanish language displays teh English translations, until they are ready.
-
-
-Older versions:
-
 
 **** 0.4.0
 

@@ -23,13 +23,9 @@ function TableBase(args) {
     WindowController.call(this, {}, args.controller, uiElements);
     this.collection = args.collection;
     // Configure the UI
-    this.controller.top_label.text_id = this.collection.title_id;
+    this.updateTable();
     this.addTablePath();
     this.addOnTimeButton();
-    this.updateTable();
-    // Window title must reflect the table type it
-    // Table is ready and configured, update the texts, etc...
-    this.updateUi();
 }
 
 // ----------------------------------------------------------------------------
@@ -72,12 +68,7 @@ TableBase.prototype.updateTable = function() {
     self.controller.table.height = 0;
     this.controller.activity.show();
 
-    var retriever = this.collection.getData({
-        on_timeout: function() {
-            alert("timeout");
-            self.close();
-        },
-
+    this.collection.getData({
         on_error: function(e) {
             alert("Error: " + e.error);
             self.close();
@@ -87,11 +78,15 @@ TableBase.prototype.updateTable = function() {
             self.controller.table.setData([]);
             var height = 0;
             // loop through collection and add them to table
-            for (var i = 0; i < data.length; i++) {
-                height += self.addRow(data[i]);
+            var set = data[self.collection.setIndex];
+
+            for (var i = 0; i < set.length; i++) {
+                height += self.addRow(set[i]);
             }
 
             self.controller.table.height = height;
+            self.controller.top_label.text_id = self.collection.title_id;
+            self.updateUi();
             self.controller.activity.hide();
         }
     });

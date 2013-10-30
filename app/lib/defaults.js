@@ -5,7 +5,7 @@
 exports.QUERY_INTERVAL = 30; // days from now...
 
 // Default data server name or IP address
-exports.SERVER_NAME = "data.avisignis.com";
+exports.SERVER_NAME = "apixserver.selfip.com";
 
 // Default locale is English
 exports.LOCALE = "en"; // Supported: hu, es...

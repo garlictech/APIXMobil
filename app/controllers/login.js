@@ -1,8 +1,9 @@
 // ----------------------------------------------------------------------------
 // Module initialization
 var Config = require('config').config;
-var webServiceClient = require('webServiceClient');
+var WebServiceClient = require('web_service_client');
 var WindowController = require("window_controller");
+var Utils = require("utils");
 
 // ----------------------------------------------------------------------------
 // Login class, responsible for Info window Login.
@@ -18,26 +19,41 @@ function Login(args) {
 Login.prototype = Object.create(WindowController.prototype);
 
 // ----------------------------------------------------------------------------
-// Create the actial Info object, and bind it to this particular controller
-module.exports = new Login(arguments[0]);
-
-// ----------------------------------------------------------------------------
-// Handle clicking on the "Login" button.
-function doLogin(e) {
+Login.prototype.doLogin = function() {
     $.username.blur();
     $.password.blur();
     $.activity.show();
     username = $.username.getValue();
     password = $.password.getValue();
-    res = webServiceClient.login(username, password);
-    $.activity.hide();
+    res = WebServiceClient.login(username, password, {
+        on_error: function(e) {
+            $.activity.hide();
+            alert(e.error);
+        },
 
-    if (res) {
-        Config.setLoggedIn(username, password);
-        Alloy.Globals.tabgroup.setActiveTab(Alloy.Globals.TABLES_TAB);
-    } else {
-        alert(webServiceClient.errorMessage);
-    }
+        on_success: function(e) {
+            $.activity.hide();
+
+            if ( ! Utils.undefined(e.authenticated) && e.authenticated)  {
+                Config.setLoggedIn(username, password);
+                Alloy.Globals.tabgroup.setActiveTab(Alloy.Globals.TABLES_TAB);
+            } else {
+                alert(Alloy.Globals.L("permission_denied"));
+            }
+
+        }
+    });
+};
+
+// ----------------------------------------------------------------------------
+// Create the actual Info object, and bind it to this particular controller
+var login = new Login(arguments[0]);
+module.exports = login;
+
+// ----------------------------------------------------------------------------
+// Handle clicking on the "Login" button.
+function doLogin(e) {
+    login.doLogin();
 }
 
 // When the login window appears, the activity monitor is hidden.

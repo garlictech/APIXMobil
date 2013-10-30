@@ -12,11 +12,7 @@ var TableBase = require("table_base");
 function SimpleTable(args) {
     TableBase.call(this, args);
     this.addBackButton();
-
-    if (this.collection.refreshable()) {
-        this.addRefreshButton();
-    }
-
+    this.addRefreshButton();
     this.addGoHomeButton();
 }
 

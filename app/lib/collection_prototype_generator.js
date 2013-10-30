@@ -2,24 +2,14 @@
 // Module initialization
 var Utils = require("utils");
 var Config = require("config").config;
-var DataRetriever = require("data_retriever");
+var WebServiceClient = require("web_service_client");
 
 // ----------------------------------------------------------------------------
 function CollectionPrototypeGenerator() {
     var args = arguments[0] || {};
 
     function Prototype(parentNode) {
-        this.title_id = args.collectionTitleId;
-        this.viewControllerName = args.viewControllerName;
         this.setIndex = 0;
-
-        if (! Utils.undefined(args.testData)) {
-            this.testData = args.testData;
-        }
-
-        if (! Utils.undefined(args.localData)) {
-            this.localData = args.localData;
-        }
 
         if (! Utils.undefined(parentNode)) {
             this.parentNode = parentNode;
@@ -32,46 +22,32 @@ function CollectionPrototypeGenerator() {
         return args.id;
     };
 
-    Prototype.prototype.refreshable = function() {
-        return (! Utils.undefined(args.refreshable)) && args.refreshable;
-    };
-
     Prototype.prototype.reset = function() {
         delete this.data;
     };
 
     Prototype.prototype.refresh = function(callbacks) {
         var self = this;
-        // localData has preference over remote data. If a collection defines
-        // local data, it means that no need to fetch it from the remote
-        // server. Good for menu-like tables, like root table, refuelling
-        // details.
-        // We pass test data as well, in test mode, it will be returned instead
-        // of fetching from server.
-        if (! Utils.undefined(this.localData)) {
-            self.buildLocalDataStructure(this.localData);
-            callbacks.on_success(this.data);
-            return;
-        } else if (Config.getProperty("ServerName").get() === "test") {
-            self.buildLocalDataStructure(this.testData);
-            callbacks.on_success(this.data);
-            return;
-        } else {
-            DataRetriever.get(this, {
-                on_error: callbacks.on_error,
 
-                on_success: function(data) {
-                    self.buildLocalDataStructure(data);
-                    callbacks.on_success(self.data);
-                }
-            });
-        }
+        WebServiceClient.getCollection(this, {
+            on_error: callbacks.on_error,
+
+            on_success: function(data) {
+                self.fillDescriptors(data.desc);
+                self.buildLocalDataStructure(data.data);
+                callbacks.on_success(self.data);
+            }
+        });
     };
 
     Prototype.prototype.setValue = function(attribute) {
         if ( !(Utils.undefined(attribute) || attribute.length === 0)) {
             return attribute;
         }
+    };
+
+    Prototype.prototype.fillDescriptors = function(desc) {
+        Utils.merge(this, desc);
     };
 
     Prototype.prototype.buildLocalDataStructure = function(data) {
@@ -88,7 +64,7 @@ function CollectionPrototypeGenerator() {
             function construct(
                 textParameter, image, value, childCollectionType
             ) {
-                if (args.text_id) {
+                if (self.text_id) {
                     this.text_id = textParameter;
                 } else {
                     this.text = textParameter;
@@ -113,44 +89,48 @@ function CollectionPrototypeGenerator() {
         }
 
         this.data = [];
-        // In compound case, we create two extra rows: total number of
-        // sets, and the actually displayed set. We step sets with the
-        // arrows of the compound windows.
-        if (data.length > 1) {
-            this.data.push(new Node(["total_data", undefined, data.length ]));
 
-            this.data.push(new Node(["actual_data", undefined, this.setIndex + 1]));
+        for (var j = 0; j < data.length; ++j) {
+            var subset = [];
+            // In compound case, we create two extra rows: total number of
+            // sets, and the actually displayed set. We step sets with the
+            // arrows of the compound windows.
+            if (data.length > 1) {
+                subset.push(new Node(["total_data", undefined, data.length ]));
+                subset.push(new Node(["actual_data", undefined, j + 1]));
+            }
+
+            for (var i = 0; i < data[j].length; ++i) {
+                subset.push(new Node(data[j][i]));
+            }
+
+            this.data.push(subset);
         }
 
-        for (var i = 0; i < data[this.setIndex].length; ++i) {
-            this.data.push(new Node(data[this.setIndex][i]));
-        }
-
+        this.setIndex = 0;
         Ti.App.fireEvent("SettingsChanged");
     };
 
     Prototype.prototype.getData = function(callbacks) {
         if (Utils.undefined(this.data)) {
             this.refresh(callbacks);
+        } else {
+            callbacks.on_success(this.data);
         }
     };
 
     Prototype.prototype.increaseSetIndex = function() {
         this.setIndex++;
-        if (this.setIndex >= args.data.length) {
+        if (this.setIndex >= this.data.length) {
             this.setIndex = 0;
         }
-
-        this.refresh();
     };
 
     Prototype.prototype.decreaseSetIndex = function() {
         this.setIndex--;
         if (this.setIndex < 0) {
-            this.setIndex = args.data.length - 1;
+            this.setIndex = this.data.length - 1;
         }
-
-        this.refresh();
     };
 
     return Prototype;

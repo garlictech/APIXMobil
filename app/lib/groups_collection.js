@@ -15,6 +15,7 @@ module.exports = CollectionPrototypeGenerator({
     collectionTitleId: "groups",
     viewControllerName: "simple_table_view",
     text_id: false,
+    refreshable: true,
     testData: testData,
     id: "groups_table"
 });
