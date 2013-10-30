@@ -4,7 +4,7 @@
 // argument[0].window: the window that the row is displayed on
 // argument[0].model: the model instance of the collection that is in the row
 function IconRow() {
-   $.icon.image = this.model.image;
+   $.icon.image = Ti.Utils.base64decode(this.model.image);
 }
 
 // ----------------------------------------------------------------------------
