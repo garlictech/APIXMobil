@@ -28,9 +28,11 @@ exports.openWindowWithBottomClicksDisabled = function(viewName, arg) {
 // ----------------------------------------------------------------------------
 exports.doLogout = function(e) {
     // Forces closing all open windows, and resets views
-    Ti.App.fireEvent("GoHome");
+    //Ti.App.fireEvent("GoHome");
     Config.setLoggedOut();
     Alloy.Globals.tabgroup.setActiveTab(Alloy.Globals.LOGIN_TAB);
+    // Clear all the downloaded collections
+    Alloy.Globals.collections = {};
 };
 
 // When locale changes, text of views must be updated to show the translations.
@@ -61,4 +63,14 @@ exports.registerTextUpdates = function() {
     Ti.App.addEventListener('SettingsChanged', update);
     update();
     return update;
+};
+
+// ----------------------------------------------------------------------------
+exports.floatDate = function(date) {
+    var zeroDate = new Date(1899, 11, 30, 0, 0, 0);
+    var oneDay = 24*60*60*1000; // hours*minutes*seconds*milliseconds
+    var diffDays = Math.round(Math.abs((date.getTime() - zeroDate.getTime())/(oneDay)));
+    var hour = 1.0 / 24.0 * date.getHours();
+    var minutes = 1.0 / 24.0 / 60.0 * date.getMinutes();
+    return 1.0 * diffDays + hour + minutes;
 };

@@ -21,6 +21,7 @@
 // compared when deciding if bookmarked collection is the actual one.
 var Config = require("config").config;
 var Utils = require("utils");
+var CollectionPrototypeGenerator = require("collection_prototype_generator");
 
 // Property holding the bookmark in Ti.App.Properties (config)
 var propertyName = "Bookmark";
@@ -50,6 +51,14 @@ OnTime.prototype.onClick = function() {
         if (id != this.actualCollection.id())
         {
             var coll = Alloy.Globals.collections[id];
+            // Get the collection if it is not downloaded
+            if (Utils.undefined(coll)) {
+                coll = new (CollectionPrototypeGenerator({
+                    _id: id,
+                    viewControllerName: Config.getProperty(propertyName).get().viewControllerName
+                }))();
+            }
+
             require("table_manager").openChildTable(coll);
         }
     }
@@ -59,7 +68,8 @@ OnTime.prototype.onClick = function() {
 OnTime.prototype.onLongpress = function() {
     // Set bookmark
     Config.getProperty(propertyName).set({
-        collectionId: this.actualCollection.id()
+        collectionId: this.actualCollection.id(),
+        viewControllerName: this.actualCollection.viewControllerName()
     });
     this.setColor();
     alert(Alloy.Globals.L("ontime_set"));

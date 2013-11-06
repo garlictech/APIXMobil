@@ -20,12 +20,24 @@ function TableBase(args) {
         uiElements = uiElements.concat(args.uiElements);
     }
 
-    WindowController.call(this, {}, args.controller, uiElements);
+    var window = Utils.undefined(args.controller.root_table_window) ? args.controller.window : args.controller.root_table_window;
+
+    WindowController.call(this, {}, args.controller, uiElements, window);
     this.collection = args.collection;
+    // In this case, we do not register all teh individual rows for
+    // locale change. We register the whole table, for performance reasons.
+    var self = this;
+
+    this.window.addEventListener("focus", function() {
+        self.addSettingsChangedHandler(function() {
+            self.updateTable();
+            self.addTablePath();
+        });
+    });
+
     // Configure the UI
-    this.updateTable();
-    this.addTablePath();
     this.addOnTimeButton();
+    this.addRefreshButton();
 }
 
 // ----------------------------------------------------------------------------
@@ -71,7 +83,13 @@ TableBase.prototype.updateTable = function() {
     this.collection.getData({
         on_error: function(e) {
             alert("Error: " + e.error);
-            self.close();
+            if (Utils.undefined(self.controller.root_table_window)) {
+                self.close();
+            } else {
+                Alloy.Globals.tabgroup.setActiveTab(Alloy.Globals.LOGIN_TAB);
+                // Clear all the downloaded collections
+                Alloy.Globals.collections = {};
+            }
         },
 
         on_success: function(data) {
@@ -80,16 +98,35 @@ TableBase.prototype.updateTable = function() {
             // loop through collection and add them to table
             var set = data[self.collection.setIndex];
 
-            for (var i = 0; i < set.length; i++) {
-                height += self.addRow(set[i]);
-            }
+            if (Utils.undefined(set)) {
+                self.controller.top_label.text_id = "no_data_available";
+            } else {
+                self.controller.top_label.text_id = self.collection.title_id;
 
-            self.controller.table.height = height;
-            self.controller.top_label.text_id = self.collection.title_id;
-            self.updateUi();
+                for (var i = 0; i < set.length; i++) {
+                    height += self.addRow(set[i]);
+                }
+
+                self.controller.table.height = height;
+            }
+            // We do not fire settings changed, because it slows things down
+            // at this point. So, we set text content manually.
+            self.controller.top_label.text =
+                Alloy.Globals.L(self.controller.top_label.text_id);
             self.controller.activity.hide();
         }
     });
+};
+
+// ----------------------------------------------------------------------------
+TableBase.prototype.addRefreshButton = function() {
+    var self = this;
+
+    this.addElement("refresh_button", {refresher: function() {
+        // Reopen the window without animation
+        self.collection.reset();
+        self.updateTable();
+    }});
 };
 
 // ----------------------------------------------------------------------------

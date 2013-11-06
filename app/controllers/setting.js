@@ -8,6 +8,7 @@ var validators = require("validators");
 // Setting class.
 function Setting() {
     $.title_label.text_id = this.args.title_id;
+    $.title_label.text = Alloy.Globals.L(this.args.title_id);
     // This will trigger UI update. Ugly solution I know.
     $.setting.top = this.args.top || 0;
 
@@ -17,7 +18,6 @@ function Setting() {
     // Listen to the "SettingChanges" event. It simply updates the string
     // representation of the property that the view shows.
     this.addSettingsChangedHandler(this.updateValue);
-    Ti.App.fireEvent("SettingsChanged");
 }
 
 // Inherits from Controller...

@@ -11,7 +11,6 @@ function WebServiceClient() {
     var self = this;
     this.xhr = Ti.Network.createHTTPClient({
         onload: function(e) {
-            Ti.API.debug(this.responseText);
             var data = JSON.parse(this.responseText);
             self.callbacks.on_success(data);
         },
@@ -27,10 +26,14 @@ function WebServiceClient() {
 // ----------------------------------------------------------------------------
 WebServiceClient.prototype.getCollection = function(collection, callbacks) {
     this.callbacks = callbacks;
-    var url = String.format("http://%s/get_collection/%s/%s/%s/",
+    metricSystem = Config.getProperty("MetricSystem").get() === "Metric" ? 1 : 0;
+    var url = String.format("http://%s/%s/%s/%f/%f/%d/%s/",
         Config.getProperty("ServerName").get(),
         Config.getProperty("Username").get(),
         Config.getProperty("Password").get(),
+        Utils.floatDate(Config.getProperty("QueryStartDate").get()),
+        Utils.floatDate(Config.getProperty("QueryEndDate").get()),
+        metricSystem,
         collection.id());
 
     this.send(url);
@@ -50,7 +53,7 @@ WebServiceClient.prototype.login = function(username, password, callbacks) {
     if (username === 'test') {
         callbacks.on_success({authenticated: true});
     } else {
-        var url = String.format("http://%s/login/%s/%s",
+        var url = String.format("http://%s/login/%s/%s/",
             Config.getProperty("ServerName").get(), username, password);
         this.send(url);
     }

@@ -4,10 +4,10 @@ var Controller = require("controller");
 var Utils = require("utils");
 
 // ----------------------------------------------------------------------------
-function WindowController(args, controller, uiElements) {
+function WindowController(args, controller, uiElements, window) {
     args = Utils.undefined(args) ? {} : args;
-    args.window = controller.window;
-    Controller.call(this, args, uiElements);
+    args.window = Utils.undefined(window) ? controller.window : window;
+    Controller.call(this, args, uiElements, window);
     var self = this;
     this.controller = controller;
 
@@ -35,7 +35,7 @@ WindowController.prototype.addElement = function(
     controllerName, args, TSSClass)
 {
     args = Utils.undefined(args) ? {} : args;
-    args.window = this.controller.window;
+    args.window = this.window;
 
     if ( ! Utils.undefined(TSSClass)) {
         var style = this.controller.createStyle({
@@ -67,7 +67,7 @@ WindowController.prototype.close = function() {
 };
 
 // ----------------------------------------------------------------------------
-// Name (path) of the controller JS, just in case we nee cloning it
+// Name (path) of the controller JS, just in case we need cloning it
 WindowController.prototype.getControllerPath = function() {
     return this.controller.__controllerPath;
 };

@@ -25,7 +25,9 @@ Property.prototype.set = function(value) {
         Ti.App.Properties.setString(this.name, value);
     }
 
-    Ti.App.fireEvent("SettingsChanged");
+    if (this.name === "Locale") {
+        Ti.App.fireEvent("SettingsChanged");
+    }
 };
 
 // ----------------------------------------------------------------------------

@@ -10,16 +10,22 @@ function CollectionPrototypeGenerator() {
 
     function Prototype(parentNode) {
         this.setIndex = 0;
+        this._id = args._id;
+        this.viewControllerName = args.viewControllerName;
 
         if (! Utils.undefined(parentNode)) {
             this.parentNode = parentNode;
         }
 
-        Alloy.Globals.collections[args.id] = this;
+        Alloy.Globals.collections[this.id()] = this;
     }
 
     Prototype.prototype.id = function() {
-        return args.id;
+        return this._id;
+    };
+
+    Prototype.prototype.viewControllerName = function() {
+        return this.viewControllerName;
     };
 
     Prototype.prototype.reset = function() {
@@ -62,7 +68,7 @@ function CollectionPrototypeGenerator() {
         // row will be displayed as icon_row.
         function Node(pars) {
             function construct(
-                textParameter, image, value, childCollectionType
+                textParameter, image, value, childCollectionId, childViewControllerName
             ) {
                 if (self.text_id) {
                     this.text_id = textParameter;
@@ -74,13 +80,14 @@ function CollectionPrototypeGenerator() {
                 this.value = self.setValue(value);
                 this.image = self.setValue(image);
 
-                var isUndef = Utils.undefined(childCollectionType) ||
-                    childCollectionType === '';
+                var isUndef = Utils.undefined(childCollectionId) ||
+                    childCollectionId === '';
 
                 if ( ! isUndef) {
                     // This is where the parent node inserts itself to the
                     // child collection
-                    var str = String.format("this.childCollection = new (require('%s'))(this);", childCollectionType);
+                    var str = String.format("this.childCollection = new (CollectionPrototypeGenerator({_id: '%s', viewControllerName: '%s'}))(this)", childCollectionId, childViewControllerName);
+
                     eval(str);
                 }
             }
@@ -108,7 +115,6 @@ function CollectionPrototypeGenerator() {
         }
 
         this.setIndex = 0;
-        Ti.App.fireEvent("SettingsChanged");
     };
 
     Prototype.prototype.getData = function(callbacks) {

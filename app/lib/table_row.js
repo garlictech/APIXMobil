@@ -15,16 +15,14 @@ function TableRow(args, row_ui, name_ui, value_ui) {
     if (this.model.text) {
         name_ui.text = this.model.text;
     } else if (this.model.text_id)  {
-        name_ui.text_id = this.model.text_id;
-        // Register for locale update only of necessary.
-        uis = [name_ui];
+        name_ui.text = Alloy.Globals.L(this.model.text_id);
     }
 
     if ( ! Utils.undefined(this.model.value) && ! Utils.undefined(value_ui)) {
         value_ui.text = this.model.value;
     }
 
-    Controller.call(this, args, uis);
+    Controller.call(this, args);
 
     if (this.hasChild()) {
         row_ui.hasChild = true;

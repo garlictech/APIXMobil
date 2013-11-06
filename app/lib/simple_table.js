@@ -12,7 +12,6 @@ var TableBase = require("table_base");
 function SimpleTable(args) {
     TableBase.call(this, args);
     this.addBackButton();
-    this.addRefreshButton();
     this.addGoHomeButton();
 }
 
@@ -31,19 +30,6 @@ SimpleTable.prototype.close = function() {
 // We should not close it when we are at the root table.
 SimpleTable.prototype.addBackButton = function() {
     TableBase.prototype.addBackButton.call(this, this.controller.window);
-};
-
-// ----------------------------------------------------------------------------
-SimpleTable.prototype.addRefreshButton = function() {
-    var self = this;
-
-    this.addElement("refresh_button", {refresher: function() {
-        // Reopen the window without animation
-        self.collection.reset();
-        require("table_manager").reopenTable(
-            self.controller.window, self.collection
-        );
-    }});
 };
 
 // ----------------------------------------------------------------------------

@@ -3,7 +3,10 @@
 // collection that the table displays.
 var CollectionPrototypeGenerator = require("collection_prototype_generator");
 
-var rootTable = new (require("simple_table"))({
-    collection: new (CollectionPrototypeGenerator({id: "root_table"}))(),
+var rootTable = new (require("table_base"))({
+    collection: new (CollectionPrototypeGenerator({
+        viewControllerName: "root_table_view",
+        _id: "root_table"
+    }))(),
     controller: $
 });
