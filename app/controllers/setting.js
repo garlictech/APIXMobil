@@ -37,7 +37,7 @@ Setting.prototype.handleClick = function (initial, use, validator) {
         useValue: function(value) {
             if (eval("validators." + validator + "(value)")) {
                 use(self.args.propertyName, value);
-                Ti.App.fireEvent('SettingsChanged');
+                self.updateValue();
             } else {
                 alert(Alloy.Globals.L("illegal_value"));
             }
