@@ -31,7 +31,7 @@ Config.prototype.init = function(now) {
     past.setDate(now.getDate() - this.getProperty("QueryInterval").get());
     this.registerNewDateProperty("QueryStartDate", past);
     this.registerNewProperty("ServerName", Defaults.SERVER_NAME);
-    //Ti.App.Properties.setString("ServerName", "127.0.0.1:8000");
+    Ti.App.Properties.setString("ServerName", "127.0.0.1:8000");
     this.registerNewProperty("Bookmark", {});
     this.registerNewProperty("Locale", Defaults.LOCALE);
     this.registerNewProperty('LoggedIn', false);

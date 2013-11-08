@@ -69,9 +69,10 @@ OnTime.prototype.onLongpress = function() {
     // Set bookmark
     Config.getProperty(propertyName).set({
         collectionId: this.actualCollection.id(),
-        viewControllerName: this.actualCollection.viewControllerName()
+        viewControllerName: this.actualCollection.viewControllerName
     });
     this.setColor();
+    Ti.App.fireEvent("SettingsChanged");
     alert(Alloy.Globals.L("ontime_set"));
 };
 

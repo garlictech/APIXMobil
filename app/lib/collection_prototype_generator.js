@@ -24,10 +24,6 @@ function CollectionPrototypeGenerator() {
         return this._id;
     };
 
-    Prototype.prototype.viewControllerName = function() {
-        return this.viewControllerName;
-    };
-
     Prototype.prototype.reset = function() {
         delete this.data;
     };
@@ -47,7 +43,7 @@ function CollectionPrototypeGenerator() {
     };
 
     Prototype.prototype.setValue = function(attribute) {
-        if ( !(Utils.undefined(attribute) || attribute.length === 0)) {
+        if ( !(Utils.undefined(attribute) || String(attribute).length === 0)) {
             return attribute;
         }
     };
