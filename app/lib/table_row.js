@@ -11,12 +11,7 @@ var Utils = require("utils");
 function TableRow(args, row_ui, name_ui, value_ui) {
     this.model = args.model;
     var uis = [];
-
-    if (this.model.text) {
-        name_ui.text = this.model.text;
-    } else if (this.model.text_id)  {
-        name_ui.text = Alloy.Globals.L(this.model.text_id);
-    }
+    name_ui.text = this.getTitle();
 
     if ( ! Utils.undefined(this.model.value) && ! Utils.undefined(value_ui)) {
         value_ui.text = this.model.value;
@@ -37,6 +32,21 @@ TableRow.prototype = Object.create(Controller.prototype);
 TableRow.prototype.openChildWindow = function() {
     if (this.hasChild()) {
         require("table_manager").openChildTable(this.model.childCollection);
+    } else {
+        var a = Titanium.UI.createAlertDialog({
+            title: this.getTitle(),
+            message: this.model.value
+        });
+        a.show();
+    }
+};
+
+// ----------------------------------------------------------------------------
+TableRow.prototype.getTitle = function() {
+    if (this.model.text) {
+        return this.model.text;
+    } else if (this.model.text_id)  {
+        return Alloy.Globals.L(this.model.text_id);
     }
 };
 
