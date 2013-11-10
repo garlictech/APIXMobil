@@ -1,1 +1,4 @@
-var eventHandlers = require('eventHandlers');
+// ----------------------------------------------------------------------------
+function goToInfo() {
+    Alloy.createController("info").getView().open();
+}

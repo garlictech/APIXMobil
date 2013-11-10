@@ -6,7 +6,5 @@
         <Require id="tables" src="tables_tab"/>
         <!-- Settings screen -->
         <Require src="settings"/>
-        <!-- Info screen -->
-        <Require src="info"/>
     </TabGroup>
 </Alloy>

@@ -1,11 +1,9 @@
 <Alloy>
-    <Tab id="info">
-        <Window id="window">
-            <Label id="top_label" class="top bar"/>
-            <ScrollView id="scrollview"  class="content_top">
-                <Label id="content" />
-            </ScrollView>
-            <!-- back_button - added programmatically-->
-        </Window>
-    </Tab>
+    <Window id="window">
+        <Label id="top_label" class="top bar"/>
+        <ScrollView id="scrollview"  class="content_top">
+            <Label id="content" />
+        </ScrollView>
+        <!-- back_button - added programmatically-->
+    </Window>
 </Alloy>

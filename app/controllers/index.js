@@ -8,7 +8,6 @@ Alloy.Globals.tabgroup = $.index;
 Alloy.Globals.LOGIN_TAB = 0;
 Alloy.Globals.TABLES_TAB = 1;
 Alloy.Globals.SETTINGS_TAB = 2;
-Alloy.Globals.INFO_TAB = 3;
 
 var activeTab = Config.isLoggedIn() ? Alloy.Globals.TABLES_TAB : Alloy.Globals.LOGIN_TAB;
 

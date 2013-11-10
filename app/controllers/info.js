@@ -13,7 +13,7 @@ function Info(args, uiElements) {
     // dispose of file handle & blob.
     file = null;
     blob = null;
-    this.addBackToTablesButton();
+    this.addBackButton();
 }
 
 // Inherits from WindowController...
