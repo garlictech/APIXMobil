@@ -1,6 +1,5 @@
 // ----------------------------------------------------------------------------
 // Module initialization
-var eventHandlers = require('eventHandlers');
 var WindowController = require("window_controller");
 
 // ----------------------------------------------------------------------------

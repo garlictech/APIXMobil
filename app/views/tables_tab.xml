@@ -1,5 +1,0 @@
-<Alloy>
-    <Tab id="tables">
-        <Require src="root_table_view"/>
-    </Tab>
-</Alloy>

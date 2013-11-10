@@ -1,1 +1,4 @@
-var eventHandlers = require('eventHandlers');
+// ----------------------------------------------------------------------------
+function goToSettings() {
+    Alloy.createController("settings").getView().open();
+}

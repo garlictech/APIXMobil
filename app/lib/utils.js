@@ -30,7 +30,7 @@ exports.doLogout = function(e) {
     // Forces closing all open windows, and resets views
     //Ti.App.fireEvent("GoHome");
     Config.setLoggedOut();
-    Alloy.Globals.tabgroup.setActiveTab(Alloy.Globals.LOGIN_TAB);
+    Alloy.createController("login").getView().open();
     // Clear all the downloaded collections
     Alloy.Globals.collections = {};
 };

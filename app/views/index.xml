@@ -1,10 +1,1 @@
-<Alloy>
-    <TabGroup>
-        <!-- Login screen -->
-        <Require src="login"/>
-        <!-- Tables screen -->
-        <Require id="tables" src="tables_tab"/>
-        <!-- Settings screen -->
-        <Require src="settings"/>
-    </TabGroup>
-</Alloy>
+<Alloy />

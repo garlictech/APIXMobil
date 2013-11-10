@@ -36,7 +36,7 @@ Login.prototype.doLogin = function() {
 
             if ( ! Utils.undefined(e.authenticated) && e.authenticated)  {
                 Config.setLoggedIn(username, password);
-                Alloy.Globals.tabgroup.setActiveTab(Alloy.Globals.TABLES_TAB);
+                Alloy.createController("root_table_view").getView().open();
             } else {
                 alert(Alloy.Globals.L("permission_denied"));
             }

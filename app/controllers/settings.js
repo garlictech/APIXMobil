@@ -13,7 +13,7 @@ function Settings(args) {
     this.addSetting('locale');
     this.addSetting('default_query_interval');
     this.addSetting('metric_system');
-    this.addBackToTablesButton();
+    this.addBackButton();
 }
 
 // Inherits from WindowController...

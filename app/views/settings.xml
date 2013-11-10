@@ -1,9 +1,7 @@
 <Alloy>
-    <Tab id="settings">
-        <Window id="window">
-            <Label id="top_label" class="top bar"/>
-            <Button id="advanced_settings_button" onClick="doAdvancedSettings" />
-            <Button id="logout_button" onClick="doLogout" />
-        </Window>
-    </Tab>
+    <Window id="window">
+        <Label id="top_label" class="top bar"/>
+        <Button id="advanced_settings_button" onClick="doAdvancedSettings" />
+        <Button id="logout_button" onClick="doLogout" />
+    </Window>
 </Alloy>
