@@ -93,7 +93,7 @@
     right: 3
 }
 
-".table_scroll_view": {
+".scroll_view": {
     bottom: "50",
     top: "130",
     showHorizontalScrollIndicator: "true",

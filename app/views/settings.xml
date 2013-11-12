@@ -1,7 +1,9 @@
 <Alloy>
     <Window id="window">
         <Label id="top_label" class="top bar"/>
-        <Button id="advanced_settings_button" onClick="doAdvancedSettings" />
-        <Button id="logout_button" onClick="doLogout" />
+        <ScrollView id="scroll_view">
+            <Button id="advanced_settings_button" onClick="doAdvancedSettings" />
+            <Button id="logout_button" onClick="doLogout" />
+        </ScrollView>
     </Window>
 </Alloy>

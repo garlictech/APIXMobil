@@ -32,7 +32,7 @@ WindowController.prototype.addBackButton = function(args) {
 // child the new element will be. An optional parameter is the parent
 // controller. If it is undefined, the controller set in object level is used.
 WindowController.prototype.addElement = function(
-    controllerName, args, TSSClass)
+    controllerName, args, TSSClass, view)
 {
     args = Utils.undefined(args) ? {} : args;
     args.window = this.window;
@@ -45,7 +45,9 @@ WindowController.prototype.addElement = function(
         Utils.merge(args, style);
     }
 
-    this.window.add(
+    var uiToAdd = Utils.undefined(view) ? this.window : view;
+
+    uiToAdd.add(
         Alloy.createController(controllerName, args).getView()
     );
 };

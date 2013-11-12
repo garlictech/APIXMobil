@@ -1,6 +1,8 @@
 "#header_image": {
     image: "images/start_screen_logo.png",
-    top: '20'
+    top: '20',
+    height: 'auto',
+    width: 'auto'
 }
 
 "TextField": {
@@ -10,13 +12,11 @@
 }
 
 "#username": {
-    hintText_id: 'username',
-    top: '150'
+    hintText_id: 'username'
 }
 
 "#password": {
     hintText_id: 'password',
-    top: '189',
     passwordMask: true,
 }
 
@@ -26,17 +26,11 @@
 }
 
 "#login_button": {
-    top: 260,
     title_id: 'login'
 }
 
-"#language_button": {
-    top: 400,
-    title: "Language"
-}
-
 ".language": {
-    top: 460,
+    top: "80%",
     width: "65%",
     title_id: "language",
     propertyName: "Locale",

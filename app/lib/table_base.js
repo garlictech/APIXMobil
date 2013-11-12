@@ -83,13 +83,9 @@ TableBase.prototype.updateTable = function() {
     this.collection.getData({
         on_error: function(e) {
             alert("Error: " + e.error);
-            if (Utils.undefined(self.controller.root_table_window)) {
-                self.close();
-            } else {
-                Alloy.Globals.tabgroup.setActiveTab(Alloy.Globals.LOGIN_TAB);
-                // Clear all the downloaded collections
-                Alloy.Globals.collections = {};
-            }
+            self.close();
+            Alloy.createController("login").getView().open();
+            Alloy.Globals.collections = {};
         },
 
         on_success: function(data) {

@@ -20,7 +20,7 @@ function Settings(args) {
 Settings.prototype = Object.create(WindowController.prototype);
 
 Settings.prototype.addSetting = function(TSSClass) {
-    this.addElement.call(this, "setting", {}, TSSClass);
+    this.addElement.call(this, "setting", {}, TSSClass, $.scroll_view);
 };
 
 // ----------------------------------------------------------------------------

@@ -44,11 +44,16 @@
 }
 
 "#advanced_settings_button": {
-    bottom: 130,
+    top: 400,
     title_id: 'advanced_settings'
 }
 
 "#logout_button": {
-    bottom: 80,
+    top: 450,
     title_id: 'logout'
+}
+
+"#scroll_view": {
+    contentHeight:'auto',
+    showVerticalScrollIndicator: "true"
 }
