@@ -115,5 +115,10 @@ exports.translations = {
     lit_ki: "Gallon display",
     km_b: "Enter Odometer reading",
     uo_b: "Enter Meter data",
-    mo_b: "Enter BOL data"
+    mo_b: "Enter BOL data",
+    fuelgas_details: "Fuelgas details",
+    vez: "Controller",
+    piszt: "Pistol",
+    hiba: "Error",
+    idozito: "Timer"
 };

@@ -114,5 +114,10 @@ exports.translations = {
     lit_ki: "Liter kijelzés",
     km_b: "Km óra bekérés",
     uo_b: "Üzemóra bekérés",
-    mo_b: "Menetokmány bekérés"
+    mo_b: "Menetokmány bekérés",
+    fuelgas_details: "Benzingőz részletek",
+    vez: "Vezérlő",
+    piszt: "Pisztoly",
+    hiba: "Hiba",
+    idozito: "Időzítő"
 };
