@@ -18,7 +18,7 @@ function WebServiceClient() {
             Ti.API.debug(e.error);
             self.callbacks.on_error(e);
         },
-        timeout:50000,
+        timeout:500000,
         enableKeepAlive: true
     });
 }
