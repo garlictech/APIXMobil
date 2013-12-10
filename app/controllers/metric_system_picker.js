@@ -32,8 +32,17 @@ function MetricSystemPicker() {
     // On change, share the value of the picker with the base controller, by
     // using args.value.
     $.picker.addEventListener('change', function(e) {
-        self.args.value = data[e.rowIndex];
-    });
+        switch (e.rowIndex) {
+        case 0:
+            self.args.value = "metric";
+            break;
+        case 1:
+            self.args.value = "US";
+            break;
+        default:
+            break;
+        }
+});
 }
 
 // ----------------------------------------------------------------------------

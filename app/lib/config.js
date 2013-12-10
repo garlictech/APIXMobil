@@ -18,21 +18,41 @@ Config.prototype.init = function(now) {
     // For testing only: dependence injection. We give explicitely what "now"
     // is.
     this.properties = [];
+    //Ti.App.Properties.removeProperty("QueryEndDate");
     this.registerNewProperty("QueryInterval", Defaults.QUERY_INTERVAL);
+    //Ti.App.Properties.setInt("QueryInterval", 300);
     now = (typeof now !== 'undefined' ? now : new Date());
-    now.setMinutes(59);
-    now.setSeconds(59);
-    now.setHours(23);
+
+    // now.setMinutes(59);
+    // now.setSeconds(0);
+    // now.setHours(1);
+
+    // now.setFullYear(2013);
+    // now.setMonth(0);
+    // now.setDate(1);
+
+    //Ti.App.Properties.removeProperty("QueryEndDate");
     this.registerNewDateProperty("QueryEndDate", now);
     past = new Date(now);
     past.setMinutes(0);
     past.setSeconds(0);
     past.setHours(0);
     past.setDate(now.getDate() - this.getProperty("QueryInterval").get());
+
+    // past.setMinutes(0);
+    // past.setSeconds(0);
+    // past.setHours(0);
+
+    // past.setFullYear(2013);
+    // past.setMonth(0);
+    // past.setDate(1);
+
+    //this.getProperty("QueryEndDate").set(past);
     this.registerNewDateProperty("QueryStartDate", past);
     this.registerNewProperty("ServerName", Defaults.SERVER_NAME);
-    Ti.App.Properties.setString("ServerName", "127.0.0.1:8000");
+    //Ti.App.Properties.setString("ServerName", "127.0.0.1:8000");
     //Ti.App.Properties.setString("ServerName", "192.168.1.17:8000");
+    //Ti.App.Properties.setString("ServerName", "192.168.1.31:8000");
     //Ti.App.Properties.setString("ServerName", Defaults.SERVER_NAME);
     this.registerNewProperty("Bookmark", {});
     this.registerNewProperty("Locale", Defaults.LOCALE);
@@ -40,6 +60,7 @@ Config.prototype.init = function(now) {
     this.registerNewProperty('Username', "");
     this.registerNewProperty('Password', "");
     this.registerNewProperty('MetricSystem', Defaults.METRIC_SYSTEM);
+    //Ti.App.Properties.setString("MetricSystem", Defaults.METRIC_SYSTEM);
     Ti.App.fireEvent("SettingsChanged");
 };
 

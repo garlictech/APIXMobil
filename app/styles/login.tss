@@ -1,23 +1,27 @@
 "#header_image": {
-    image: "images/start_screen_logo.png",
-    top: '20',
+    image: "/images/start_screen_logo.png",
     height: 'auto',
     width: 'auto'
 }
 
 "TextField": {
     width: 200,
+    height: 40,
+    textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
     autocorrect: false,
-    autocapitalization: "Titanium.Ui.TEXT_AUTOCAPITALIZATION_NONE"
+    autocapitalization: "Titanium.Ui.TEXT_AUTOCAPITALIZATION_NONE",
+    font: {fontSize: "16"}
 }
 
 "#username": {
-    hintText_id: 'username'
+    hintText_id: 'username',
+    top: 250
 }
 
 "#password": {
     hintText_id: 'password',
     passwordMask: true,
+    top: 289
 }
 
 "Button": {
@@ -26,7 +30,8 @@
 }
 
 "#login_button": {
-    title_id: 'login'
+    title_id: 'login',
+    top: 350
 }
 
 ".language": {

@@ -40,7 +40,8 @@
 
 "Button": {
     left: 5,
-    right: 5
+    right: 5,
+    height: 35
 }
 
 "#advanced_settings_button": {

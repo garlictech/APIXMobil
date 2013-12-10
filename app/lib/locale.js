@@ -34,6 +34,14 @@ exports.setTranslation = function() {
 // ----------------------------------------------------------------------------
 // Returns the actual translation of the text id
 exports.myL = function(key) {
+    if (Utils.undefined(key)) {
+        return '(undefined)';
+    }
+
+    if (typeof key !== 'string') {
+        return key;
+    }
+
     var k = key.trim();
     var str = eval(String.format("_translations['%s']", k));
     return Utils.undefined(str) ? k : str;

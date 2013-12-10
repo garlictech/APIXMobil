@@ -1,4 +1,4 @@
 "Button": {
-    backgroundImage: "images/icons/MD-repeat.png",
-    left: 45
+    backgroundImage: "/images/icons/MD-repeat.png",
+    left: "45dp"
 }

@@ -10,11 +10,7 @@ var Utils = require("utils");
 function Login(args) {
     var uiElements =
         [$.username, $.password, $.login_button, $.activity];
-
-    header_image_height = $.header_image.toImage().height + 20;
-    $.username.top = header_image_height;
-    $.password.top = $.username.top + 39;
-    $.login_button.top = $.username.top + 90;
+    $.header_image.top = Utils.isAndroid() ? "0" : "20dp";
     WindowController.call(this, args, $, uiElements);
     this.addElement('setting', {}, 'language');
 }

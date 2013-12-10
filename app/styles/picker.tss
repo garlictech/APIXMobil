@@ -1,8 +1,8 @@
 "Window": {
-    height: 220,
+    height: "220dp",
     // inverse of the height allows us to have the picker slide in from
     // the bottom.
-    bottom: -220,
+    bottom: "-220dp",
     backgroundColor: "white"
 }
 
@@ -23,8 +23,8 @@
 "#picker": {
     selectionIndicator: "true",
     useSpinner: "true",
-    top: "20",
-    height: "200"
+    top: "20dp",
+    height: "200dp"
 }
 
 "ToolBar": {

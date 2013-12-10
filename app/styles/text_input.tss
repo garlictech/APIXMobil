@@ -5,24 +5,26 @@
 }
 
 "TextField": {
-    top:80,
-    left: 5,
-    right: 5
+    top: "80dp",
+    left: "5dp",
+    right: "5dp"
 }
 
 "Button": {
-    top: 23,
-    borderColor: "black"
+    top: "20",
+    height: "36",
+    width: "36",
+    backgroundColor: "#e9bf3c"
 }
 
 "#cancel_button": {
-    left: 10,
-    backgroundImage: "images/icons/cancel.png"
+    left: "10",
+    backgroundImage: "/images/icons/cancel.png"
 }
 
 "#done_button": {
-    right: 10,
-    backgroundImage: "images/icons/check.png"
+    right: "10dp",
+    backgroundImage: "/images/icons/check.png"
 }
 
 "#top_label": {

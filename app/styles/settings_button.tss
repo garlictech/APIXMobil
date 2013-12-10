@@ -1,4 +1,4 @@
 "Button": {
-    backgroundImage: "images/icons/settings.png",
-    right: 45
+    backgroundImage: "/images/icons/settings.png",
+    right: "45dp"
 }

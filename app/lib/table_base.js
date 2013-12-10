@@ -5,6 +5,7 @@
 var WindowController = require("window_controller");
 var TableManager = require("table_manager").manager;
 var Utils=require("utils");
+var DataTableManager = require("data_table").Manager;
 
 // ----------------------------------------------------------------------------
 // Expected class arguments:
@@ -13,7 +14,7 @@ var Utils=require("utils");
 // - args.collection: The collection that the table displays.
 // - args.uiElements: The UI elements to be registered as reveivers of
 // SettingsChanged event.
-function TableBase(args) {
+function TableBase(args, dataTableManager) {
     var uiElements = [args.controller.top_label, args.controller.activity];
 
     if ( ! Utils.undefined(args.uiElements)) {
@@ -24,7 +25,11 @@ function TableBase(args) {
 
     WindowController.call(this, {}, args.controller, uiElements, window);
     this.collection = args.collection;
-    // In this case, we do not register all teh individual rows for
+
+    this.dataTableManager = Utils.undefined(dataTableManager) ?
+        new DataTableManager(window, args.controller.scroll_view) :
+        dataTableManager;
+    // In this case, we do not register all the individual rows for
     // locale change. We register the whole table, for performance reasons.
     var self = this;
 
@@ -45,21 +50,6 @@ function TableBase(args) {
 TableBase.prototype = Object.create(WindowController.prototype);
 
 // ----------------------------------------------------------------------------
-TableBase.prototype.addRow = function(model) {
-    var rowControllerName = typeof model.image !== 'undefined' ?
-        "icon_row" : "text_row";
-
-    var args = {
-        window: this.controller.window,
-        model: model
-    };
-
-    var row = Alloy.createController(rowControllerName, args).getView();
-    this.controller.table.appendRow(row);
-    return row.height;
-};
-
-// ----------------------------------------------------------------------------
 TableBase.prototype.addTablePath = function() {
     this.addElement("table_path", {
         collection: this.collection
@@ -77,7 +67,6 @@ TableBase.prototype.addOnTimeButton = function() {
 // ----------------------------------------------------------------------------
 TableBase.prototype.updateTable = function() {
     var self = this;
-    self.controller.table.height = 0;
     this.controller.activity.show();
 
     this.collection.getData({
@@ -89,24 +78,16 @@ TableBase.prototype.updateTable = function() {
         },
 
         on_success: function(data) {
-            self.controller.table.setData([]);
-            var height = 0;
-            // loop through collection and add them to table
+            self.dataTableManager.deleteAllTables();
             var set = data[self.collection.setIndex];
 
             if (Utils.undefined(set)) {
                 self.controller.top_label.text_id = "no_data_available";
             } else {
                 self.controller.top_label.text_id = self.collection.title_id;
-
-                for (var i = 0; i < set.length; i++) {
-                    height += self.addRow(set[i]);
-                }
-
-                self.controller.table.height = height;
+                self.dataTableManager.createTables(set);
             }
-            // We do not fire settings changed, because it slows things down
-            // at this point. So, we set text content manually.
+
             self.controller.top_label.text =
                 Alloy.Globals.L(self.controller.top_label.text_id);
             self.controller.activity.hide();

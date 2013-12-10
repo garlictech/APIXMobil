@@ -28,7 +28,7 @@ Setting.prototype = new (require("controller"))(
 // Read the actual value of the property that this setting is responsible for
 Setting.prototype.updateValue = function() {
     $.setting_value.text =
-        Config.getProperty(this.args.propertyName).stringValue();
+        Alloy.Globals.L(Config.getProperty(this.args.propertyName).stringValue());
 };
 
 Setting.prototype.handleClick = function (initial, use, validator) {

@@ -2,27 +2,27 @@
     backgroundColor: "#828282",
     borderColor: "#e9bf3c",
     color: "black",
-    borderWidth: 1,
+    borderWidth: "1dp",
     style: Ti.UI.iPhone.DONE,
-    borderRadius: 5,
+    borderRadius: "5dp",
     backgroundImage: 'none',
-    font: {fontWeight: "bold", fontSize: "16"}
+    font: {fontWeight: "bold", fontSize: "16dp"}
 }
 
 ".BackButton": {
-    top: 25,
-    left: 5,
-    height: 30,
-    width: 60,
+    top: "25dp",
+    left: "5dp",
+    height: "30dp",
+    width: "60dp",
     title_id: 'back'
 }
 
 "TextField": {
-    paddingLeft: 5,
+    paddingLeft: "5dp",
     backgroundColor: "#828282",
     borderColor: "#e9bf3c",
-    borderWidth: 1,
-    height: 40,
+    borderWidth: "1",
+    height: "40dp",
     autocorrect: false
 }
 
@@ -36,8 +36,9 @@
 
 ".bar": {
     backgroundColor: "#e9bf3c",
-    borderRadius: 5,
-    height: 40,
+    borderRadius: "5",
+    borderWidth: "1",
+    height: "40",
     width: "100%",
     textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
     font: {fontSize: "20"},
@@ -57,11 +58,11 @@
 }
 
 ".left": {
-    left: 5
+    left: "5dp"
 }
 
 ".right": {
-    right: 5
+    right: "5dp"
 }
 
 ".content_top": {
@@ -75,22 +76,14 @@
 
 ".small_button": {
     backgroundColor: "#e9bf3c",
-    bottom: 5
+    bottom: "2",
+    height: "36",
+    width: "36"
 }
 
 ".home_button": {
-    backgroundImage: "images/icons/home.png",
-    left: 5
-}
-
-".table": {
-    backgroundColor: "black",
-    borderColor: "#e9bf3c",
-    borderRadius: 5,
-    separatorColor: "e9bf3c",
-    top: 0,
-    left: 3,
-    right: 3
+    backgroundImage: "/images/icons/home.png",
+    left: "5"
 }
 
 ".scroll_view": {
@@ -102,8 +95,8 @@
 
 ".activity_indicator": {
     width: "auto",
-    height: 30,
-    top: 330,
+    height: "30",
+    top: "330",
     message_id: 'in_progress',
     color: 'white',
     style: 'Ti.UI.ActivityIndicatorStyle.PLAIN'

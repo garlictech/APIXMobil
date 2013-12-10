@@ -14,6 +14,12 @@ function WindowController(args, controller, uiElements, window) {
     this.window.addEventListener("close", function() {
         self.close();
     });
+
+    if (Utils.isAndroid()) {
+        var win = this.window;
+        win.addEventListener('android:back', function(e) {
+        });
+    }
 }
 
 // ----------------------------------------------------------------------------

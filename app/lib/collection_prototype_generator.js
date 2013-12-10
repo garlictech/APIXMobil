@@ -98,9 +98,11 @@ function CollectionPrototypeGenerator() {
             // In compound case, we create two extra rows: total number of
             // sets, and the actually displayed set. We step sets with the
             // arrows of the compound windows.
-            if (data.length > 1) {
+            //if (data.length > 1) {
+            if (this.viewControllerName === "compound_table_view") {
                 subset.push(new Node(["total_data", undefined, data.length ]));
                 subset.push(new Node(["actual_data", undefined, j + 1]));
+                subset.push(new Node(["new_section", undefined, undefined]));
             }
 
             for (var i = 0; i < data[j].length; ++i) {

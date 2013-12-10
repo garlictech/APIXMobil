@@ -11,4 +11,4 @@ exports.SERVER_NAME = "apixserver.selfip.com";
 exports.LOCALE = "en"; // Supported: hu, es...
 
 // Metric or US systems
-exports.METRIC_SYSTEM = "Metric";
+exports.METRIC_SYSTEM = "metric";

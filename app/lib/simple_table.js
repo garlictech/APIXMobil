@@ -9,8 +9,8 @@ var TableBase = require("table_base");
 // - args.controller: The controller creating this view. It must contain a/
 // window, the value of that window "id" attribute must be "window".
 // - args.collection: The collection that the table displays.
-function SimpleTable(args) {
-    TableBase.call(this, args);
+function SimpleTable(args, imageTableManager) {
+    TableBase.call(this, args, imageTableManager);
     this.addBackButton();
     this.addGoHomeButton();
 }

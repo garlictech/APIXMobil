@@ -1,18 +1,25 @@
 "#name": {
+    //height: "24",
     left: 5,
+    width: "60%",
     color: "#e9bf3c",
+    ellipsize: "true"
 }
 
 "#value": {
-    left: 150,
+    //height: "20",
+    //top: "27",
+    //width: "100%",
     right: 5,
-    color: "#e9bf3c",
-    textAlign: Ti.UI.TEXT_ALIGNMENT_RIGHT,
-    font: {fontSize: "14"},
-    color: "white"
+    width: "40%",
+    textAlign: "right",
+    font: {fontSize: 14},
+    color: "white",
+    ellipsize: "true"
 }
 
 "TableViewRow": {
     hasChild: false,
+    //height: 47
     height: 30
 }

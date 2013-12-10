@@ -1,4 +1,4 @@
-Version: 0.6.1
+Version: 0.9.0
 
 Usage:
 
@@ -8,9 +8,21 @@ database. Password field should not be empty, anyway.
 
 New features:
 
-- Support all the iOS devices and screen sizes.
+- Fixed icon generations
+- Diagrams displayed
 
 Older versions:
+
+**** 0.8.0
+- Menu structure conforms to that of HRFS PC
+
+**** 0.7.0
+- Fuelgas details are displayed
+- Icon generation modified
+
+**** 0.6.1
+
+- Support all the iOS devices and screen sizes.
 
 **** 0.6.0
 

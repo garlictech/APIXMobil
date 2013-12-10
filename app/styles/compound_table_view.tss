@@ -1,9 +1,9 @@
 "#right_arrow": {
-    backgroundImage: "images/icons/arrow-1-right.png",
-    left : 145
+    backgroundImage: "/images/icons/arrow-1-right.png",
+    left : "145dp"
 }
 
 "#left_arrow": {
-    backgroundImage: "images/icons/arrow-1-left.png",
-    left: 90
+    backgroundImage: "/images/icons/arrow-1-left.png",
+    left: "90dp"
 }

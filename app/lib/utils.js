@@ -74,3 +74,29 @@ exports.floatDate = function(date) {
     var minutes = 1.0 / 24.0 / 60.0 * date.getMinutes();
     return String(1.0 * diffDays + hour + minutes);
 };
+
+// ----------------------------------------------------------------------------
+exports.DPUnitsToPixels = function(TheDPUnits)
+{
+  return (TheDPUnits * (Titanium.Platform.displayCaps.dpi / 160));
+};
+
+// ----------------------------------------------------------------------------
+exports.isAndroid = function()
+{
+  return Ti.Platform.osname === "android";
+};
+
+// ----------------------------------------------------------------------------
+exports.assert = function(condition, message) {
+    if (!condition) {
+        throw message || "Assertion failed";
+    }
+}
+
+// ----------------------------------------------------------------------------
+exports.isMetric = function() {
+    var c = Config.getProperty("MetricSystem").get();
+    var m = (c === "metric" ? 1 : 0);
+    return m;
+}

@@ -1,6 +1,8 @@
 "Button": {
-    top: 64,
+    top: "64",
     backgroundColor: "#828282",
     title: "on time",
-    width: 150
+    width: "150",
+    height: 35,
+    font: {fontWeight: "bold", fontSize: "18"}
 }

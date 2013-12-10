@@ -1,4 +1,4 @@
 "Button": {
-    backgroundImage: "images/icons/home.png",
-    left: 5
+    backgroundImage: "/images/icons/home.png",
+    left: "5dp"
 }

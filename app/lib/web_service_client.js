@@ -26,15 +26,20 @@ function WebServiceClient() {
 // ----------------------------------------------------------------------------
 WebServiceClient.prototype.getCollection = function(collection, callbacks) {
     this.callbacks = callbacks;
-    metricSystem = Config.getProperty("MetricSystem").get() === "Metric" ? 1 : 0;
-    var url = String.format("http://%s/%s/%s/%s/%s/%s/%s/",
+
+    var url = String.format("http://%s/%s/%s/%s/%s/%s/",
         Config.getProperty("ServerName").get(),
         Config.getProperty("Username").get(),
         Config.getProperty("Password").get(),
         Utils.floatDate(Config.getProperty("QueryStartDate").get()),
         Utils.floatDate(Config.getProperty("QueryEndDate").get()),
-        String(metricSystem),
         collection.id());
+
+    if (collection.id().indexOf("_diagram") !== -1) {
+        url += String.format("%s/%d/", Config.getProperty("Locale").get(),
+            Utils.isMetric()
+        );
+    }
 
     this.send(url);
 };

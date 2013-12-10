@@ -12,5 +12,7 @@
 
 "TableViewRow": {
     hasChild: false,
-    height: 43
+    height: 50,
+    borderWidth: "1",
+    borderColor: "#e9bf3c"
 }

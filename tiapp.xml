@@ -15,7 +15,7 @@
 	<navbar-hidden>false</navbar-hidden>
 	<analytics>true</analytics>
 	<guid>569e6f6c-9db8-409b-9c24-4345b4816c36</guid>
-	<property name="ti.ui.defaultunit" type="string">system</property>
+	<property name="ti.ui.defaultunit" type="string">dip</property>
 	<iphone>
 		<orientations device="iphone">
 			<orientation>Ti.UI.PORTRAIT</orientation>
@@ -33,7 +33,7 @@
 		<precache>
 		</precache>
 		<splash>
-			<enabled>false</enabled>
+			<enabled>true</enabled>
 			<inline-css-images>true</inline-css-images>
 		</splash>
 		<theme>default</theme>

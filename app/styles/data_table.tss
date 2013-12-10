@@ -1,0 +1,9 @@
+"TableView": {
+    backgroundColor: "black",
+    borderColor: "#e9bf3c",
+    borderRadius: 5,
+    borderWidth: 1,
+    separatorColor: "e9bf3c",
+    left: 3,
+    right: 3
+}

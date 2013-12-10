@@ -1,12 +1,12 @@
 "#label": {
     color: "white",
-    font: {fontWeight: "medium", fontSize: "12"},
+    font: {fontWeight: "medium", fontSize: "12dp"},
     textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT
 }
 
 "#view": {
-    top: 100,
-    height: 26,
+    top: "100",
+    height: "30",
     showHorizontalScrollIndicator: true
 }
 

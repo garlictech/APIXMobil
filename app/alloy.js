@@ -11,6 +11,7 @@
 // Alloy.Globals.someGlobalFunction = function(){};
 
 var locale = require('locale');
+
 Alloy.Globals.L = locale.myL;
 // Execute unit test suite
 // if (Ti.App.deployType == 'test') {
