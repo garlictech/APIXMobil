@@ -33,11 +33,17 @@ function TableBase(args, dataTableManager) {
     // locale change. We register the whole table, for performance reasons.
     var self = this;
 
+    this.addSettingsChangedHandler(function() {
+        self.updateTable();
+        self.addTablePath();
+    });
+
+    // When windows gets focu,s it checks if the collection to be displayed
+    // exists. If it does not, retrieve it.
     this.window.addEventListener("focus", function() {
-        self.addSettingsChangedHandler(function() {
-            self.updateTable();
-            self.addTablePath();
-        });
+        if ( ! Utils.collectionExists(self.collection.id())) {
+            self.reFetchData();
+        }
     });
 
     // Configure the UI
@@ -68,17 +74,15 @@ TableBase.prototype.addOnTimeButton = function() {
 TableBase.prototype.updateTable = function() {
     var self = this;
     this.controller.activity.show();
+    self.dataTableManager.deleteAllTables();
 
     this.collection.getData({
         on_error: function(e) {
             alert("Error: " + e.error);
             self.close();
-            Alloy.createController("login").getView().open();
-            Alloy.Globals.collections = {};
         },
 
         on_success: function(data) {
-            self.dataTableManager.deleteAllTables();
             var set = data[self.collection.setIndex];
 
             if (Utils.undefined(set)) {
@@ -101,9 +105,14 @@ TableBase.prototype.addRefreshButton = function() {
 
     this.addElement("refresh_button", {refresher: function() {
         // Reopen the window without animation
-        self.collection.reset();
-        self.updateTable();
+        self.reFetchData();
     }});
+};
+
+// ----------------------------------------------------------------------------
+TableBase.prototype.reFetchData = function() {
+    this.collection.reset();
+    this.updateTable();
 };
 
 // ----------------------------------------------------------------------------

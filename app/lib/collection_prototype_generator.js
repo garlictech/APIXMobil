@@ -37,6 +37,7 @@ function CollectionPrototypeGenerator() {
             on_success: function(data) {
                 self.fillDescriptors(data.desc);
                 self.buildLocalDataStructure(data.data);
+                Alloy.Globals.collections[self.id()] = self;
                 callbacks.on_success(self.data);
             }
         });

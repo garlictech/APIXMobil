@@ -92,11 +92,27 @@ exports.assert = function(condition, message) {
     if (!condition) {
         throw message || "Assertion failed";
     }
-}
+};
 
 // ----------------------------------------------------------------------------
 exports.isMetric = function() {
     var c = Config.getProperty("MetricSystem").get();
     var m = (c === "metric" ? 1 : 0);
     return m;
-}
+};
+
+// ----------------------------------------------------------------------------
+exports.clearDataCache = function() {
+    Alloy.Globals.collections = {};
+};
+
+// ----------------------------------------------------------------------------
+exports.collectionExists = function(id) {
+    for (var coll in Alloy.Globals.collections) {
+        if (coll === id) {
+            return true;
+        }
+    }
+
+    return false;
+};

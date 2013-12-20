@@ -11,6 +11,7 @@
 // Alloy.Globals.someGlobalFunction = function(){};
 
 var locale = require('locale');
+var Utils = require('utils');
 
 Alloy.Globals.L = locale.myL;
 // Execute unit test suite
@@ -25,3 +26,41 @@ Alloy.Globals.L = locale.myL;
 
 Alloy.Globals.collections = {};
 
+// ----------------------------------------------------------------------------
+function handleSettingChangedEvents(eventName) {
+    var keysToRemove = [];
+    // Look up collections sensitive to date change, and record them
+    for (var key in Alloy.Globals.collections) {
+        if (! Alloy.Globals.collections.hasOwnProperty(key)) {
+            continue;
+        }
+
+        var signal = Alloy.Globals.collections[key].sensitiveTo;
+
+        if ( ! Utils.undefined(signal) &&
+             signal.indexOf(eventName) != -1
+        ) {
+            keysToRemove.push(key);
+        }
+    }
+
+    for (key in keysToRemove) {
+        delete Alloy.Globals.collections[keysToRemove[key]];
+    }
+
+    if (keysToRemove.length) {
+        alert(Alloy.Globals.L("refetch_data"));
+    }
+}
+
+// ----------------------------------------------------------------------------
+Ti.App.addEventListener('DatesChanged', function() {
+    handleSettingChangedEvents('DatesChanged');
+});
+
+// ----------------------------------------------------------------------------
+Ti.App.addEventListener('MetricChanged', function() {
+    alert(Alloy.Globals.L("metric_changed"));
+    Ti.App.fireEvent("GoHome");
+    handleSettingChangedEvents('MetricChanged');
+});

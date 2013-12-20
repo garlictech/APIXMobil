@@ -1,4 +1,4 @@
-Version: 0.9.0
+Version: 0.10.0
 
 Usage:
 
@@ -7,11 +7,21 @@ database. Password field should not be empty, anyway.
 - In Advanced Settings, you can set the server address. The current default is apixserver.selfip.com. When this is set, the app will contact the server in cases where the server side query is implemented. In unimeplemented cases, the app returns mock data, build in the app (no server contact).
 
 New features:
+- When changing metric system, app goes to home, and deletes cached data sensitive to metric change.
+- When changing dates, data sensitive to it is re-downloaded when its window gets focus.
+- Fixed: long text in the icon row expands below the > sign (child indicator).
+- Device handles orientation.
 
+
+Older versions:
+
+**** 0.9.0
 - Fixed icon generations
 - Diagrams displayed
 
-Older versions:
+**** 0.9.0
+- Fixed icon generations
+- Diagrams displayed
 
 **** 0.8.0
 - Menu structure conforms to that of HRFS PC

@@ -25,6 +25,7 @@ function TableRow(args, row_ui, name_ui, value_ui) {
 
     if (this.hasChild()) {
         row_ui.hasChild = true;
+        name_ui.width = "85%";
     }
 }
 

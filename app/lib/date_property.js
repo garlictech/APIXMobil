@@ -15,6 +15,7 @@ DateProperty.prototype = Object.create(Property.prototype);
 // ----------------------------------------------------------------------------
 DateProperty.prototype.set = function(value) {
     Ti.App.Properties.setString(this.name, value.toString());
+    Ti.App.fireEvent("DatesChanged");
 };
 
 // ----------------------------------------------------------------------------

@@ -3,7 +3,7 @@
 }
 
 ".query_end_date": {
-    top: 100,
+    top: 90,
     title_id: "query_interval_end",
     propertyName: "QueryEndDate",
     controllerName: "date_picker",
@@ -11,20 +11,20 @@
 
 ".query_start_date": {
     title_id: "query_interval_start",
-    top: 160,
+    top: 30,
     propertyName: "QueryStartDate",
     controllerName: "date_picker"
 }
 
 ".locale": {
-    top: 220,
+    top: 150,
     title_id: "language",
     propertyName: "Locale",
     controllerName: "language_picker"
 }
 
 ".metric_system": {
-    top: 280,
+    top: 210,
     title_id: "metric_system",
     propertyName: "MetricSystem",
     controllerName: "metric_system_picker"
@@ -32,7 +32,7 @@
 
 ".default_query_interval": {
     title_id: "default_query_interval",
-    top: 340,
+    top: 270,
     propertyName: "QueryInterval",
     controllerName: "text_input",
     validator: "mustBePositiveNumber"
@@ -45,16 +45,16 @@
 }
 
 "#advanced_settings_button": {
-    top: 400,
+    top: 330,
     title_id: 'advanced_settings'
 }
 
 "#logout_button": {
-    top: 450,
+    top: 380,
     title_id: 'logout'
 }
 
 "#scroll_view": {
-    contentHeight:'auto',
-    showVerticalScrollIndicator: "true"
+    showVerticalScrollIndicator: "true",
+    top: "70"
 }
