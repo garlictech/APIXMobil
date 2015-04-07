@@ -6,7 +6,7 @@
 	<url>http://www.avisignis.com</url>
 	<description>not specified</description>
 	<copyright>not specified</copyright>
-	<icon>images/appicon.png</icon>
+	<icon>appicon.png</icon>
 	<persistent-wifi>false</persistent-wifi>
 	<prerendered-icon>false</prerendered-icon>
 	<statusbar-style>opaque</statusbar-style>

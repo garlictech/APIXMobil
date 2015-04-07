@@ -4,7 +4,7 @@ var Config=require("config").config;
 
 // ----------------------------------------------------------------------------
 exports.undefined = function(obj) {
-    return typeof obj === 'undefined';
+    return typeof obj === 'undefined' || obj === null;
 };
 
 // ----------------------------------------------------------------------------

@@ -34,15 +34,20 @@ function TableBase(args, dataTableManager) {
     var self = this;
 
     this.addSettingsChangedHandler(function() {
-        self.updateTable();
-        self.addTablePath();
+        self.mustUpdateUi = true;
     });
 
-    // When windows gets focu,s it checks if the collection to be displayed
+    // When windows gets focus it checks if the collection to be displayed
     // exists. If it does not, retrieve it.
     this.window.addEventListener("focus", function() {
         if ( ! Utils.collectionExists(self.collection.id())) {
             self.reFetchData();
+        }
+
+        if (self.mustUpdateUi) {
+            self.updateTable();
+            self.addTablePath();
+            self.mustUpdateUi = false;
         }
     });
 
@@ -78,23 +83,29 @@ TableBase.prototype.updateTable = function() {
 
     this.collection.getData({
         on_error: function(e) {
-            alert("Error: " + e.error);
             self.close();
+            alert("Error: " + e.error);
         },
 
         on_success: function(data) {
-            var set = data[self.collection.setIndex];
+            var handler = function() {
+                Ti.App.removeEventListener("loadTableData", arguments.callee);
+                var set = data[self.collection.setIndex];
 
-            if (Utils.undefined(set)) {
-                self.controller.top_label.text_id = "no_data_available";
-            } else {
-                self.controller.top_label.text_id = self.collection.title_id;
-                self.dataTableManager.createTables(set);
-            }
+                if (Utils.undefined(set)) {
+                    self.controller.top_label.text_id = "no_data_available";
+                } else {
+                    self.controller.top_label.text_id = self.collection.title_id;
+                    self.dataTableManager.createTables(set);
+                }
 
-            self.controller.top_label.text =
-                Alloy.Globals.L(self.controller.top_label.text_id);
-            self.controller.activity.hide();
+                self.controller.top_label.text =
+                    Alloy.Globals.L(self.controller.top_label.text_id);
+                self.controller.activity.hide();
+            };
+
+            Ti.App.addEventListener("loadTableData", handler);
+            Ti.App.fireEvent("loadTableData");
         }
     });
 };

@@ -35,6 +35,9 @@ function CollectionPrototypeGenerator() {
             on_error: callbacks.on_error,
 
             on_success: function(data) {
+                if (Utils.undefined(data) || Utils.undefined(data.desc)) {
+                    return;
+                }
                 self.fillDescriptors(data.desc);
                 self.buildLocalDataStructure(data.data);
                 Alloy.Globals.collections[self.id()] = self;
@@ -125,16 +128,20 @@ function CollectionPrototypeGenerator() {
     };
 
     Prototype.prototype.increaseSetIndex = function() {
-        this.setIndex++;
-        if (this.setIndex >= this.data.length) {
-            this.setIndex = 0;
+        if (! Utils.undefined(this.data)) {
+            this.setIndex++;
+            if (this.setIndex >= this.data.length) {
+                this.setIndex = 0;
+            }
         }
     };
 
     Prototype.prototype.decreaseSetIndex = function() {
-        this.setIndex--;
-        if (this.setIndex < 0) {
-            this.setIndex = this.data.length - 1;
+        if (! Utils.undefined(this.data)) {
+            this.setIndex--;
+            if (this.setIndex < 0) {
+                this.setIndex = this.data.length - 1;
+            }
         }
     };
 

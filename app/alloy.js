@@ -47,10 +47,6 @@ function handleSettingChangedEvents(eventName) {
     for (key in keysToRemove) {
         delete Alloy.Globals.collections[keysToRemove[key]];
     }
-
-    if (keysToRemove.length) {
-        alert(Alloy.Globals.L("refetch_data"));
-    }
 }
 
 // ----------------------------------------------------------------------------
@@ -63,4 +59,13 @@ Ti.App.addEventListener('MetricChanged', function() {
     alert(Alloy.Globals.L("metric_changed"));
     Ti.App.fireEvent("GoHome");
     handleSettingChangedEvents('MetricChanged');
+});
+
+// ----------------------------------------------------------------------------
+Ti.Gesture.addEventListener('orientationchange',function(e) {
+    var toHideBackground = (e.orientation === Titanium.UI.LANDSCAPE_LEFT || e.orientation === Titanium.UI.LANDSCAPE_RIGHT);
+
+    if (e.orientation < 5) {
+        Ti.App.fireEvent('orient', {toHideBackground: toHideBackground});
+    }
 });

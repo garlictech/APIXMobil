@@ -7,13 +7,16 @@
 
 "#name": {
     left: 50,
+    height: 40,
     color: "#e9bf3c",
-    ellipsize: "true"
+    ellipsize: "true",
+    font: {fontSize: 16}
 }
 
-"TableViewRow": {
-    hasChild: false,
-    height: 50,
-    borderWidth: "1",
-    borderColor: "#e9bf3c"
+"#row": {
+    hasChild: false
+}
+
+"#holder": {
+    height: 50
 }

@@ -18,4 +18,9 @@ var iconrow = new IconRow();
 // ----------------------------------------------------------------------------
 function openChildWindow(e) {
     iconrow.openChildWindow();
+    $.row.setBackgroundColor("#e9bf3c");
+
+    setTimeout(function() {
+        $.row.setBackgroundColor("black");
+    }, 250);
 }

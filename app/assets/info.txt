@@ -1,4 +1,4 @@
-Version: 0.10.0
+Version: 0.12.0
 
 Usage:
 
@@ -6,14 +6,28 @@ Usage:
 database. Password field should not be empty, anyway.
 - In Advanced Settings, you can set the server address. The current default is apixserver.selfip.com. When this is set, the app will contact the server in cases where the server side query is implemented. In unimeplemented cases, the app returns mock data, build in the app (no server contact).
 
-New features:
+Changes:
+
+- Bug fix: activity indicator is not displayed when updating tabled from cached
+data.
+- Temporary “Spanish translation”: English text with “-s” suffix. It prevents from errors related to missing translation strings.
+- Bugfix: when changing language, and there is much data cached, it takes long
+time. Solution: ui updated only when a window gets focus.
+- If there is no image (no data), the screen does not become black in case of device rotation.
+- When clicking on a table row, ther is a visual blink to indicate that click has happened.
+- Support Spanish language.
+
+Older versions:
+
+**** 0.11.0
+- Bug fixes
+- Taking dbgrid table into account
+
+**** 0.10.0
 - When changing metric system, app goes to home, and deletes cached data sensitive to metric change.
 - When changing dates, data sensitive to it is re-downloaded when its window gets focus.
 - Fixed: long text in the icon row expands below the > sign (child indicator).
 - Device handles orientation.
-
-
-Older versions:
 
 **** 0.9.0
 - Fixed icon generations

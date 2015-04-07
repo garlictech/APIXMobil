@@ -12,6 +12,7 @@ function Login(args) {
         [$.username, $.password, $.login_button, $.activity];
     $.header_image.top = Utils.isAndroid() ? "0" : "20dp";
     WindowController.call(this, args, $, uiElements);
+    this.window.setOrientationModes([Ti.UI.PORTRAIT]);
     this.addElement('setting', {}, 'language');
 }
 

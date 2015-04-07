@@ -7,6 +7,6 @@
         <Label class="bottom bar" />
         <Require src="info_button"/>
         <Require src="settings_button"/>
-        <ActivityIndicator id="activity" class="actvity_indicator" />
+        <ActivityIndicator id="activity" class="actvity_indicator" zIndex="100"/>
     </Window>
 </Alloy>

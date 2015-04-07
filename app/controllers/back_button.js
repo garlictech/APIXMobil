@@ -23,3 +23,5 @@ var button = new BackButton();
 function onClick(e) {
     button.onClick(e);
 }
+
+button.addAndroidBackButtonHandler(onClick);

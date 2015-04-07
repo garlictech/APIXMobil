@@ -10,6 +10,14 @@ function DataTable(rows, window, view, top) {
     }
 
     this.table.height = height;
+
+    // Dirty hack. Table separator handling in Android seems to be not OK,
+    // it seems that the divider is 1 pixel wide, that is half than 1dp.
+    // This solution is not future-proof, when higher density displays appear.
+    if (Utils.isAndroid()) {
+        this.table.height += rows.length;
+    }
+
     this.table.top = top;
     this.view.add(this.table);
 }
@@ -24,9 +32,9 @@ DataTable.prototype.addRow = function(row) {
         model: row
     };
 
-    var tableRow = Alloy.createController(rowControllerName, args).getView();
-    this.table.appendRow(tableRow);
-    return tableRow.height;
+    var tableRow = Alloy.createController(rowControllerName, args);
+    this.table.appendRow(tableRow.getView());
+    return tableRow.holder.height;
 };
 
 // ----------------------------------------------------------------------------

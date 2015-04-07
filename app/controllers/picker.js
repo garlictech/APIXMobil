@@ -1,5 +1,6 @@
-Ti.API.debug('picker constructor started');
 // ----------------------------------------------------------------------------
+var Utils = require('utils');
+
 var args = arguments[0] || {};
 // Handling text label update in case of locale change
 var listener = require('utils').registerTextUpdates($.cancel, $.done);
@@ -21,11 +22,21 @@ function close() {
     args.cover_window.close();
 }
 
+// ----------------------------------------------------------------------------
 // On cancel, simply close the picker.
 function cancelClicked(e) {
     close();
 }
 
+// ----------------------------------------------------------------------------
+// Android back button is "cancel"
+if (Utils.isAndroid()) {
+    $.picker_window.addEventListener('android:back', function(e) {
+        cancelClicked(e);
+    });
+}
+
+// ----------------------------------------------------------------------------
 // When done, call the passed function that handles the picker value.
 // Then closes the window properly.
 exports.doneClicked = function(e) {
@@ -33,5 +44,3 @@ exports.doneClicked = function(e) {
     close();
 };
 
-// ----------------------------------------------------------------------------
-Ti.API.debug('picker constructor finished');

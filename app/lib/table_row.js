@@ -40,7 +40,7 @@ TableRow.prototype.openChildWindow = function() {
     } else {
         var a = Titanium.UI.createAlertDialog({
             title: this.getTitle(),
-            message: this.model.value
+            message: this.value
         });
         a.show();
     }
@@ -135,11 +135,6 @@ TableRow.prototype.handleMeasure = function() {
 TableRow.prototype.hasChild = function() {
     return typeof this.model.childCollection !== 'undefined';
 };
-
-// ----------------------------------------------------------------------------
-TableRow.prototype.handleMetric = function() {
-
-}
 
 // ----------------------------------------------------------------------------
 module.exports = TableRow;

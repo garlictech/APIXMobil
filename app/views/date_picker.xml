@@ -1,0 +1,8 @@
+<Alloy>
+    <Window id="picker_window">
+        <Picker id="date_picker" />
+        <Picker id="time_picker" />
+        <Label id="cancel" class="left" onClick="cancelClicked"/>
+        <Label id="done" class="right" onClick="exports.doneClicked" />
+    </Window>
+</Alloy>

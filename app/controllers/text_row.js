@@ -18,4 +18,9 @@ var textRow = new TextRow();
 // ----------------------------------------------------------------------------
 function openChildWindow(e) {
     textRow.openChildWindow();
+    $.row.setBackgroundColor("#e9bf3c");
+
+    setTimeout(function() {
+        $.row.setBackgroundColor("black");
+    }, 250);
 }

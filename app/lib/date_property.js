@@ -22,8 +22,11 @@ DateProperty.prototype.set = function(value) {
 DateProperty.prototype.stringValue = function() {
     var date = this.get();
 
-    return String.format("%s %d:%d", date.toLocaleDateString(),
-        date.getHours(), date.getMinutes());
+    if (Utils.isAndroid()) {
+        return String.format("%s %02d:%02d", date.toLocaleDateString(), date.getHours(), date.getMinutes());
+    } else {
+        return String.format("%s %02.0f:%02.0f", date.toLocaleDateString(), date.getHours(), date.getMinutes());
+    }
 };
 
 // ----------------------------------------------------------------------------

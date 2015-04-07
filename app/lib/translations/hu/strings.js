@@ -145,7 +145,7 @@ exports.translations = {
     tCard: "Tiltott kártyák száma",
     sGroup: "Csoportok száma",
     groups: "Csoportok",
-    group_summary: "Csoportok összesítő",
+    group_summary: "Csoport összesítő",
     num: "Sorszám",
     indx: "Index",
     megj: "Megjegyzés",
@@ -155,5 +155,6 @@ exports.translations = {
     tank_water_height_diagram: "Víz magasság diagram",
     tank_temperature_diagram: "Hőmérséklet diagram",
     metric_changed: "Szükséges lehet az adatok újra számolására, ezért átkapcsoltunk a kezdő nézetre.",
-    refetch_data: "Figyelem: a beállításra érzékeny adatok újra le lesznek töltve ismételt megtekintéskor."
+    invalid_date: "Hibás dátum, %d nap nincs a %d. hónapban.",
+    icon: "Ikon"
 };

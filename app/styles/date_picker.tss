@@ -1,0 +1,36 @@
+"Window": {
+    backgroundColor: "white",
+    top: 200
+}
+
+"Label": {
+    top: "0",
+    backgroundColor: "white",
+    color: "black",
+    font: {fontSize: "18"}
+}
+
+"#cancel": {
+    text_id: 'cancel'
+}
+
+"#done": {
+    text_id: 'ok',
+}
+
+"Picker": {
+    selectionIndicator: "true",
+}
+
+"#date_picker": {
+    top: "26"
+}
+
+"#time_picker": {
+    format24: "true",
+    top: "204"
+}
+
+"ToolBar": {
+    top: 0
+}

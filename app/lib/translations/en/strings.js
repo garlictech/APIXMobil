@@ -1,6 +1,6 @@
-// English translations
+// Spanish translations
 exports.translations = {
-    controller_name: "Controller name",
+    controller_name: "Pump name",
     serial_no: "Serial No",
     fuelgas_suction: "Fuelgas suction %",
     nozzle_number: "Nozzle number",
@@ -19,8 +19,10 @@ exports.translations = {
     tanks: "Tanks",
     tank_diagram: "Tank diagram",
     tank_summary: "Tank summary",
-    controllers: "Controllers",
-    controller_summary: "Controller summary",
+    controllers: "Pumps",
+    controller_summary: "Pump summary",
+    group_summary: "Group summary",
+    icon: "Icon",
     fuelgas_diagrams: "Fuelgas diagrams",
     fuelgas_error_number_diagram: "Fuelgas error",
     fuelgas_percentage_diagram: "Fuelgas percentage",
@@ -104,10 +106,10 @@ exports.translations = {
     p2: "Pistol 2",
     p3: "Pistol 3",
     p4: "Pistol 4",
-    p1_vez: "Controller of pistol 1",
-    p2_vez: "Controller of pistol 2",
-    p3_vez: "Controller of pistol 3",
-    p4_vez: "Controller of pistol 4",
+    p1_vez: "Pump of pistol 1",
+    p2_vez: "Pump of pistol 2",
+    p3_vez: "Pump of pistol 3",
+    p4_vez: "Pump of pistol 4",
     es1: "1.meter",
     es2: "2.meter",
     es3: "3.meter",
@@ -124,7 +126,7 @@ exports.translations = {
     uo_b: "Enter Meter data",
     mo_b: "Enter BOL data",
     fuelgas: "Fuelgas",
-    vez: "Controller",
+    vez: "Pump",
     piszt: "Pistol",
     hiba: "Error",
     idozito: "Timer",
@@ -147,7 +149,6 @@ exports.translations = {
     tCard: "Banned card number",
     sGroup: "Number of groups",
     groups: "Groups",
-    tanks: "Tanks",
     num: "Serial number",
     indx: "Index",
     megj: "Remark",
@@ -157,5 +158,5 @@ exports.translations = {
     tank_water_height_diagram: "Water height diagram",
     tank_temperature_diagram: "Temperature diagram",
     metric_changed: "Data recalculation may be required, switched to root view.",
-    refetch_data: "Data sensitive to this setting will be re-downloaded at their next display."
+    invalid_date: "Wrong date, there is no %d day in month %d."
 };

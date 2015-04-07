@@ -31,7 +31,7 @@ Config.prototype.init = function(now) {
     // now.setMonth(0);
     // now.setDate(1);
 
-    //Ti.App.Properties.removeProperty("QueryEndDate");
+    // Ti.App.Properties.removeProperty("QueryEndDate");
     this.registerNewDateProperty("QueryEndDate", now);
     past = new Date(now);
     past.setMinutes(0);
@@ -47,12 +47,12 @@ Config.prototype.init = function(now) {
     // past.setMonth(0);
     // past.setDate(1);
 
-    //this.getProperty("QueryEndDate").set(past);
+    // this.getProperty("QueryEndDate").set(past);
     this.registerNewDateProperty("QueryStartDate", past);
     this.registerNewProperty("ServerName", Defaults.SERVER_NAME);
+    //Ti.App.Properties.setString("ServerName", Defaults.SERVER_NAME);
     //Ti.App.Properties.setString("ServerName", "127.0.0.1:8000");
-    //Ti.App.Properties.setString("ServerName", "192.168.1.17:8000");
-    //Ti.App.Properties.setString("ServerName", "192.168.1.31:8000");
+    //Ti.App.Properties.setString("ServerName", "192.168.1.18:8000");
     //Ti.App.Properties.setString("ServerName", Defaults.SERVER_NAME);
     this.registerNewProperty("Bookmark", {});
     this.registerNewProperty("Locale", Defaults.LOCALE);

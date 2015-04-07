@@ -4,9 +4,9 @@
         <!-- Ontime button added programmatically -->
         <!-- table_path added programmatically -->
         <ImageView id="image" />
-        <Label class="bottom bar" />
-        <Require src="info_button"/>
-        <Require src="settings_button"/>
+        <Label id="bottom_bar" class="bottom bar" />
+        <Require id="info_button" src="info_button"/>
+        <Require id="settings_button" src="settings_button"/>
         <ActivityIndicator id="activity" class="actvity_indicator" />
     </Window>
 </Alloy>

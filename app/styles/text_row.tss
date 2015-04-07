@@ -1,25 +1,26 @@
 "#name": {
-    //height: "24",
     left: 5,
+    height: 39,
     width: "60%",
     color: "#e9bf3c",
-    ellipsize: "true"
+    ellipsize: "true",
+    font: {fontSize: 18}
 }
 
 "#value": {
-    //height: "20",
-    //top: "27",
-    //width: "100%",
+    height: 39,
     right: 5,
     width: "40%",
     textAlign: "right",
-    font: {fontSize: 14},
+    font: {fontSize: 16},
     color: "white",
     ellipsize: "true"
 }
 
-"TableViewRow": {
-    hasChild: false,
-    //height: 47
-    height: 30
+"#row": {
+    hasChild: false
+}
+
+"#holder": {
+    height: 40
 }

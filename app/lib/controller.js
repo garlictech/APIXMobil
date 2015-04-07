@@ -22,6 +22,7 @@ Controller.prototype.addSettingsChangedHandler = function (handler){
     var self = this;
     // Otherwise, handler will be executed in global context...
     function h() {
+        Ti.API.debug("addSettingsChangedHandler called..");
         handler.call(self);
     }
 
@@ -62,6 +63,13 @@ Controller.prototype.registerTextUpdates = function(uiElements) {
 // ----------------------------------------------------------------------------
 Controller.prototype.updateUi = function() {
     Ti.App.fireEvent("SettingsChanged");
+};
+
+// ----------------------------------------------------------------------------
+Controller.prototype.addAndroidBackButtonHandler = function(handler) {
+    if (Utils.isAndroid()) {
+        this.window.addEventListener('android:back', handler);
+    }
 };
 
 // ----------------------------------------------------------------------------
